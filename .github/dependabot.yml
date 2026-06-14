@@ -1,0 +1,59 @@
+# Dependabot 自動套件更新
+# 
+# 每天檢查 npm 套件，自動開 PR 更新。
+# 運作方式：
+#   - patch/minor（安全修補）→ 自動合併（build 通過後）
+#   - major（大版本）→ 開 PR 等審核
+#   - 若 build fail → 不會合併，你只要看 Telegram 通知即可
+
+version: 2
+updates:
+  # --- npm (Astro & Tailwind & 其他 JS 套件) ---
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "03:00"
+      timezone: "Asia/Taipei"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "security"
+    # 分組：patch/minor 捆成一個 PR
+    groups:
+      astro-core:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
+        update-types:
+          - "minor"
+          - "patch"
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+        update-types:
+          - "minor"
+          - "patch"
+      dev-deps:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    # 不要跳 major 版本（改動太大，人工審）
+    ignore:
+      - dependency-name: "astro"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+
+  # --- GitHub Actions (workflow 檔案) ---
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "03:00"
+      timezone: "Asia/Taipei"
