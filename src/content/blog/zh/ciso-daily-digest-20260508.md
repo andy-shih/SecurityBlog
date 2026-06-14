@@ -1,69 +1,52 @@
 ---
-title: "CISO 每日摘要：Canvas Breach Disrupts Schools & Colleges Nationwi (20260508)"
-description: "2026-05-08 每日資安新聞摘要"
+title: "CISO 每日摘要：Linux Kernel Dirty Frag Vulnerability; Ivanti EPMM RCE Under Attack (20260508)"
+description: "2026-05-08 每日資安新聞摘要 - Linux 'Dirty Frag' local privilege escalation, Ivanti EPMM RCE exploited in the wild, Canvas breach impact spreads, and Google Android verification feature launched."
 pubDate: 2026-05-08
-tags: ["資安", "CISO", "daily-digest"]
+tags: ["資安", "CISO", "daily-digest", "威脅情資"]
 author: "Security Solutions Team"
 featured: true
 ---
 
-## 重點新聞
+## Linux Kernel 'Dirty Frag' Vulnerability Allows Local Privilege Escalation
 
-**Canvas Breach Disrupts Schools & Colleges Nationwide**
+A high-severity vulnerability named 'Dirty Frag' has been discovered in the Linux kernel's fragment handling code, affecting kernel versions dating back to 2017. The flaw allows local attackers to escalate privileges to root on affected systems, including all major Linux distributions. Proof-of-concept exploit code has already been released publicly, and security teams are urged to apply kernel patches immediately.
 
-- 據 安全研究人員 報導，此為當日重大安全事件。
-
-🔗 **參考資料：** [詳情](https://krebsonsecurity.com/2026/05/canvas-breach-disrupts-schools-colleges-nationwide/)
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/)
 
 ## 本週活躍威脅
 
-📌 **PCPJack Credential Stealer Exploits 5 CVEs to Spread Worm**
+📌 **Ivanti EPMM Critical RCE (CVE-2026-6973) Under Active Exploitation**
 
-據 Like Across Cloud Systems 報導，此新興安全威脅需要企業資安團隊關注。
+A critical remote code execution vulnerability in Ivanti's Enterprise Performance Management Platform (EPMM) is being actively exploited in the wild. The flaw allows unauthenticated attackers to execute arbitrary commands on vulnerable servers. CISA has added this to its KEV catalog.
 
-🔗 **Reference:** [Like Across Cloud Systems](https://thehackernews.com/2026/05/pcpjack-credential-stealer-exploits-5.html)
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973.html)
 
-📌 **After Replacing TeamPCP Malware, 'PCPJack' Steals Cloud Secrets**
+📌 **Canvas Breach Disrupts Schools & Colleges Across the US**
 
-此新興安全威脅需要企業資安團隊關注。
+The Instructure Canvas breach, claimed by ShinyHunters, has caused widespread disruption across educational institutions nationwide. The breach exposed student records, academic data, and administrative credentials, with many schools forced to temporarily suspend Canvas operations and move to backup systems.
 
-🔗 **Reference:** [詳情](https://www.darkreading.com/cloud-security/teampcp-malware-pcpjack-steals-cloud-secrets)
+🔗 **Reference:** [Krebs on Security](https://krebsonsecurity.com/2026/05/canvas-breach-disrupts-schools-colleges-nationwide/)
 
-📌 **駭客架設假Claude網站散布惡意軟體Beagle**
+📌 **PCPJack Credential Stealer Exploits 5 CVEs to Worm-Like Spread Across Cloud Systems**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+The PCPJack credential stealer malware exploits five different CVEs to spread like a worm across cloud environments. The malware targets cloud service credentials including AWS, Azure, and GCP access keys, using them for lateral movement between cloud accounts.
 
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/pcpjack-credential-stealer.html)
 
-📌 **思科網路管理平臺存在阻斷服務漏洞，IT人員需手動重開機才能恢復運作**
+📌 **Mozilla Firefox 150.0.2 Patches 3 High-Risk Vulnerabilities**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+Mozilla has released Firefox 150.0.2 addressing three high-risk security vulnerabilities. The flaws could allow arbitrary code execution. Users are strongly advised to update immediately.
 
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/)
 
-📌 **Ivanti EPMM CVE**
+📌 **Google Android Apps Get Public Verification to Stop Supply Chain Attacks**
 
-據 2026-6973 RCE Under Active Exploitation Grants Admin-Level Access 報導，此新興安全威脅需要企業資安團隊關注。
+Google has introduced public cryptographic verification for Android APK files, allowing users and developers to verify app integrity before installation. The feature aims to prevent supply chain attacks where legitimate apps are repackaged with malware.
 
-🔗 **Reference:** [2026-6973 RCE Under Active Exploitation Grants Admin-Level Access](https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973-rce-under.html)
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/android-apps-get-public-verification.html)
 
-📌 **Ivanti修補裝置管理平臺EPMM已遭利用的高風險漏洞**
+📌 **Anthropic Claude Chrome Extension Flaw Could Leak OAuth Credentials**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+Security researchers identified a design flaw in Anthropic's Claude Code MCP integration that could allow malicious MCP servers to hijack Claude and steal OAuth credentials. Anthropic has released a fix within hours of disclosure.
 
-
-📌 **Anthropic releases fix for severe Claude Chrome extension flaw**
-
-據 researcher hacks patch in 3 hours - Cybernews 報導，此新興安全威脅需要企業資安團隊關注。
-
-
-📌 **Linux核心再現本機提權漏洞，發行版修補前攻擊程式已流出**
-
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
-
-
-## 其他安全事件
-
-- **資安營運**
-- **駭客發動長達5小時慢而低調的DDoS攻擊以規避偵測**
-- **駭客濫用Anthropic與OpenAI的模型攻擊墨西哥水力及排水系統**
-- **國安局指出高德地圖存在資安問題，使用者通話及個資會回傳中國**
-- **Anthropic Claude Code設計問題，可被MCP劫持竊取OAuth憑證**
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/)
