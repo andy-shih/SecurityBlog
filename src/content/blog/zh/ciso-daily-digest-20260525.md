@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：軟體供應鏈攻擊頻傳 (2026-05-25)"
+title: "CISO Daily Digest: Drupal SQL 注入漏洞遭 CISA 確認已遭實際利用 (20260525)"
 description: "2026-05-25 每日資安摘要，涵蓋當日最重大的威脅、漏洞與資安產業發展。"
 pubDate: 2026-05-25
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]
