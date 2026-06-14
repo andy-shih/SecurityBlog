@@ -70,7 +70,7 @@ ShinyHunters exploited an Oracle zero-day to compromise higher education institu
 
 ---
 
-## What OPSWAT can do
+## How Can OPSWAT Help
 
 **Supply chain threat prevention (AUR packages, backdoored binaries):** OPSWAT MetaDefender's multi-engine scanning (30+ antivirus engines) and Content Disarm and Reconstruction (CDR) can inspect downloaded packages and binaries before they reach enterprise systems. For organizations concerned about malicious files entering through CI/CD pipelines, developer workstations, or package registries, MetaDefender can be deployed as a file verification gate—stripping active threats from files while preserving their usability. This applies to any software package ecosystem, not just AUR.
 
