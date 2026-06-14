@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：微軟 SharePoint RCE、Universal Robots 工控漏洞、 (t-20260526)"
+title: "CISO 每日摘要：微軟 SharePoint RCE、Universal Robots 工控漏洞、CERT-In 強制 (t-20260526)"
 description: "2026-05-26 每日資安新聞摘要"
 pubDate: 2026-05-26
 tags: ["CISO", "資訊安全", "威脅情資"]
