@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: CISA Warns of Palo Alto GlobalProtect Vulnerability (-20260601)"
+title: "CISO Daily Digest: CISA Warns of Palo Alto GlobalProtect Vulnerability (20260601)"
 description: "Key cybersecurity events and threats as of June 01, 2026"
 pubDate: 2026-06-01
 tags: ["CISO", "Daily Digest", "Cybersecurity", "Threat Intelligence"]
