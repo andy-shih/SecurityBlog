@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：VECT 2.0 Ransomware Irreversibly Destroy (t-20260428)"
+title: "CISO 每日摘要：VECT 2.0 Ransomware Irreversibly Destroys Files Ov (t-20260428)"
 description: "每日資安重點事件與威脅摘要 — 2026-04-28"
 pubDate: 2026-04-28
 tags: ["CISO", "資安", "每日摘要", "威脅情資"]
