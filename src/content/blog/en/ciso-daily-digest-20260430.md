@@ -85,7 +85,7 @@ This PyPI package compromise affects a package with 1M+ monthly downloads. Verif
 
 ---
 
-## What OPSWAT can do
+## How Can OPSWAT Help
 
 **Supply chain threat prevention:** OPSWAT MetaDefender's multi-engine scanning (30+ AV engines) and Content Disarm and Reconstruction (CDR) can inspect downloaded packages and binaries before they reach enterprise systems—stripping active threats while preserving usability.
 
