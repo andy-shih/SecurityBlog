@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：資料外洩事件 (20260426)"
+title: "CISO 每日摘要：Anthropic’s ‘Too Dangerous To Release’ M (t-20260426)"
 description: "每日資安重點事件與威脅摘要 — 2026-04-26"
 pubDate: 2026-04-26
 tags: ["CISO", "資安", "每日摘要", "威脅情資"]
