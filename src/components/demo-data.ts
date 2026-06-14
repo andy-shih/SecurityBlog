@@ -48,7 +48,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: 'PDF 內含惡意超連結，將使用者導向憑證竊取頁面。MetaDefender 提取並分析文件中所有 URI。',
     category: 'pdf', difficulty: 'beginner', platforms: ['windows', 'linux', 'macos'], file_types: ['pdf'],
     attack_technique: 'PDF URI Manipulation', mitre_attack_id: 'T1566.002',
-    metadefender_capabilities: ['PDF Analysis', 'Threat Intelligence'],
+    metadefender_capabilities: ['Deep CDR', 'Threat Intelligence', 'Multiscanning'],
     estimated_duration: '5 minutes', status: 'published', download_url: '', github_url: '', created: '2026-06-03',
   },
   {
@@ -57,7 +57,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: '攻擊者將惡意負載藏於巢狀 ZIP 壓縮檔中，繞過平面掃描。MetaDefender 遞迴解壓並掃描每一層。',
     category: 'archive', difficulty: 'beginner', platforms: ['windows', 'linux', 'macos'], file_types: ['zip', 'rar', '7z'],
     attack_technique: 'Archive Nesting', mitre_attack_id: 'T1027',
-    metadefender_capabilities: ['Archive Extraction', 'Deep CDR'],
+    metadefender_capabilities: ['Archive Extraction', 'Multiscanning'],
     estimated_duration: '5 minutes', status: 'published', download_url: '', github_url: '', created: '2026-06-04',
   },
   {
@@ -66,7 +66,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: 'Windows 捷徑檔挾帶特製命令列參數，點選時執行惡意負載。MetaDefender 檢查 LNK 目標路徑與參數。',
     category: 'lnk', difficulty: 'intermediate', platforms: ['windows'], file_types: ['lnk'],
     attack_technique: 'LNK File Execution', mitre_attack_id: 'T1204.001',
-    metadefender_capabilities: ['LNK Analysis', 'Deep CDR'],
+    metadefender_capabilities: ['Deep CDR', 'Multiscanning'],
     estimated_duration: '7 minutes', status: 'published', download_url: '', github_url: '', created: '2026-06-05',
   },
   {
@@ -75,7 +75,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: 'SVG 向量圖檔內嵌 JavaScript，渲染時自動執行。MetaDefender 偵測並淨化內嵌腳本。',
     category: 'script', difficulty: 'intermediate', platforms: ['windows', 'linux', 'macos'], file_types: ['svg'],
     attack_technique: 'XML Injection via SVG', mitre_attack_id: 'T1059.007',
-    metadefender_capabilities: ['Deep CDR', 'Threat Intelligence'],
+    metadefender_capabilities: ['Deep CDR', 'Multiscanning'],
     estimated_duration: '8 minutes', status: 'published', download_url: '', github_url: '', created: '2026-06-06',
   },
   {
@@ -84,7 +84,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: '惡意軟體包裝在 ISO 映像檔中，繞過 Mark-of-the-Web 保護機制。MetaDefender 在掛載前即提取並掃描 ISO 內容。',
     category: 'container', difficulty: 'intermediate', platforms: ['windows'], file_types: ['iso'],
     attack_technique: 'ISO Mount Bypass', mitre_attack_id: 'T1553.005',
-    metadefender_capabilities: ['Deep CDR', 'Sandbox'],
+    metadefender_capabilities: ['Archive Extraction', 'Sandbox', 'Multiscanning'],
     estimated_duration: '10 minutes', status: 'published', download_url: '', github_url: '', created: '2026-06-07',
   },
   {
@@ -93,7 +93,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: 'PDF 內嵌 JavaScript，開啟時自動執行。MetaDefender 的 PDF 解析器提取並分析所有內嵌腳本。',
     category: 'script', difficulty: 'intermediate', platforms: ['windows', 'linux', 'macos'], file_types: ['pdf'],
     attack_technique: 'Embedded Script in PDF', mitre_attack_id: 'T1218.001',
-    metadefender_capabilities: ['PDF Analysis', 'Deep CDR', 'Sandbox'],
+    metadefender_capabilities: ['Deep CDR', 'Sandbox', 'Multiscanning'],
     estimated_duration: '10 minutes', status: 'published', download_url: '', github_url: '', created: '2026-06-08',
   },
   {
@@ -120,7 +120,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: '惡意軟體藏在 10 層巢狀壓縮檔中，繞過解壓縮深度限制。MetaDefender 深度存檔掃描提取所有層級。',
     category: 'archive', difficulty: 'advanced', platforms: ['windows', 'linux'], file_types: ['zip', 'gz', 'bz2', 'tar'],
     attack_technique: 'Deep Archive Nesting', mitre_attack_id: 'T1027',
-    metadefender_capabilities: ['Archive Extraction'],
+    metadefender_capabilities: ['Archive Extraction', 'Multiscanning'],
     estimated_duration: '20 minutes', status: 'coming_soon', download_url: '', github_url: '', created: '2026-06-11',
   },
   {
@@ -129,7 +129,7 @@ export const demos: DemoEntry[] = [
     descriptionZh: 'Office 文件內嵌 OLE 物件，連結遠端惡意內容。MetaDefender 拆解 OLE 結構並封鎖遠端連線。',
     category: 'macro', difficulty: 'advanced', platforms: ['windows'], file_types: ['doc', 'docx', 'xls', 'ppt'],
     attack_technique: 'OLE Object Linking', mitre_attack_id: 'T1027.002',
-    metadefender_capabilities: ['OLE Analysis', 'Deep CDR', 'Sandbox'],
+    metadefender_capabilities: ['Deep CDR', 'Sandbox', 'Multiscanning'],
     estimated_duration: '15 minutes', status: 'coming_soon', download_url: '', github_url: '', created: '2026-06-12',
   },
 ];
