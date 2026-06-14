@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Anthropic Fable 5 禁令與企業 AI 風險管理"
+title: "CISO 每日摘要：Anthropic Fable 5 禁令與企業 AI 風險管理 (20260613)"
 description: "美國政府下令全球關閉 Claude Fable 5 與 Mythos 5 對第三方 AI 風險、供應鏈安全及 CISO 治理的衝擊。同場加映：Splunk 零日漏洞、AUR 供應鏈攻擊、中國 APT 後門活動。"
 pubDate: 2026-06-13
 tags: ["AI 治理", "供應鏈安全", "供應商風險", "地緣政治", "Anthropic", "Splunk", "威脅情資"]
