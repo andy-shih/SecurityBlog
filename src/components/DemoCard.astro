@@ -1,5 +1,5 @@
 ---
-import { getCategoryLabel, difficultyClass } from './demo-data';
+import { categoryLabels } from './demo-data';
 import type { DemoEntry } from './demo-data';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 const { demo, lang } = Astro.props;
 const title = lang === 'zh' ? demo.titleZh : demo.title;
 const desc = lang === 'zh' ? demo.descriptionZh : demo.description;
-const cat = getCategoryLabel(demo.category, lang);
+const cat = categoryLabels[demo.category]?.[lang] ?? demo.category;
 const href = `/${lang}/demos/${demo.id}/`;
 ---
 
@@ -34,7 +34,7 @@ const href = `/${lang}/demos/${demo.id}/`;
     {(demo.platforms.slice(0, 3)).map((p: string) => (
       <span class="rounded-md border border-white/5 bg-white/[0.02] px-2 py-0.5 font-mono text-xs text-slate-500">{p}</span>
     ))}
-    <span class={`ml-auto rounded-md px-2 py-0.5 font-mono text-xs ${difficultyClass(demo.difficulty)}`}>
+    <span class={`ml-auto rounded-md px-2 py-0.5 font-mono text-xs ${demo.difficulty === 'beginner' ? 'text-emerald-200 border-emerald-300/20 bg-emerald-300/[0.08]' : demo.difficulty === 'intermediate' ? 'text-amber-200 border-amber-300/20 bg-amber-300/[0.08]' : 'text-rose-200 border-rose-300/20 bg-rose-300/[0.08]'}`}>
       {demo.difficulty}
     </span>
   </div>
