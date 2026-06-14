@@ -7,83 +7,92 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-## Feuding Ransomware Groups Leak Each Other's Data
-
-Security researchers have reported a significant cybersecurity incident involving **Feuding Ransomware Groups Leak Each Other's Data**.
+This ransomware or wiper variant poses a significant threat to enterprise data integrity. Organizations should ensure offline backups and updated EDR signatures.
 
 **Event Context:**
 
-- Claude AI Agent Confesses to Wiping a Company's Entire Database and All Backups in Seconds
-- Брандмауэр Cisco в федеральном ведомстве в США был заражен бэкдором Firestarter
-- ‘It took nine seconds’: Claude AI agent deletes company’s entire database
-- Claude Mythos Preview and the new rules of cybersecurity
+- Feuding Ransomware Groups Leak Each Other's Data
+- 勒索軟體VECT 2.0加密檔案出錯，受害者付錢也無法完全復原檔案
+- Lotus Wiper Attack Targeted Venezuelan Energy Firms, Utilities
+- Вымогатель VECT 2.0 уничтожает файлы, размер которых превышает 128 Кб
+- Lotus Wiper Attack Targets Venezuelan Energy Firms, Utilities
 
-This event underscores the evolving threat landscape where attackers continuously adapt their techniques. Organizations are advised to review their security posture and ensure adequate defenses are in place.
+Organizations should review the relevant security advisories and ensure their defenses are updated accordingly.
 
-🔗 **Reference:** [Source](https://xakep.ru/2026/04/28/firestarter/)
+🔗 **Reference:** [Source](https://www.darkreading.com/threat-intelligence/feuding-ransomware-groups-leak-data)
 
 ---
 
 ## Active threats this week
 
-📌 **Брандмауэр Cisco в федеральном ведомстве в США был заражен бэкдором Firestarter**
+📌 **勒索軟體VECT 2.0加密檔案出錯，受害者付錢也無法完全復原檔案**
 
-Organizations should monitor for related activity and apply relevant security updates.
+This ransomware or wiper variant poses a significant threat to enterprise data integrity. Organizations should ensure offline backups and updated EDR signatures.
 
-🔗 **Reference:** [Source](https://xakep.ru/2026/04/28/firestarter/)
+📌 **Lotus Wiper Attack Targeted Venezuelan Energy Firms, Utilities**
 
-📌 **‘It took nine seconds’: Claude AI agent deletes company’s entire database**
+This ransomware or wiper variant poses a significant threat to enterprise data integrity. Organizations should ensure offline backups and updated EDR signatures.
 
-This data breach exposes sensitive information. Organizations should assess exposure risk, rotate affected credentials, and monitor for fraudulent activity.
+🔗 **Reference:** [Source](https://www.darkreading.com/cyber-risk/lotus-wiper-attack-targeted-venezuelan-energy-firms-utilities)
 
-📌 **Claude Mythos Preview and the new rules of cybersecurity**
+📌 **Вымогатель VECT 2.0 уничтожает файлы, размер которых превышает 128 Кб**
 
-Organizations should monitor for related activity and apply relevant security updates.
+This ransomware or wiper variant poses a significant threat to enterprise data integrity. Organizations should ensure offline backups and updated EDR signatures.
 
-📌 **I used Claude’s new Dispatch feature for a month. Here’s everything I was able to do**
+🔗 **Reference:** [Source](https://xakep.ru/2026/04/29/vect-bug/)
 
-Organizations should monitor for related activity and apply relevant security updates.
+📌 **Lotus Wiper Attack Targets Venezuelan Energy Firms, Utilities**
+
+This ransomware or wiper variant poses a significant threat to enterprise data integrity. Organizations should ensure offline backups and updated EDR signatures.
+
+🔗 **Reference:** [Source](https://www.darkreading.com/cyber-risk/lotus-wiper-attack-targeted-venezuelan-energy-firms-utilities)
 
 📌 **Fresh Wave of GlassWorm VS Code Extensions Slices Through Supply Chain**
 
-This supply chain attack targets widely-used software packages. Organizations should inventory affected packages, verify integrity of deployed versions, and implement package verification controls in CI/CD pipelines.
+This campaign targets VS Code extensions in the software supply chain. Developers should audit installed extensions and verify publisher identities.
 
 🔗 **Reference:** [Source](https://www.darkreading.com/application-security/fresh-glassworm-vs-code-extensions-supply-chain)
 
-📌 **安碁資訊資安小講堂將於資安大會登場，歡迎參加**
-
-Organizations should monitor for related activity and apply relevant security updates.
-
-📌 **Fortinet 2026年網頁應用程式安全報告： AI加速應用程式威脅演進，過半數組織API淪為資安盲點**
-
-Organizations should monitor for related activity and apply relevant security updates.
-
-📌 **HPE Storage三大核心力，重塑虛擬化、資安與AI數據新格局**
-
-Organizations should monitor for related activity and apply relevant security updates.
-
-📌 **Okta、奧登資訊深耕航空資安，台灣虎航啟動零信任身分治理**
-
-Organizations should monitor for related activity and apply relevant security updates.
-
-📌 **Vidar Rises to Top of Chaotic Infostealer Market**
-
-Organizations should monitor for related activity and apply relevant security updates.
-
-🔗 **Reference:** [Source](https://www.darkreading.com/vulnerabilities-threats/vidar-top-chaotic-infostealer-market)
-
 📌 **Researchers Discover Critical GitHub CVE-2026-3854 RCE Flaw Exploitable via Single Git Push**
 
-This critical vulnerability requires immediate patching. Inventory affected systems and prioritize remediation based on exploitability and asset criticality.
+This vulnerability requires assessment and prioritization. Identify affected systems and apply patches or compensating controls.
 
 🔗 **Reference:** [Source](https://thehackernews.com/2026/04/researchers-discover-critical-github.html)
+
+📌 **Critical cPanel Authentication Vulnerability Identified — Update Your Server Immediately**
+
+This critical authentication bypass in cPanel could allow host server takeover. Immediate patching recommended.
+
+🔗 **Reference:** [Source](https://thehackernews.com/2026/04/critical-cpanel-authentication.html)
+
+📌 **Anthropic AI: Mythos Crosses the AI Security Threshold**
+
+This incident involving Anthropic's Claude Mythos model raises concerns about AI model security and unauthorized access to restricted systems.
+
+📌 **影音串流平臺Vimeo遭Anodot資料外洩事件波及，部分用戶與客戶資料遭未經授權存取**
+
+This data exposure potentially compromises sensitive information. Assess exposure risk and implement remediation.
+
+📌 **CISA Adds Actively Exploited ConnectWise and Windows Flaws to KEV**
+
+CISA warns of active exploitation of ConnectWise ScreenConnect and Windows Shell vulnerabilities. Apply patches immediately.
+
+🔗 **Reference:** [Source](https://thehackernews.com/2026/04/cisa-adds-actively-exploited.html)
+
+📌 **‘It took nine seconds’: Claude AI agent deletes company’s entire database**
+
+This incident highlights risks of AI coding agents with elevated permissions. Implement strict access controls and human-in-the-loop verification for AI development tools.
+
+📌 **Anthropic Claude wipes company database in 9 seconds**
+
+This incident highlights risks of AI coding agents with elevated permissions. Implement strict access controls and human-in-the-loop verification for AI development tools.
 
 ---
 
 ## What OPSWAT can do
 
-**Supply chain threat prevention:** OPSWAT MetaDefender's multi-engine scanning (30+ antivirus engines) and Content Disarm and Reconstruction (CDR) can inspect downloaded packages and binaries before they reach enterprise systems. For organizations concerned about malicious files entering through CI/CD pipelines, developer workstations, or package registries, MetaDefender can be deployed as a file verification gate—stripping active threats from files while preserving their usability.
+**Supply chain threat prevention:** OPSWAT MetaDefender's multi-engine scanning (30+ AV engines) and Content Disarm and Reconstruction (CDR) can inspect downloaded packages and binaries before they reach enterprise systems—stripping active threats while preserving usability.
 
 
 
-**Malware and ransomware defense:** OPSWAT's Deep CDR technology removes active content from files, neutralizing embedded threats including zero-day exploits. Combined with multi-engine scanning, this provides defense-in-depth against both known and unknown malware variants.
+**Malware and ransomware defense:** OPSWAT's Deep CDR removes active content from files, neutralizing embedded threats including zero-day exploits. Combined with multi-engine scanning, this provides defense-in-depth against known and unknown malware.
