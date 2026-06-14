@@ -1,79 +1,189 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
-import type { DemoEntry } from '@/components/demo-types';
-import { demos, demoCategories, demoCapabilities } from '@/components/demo-data';
-import { getCategoryLabel } from '@/components/demo-types';
-import DemoCard from '@/components/DemoCard.astro';
+import type { DemoEntry } from '@/components/demo-data';
+import { demos, categoryLabels } from '@/components/demo-data';
 import type { Lang } from '@/i18n';
 import { ui } from '@/i18n';
 
 interface Props {
   lang: Lang;
-  demos: DemoEntry[];
 }
 
 const { lang } = Astro.props;
 const t = ui[lang];
 
-const published = demos.filter((d: DemoEntry) => d.status === 'published');
+const published = demos.filter((d) => d.status === 'published');
+// Sort by created date descending
+published.sort((a, b) => b.created.localeCompare(a.created));
 
 const pageTitle = lang === 'zh' ? '攻防示範資料庫' : 'Attack Demo Library';
 const pageDesc = lang === 'zh'
   ? 'OPSWAT MetaDefender 攻防示範：實際攻擊手法與 MetaDefender 防護能力展示'
   : 'Hands-on attack demonstrations mapped to OPSWAT MetaDefender capabilities.';
+
+const diffLabel: Record<string, string> = {
+  beginner: 'Beginner',
+  intermediate: 'Intermediate',
+  advanced: 'Advanced',
+};
+const diffLabelZh: Record<string, string> = {
+  beginner: '初級',
+  intermediate: '中級',
+  advanced: '進階',
+};
 ---
 
 <BaseLayout title={pageTitle} description={pageDesc} lang={lang} currentPath="/demos/">
   <section class="px-5 py-14">
     <div class="mx-auto max-w-6xl">
-      <div class="mb-8">
+      <!-- Header -->
+      <div class="mb-6">
         <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{t.demosSection}</p>
         <h1 class="mt-3 text-3xl font-bold text-white">{pageTitle}</h1>
-        <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-300">{pageDesc}</p>
+        <p class="mt-3 max-w-3xl text-base leading-7 text-slate-400">{pageDesc}</p>
       </div>
 
-      <div class="mb-8 grid gap-3 sm:grid-cols-3">
-        <div class="hud-panel rounded-lg p-4">
-          <p class="font-mono text-2xl font-bold text-white">{published.length}</p>
-          <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? '已發布示範' : 'Published Demos'}</p>
-        </div>
-        <div class="hud-panel rounded-lg p-4">
-          <p class="font-mono text-2xl font-bold text-white">{demoCategories.length}</p>
-          <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? '攻擊類別' : 'Attack Categories'}</p>
-        </div>
-        <div class="hud-panel rounded-lg p-4">
-          <p class="font-mono text-2xl font-bold text-white">{demoCapabilities.length}</p>
-          <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? 'MetaDefender 防護能力' : 'MetaDefender Capabilities'}</p>
-        </div>
+      <!-- Stats row -->
+      <div class="mb-6 flex flex-wrap gap-4 text-sm text-slate-400">
+        <span class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5">
+          {lang === 'zh' ? '已發布' : 'Published'}: <strong class="text-white">{published.length}</strong>
+        </span>
+        <span class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5">
+          {lang === 'zh' ? '類別' : 'Categories'}: <strong class="text-white">{categoryLabels.size}</strong>
+        </span>
       </div>
 
-      <div class="mb-6 flex flex-wrap gap-2">
-        <a
-          href={`/${lang}/demos/`}
-          class="rounded-md border border-sky-300/20 bg-sky-300/[0.08] px-3 py-1.5 font-mono text-xs text-sky-200"
+      <!-- Search + Filter -->
+      <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <input
+          type="search"
+          id="demo-search"
+          placeholder={lang === 'zh' ? '搜尋攻擊手法、描述、能力...' : 'Search attack name, description, capability...'}
+          class="flex-1 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-sky-300/40"
+          oninput="filterDemos()"
+        />
+        <select
+          id="category-filter"
+          class="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-slate-300 outline-none transition focus:border-sky-300/40"
+          onchange="filterDemos()"
         >
-          {lang === 'zh' ? '全部' : 'All'}
-        </a>
-        {demoCategories.map((cat: string) => (
-          <a
-            href={`/${lang}/demos/?category=${cat}`}
-            class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-xs text-slate-300 transition hover:border-sky-300/30 hover:text-white"
-          >
-            {getCategoryLabel(cat, lang)}
-          </a>
-        ))}
+          <option value="">{lang === 'zh' ? '全部分類' : 'All Categories'}</option>
+          {[...categoryLabels.entries()].sort().map(([key, labels]) => (
+            <option value={key}>{labels[lang]}</option>
+          ))}
+        </select>
       </div>
 
-      {published.length > 0 ? (
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {published.map((demo: DemoEntry) => <DemoCard demo={demo} lang={lang} />)}
-        </div>
-      ) : (
-        <div class="hud-panel rounded-lg p-10 text-center">
-          <p class="text-slate-400">{lang === 'zh' ? '尚無可用示範' : 'No demos available yet.'}</p>
-        </div>
-      )}
+      <!-- Table -->
+      <div class="overflow-x-auto rounded-lg border border-white/10">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10 bg-white/[0.03] font-mono text-xs uppercase tracking-[0.12em] text-slate-400">
+              <th class="px-4 py-3 font-normal">{lang === 'zh' ? '日期' : 'Date'}</th>
+              <th class="px-4 py-3 font-normal">{lang === 'zh' ? '標題' : 'Title'}</th>
+              <th class="hidden px-4 py-3 font-normal md:table-cell">{lang === 'zh' ? '敘述' : 'Description'}</th>
+              <th class="px-4 py-3 font-normal">{lang === 'zh' ? 'OS' : 'OS'}</th>
+              <th class="px-4 py-3 font-normal">{lang === 'zh' ? '攻擊類型' : 'Type'}</th>
+              <th class="hidden px-4 py-3 font-normal lg:table-cell">{lang === 'zh' ? 'MetaDefender 功能' : 'MetaDefender'}</th>
+            </tr>
+          </thead>
+          <tbody id="demo-table-body">
+            {published.map((demo) => {
+              const title = lang === 'zh' ? demo.titleZh : demo.title;
+              const desc = lang === 'zh' ? demo.descriptionZh : demo.description;
+              const cat = categoryLabels[demo.category]?.[lang] ?? demo.category;
+              const diff = lang === 'zh' ? diffLabelZh[demo.difficulty] : diffLabel[demo.difficulty];
+              const rowClass = demo.status === 'coming_soon' ? 'opacity-50' : '';
+              const href = `/${lang}/demos/${demo.id}/`;
+              return (
+                <tr
+                  class={`${rowClass} demo-row border-b border-white/5 transition hover:bg-white/[0.02]`}
+                  data-name={title.toLowerCase()}
+                  data-desc={desc.toLowerCase()}
+                  data-category={demo.category}
+                  data-capabilities={demo.metadefender_capabilities.join(' ').toLowerCase()}
+                >
+                  <td class="whitespace-nowrap px-4 py-3 font-mono text-xs text-slate-500">
+                    {demo.created}
+                  </td>
+                  <td class="px-4 py-3">
+                    <a href={href} class="font-semibold text-white hover:text-sky-100">
+                      {title}
+                    </a>
+                  </td>
+                  <td class="hidden max-w-xs truncate px-4 py-3 text-slate-400 md:table-cell">
+                    {desc}
+                  </td>
+                  <td class="whitespace-nowrap px-4 py-3">
+                    <div class="flex flex-wrap gap-1">
+                      {demo.platforms.slice(0, 3).map((p: string) => (
+                        <span class="rounded border border-white/5 bg-white/[0.02] px-1.5 py-0.5 font-mono text-[11px] text-slate-500">{p}</span>
+                      ))}
+                    </div>
+                  </td>
+                  <td class="px-4 py-3">
+                    <span class="rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[11px] text-sky-200 whitespace-nowrap">
+                      {cat}
+                    </span>
+                    <span class={`ml-1 rounded-md px-1.5 py-0.5 font-mono text-[11px] ${
+                      demo.difficulty === 'beginner' ? 'text-emerald-200 bg-emerald-300/[0.08] border-emerald-300/20' :
+                      demo.difficulty === 'intermediate' ? 'text-amber-200 bg-amber-300/[0.08] border-amber-300/20' :
+                      'text-rose-200 bg-rose-300/[0.08] border-rose-300/20'
+                    }`}>
+                      {diff}
+                    </span>
+                  </td>
+                  <td class="hidden max-w-[200px] px-4 py-3 lg:table-cell">
+                    <div class="flex flex-wrap gap-1">
+                      {demo.metadefender_capabilities.slice(0, 3).map((cap: string) => (
+                        <span class="rounded border border-emerald-300/15 bg-emerald-300/[0.05] px-1.5 py-0.5 font-mono text-[11px] text-emerald-200/80">{cap}</span>
+                      ))}
+                      {demo.metadefender_capabilities.length > 3 && (
+                        <span class="text-[11px] text-slate-500">+{demo.metadefender_capabilities.length - 3}</span>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty state -->
+      <p id="demo-empty" class="mt-6 hidden text-center text-sm text-slate-500">
+        {lang === 'zh' ? '找不到符合條件的示範。' : 'No matching demos found.'}
+      </p>
     </div>
   </section>
+
+  <script>
+    function filterDemos() {
+      const search = (document.getElementById('demo-search') as HTMLInputElement).value.toLowerCase().trim();
+      const category = (document.getElementById('category-filter') as HTMLSelectElement).value;
+      const rows = document.querySelectorAll<HTMLElement>('.demo-row');
+      let visible = 0;
+
+      rows.forEach((row) => {
+        const name = row.dataset.name || '';
+        const desc = row.dataset.desc || '';
+        const rowCat = row.dataset.category || '';
+        const rowCap = row.dataset.capabilities || '';
+
+        const matchSearch = !search || name.includes(search) || desc.includes(search) || rowCap.includes(search);
+        const matchCat = !category || rowCat === category;
+
+        if (matchSearch && matchCat) {
+          row.style.display = '';
+          visible++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      const empty = document.getElementById('demo-empty')!;
+      empty.classList.toggle('hidden', visible > 0);
+    }
+  </script>
 </BaseLayout>
 ---

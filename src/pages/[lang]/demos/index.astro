@@ -1,7 +1,6 @@
 ---
 import DemoCatalog from '@/components/DemoCatalog.astro';
 import type { Lang } from '@/i18n';
-import { demos } from '@/components/demo-data';
 
 export async function getStaticPaths() {
   const langs: Lang[] = ['en', 'zh'];
@@ -13,5 +12,5 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.props as { lang: Lang };
 ---
-<DemoCatalog lang={lang} demos={demos} />
+<DemoCatalog lang={lang} />
 ---
