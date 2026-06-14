@@ -34,7 +34,7 @@ export const profile = {
     },
     {
       period: '2024.10 - 2026.01',
-      role: 'Technical Account Manager/ Customer Success Manager',
+      role: 'Technical Account Manager',
       company: 'OPSWAT',
       summary: 'Owned technical customer success, account health, adoption guidance, escalations, and long-term security outcome alignment.'
     },
