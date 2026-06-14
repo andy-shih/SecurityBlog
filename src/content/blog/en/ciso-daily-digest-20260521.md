@@ -56,6 +56,6 @@ This supply chain attack targets the open-source ecosystem, compromising package
 
 🔗 **Reference:** [Zyxel推出「生成式AI 防護解決方案」，協助企業應對影子 AI資安風險 - iThome](https://news.google.com/rss/articles/CBMiS0FVX3lxTE9KbFljcVRGdmJDTkNGekJYYmxXcS1pWTlyX2xXcU4yUWpZU0RVRmkyWWY3ajA4ZUdOa1BBSkRMVkFtZjhfSm82NXdHVQ?oc=5)
 
-## What OPSWAT Can Do
+## How Can OPSWAT Help
 
 OPSWAT MetaDefender provides **multi-engine malware detection** with over **30 anti-malware engines** and **Deep Content Disarm and Reconstruction (CDR)** technology, protecting OT/ICS environments from zero-day threats and targeted attacks. Organizations can deploy MetaDefender to prevent malicious files from reaching critical infrastructure, supporting compliance with **NIST**, **IEC 62443**, and other regulatory frameworks.
