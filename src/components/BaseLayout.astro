@@ -40,8 +40,8 @@ const t = ui[lang];
         <div class="flex items-center gap-1 text-xs text-slate-300 sm:gap-2 sm:text-sm">
           <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/`}>{t.navHome}</a>
           <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/blog/`}>{t.navBlog}</a>
-          <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/resume/`}>{t.navResume}</a>
           <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/demos/`}>{t.navDemos}</a>
+          <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/resume/`}>{t.navResume}</a>
           <span class="mx-0.5 h-5 w-px bg-white/10 sm:mx-1" aria-hidden="true"></span>
           <a class={`rounded-md px-2 py-2 font-mono text-xs ${lang === 'zh' ? 'bg-sky-300/15 text-sky-100' : 'hover:bg-white/[0.08] hover:text-white'}`} href={getLangPath('zh', currentPath)}>ZH</a>
           <a class={`rounded-md px-2 py-2 font-mono text-xs ${lang === 'en' ? 'bg-sky-300/15 text-sky-100' : 'hover:bg-white/[0.08] hover:text-white'}`} href={getLangPath('en', currentPath)}>EN</a>
