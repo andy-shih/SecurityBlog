@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
 import type { DemoEntry } from '@/components/demo-data';
-import { getCategoryLabel, difficultyClass } from '@/components/demo-data';
+import { categoryLabels } from '@/components/demo-data';
 import type { Lang } from '@/i18n';
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
 const { lang, demo } = Astro.props;
 const title = lang === 'zh' ? demo.titleZh : demo.title;
 const desc = lang === 'zh' ? demo.descriptionZh : demo.description;
-const cat = getCategoryLabel(demo.category, lang);
+const cat = categoryLabels[demo.category]?.[lang] ?? demo.category;
 const pageTitle = `${title} | ${lang === 'zh' ? '攻防示範' : 'Attack Demo'}`;
 const pageDesc = desc;
 ---
