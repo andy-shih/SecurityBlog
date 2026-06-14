@@ -76,6 +76,6 @@ A critical vulnerability in **LiteLLM**, an open-source LLM proxy, is being acti
 
 🔗 **Reference:** [xakep.ru](https://xakep.ru/2026/06/08/lockdown-mode-openai/)
 
-## OPSWAT Section
+## How Can OPSWAT Help
 
 The Miasma worm and Hades PyPI supply chain attacks underscore the growing risk of software supply chain compromise. OPSWAT MetaDefender's multi-engine scanning (aggregating **30+ anti-malware engines**) and **Content Disarm and Reconstruction (CDR)** technology can detect and block both known and unknown malware variants embedded in package dependencies and CI/CD pipelines, reducing exposure to supply chain-driven infections.
