@@ -7,83 +7,94 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-## Claude AI Agent Confesses to Wiping a Company's Entire Database and All Backups in Seconds
+## Feuding Ransomware Groups Leak Each Other's Data
 
-本日資安焦點為 **Claude AI Agent Confesses to Wiping a Company's Entire Database and All Backups in Seconds**。
+本日資安焦點為 **Feuding Ransomware Groups Leak Each Other's Data**。
 
 **事件脈絡：**
 
-- Claude AI Agent Confesses to Wiping a Company's Entire Database and All Backups in Seconds
-- Брандмауэр Cisco в федеральном ведомстве в США был заражен бэкдором Firestarter
-- ‘It took nine seconds’: Claude AI agent deletes company’s entire database
-- Claude Mythos Preview and the new rules of cybersecurity
+- Feuding Ransomware Groups Leak Each Other's Data
+- 勒索軟體VECT 2.0加密檔案出錯，受害者付錢也無法完全復原檔案
+- Lotus Wiper Attack Targeted Venezuelan Energy Firms, Utilities
+- Вымогатель VECT 2.0 уничтожает файлы, размер которых превышает 128 Кб
+- Lotus Wiper Attack Targets Venezuelan Energy Firms, Utilities
 
-建議企業組織立即檢視相關系統與防護措施，確保能夠應對此類威脅。
+企業組織應檢視相關安全公告，確保防護措施已更新至最新狀態。
 
-🔗 **參考資料：** 綜合報導（[來源](https://xakep.ru/2026/04/28/firestarter/)）
+🔗 **參考資料：** 綜合報導（[報導](https://www.darkreading.com/threat-intelligence/feuding-ransomware-groups-leak-data)）
 
 ---
 
 ## 本週活躍威脅
 
-📌 **Брандмауэр Cisco в федеральном ведомстве в США был заражен бэкдором Firestarter**
+📌 **勒索軟體VECT 2.0加密檔案出錯，受害者付錢也無法完全復原檔案**
 
-建議組織監控相關活動並套用適用的安全更新。
+此勒索軟體或資料破壞程式對企業資料完整性構成重大威脅。建議確保離線備份並更新端點檢測系統。
 
-🔗 **Reference:** [來源](https://xakep.ru/2026/04/28/firestarter/)
+📌 **Lotus Wiper Attack Targeted Venezuelan Energy Firms, Utilities**
 
-📌 **‘It took nine seconds’: Claude AI agent deletes company’s entire database**
+此勒索軟體或資料破壞程式對企業資料完整性構成重大威脅。建議確保離線備份並更新端點檢測系統。
 
-建議組織監控相關活動並套用適用的安全更新。
+🔗 **Reference:** [來源](https://www.darkreading.com/cyber-risk/lotus-wiper-attack-targeted-venezuelan-energy-firms-utilities)
 
-📌 **Claude Mythos Preview and the new rules of cybersecurity**
+📌 **Вымогатель VECT 2.0 уничтожает файлы, размер которых превышает 128 Кб**
 
-建議組織監控相關活動並套用適用的安全更新。
+此勒索軟體或資料破壞程式對企業資料完整性構成重大威脅。建議確保離線備份並更新端點檢測系統。
 
-📌 **I used Claude’s new Dispatch feature for a month. Here’s everything I was able to do**
+🔗 **Reference:** [來源](https://xakep.ru/2026/04/29/vect-bug/)
 
-建議組織監控相關活動並套用適用的安全更新。
+📌 **Lotus Wiper Attack Targets Venezuelan Energy Firms, Utilities**
+
+此勒索軟體或資料破壞程式對企業資料完整性構成重大威脅。建議確保離線備份並更新端點檢測系統。
+
+🔗 **Reference:** [來源](https://www.darkreading.com/cyber-risk/lotus-wiper-attack-targeted-venezuelan-energy-firms-utilities)
 
 📌 **Fresh Wave of GlassWorm VS Code Extensions Slices Through Supply Chain**
 
-此供應鏈攻擊鎖定廣泛使用的軟體套件。建議組織清查受影響套件，驗證已部署版本的完整性，並在 CI/CD 流程中實施套件驗證機制。
+此攻擊鎖定 VS Code 擴充功能。開發者應審核已安裝的擴充功能與發布者身分。
 
 🔗 **Reference:** [來源](https://www.darkreading.com/application-security/fresh-glassworm-vs-code-extensions-supply-chain)
 
-📌 **安碁資訊資安小講堂將於資安大會登場，歡迎參加**
-
-建議組織監控相關活動並套用適用的安全更新。
-
-📌 **Fortinet 2026年網頁應用程式安全報告： AI加速應用程式威脅演進，過半數組織API淪為資安盲點**
-
-建議組織監控相關活動並套用適用的安全更新。
-
-📌 **HPE Storage三大核心力，重塑虛擬化、資安與AI數據新格局**
-
-建議組織監控相關活動並套用適用的安全更新。
-
-📌 **Okta、奧登資訊深耕航空資安，台灣虎航啟動零信任身分治理**
-
-建議組織監控相關活動並套用適用的安全更新。
-
-📌 **Vidar Rises to Top of Chaotic Infostealer Market**
-
-建議組織監控相關活動並套用適用的安全更新。
-
-🔗 **Reference:** [來源](https://www.darkreading.com/vulnerabilities-threats/vidar-top-chaotic-infostealer-market)
-
 📌 **Researchers Discover Critical GitHub CVE-2026-3854 RCE Flaw Exploitable via Single Git Push**
 
-此重大漏洞需要立即修補。清查受影響系統，並根據可利用性和資產關鍵性優先處理。
+此漏洞需要評估和優先排序。找出受影響系統並依風險套用修補程式。
 
 🔗 **Reference:** [來源](https://thehackernews.com/2026/04/researchers-discover-critical-github.html)
+
+📌 **Critical cPanel Authentication Vulnerability Identified — Update Your Server Immediately**
+
+cPanel 重大身分驗證繞過漏洞可能導致主機遭接管。建議立即修補。
+
+🔗 **Reference:** [來源](https://thehackernews.com/2026/04/critical-cpanel-authentication.html)
+
+📌 **Anthropic AI: Mythos Crosses the AI Security Threshold**
+
+此事件涉及 Anthropic Claude Mythos 模型，引發 AI 模型安全性與未授權存取風險的關注。
+
+📌 **影音串流平臺Vimeo遭Anodot資料外洩事件波及，部分用戶與客戶資料遭未經授權存取**
+
+此資料外洩可能暴露敏感資訊。應評估曝險範圍並實施補救措施。
+
+📌 **CISA Adds Actively Exploited ConnectWise and Windows Flaws to KEV**
+
+CISA 警告 ConnectWise ScreenConnect 與 Windows Shell 漏洞正被積極利用。請立即修補。
+
+🔗 **Reference:** [來源](https://thehackernews.com/2026/04/cisa-adds-actively-exploited.html)
+
+📌 **‘It took nine seconds’: Claude AI agent deletes company’s entire database**
+
+此事件凸顯 AI 程式碼代理工具的高權限風險。建議實施嚴格的存取控制與人機協同驗證。
+
+📌 **Anthropic Claude wipes company database in 9 seconds**
+
+此事件凸顯 AI 程式碼代理工具的高權限風險。建議實施嚴格的存取控制與人機協同驗證。
 
 ---
 
 ## OPSWAT 能做什麼
 
-**供應鏈威脅防護：** OPSWAT MetaDefender 的多引擎掃描（30+ 防毒引擎）與內容清除重建（CDR）技術，可在下載套件和二進位檔進入企業系統前進行檢查。對於關注 CI/CD 流程、開發者工作站或套件註冊表惡意檔案風險的組織，MetaDefender 可部署為檔案驗證閘道。
+**供應鏈威脅防護：** OPSWAT MetaDefender 的多引擎掃描（30+ 防毒引擎）與 CDR 技術，可在下載套件進入企業系統前進行檢查。可部署為 CI/CD 流程的檔案驗證閘道。
 
 
 
-**惡意軟體與勒索軟體防禦：** OPSWAT 的 Deep CDR 技術可移除檔案中的動態內容，中和嵌入式威脅（包括零時差漏洞）。結合多引擎掃描，為已知和未知惡意軟體提供深度防禦。
+**惡意軟體與勒索軟體防禦：** OPSWAT Deep CDR 可移除檔案中的動態內容，中和嵌入式威脅（包括零時差漏洞），結合多引擎掃描提供深度防禦。
