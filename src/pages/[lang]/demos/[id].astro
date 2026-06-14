@@ -1,0 +1,23 @@
+---
+import DemoDetail from '@/components/DemoDetail.astro';
+import type { Lang } from '@/i18n';
+import { demos } from '@/components/demo-data';
+
+export async function getStaticPaths() {
+  const langs: Lang[] = ['en', 'zh'];
+  const paths = [];
+  for (const lang of langs) {
+    for (const demo of demos) {
+      paths.push({
+        params: { lang, id: demo.id },
+        props: { lang, demo },
+      });
+    }
+  }
+  return paths;
+}
+
+const { lang, demo } = Astro.props as { lang: Lang; demo: (typeof demos)[number] };
+---
+<DemoDetail lang={lang} demo={demo} />
+---

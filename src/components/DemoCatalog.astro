@@ -1,0 +1,84 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import type { DemoEntry } from '@/components/demo-types';
+import DemoCard from '@/components/DemoCard.astro';
+import { getCategoryLabel, difficultyClass } from '@/components/demo-types';
+import type { Lang } from '@/i18n';
+import { ui } from '@/i18n';
+
+interface Props {
+  lang: Lang;
+  demos: DemoEntry[];
+}
+
+const { lang, demos } = Astro.props;
+const t = ui[lang];
+
+const allCategories = [...new Set(demos.map((d) => d.category))];
+const allCapabilities = [...new Set(demos.flatMap((d) => d.metadefender_capabilities))];
+const allPlatforms = [...new Set(demos.flatMap((d) => d.platforms))];
+const published = demos.filter((d) => d.status === 'published');
+
+const pageTitle = lang === 'zh' ? '攻防示範資料庫' : 'Attack Demo Library';
+const pageDesc = lang === 'zh'
+  ? 'OPSWAT MetaDefender 攻防示範：實際攻擊手法與 MetaDefender 防護能力展示'
+  : 'Hands-on attack demonstrations mapped to OPSWAT MetaDefender capabilities.';
+---
+
+<BaseLayout title={pageTitle} description={pageDesc} lang={lang} currentPath="/demos/">
+  <section class="px-5 py-14">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-8">
+        <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{t.demosSection}</p>
+        <h1 class="mt-3 text-3xl font-bold text-white">{pageTitle}</h1>
+        <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-300">{pageDesc}</p>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="mb-8 grid gap-3 sm:grid-cols-3">
+        <div class="hud-panel rounded-lg p-4">
+          <p class="font-mono text-2xl font-bold text-white">{published.length}</p>
+          <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? '已發布示範' : 'Published Demos'}</p>
+        </div>
+        <div class="hud-panel rounded-lg p-4">
+          <p class="font-mono text-2xl font-bold text-white">{allCategories.length}</p>
+          <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? '攻擊類別' : 'Attack Categories'}</p>
+        </div>
+        <div class="hud-panel rounded-lg p-4">
+          <p class="font-mono text-2xl font-bold text-white">{allCapabilities.length}</p>
+          <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? 'MetaDefender 防護能力' : 'MetaDefender Capabilities'}</p>
+        </div>
+      </div>
+
+      <!-- Category filter chips -->
+      <div class="mb-6 flex flex-wrap gap-2">
+        <a
+          href={`/${lang}/demos/`}
+          class="rounded-md border border-sky-300/20 bg-sky-300/[0.08] px-3 py-1.5 font-mono text-xs text-sky-200"
+        >
+          {lang === 'zh' ? '全部' : 'All'}
+        </a>
+        {allCategories.map((cat) => (
+          <a
+            href={`/${lang}/demos/?category=${cat}`}
+            class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-xs text-slate-300 transition hover:border-sky-300/30 hover:text-white"
+          >
+            {getCategoryLabel(cat, lang)}
+          </a>
+        ))}
+      </div>
+
+      <!-- Demo grid -->
+      {published.length > 0 ? (
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {published.map((demo) => <DemoCard demo={demo} lang={lang} />)}
+        </div>
+      ) : (
+        <div class="hud-panel rounded-lg p-10 text-center">
+          <p class="text-slate-400">{lang === 'zh' ? '尚無可用示範' : 'No demos available yet.'}</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+---

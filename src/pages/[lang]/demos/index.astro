@@ -1,0 +1,17 @@
+---
+import DemoCatalog from '@/components/DemoCatalog.astro';
+import type { Lang } from '@/i18n';
+import { demos } from '@/components/demo-data';
+
+export async function getStaticPaths() {
+  const langs: Lang[] = ['en', 'zh'];
+  return langs.map((lang) => ({
+    params: { lang },
+    props: { lang },
+  }));
+}
+
+const { lang } = Astro.props as { lang: Lang };
+---
+<DemoCatalog lang={lang} demos={demos} />
+---
