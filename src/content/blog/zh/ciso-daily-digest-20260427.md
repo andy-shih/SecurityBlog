@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Discord sleuths breach Anthropic’s zero- (t-20260427)"
+title: "CISO 每日摘要：Discord sleuths breach Anthropic’s zero-day hunter (t-20260427)"
 description: "每日資安重點事件與威脅摘要 — 2026-04-27"
 pubDate: 2026-04-27
 tags: ["CISO", "資安", "每日摘要", "威脅情資"]
