@@ -89,7 +89,7 @@ This incident highlights risks of AI coding agents with elevated permissions. Im
 
 ---
 
-## What OPSWAT can do
+## How Can OPSWAT Help
 
 **Supply chain threat prevention:** OPSWAT MetaDefender's multi-engine scanning (30+ AV engines) and Content Disarm and Reconstruction (CDR) can inspect downloaded packages and binaries before they reach enterprise systems—stripping active threats while preserving usability.
 
