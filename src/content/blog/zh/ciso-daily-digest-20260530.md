@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：PAN-OS GlobalProtect 認證繞過漏洞遭利用、ChatGPhis (t-20260530)"
+title: "CISO 每日摘要：PAN-OS GlobalProtect 認證繞過漏洞遭利用、ChatGPhish 漏洞、微軟 De (t-20260530)"
 description: "2026-05-30 每日資安新聞摘要"
 pubDate: 2026-05-30
 tags: ["CISO", "資訊安全", "威脅情資"]
