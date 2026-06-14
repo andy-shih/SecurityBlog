@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Software Supply Chain Attacks on the Rise (2026-05-24)"
+title: "CISO Daily Digest: Anthropic Claude Mythos 10,000+ Zero-Days and Packagist Supply Chain Attack (20260524)"
 description: "Daily cybersecurity briefing for 2026-05-24 covering the most critical threats, vulnerabilities, and security industry developments."
 pubDate: 2026-05-24
 tags: ["CISO", "cybersecurity", "threats", "vulnerabilities", "infosec"]
