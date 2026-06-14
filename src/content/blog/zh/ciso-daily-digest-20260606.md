@@ -65,6 +65,6 @@ MariaDB 發布安全更新，修補了**多個漏洞**，其中一個被評為 *
 
 🔗 **參考資料：** [iThome](https://news.google.com/rss/articles/CBMiTkFVX3lxTFBWOEpyU0FYbVN0aTQ1ZHJmbUtsM3JDMm1EbG1oZVY2OUhsR2h6OUI4M0ZZaFdFWnNud2h4ZGpFaC1PdzRvZ003ZHZ5R2pQQQ?oc=5)
 
-## OPSWAT 相關
+## OPSWAT可以怎麼幫上忙
 
 Check Point VPN 零時差漏洞遭 Qilin 勒索軟體利用，突顯了網路邊界多層次檔案檢測的關鍵重要性。OPSWAT MetaDefender 的**深度內容拆除與重組（Deep CDR）**技術能夠透過移除潛在惡意物件同時保留文件可用性，來消除 VPN 傳遞檔案中的威脅。結合**30 多個防毒引擎的多引擎掃描**，OPSWAT 解決方案為針對 VPN 基礎設施的零時差漏洞提供了縱深防禦。
