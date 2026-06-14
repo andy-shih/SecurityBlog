@@ -37,7 +37,7 @@ export const ui = {
     backToArticles: 'Back to articles',
     recommended: 'Recommended articles',
     resumeProfile: 'OPSWAT security career and solutions experience',
-    resumeIntro: 'My security experience is rooted in OPSWAT customer-facing roles, from L2/L3 Technical Support and Technical Account Manager/ Customer Success Manager to Solutions Engineer. I connect customer problems, product capabilities, and critical infrastructure protection requirements into deployable and maintainable security solutions.'
+    resumeIntro: 'From L2/L3 Technical Support and Technical Account Manager/ Customer Success Manager to Solutions Engineer. I connect customer problems, product capabilities, and critical infrastructure protection requirements into deployable and maintainable security solutions.'
   }
 } as const;
 
