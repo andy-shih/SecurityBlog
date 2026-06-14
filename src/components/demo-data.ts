@@ -38,6 +38,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['Sandbox', 'VBA Emulation', 'Dynamic Analysis'],
     estimated_duration: '15 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-01',
   },
   {
@@ -55,6 +57,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['Protocol Detection', 'File Type Identification'],
     estimated_duration: '3 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-02',
   },
   {
@@ -72,6 +76,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['PDF Analysis', 'URI Extraction', 'Threat Intelligence'],
     estimated_duration: '5 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-03',
   },
   {
@@ -89,6 +95,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['Archive Extraction', 'Recursive Scanning', 'Deep CDR'],
     estimated_duration: '5 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-04',
   },
   {
@@ -106,6 +114,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['LNK Analysis', 'Command Line Detection', 'Deep CDR'],
     estimated_duration: '7 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-05',
   },
   {
@@ -123,6 +133,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['Deep CDR', 'XML Sanitization', 'Threat Intelligence'],
     estimated_duration: '8 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-06',
   },
   {
@@ -140,6 +152,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['ISO Extraction', 'Deep CDR', 'Sandbox'],
     estimated_duration: '10 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-07',
   },
   {
@@ -157,6 +171,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['PDF Analysis', 'Script Extraction', 'Deep CDR', 'Sandbox'],
     estimated_duration: '10 minutes',
     status: 'published',
+    download_url: '',
+    github_url: '',
     created: '2026-06-08',
   },
   {
@@ -210,6 +226,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['Deep Archive Extraction', 'Recursive Scanning'],
     estimated_duration: '20 minutes',
     status: 'coming_soon',
+    download_url: '',
+    github_url: '',
     created: '2026-06-11',
   },
   {
@@ -227,6 +245,8 @@ export const demos: DemoEntry[] = [
     metadefender_capabilities: ['OLE Analysis', 'Object Extraction', 'Deep CDR', 'Sandbox'],
     estimated_duration: '15 minutes',
     status: 'coming_soon',
+    download_url: '',
+    github_url: '',
     created: '2026-06-12',
   },
 ];
