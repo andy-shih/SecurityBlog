@@ -51,34 +51,6 @@ The ban also applies retroactively—[enterprises with prepaid Fable 5 credits f
 
 ---
 
-## What CISOs need to do
-
-### This week
-
-1. **Audit your AI vendor dependencies.** Which Anthropic models are in production? Which use cases (customer support, internal tools, code generation) depend on them? Document every integration point and tag by criticality.
-2. **Patch Splunk Enterprise.** This is unauthenticated RCE—treat it as an active exploitation scenario.
-3. **Verify Linux binary integrity.** Run `rpm -V` or `debsums` on SSH and authentication binaries across server fleets.
-
-### This month
-
-1. **Build AI vendor redundancy.** For each mission-critical AI use case, identify 2–3 alternatives. Test failover procedures. The next mandate may hit another provider.
-2. **Review supply chain security practices.** [The Hacker News coverage of the AUR attack](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html) and [China-linked backdoor](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html) both demonstrate that package ecosystem attacks are growing in scale and sophistication. Ensure your artifact verification and dependency pinning cover all language ecosystems in your pipeline (Rust, Python, npm, Go).
-3. **Brief the board.** Frame the Anthropic mandate as a supply chain resilience issue, not a compliance checkbox. The next model shutdown could hit your production AI pipeline directly.
-
-### This quarter
-
-1. **Establish a geopolitical vendor risk framework.** Score each AI provider on regulatory exposure, data sovereignty, and contract flexibility.
-2. **Evaluate self-hosted and open-source AI alternatives.** The regulatory advantage of running a model you control has never been clearer.
-3. **Model the cost of vendor discontinuity.** What does a 24-hour unplanned AI service outage cost your organization? Build that into vendor selection criteria.
-
----
-
-## What to tell the board
-
-> *"The U.S. government has established a precedent that AI models can be shut down by executive directive with zero notice. We have identified [X] AI integrations across the organization. We are building a multi-vendor AI architecture with <24-hour failover capability to maintain operational continuity regardless of regulatory changes."*
-
----
-
 ## Key readings
 
 **The Anthropic mandate:**
@@ -97,13 +69,3 @@ The ban also applies retroactively—[enterprises with prepaid Fable 5 credits f
 - [Anthropic launches $15M cyber defense program (StateScoop)](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNME1NNUNiODhvSFVlVldoMTFQMDVRSTg2VFg2TTlzUHkzb0kxaXJsa3NVYkhhX3FkTXRYNERVX0NjVXVJRUVicWNVRVZQTWxtRC1OclFrQjlsWkZNWHBnRk14WE1FVUNveC1FMTJhdkZDekZzUTFyT1NYdmtaV3hKdDdBeDNYTXNXRUs2cnI3UDhiQWpLdGN5Y2I2cEtMS0JHSDliTkVNT0ZoY2h4YjJKWFdPZ0xtamUtNl80?oc=5)
 - [Opsin x Claude Compliance API for AI Governance (Yahoo Finance)](https://news.google.com/rss/articles/CBMirAFBVV95cUxNZ0xzZHEtUjRGei0yTmRmYzlHT3JCS1dhNnBzbmNUZHduNEpocEQzbUdRZUdRYjRjbFFkNDNJT2dWdUw2c1llU0ZLUlVRdnJWWjdLZzd6M25DZVM2QVpPUlJzLVpRWFNrVkt4Y3Y2YjFHcC1KcEVpQmNoc0wtVWVFTUJSbVdBUVdHd2dQVGRZLWpiVVZIT3dlNnR2SDRob3ZQYl9OVHMwMGs5WGFX?oc=5)
 - [Canada privacy watchdog rules on Grok deepfakes (Jurist)](https://news.google.com/rss/articles/CBMixgFBVV95cUxPS05zUFVuaFBQWWJpUHBiM3FWN1dRTF9IUmoteWdteEZOZmJyR2RCeXUxM2lvVUpsX3FzT0E3QldLOFRSdklhZTYxdU1oRXBXTjFQOXQyMC01QXRfeGROMHZ3S2c0SHdRdmUtLURCR2JYU3VRQ3psSnhvTU5zTG4zUEw2aEFGTTFGVkNOMW5WY19pVUwzSzFVYzV2VUhWOVZaZ2VtcjhPSFdhVVdhdHlfTjRVdmg0UFd5enpjSUxQQmtFTGFCa2c?oc=5)
-
----
-
-## Start here
-
-1. **Immediately:** Patch Splunk Enterprise. Validate Linux binary integrity. Know which Anthropic models your organization is running.
-2. **This week:** Complete an AI vendor dependency inventory. Identify single points of failure.
-3. **This month:** Brief the board on geopolitical AI risk. Build failover capability into your AI architecture.
-
-Good AI governance means your organization can survive a model shutdown—from any cause—without operational disruption. The Fable 5 mandate is the test case. Don't wait for the next one.
