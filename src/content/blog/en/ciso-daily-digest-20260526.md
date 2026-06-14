@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: Cybersecurity Roundup (20260526)"
-description: "Daily cybersecurity news summary for 2026-05-26"
+description: "Microsoft patches critical SharePoint remote code execution (CVE-2026-45659); Universal Robots discloses critical ICS vulnerabilities; the TrapDoor supply chain campaign targets npm, PyPI, and Crates.io with info-stealers; FBI warns of Kali365 phishing-as-a-service stealing Microsoft 365 tokens; MuddyWater APT conducts DLL side-loading espionage across 9 countries; Mercedes-Benz data breach exposes hundreds of thousands of customer records; KnowledgeDeliver LMS flaw exploited to deploy Godzilla web shells and Cobalt Strike."
 pubDate: 2026-05-26
 tags: ["CISO", "cybersecurity", "threat intelligence"]
 author: "Security Solutions Team"

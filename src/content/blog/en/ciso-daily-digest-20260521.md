@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: Pwn2Own Berlin and Rising Zero-Day Threats (2026-05-21)"
-description: "Daily cybersecurity briefing for 2026-05-21 covering the most critical threats, vulnerabilities, and security industry developments."
+description: "Pwn2Own Berlin 2026 concluded with researchers demonstrating 47 zero-day exploits across browsers, OS, and ICS platforms; a new wave of Shai-Hulud supply-chain attacks compromised 600 npm packages; a critical unpatched flaw in OT RobotOS gave attackers remote control over industrial systems; and Microsoft took down a malware-signing service that had been issuing valid code-signing certificates to ransomware groups."
 pubDate: 2026-05-21
 tags: ["CISO", "cybersecurity", "threats", "vulnerabilities", "infosec"]
 author: "Security Solutions Team"

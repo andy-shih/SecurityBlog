@@ -1,6 +1,6 @@
 ---
 title: "CISO 每日摘要：PAN-OS GlobalProtect 認證繞過漏洞遭利用、ChatGPhish 漏洞、微軟 De (t-20260530)"
-description: "2026-05-30 每日資安新聞摘要"
+description: "Palo Alto Networks PAN-OS GlobalProtect認證繞過漏洞CVE-2026-0257遭積極利用，ChatGPhish漏洞將ChatGPT網頁摘要變成釣魚攻擊面，微軟譴責Chaotic Eclipse未經協調公開多項零時差漏洞並宣布Defender自動隔離功能。"
 pubDate: 2026-05-30
 tags: ["CISO", "資訊安全", "威脅情資"]
 author: "Security Solutions Team"

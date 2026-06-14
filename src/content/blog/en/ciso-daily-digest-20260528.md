@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: Cybersecurity Roundup (20260528)"
-description: "Daily cybersecurity news summary for 2026-05-28"
+description: "Chinese state-sponsored hackers deployed Showboat and JFMBackdoor malware targeting telecom operators, Grandoreiro RAT and BTMOB RAT campaigns hit Latin American users, and CISA mandated patching of a critical cPanel LiteSpeed plugin vulnerability, while a malicious npm package stole files from Claude AI user directories."
 pubDate: 2026-05-28
 tags: ["CISO", "cybersecurity", "threat intelligence"]
 author: "Security Solutions Team"

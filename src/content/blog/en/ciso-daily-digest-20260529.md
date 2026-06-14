@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: Cybersecurity Roundup (20260529)"
-description: "Daily cybersecurity news summary for 2026-05-29"
+description: "A critical remote code execution vulnerability in Gogs was disclosed, threat actors actively exploited a FortiClient EMS flaw to deploy credential-stealing malware, Google released Chrome 148 fixing over 150 vulnerabilities, the Fluffy Wolf APT group targeted Russian organizations, and a hacker put 340 million OnlyFans user records up for sale."
 pubDate: 2026-05-29
 tags: ["CISO", "cybersecurity", "threat intelligence"]
 author: "Security Solutions Team"

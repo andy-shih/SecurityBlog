@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: Anthropic Claude Mythos 10,000+ Zero-Days and Packagist Supply Chain Attack (20260524)"
-description: "Daily cybersecurity briefing for 2026-05-24 covering the most critical threats, vulnerabilities, and security industry developments."
+description: "Anthropic's Claude Mythos AI uncovers over 10,000 zero-day vulnerabilities in Project Glasswing; supply chain attacks target Packagist (8 packages via GitHub-hosted Linux malware), npm, and the Nx Console VS Code extension; CISA warns of actively exploited Drupal SQL injection; hacker group TeamPCP sells data from nearly 4,000 GitHub repositories."
 pubDate: 2026-05-24
 tags: ["CISO", "cybersecurity", "threats", "vulnerabilities", "infosec"]
 author: "Security Solutions Team"

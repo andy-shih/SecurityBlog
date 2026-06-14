@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: CISA Warns of Actively Exploited Drupal SQL Injection Vulnerability (20260525)"
-description: "Daily cybersecurity briefing for 2026-05-25 covering the most critical threats, vulnerabilities, and security industry developments."
+description: "CISA confirms active exploitation of a Drupal SQL injection vulnerability; Anthropic Project Glasswing surpasses 30,000 vulnerabilities found by Claude Mythos in one month; SonicWall SSL-VPN devices exploited via MFA bypass to implant backdoors; US and Canadian authorities arrest the 23-year-old administrator of the KimWolf botnet; Hitachi disk array system vulnerabilities disclosed."
 pubDate: 2026-05-25
 tags: ["CISO", "cybersecurity", "threats", "vulnerabilities", "infosec"]
 author: "Security Solutions Team"

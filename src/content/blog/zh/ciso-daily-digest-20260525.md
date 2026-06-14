@@ -1,6 +1,6 @@
 ---
 title: "CISO 每日摘要：Drupal SQL 注入漏洞遭 CISA 確認已遭實際利用 (20260525)"
-description: "2026-05-25 每日資安摘要，涵蓋當日最重大的威脅、漏洞與資安產業發展。"
+description: "CISA 確認 Drupal SQL 注入漏洞已遭實際利用；Anthropic 公布 Project Glasswing 一個月成果，Claude Mythos 已找出超過三萬個漏洞；舊款 SonicWall SSL-VPN 設備的 MFA 繞過漏洞遭駭客破解植入後門；美加兩國聯手逮捕 KimWolf 殭屍網路 23 歲管理者；Hitachi 磁碟陣列系統發布安全公告。"
 pubDate: 2026-05-25
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]
 author: "Security Solutions Team"

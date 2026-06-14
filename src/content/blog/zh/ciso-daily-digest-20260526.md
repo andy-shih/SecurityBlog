@@ -1,6 +1,6 @@
 ---
 title: "CISO 每日摘要：微軟 SharePoint RCE、Universal Robots 工控漏洞、CERT-In 強制 (t-20260526)"
-description: "2026-05-26 每日資安新聞摘要"
+description: "微軟修補 SharePoint 重大遠端程式碼執行漏洞 CVE-2026-45659；Universal Robots 工控機器人控制器存在重大漏洞；TrapDoor 供應鏈攻擊透過 NPM、PyPI 及 Crates.io 散布竊資軟體；FBI 警告 Kali365 釣魚即服務可繞過密碼竊取 Microsoft 365 權杖；MuddyWater APT 以 DLL 側載發動跨 9 國間諜攻擊；Mercedes-Benz 德國與土耳其分公司資料外洩影響數十萬客戶；KnowledgeDeliver LMS 漏洞遭利用部署 Godzilla 網頁後門及 Cobalt Strike。"
 pubDate: 2026-05-26
 tags: ["CISO", "資訊安全", "威脅情資"]
 author: "Security Solutions Team"

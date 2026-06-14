@@ -1,6 +1,6 @@
 ---
 title: "CISO 每日摘要：Packagist 供應鏈攻擊與 npm 強化 2FA 安全管控 (20260524)"
-description: "2026-05-24 每日資安摘要，涵蓋當日最重大的威脅、漏洞與資安產業發展。"
+description: "Anthropic 的 Claude Mythos AI 在 Project Glasswing 中發現超過一萬個零時差漏洞；Packagist 供應鏈攻擊感染 8 個套件、npm 推出 2FA 發布機制，以及 Nx Console VS Code 延伸套件遭植入竊資軟體；CISA 警告 Drupal SQL 注入漏洞已遭實際利用；駭客組織 TeamPCP 以 5 萬美元兜售近 4,000 個 GitHub 儲存庫資料。"
 pubDate: 2026-05-24
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]
 author: "Security Solutions Team"

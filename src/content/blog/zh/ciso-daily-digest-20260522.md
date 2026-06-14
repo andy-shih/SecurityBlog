@@ -1,6 +1,6 @@
 ---
 title: "CISO 每日摘要：BitLocker 零時差漏洞與微軟重大修補 (2026-05-22)"
-description: "2026-05-22 每日資安摘要，涵蓋當日最重大的威脅、漏洞與資安產業發展。"
+description: "本日重點：微軟（Microsoft）公布 BitLocker 零時差漏洞 YellowKey（CVE 尚未指派），可繞過全磁碟加密危及 Windows 裝置資料安全；Microsoft Defender 零時差漏洞在修補前已流出概念驗證（PoC）程式碼；Showboat Linux 惡意軟體透過 SOCKS5 代理後門鎖定中東電信業者；Anthropic 低調修復 Claude Code 沙箱繞過漏洞。"
 pubDate: 2026-05-22
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]
 author: "Security Solutions Team"

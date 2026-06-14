@@ -1,6 +1,6 @@
 ---
 title: "CISO 每日摘要：CISA 資料外洩、Drupal 重大 RCE 漏洞、OPSWAT 獲日本 70% 地方政府信任 (20260523)"
-description: "2026-05-23 每日資安摘要，涵蓋當日最重大的威脅、漏洞與資安產業發展。"
+description: "本日重點：美國網路安全暨基礎設施安全局（CISA）發生資料外洩事件，國會兩黨議員要求立即說明；Drupal 核心被揭露重大遠端程式碼執行（RCE）漏洞（CVE 尚未指派）；全球首例 VPN 服務因遭 25 個勒索軟體組織濫用而被跨國執法行動查封；微軟（Microsoft）扣押用於惡意軟體簽章的服務網域。"
 pubDate: 2026-05-23
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]
 author: "Security Solutions Team"

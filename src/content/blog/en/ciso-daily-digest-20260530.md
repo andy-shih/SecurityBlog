@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: Cybersecurity Roundup (20260530)"
-description: "Daily cybersecurity news summary for 2026-05-30"
+description: "Palo Alto Networks PAN-OS GlobalProtect authentication bypass (CVE-2026-0257) came under active exploitation, the ChatGPhish vulnerability turned ChatGPT web summaries into a phishing attack surface, and Microsoft condemned Chaotic Eclipse for dumping multiple zero-days while announcing automated Defender isolation capabilities."
 pubDate: 2026-05-30
 tags: ["CISO", "cybersecurity", "threat intelligence"]
 author: "Security Solutions Team"

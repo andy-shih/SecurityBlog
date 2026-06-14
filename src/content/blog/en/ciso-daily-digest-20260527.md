@@ -1,6 +1,6 @@
 ---
 title: "CISO Daily Digest: Cybersecurity Roundup (20260527)"
-description: "Daily cybersecurity news summary for 2026-05-27"
+description: "Taiwan's EVERY8D OTP platform was breached, North Korean Lazarus Group deployed RemotePE malware targeting financial institutions, and a Ghost CMS SQL injection compromised 700+ sites with ClickFix attacks, while Microsoft patched the UnDefend and RedSun zero-days and the Megalodon malware campaign infected thousands of GitHub repos."
 pubDate: 2026-05-27
 tags: ["CISO", "cybersecurity", "threat intelligence"]
 author: "Security Solutions Team"
