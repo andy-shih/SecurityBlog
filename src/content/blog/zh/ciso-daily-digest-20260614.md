@@ -1,6 +1,6 @@
 ---
-title: "CISO 每日摘要：美國政府下令 Anthropic 全球下架 Claude Fable 5 (20260614)"
-description: "美國商務部援引出口管制法規，要求 Anthropic 在 90 分鐘內全球下架 Fable 5 與 Mythos 5，Amazon 創辦人 Jassy 向白宮通報安全漏洞成為導火線。同場加映：xAI Grok 安全吹哨者訴訟、NPM 12 預設封鎖安裝腳本以防止供應鏈攻擊、伊朗 Handala 組織宣稱入侵加州水務公司。"
+title: "CISO 每日摘要：Fable 5 禁令後續 — Amazon 角色與產業震皪 (20260614)"
+description: "Anthropic Fable 5 下架事件第二天：Amazon CEO Andy Jassy 向白宮簡報，觸發 90 分鐘最後通牒。另含：xAI Grok 吹哨者訴訟、npm 12 封鎖安裝腳本、伊朗 Handala 入侵加州水務。"
 pubDate: 2026-06-14
 tags: [AI治理, 供應鏈安全, 關鍵基礎設施, 出口管制, AI安全, Anthropic, NPM]
 author: "Security Solutions Team"
