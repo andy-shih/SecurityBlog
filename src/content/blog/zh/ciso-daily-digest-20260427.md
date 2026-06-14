@@ -1,63 +1,81 @@
 ---
-title: "CISO 每日摘要：AI 安全威脅 (20260427)"
+title: "CISO 每日摘要：供應鏈攻擊 (20260427)"
 description: "每日資安重點事件與威脅摘要 — 2026-04-27"
 pubDate: 2026-04-27
-tags: ["CISO", "Cybersecurity", "Daily Digest"]
+tags: ["CISO", "資安", "每日摘要", "威脅情資"]
 author: "Security Solutions Team"
 featured: true
 ---
 
+## 瑞怡談從防止攻擊到維持營運：AI 時代的資安典範轉移
 
-CISO 每日摘要：AI 安全威脅 (20260427)
+本日資安焦點為 **瑞怡談從防止攻擊到維持營運：AI 時代的資安典範轉移**。
 
 **事件脈絡：**
 
+- 瑞怡談從防止攻擊到維持營運：AI 時代的資安典範轉移
 - AI 威脅與混合辦公夾擊企業防線，Jamf 擴大參與Cybersec 2026 年資安大會首度以資安品牌日與Apple 體驗區回應行動資安新局
 - 從Security+邁向 SecAI+：AI 資安與治理技能成為資安人員新標配
-- The Popular Anthropic Experiment: Claude Made 186 Deals for Humans, Opus Boosts Profits by 70%
+- AI 詐騙信攻擊驚人逼真，專家警告社交工程威脅又升級
 
-2026-04-27 資安全球威脅情勢以 AI 安全威脅, 惡意軟體, 重大漏洞 為主要焦點。
+建議企業組織立即檢視相關系統與防護措施，確保能夠應對此類威脅。
+
+---
 
 ## 本週活躍威脅
 
 📌 **AI 威脅與混合辦公夾擊企業防線，Jamf 擴大參與Cybersec 2026 年資安大會首度以資安品牌日與Apple 體驗區回應行動資安新局**
 
-來源：**iThome**。
+建議組織監控相關活動並套用適用的安全更新。
 
 📌 **從Security+邁向 SecAI+：AI 資安與治理技能成為資安人員新標配**
 
-來源：**iThome**。
+建議組織監控相關活動並套用適用的安全更新。
 
-📌 **The Popular Anthropic Experiment: Claude Made 186 Deals for Humans, Opus Boosts Profits by 70%**
+📌 **AI 詐騙信攻擊驚人逼真，專家警告社交工程威脅又升級**
 
-來源：**eu.36kr.com**。
-
-📌 **Anthropic adds persistent memory to Claude Managed Agents in public beta**
-
-來源：**ETIH EdTech News - EdTech Innovation Hub**。
+此社交工程活動透過欺騙性通訊鎖定員工。應審查資安意識培訓和郵件過濾控制措施。
 
 📌 **注意喚起: Cisco ASAおよびFTDにおける複数の脆弱性（CVE-2025-20333、CVE-2025-20362）に関する注意喚起  (更新)**
 
-來源：****。
+建議組織監控相關活動並套用適用的安全更新。
 
 🔗 **Reference:** [來源](https://www.jpcert.or.jp/at/2025/at250021.html)
 
+📌 **指控DeepSeek竊密！美國務院發出全球警告 嚴防中國「模型蒸餾」威脅**
+
+建議組織監控相關活動並套用適用的安全更新。
+
 📌 **FireStarter**
 
-來源：**iThome**。
+建議組織監控相關活動並套用適用的安全更新。
+
+📌 **Linux惡意軟體GoGra濫用Microsoft Graph API隱匿活動蹤跡**
+
+此惡意軟體活動需要跨電子郵件、Web 和端點安全層的協調防禦。組織應更新特徵碼並審查檢測規則。
 
 📌 **美國聯邦機構的思科防火牆遭後門程式FireStarter攻擊**
 
-來源：**iThome**。
+此後門程式可對受感染系統建立持續存取。應配置 EDR 和網路監控工具以檢測相關入侵指標。
+
+📌 **殭屍網路Mirai變種綁架生命週期結束的D-Link路由器**
+
+建議組織監控相關活動並套用適用的安全更新。
 
 📌 **中國駭客Tropic Trooper鎖定臺灣、日本、韓國，透過Adaptix C2與VS Code隧道控制受害電腦**
 
-來源：**iThome**。
-
-📌 **Anthropic Claude went shopping with $100 and negotiated 186 deals: here’s what it bought**
-
-來源：**Moneycontrol.com**。
+此後門程式可對受感染系統建立持續存取。應配置 EDR 和網路監控工具以檢測相關入侵指標。
 
 📌 **CISA將微軟Defender漏洞BlueHammer列入KEV清單，要求各機構限期修補**
 
-來源：**iThome**。
+此重大漏洞需要立即修補。清查受影響系統，並根據可利用性和資產關鍵性優先處理。
+
+---
+
+## OPSWAT 能做什麼
+
+**供應鏈威脅防護：** OPSWAT MetaDefender 的多引擎掃描（30+ 防毒引擎）與內容清除重建（CDR）技術，可在下載套件和二進位檔進入企業系統前進行檢查。對於關注 CI/CD 流程、開發者工作站或套件註冊表惡意檔案風險的組織，MetaDefender 可部署為檔案驗證閘道。
+
+
+
+**惡意軟體與勒索軟體防禦：** OPSWAT 的 Deep CDR 技術可移除檔案中的動態內容，中和嵌入式威脅（包括零時差漏洞）。結合多引擎掃描，為已知和未知惡意軟體提供深度防禦。
