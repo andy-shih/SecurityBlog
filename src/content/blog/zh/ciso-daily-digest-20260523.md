@@ -47,6 +47,6 @@ featured: true
 
 🔗 **Reference:** [Akamai Joins Growing Chorus of Vendors Betting Big on Secure Enterprise Browsers](https://www.darkreading.com/remote-workforce/akamai-growing-chorus-betting-on-secure-enterprise-browsers)
 
-## OPSWAT 能做什麼
+## OPSWAT可以怎麼幫上忙
 
 OPSWAT MetaDefender 提供多引擎掃描與 **Deep Content Disarm and Reconstruction（CDR）** 技術，可抵禦今日摘要中提及的各類威脅。超過 **30 個防毒引擎** 與即時檔案分析能力，能在零時差威脅進入關鍵系統前加以偵測與封鎖。
