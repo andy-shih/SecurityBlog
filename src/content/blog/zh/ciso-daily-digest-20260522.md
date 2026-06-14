@@ -53,6 +53,6 @@ featured: true
 
 🔗 **Reference:** [В Microsoft рассказали, как защититься от 0-day-уязвимости YellowKey для обхода BitLocker](https://xakep.ru/2026/05/21/yellowkey-migration/)
 
-## OPSWAT 能做什麼
+## OPSWAT可以怎麼幫上忙
 
 OPSWAT MetaDefender 提供 **多引擎惡意軟體偵測**（超過 **30 個防毒引擎**）與 **Deep Content Disarm and Reconstruction（CDR）** 技術，能保護 OT/ICS 環境免受零時差威脅與針對性攻擊。企業可部署 MetaDefender 防止惡意檔案進入關鍵基礎設施，支援 **NIST**、**IEC 62443** 等合規框架。
