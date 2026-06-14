@@ -51,6 +51,6 @@ The Apache Software Foundation has patched a high-risk vulnerability in the Apac
 
 🔗 **Reference:** [iThome](https://www.ithome.com.tw/)
 
-## What OPSWAT Can Do
+## How Can OPSWAT Help
 
 The Trellix source code breach and ShinyHunters' data theft operations highlight the critical need for multi-layered defense. MetaDefender's CDR technology disarms malicious documents at the gateway, while multi-engine scanning catches known and unknown threats across email and web traffic.
