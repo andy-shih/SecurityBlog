@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Gogs RCE 重大漏洞、FortiClient EMS 遭積極利用、Chro (t-20260529)"
+title: "CISO 每日摘要：Gogs RCE 重大漏洞、FortiClient EMS 遭積極利用、Chrome 148 修補逾 (t-20260529)"
 description: "2026-05-29 每日資安新聞摘要"
 pubDate: 2026-05-29
 tags: ["CISO", "資訊安全", "威脅情資"]
