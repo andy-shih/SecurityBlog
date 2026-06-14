@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：資安重點整理 (20260527)"
+title: "CISO 每日摘要：EVERY8D 遭駭、Lazarus 攻擊鎖定金融機構、Ghost CMS Cl (t-20260527)"
 description: "2026-05-27 每日資安新聞摘要"
 pubDate: 2026-05-27
 tags: ["CISO", "資訊安全", "威脅情資"]
