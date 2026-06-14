@@ -55,6 +55,6 @@ Google 修補了 Antigravity AI 開發工具的重大漏洞，該漏洞允許透
 
 🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/04/google-patches-a)
 
-## OPSWAT 能做什麼
+## OPSWAT可以怎麼幫上忙
 
 Vercel 資料外洩事件再次凸顯 CI/CD 管線中多層檔案安全的重要性。MetaDefender 的 **Content Disarm and Reconstruction（CDR）技術** 可中和武器化的 AI 模型檔案（GGUF、Safetensors）與開發工件，同時 **MetaDefender ICAP Server** 可與 Web Proxy 整合，掃描所有 AI 工具整合中的檔案上傳/下載。
