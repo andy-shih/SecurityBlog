@@ -51,6 +51,6 @@ Analysis of 25 million security alerts across multiple organizations reveals tha
 
 🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/one-missed-threat-per-week.html)
 
-## OPSWAT 能做什麼
+## OPSWAT可以怎麼幫上忙
 
 The TCLBANKER banking trojan spreading through WhatsApp and the Fake Call History apps demonstrate the growing threat of credential theft via mobile channels. MetaDefender Email Security and Mobile Threat Defense detect and block phishing attempts and malicious apps before they reach end users.
