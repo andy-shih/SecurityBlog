@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const pageTitle = `${title} | ${profile.title}`;
+const pageTitle = `${title} | ${profile.siteName}`;
 ---
 
 <!doctype html>
@@ -27,7 +27,7 @@ const pageTitle = `${title} | ${profile.title}`;
     <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/[0.82] backdrop-blur">
       <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
         <a href="/" class="font-mono text-sm font-semibold uppercase tracking-[0.18em] text-sky-200">
-          {profile.name}
+          {profile.siteName}
         </a>
         <div class="flex items-center gap-1 text-sm text-slate-300 sm:gap-2">
           <a class="rounded-md px-3 py-2 transition hover:bg-white/[0.08] hover:text-white" href="/">Home</a>
@@ -41,11 +41,10 @@ const pageTitle = `${title} | ${profile.title}`;
     </main>
     <footer class="border-t border-white/10 px-5 py-10">
       <div class="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} {profile.name}. Cyber security consulting notes.</p>
+        <p>© {new Date().getFullYear()} {profile.siteName}. Security notes by {profile.name}.</p>
         <div class="flex flex-wrap gap-4">
           <a class="hover:text-sky-200" href={`mailto:${profile.email}`}>Email</a>
           <a class="hover:text-sky-200" href={profile.github}>GitHub</a>
-          <a class="hover:text-sky-200" href={profile.linkedin}>LinkedIn</a>
         </div>
       </div>
     </footer>

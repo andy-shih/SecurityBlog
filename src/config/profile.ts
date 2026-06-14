@@ -1,32 +1,51 @@
 export const profile = {
-  name: 'Your Name',
-  title: 'Cyber Security Consultant',
-  titleZh: '資安顧問',
-  tagline: 'I help teams reduce real-world cyber risk through practical assessments, incident readiness, and security architecture.',
-  taglineZh: '協助團隊用務實的安全評估、事件應變準備與架構改善，降低真正會發生的資安風險。',
-  email: 'hello@example.com',
-  location: 'Taipei / Remote',
-  github: 'https://github.com/your-handle',
-  linkedin: 'https://www.linkedin.com/in/your-handle',
-  services: [
-    'Security Assessment',
-    'Web Application Review',
-    'Cloudflare Security Baseline',
-    'Incident Response Readiness',
-    'Phishing Resilience Program',
-    'Executive Risk Briefing'
+  siteName: 'Andy.S',
+  name: 'Andy.Shih',
+  title: 'Solutions Engineer',
+  titleZh: '資安解決方案工程師',
+  company: 'OPSWAT',
+  tagline: 'Security professional focused on critical infrastructure protection, secure file workflows, and customer-facing security architecture.',
+  taglineZh: '專注於關鍵基礎設施防護、安全檔案流程與客戶場景資安架構的資安專業人員。',
+  email: 'andy.shih@opswat.com',
+  location: 'Taiwan / Global customers',
+  github: 'https://github.com/andy-shih',
+  focus: [
+    'Critical infrastructure protection',
+    'IT/OT security conversations',
+    'MetaDefender platform solution design',
+    'Secure file transfer and file-borne threat prevention',
+    'Deep CDR, multiscanning, sandboxing, and malware prevention workflows',
+    'Customer success, escalation handling, and technical account strategy'
   ],
   expertise: [
-    'Zero Trust architecture',
-    'Cloud and edge security',
-    'Web application penetration testing',
-    'Incident response tabletop exercises',
-    'Security awareness and phishing defense',
-    'Risk communication for leadership'
+    'Critical infrastructure cybersecurity',
+    'File security and content disarm workflows',
+    'Malware prevention and multiscanning architecture',
+    'Customer technical enablement',
+    'Enterprise support escalation',
+    'Security solution discovery and deployment planning'
+  ],
+  experience: [
+    {
+      period: '2026.01 ~ Present',
+      role: 'Solutions Engineer',
+      company: 'OPSWAT',
+      summary: 'Designs security solutions for customer environments, translating OPSWAT critical infrastructure protection capabilities into practical architectures and deployment paths.'
+    },
+    {
+      period: '2024.10 - 2026.01',
+      role: 'Technical Account Manager/ Customer Success Manager',
+      company: 'OPSWAT',
+      summary: 'Owned technical customer success, account health, adoption guidance, escalations, and long-term security outcome alignment.'
+    },
+    {
+      period: '2021.04 - 2024.09',
+      role: 'L2/ L3 Technical Support',
+      company: 'OPSWAT',
+      summary: 'Handled advanced support, troubleshooting, customer escalations, and deep technical investigation across enterprise security deployments.'
+    }
   ],
   certifications: [
-    'CISSP / OSCP placeholder',
-    'Cloud security certification placeholder',
-    'Incident response training placeholder'
+    'CISSP'
   ]
 } as const;

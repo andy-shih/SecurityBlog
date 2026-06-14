@@ -3,7 +3,7 @@ title: "Zero Trust Roadmap for Growing Teams"
 description: "A pragmatic roadmap for moving from perimeter thinking to identity-first controls without slowing the business."
 pubDate: 2026-05-20
 tags: ["Zero Trust", "Strategy", "Identity"]
-author: "Your Name"
+author: "Andy.Shih"
 featured: true
 ---
 

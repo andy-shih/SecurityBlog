@@ -1,6 +1,6 @@
-# Cyber Security Consultant Blog
+# Andy.S Security Blog
 
-Astro + Tailwind static personal brand blog for a cyber security consultant. The first version uses placeholder profile data, bilingual Chinese/English copy, five seeded security articles, and a professional dark HUD visual direction.
+Astro + Tailwind static personal brand blog for Andy.Shih. The site focuses on OPSWAT experience, critical infrastructure protection, secure file workflows, CISSP credentials, and practical security writing with a professional dark HUD visual direction.
 
 ## Local Development
 
@@ -18,14 +18,15 @@ npm run test:e2e
 
 `npm run build` runs `astro check` before generating the static site into `dist/`.
 
-## Replace Placeholder Profile Data
+## Profile Data
 
-Update `src/config/profile.ts` with your real:
+Profile content is centralized in `src/config/profile.ts`:
 
-- Name and title
-- Email
-- GitHub and LinkedIn URLs
-- Services, expertise, and certifications
+- Site name: Andy.S
+- Resume name: Andy.Shih
+- Email: andy.shih@opswat.com
+- GitHub: https://github.com/andy-shih
+- OPSWAT experience and CISSP credential
 
 Blog posts live in `src/content/blog/`.
 

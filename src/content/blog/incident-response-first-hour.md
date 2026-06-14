@@ -3,7 +3,7 @@ title: "The First Hour of Incident Response"
 description: "A practical first-hour structure for teams that need calm triage, clean evidence, and clear communication."
 pubDate: 2026-06-03
 tags: ["Incident Response", "Tabletop", "Leadership"]
-author: "Your Name"
+author: "Andy.Shih"
 featured: true
 ---
 

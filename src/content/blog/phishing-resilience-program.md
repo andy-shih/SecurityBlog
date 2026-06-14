@@ -3,7 +3,7 @@ title: "Building a Phishing Resilience Program"
 description: "A balanced approach to phishing defense that combines identity controls, reporting culture, and realistic training."
 pubDate: 2026-06-11
 tags: ["Phishing", "Awareness", "Identity"]
-author: "Your Name"
+author: "Andy.Shih"
 featured: true
 ---
 

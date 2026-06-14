@@ -3,7 +3,7 @@ title: "Cloudflare Security Baseline for Public Websites"
 description: "A concise baseline for using Cloudflare as an edge security layer without turning the dashboard into a maze."
 pubDate: 2026-05-28
 tags: ["Cloudflare", "Edge Security", "Baseline"]
-author: "Your Name"
+author: "Andy.Shih"
 featured: true
 ---
 

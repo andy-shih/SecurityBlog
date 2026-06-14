@@ -6,20 +6,23 @@ import { profile } from '@/config/profile';
 import { sortPosts } from '@/utils/posts';
 
 const posts = sortPosts(await getCollection('blog'));
-const featuredPosts = posts.filter((post) => post.data.featured).slice(0, 5);
+const latestPosts = posts.slice(0, 4);
 ---
 
-<BaseLayout title="Home" description="Bilingual cyber security consultant blog focused on practical risk reduction, incident readiness, and secure architecture.">
+<BaseLayout title="Home" description="Andy.S security notes on OPSWAT, critical infrastructure protection, secure file workflows, and practical cyber defense.">
   <section class="px-5 py-16 sm:py-20 lg:py-24">
     <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
       <div class="space-y-8">
         <div class="inline-flex rounded-md border border-sky-300/25 bg-sky-300/[0.08] px-3 py-2 font-mono text-xs uppercase tracking-[0.2em] text-sky-200">
-          Cyber Risk / Incident Readiness / Secure Architecture
+          OPSWAT / Critical Infrastructure Protection / Secure File Workflows
         </div>
         <div class="space-y-5">
           <h1 class="max-w-4xl text-4xl font-bold leading-[1.06] text-white sm:text-5xl lg:text-6xl">
-            Cyber Security Consultant for teams that need practical defense.
+            {profile.siteName}
           </h1>
+          <h2 class="max-w-3xl text-2xl font-semibold leading-tight text-sky-100 sm:text-3xl">
+            Security notes from {profile.name}, {profile.title} at {profile.company}.
+          </h2>
           <p class="max-w-2xl text-lg leading-8 text-slate-300">
             {profile.taglineZh}
           </p>
@@ -27,22 +30,14 @@ const featuredPosts = posts.filter((post) => post.data.featured).slice(0, 5);
             {profile.tagline}
           </p>
         </div>
-        <div class="flex flex-col gap-3 sm:flex-row">
-          <a class="rounded-md bg-emerald-300 px-5 py-3 text-center font-semibold text-slate-950 transition hover:bg-emerald-200" href={`mailto:${profile.email}`} aria-label="Book a security review by email">
-            Book a security review
-          </a>
-          <a class="rounded-md border border-white/15 px-5 py-3 text-center font-semibold text-slate-100 transition hover:border-sky-300/50 hover:bg-white/[0.08]" href="/blog/">
-            Read field notes
-          </a>
-        </div>
       </div>
       <div class="scanline hud-panel rounded-lg p-5">
         <div class="mb-4 flex items-center justify-between border-b border-white/10 pb-3 font-mono text-xs text-slate-400">
-          <span>risk-console.log</span>
-          <span class="text-emerald-200">LIVE</span>
+          <span>professional-scope.log</span>
+          <span class="text-emerald-200">OPSWAT</span>
         </div>
         <div class="space-y-4 font-mono text-sm text-slate-300">
-          <p class="terminal-line max-w-full text-emerald-200">run security_baseline --scope=cloud+web</p>
+          <p class="terminal-line max-w-full text-emerald-200">map expertise --focus=critical-infrastructure</p>
           <div class="grid gap-3 pt-3 sm:grid-cols-2">
             {profile.expertise.slice(0, 6).map((item) => (
               <div class="rounded-md border border-white/10 bg-white/[0.03] p-3">
@@ -60,18 +55,18 @@ const featuredPosts = posts.filter((post) => post.data.featured).slice(0, 5);
     <div class="mx-auto max-w-6xl">
       <div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <p class="font-mono text-xs uppercase tracking-[0.2em] text-emerald-200">Consulting focus</p>
-          <h2 class="mt-3 text-3xl font-bold text-white">從風險到行動的安全服務</h2>
+          <p class="font-mono text-xs uppercase tracking-[0.2em] text-emerald-200">Professional focus</p>
+          <h2 class="mt-3 text-3xl font-bold text-white">專業焦點</h2>
         </div>
         <p class="max-w-2xl leading-7 text-slate-400">
-          將高風險議題整理成可落地的修補順序、演練流程與管理層能理解的風險語言。
+          這裡整理我在 OPSWAT customer-facing technical roles 中持續累積的資安觀察與實務脈絡。
         </p>
       </div>
-      <div class="grid gap-4 md:grid-cols-3" data-testid="services">
-        {profile.services.slice(0, 6).map((service) => (
+      <div class="grid gap-4 md:grid-cols-3">
+        {profile.focus.slice(0, 6).map((focus) => (
           <div class="hud-panel rounded-lg p-5">
-            <p class="font-mono text-xs uppercase tracking-[0.18em] text-sky-200">service</p>
-            <h3 class="mt-3 text-lg font-semibold text-white">{service}</h3>
+            <p class="font-mono text-xs uppercase tracking-[0.18em] text-sky-200">focus</p>
+            <h3 class="mt-3 text-lg font-semibold text-white">{focus}</h3>
           </div>
         ))}
       </div>
@@ -83,25 +78,12 @@ const featuredPosts = posts.filter((post) => post.data.featured).slice(0, 5);
       <div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">Latest writing</p>
-          <h2 class="mt-3 text-3xl font-bold text-white">Security Field Notes</h2>
+          <h2 class="mt-3 text-3xl font-bold text-white">Latest 4 Articles</h2>
         </div>
-        <a class="font-semibold text-emerald-200 hover:text-emerald-100" href="/blog/">View all articles</a>
       </div>
-      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3" data-testid="featured-articles">
-        {featuredPosts.map((post, index) => <ArticleCard post={post} index={index} />)}
+      <div class="grid gap-4 md:grid-cols-2" data-testid="featured-articles">
+        {latestPosts.map((post, index) => <ArticleCard post={post} index={index} />)}
       </div>
-    </div>
-  </section>
-
-  <section class="px-5 py-16">
-    <div class="mx-auto max-w-6xl rounded-lg border border-emerald-300/20 bg-emerald-300/[0.07] p-8 md:flex md:items-center md:justify-between md:gap-8">
-      <div>
-        <p class="font-mono text-xs uppercase tracking-[0.2em] text-emerald-200">Ready for a baseline review?</p>
-        <h2 class="mt-3 text-3xl font-bold text-white">把安全問題整理成下一週就能執行的清單。</h2>
-      </div>
-      <a class="mt-6 inline-flex rounded-md bg-sky-300 px-5 py-3 font-semibold text-slate-950 transition hover:bg-sky-200 md:mt-0" href={`mailto:${profile.email}`}>
-        Start consulting conversation
-      </a>
     </div>
   </section>
 </BaseLayout>
