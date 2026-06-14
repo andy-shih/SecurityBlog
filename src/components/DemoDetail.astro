@@ -30,7 +30,7 @@ const pageDesc = desc;
       <div class="mt-6 border-b border-white/10 pb-8">
         <div class="mb-4 flex flex-wrap items-center gap-2">
           <span class="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 font-mono text-xs text-slate-400">{cat}</span>
-          <span class={`rounded-md px-2 py-1 font-mono text-xs ${difficultyClass(demo.difficulty)}`}>{demo.difficulty}</span>
+          <span class={`rounded-md px-2 py-1 font-mono text-xs ${demo.difficulty === 'beginner' ? 'text-emerald-200 bg-emerald-300/[0.08] border-emerald-300/20' : demo.difficulty === 'intermediate' ? 'text-amber-200 bg-amber-300/[0.08] border-amber-300/20' : 'text-rose-200 bg-rose-300/[0.08] border-rose-300/20'}`}>{demo.difficulty}</span>
           {demo.estimated_duration && (
             <span class="font-mono text-xs text-slate-400">&middot; {demo.estimated_duration}</span>
           )}
