@@ -27,7 +27,7 @@ export const profile = {
   ],
   experience: [
     {
-      period: '2026.01 ~ Present',
+      period: '2026.01 - Present',
       role: 'Solutions Engineer',
       company: 'OPSWAT',
       summary: 'Designs security solutions for customer environments, translating OPSWAT critical infrastructure protection capabilities into practical architectures and deployment paths.'
