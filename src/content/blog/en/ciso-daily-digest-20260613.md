@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: The Anthropic Fable 5 Mandate & What It Means for Enterprise AI Risk"
+title: "CISO Daily Digest: The Anthropic Fable 5 Mandate & What It Means for Enterprise AI Risk (20260613)"
 description: "How the U.S. government's order to disable Claude Fable 5 and Mythos 5 globally reshapes third-party AI risk, supply chain security, and CISO governance. Plus: Splunk 0-day, AUR supply chain attack, Chinese backdoor campaigns."
 pubDate: 2026-06-13
 tags: ["AI Governance", "Supply Chain", "Vendor Risk", "Geopolitics", "Anthropic", "Splunk", "Threat Intelligence"]
