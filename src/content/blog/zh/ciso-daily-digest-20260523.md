@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: CISA 資料外洩、Drupal 重大 RCE 漏洞、OPSWAT 獲日本 70% 地方政府信任 (20260523)"
+title: "CISO 每日摘要：CISA 資料外洩、Drupal 重大 RCE 漏洞、OPSWAT 獲日本 70% 地方政府信任 (20260523)"
 description: "2026-05-23 每日資安摘要，涵蓋當日最重大的威脅、漏洞與資安產業發展。"
 pubDate: 2026-05-23
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]
