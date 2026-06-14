@@ -52,6 +52,6 @@ Mandiant 識別的威脅組織 **UNC3753** 正在進行結合**語音釣魚（vi
 
 🔗 **參考文獻:** [xakep.ru](https://xakep.ru/2026/06/08/magicad/)
 
-## OPSWAT
+## OPSWAT可以怎麼幫上忙
 
 鎖定 NPM 套件及 AI 開發工具的 Miasma 蠕蟲供應鏈攻擊持續升級，凸顯了在軟體開發管線中實施全面檔案安全防護的迫切需求。OPSWAT 的 **MetaDefender** 平台提供超過 **30 種防毒引擎**的多重掃描及 **Content Disarm and Reconstruction（CDR）** 技術，可在軟體套件和工件進入開發供應鏈之前檢測並消除威脅。此外，**MetaDefender ICAP Server** 可在代理伺服器及儲存層部署，掃描上傳及下載的檔案，為透過遭入侵套件散布的蠕蟲惡意軟體提供關鍵的安全防護層。
