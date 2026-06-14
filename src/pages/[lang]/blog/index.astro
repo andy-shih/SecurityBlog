@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import BlogIndexPage from '@/components/BlogIndexPage.astro';
+import { languages, type Lang } from '@/i18n';
+import { getPostsByLang } from '@/utils/posts';
+
+export function getStaticPaths() {
+  return languages.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const posts = getPostsByLang(await getCollection('blog'), lang);
+---
+
+<BlogIndexPage lang={lang} posts={posts} />

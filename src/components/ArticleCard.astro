@@ -1,17 +1,21 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Lang } from '@/i18n';
+import { getPostSlug } from '@/utils/posts';
 
 interface Props {
   post: CollectionEntry<'blog'>;
+  lang: Lang;
   index?: number;
 }
 
-const { post, index = 0 } = Astro.props;
+const { post, lang, index = 0 } = Astro.props;
 const date = post.data.pubDate.toLocaleDateString('en', {
   year: 'numeric',
   month: 'short',
   day: 'numeric'
 });
+const href = `/${lang}/blog/${getPostSlug(post)}/`;
 ---
 
 <article
@@ -25,7 +29,7 @@ const date = post.data.pubDate.toLocaleDateString('en', {
   </div>
   <div class="space-y-3">
     <h2 class="text-xl font-semibold leading-tight text-white group-hover:text-sky-200">
-      <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+      <a href={href}>{post.data.title}</a>
     </h2>
     <p class="text-sm leading-7 text-slate-300">{post.data.description}</p>
   </div>

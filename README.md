@@ -28,7 +28,10 @@ Profile content is centralized in `src/config/profile.ts`:
 - GitHub: https://github.com/andy-shih
 - OPSWAT experience and CISSP credential
 
-Blog posts live in `src/content/blog/`.
+Blog posts are separated by language:
+
+- English: `src/content/blog/en/`
+- Traditional Chinese: `src/content/blog/zh/`
 
 ## GitHub Setup
 

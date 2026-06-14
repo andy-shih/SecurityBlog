@@ -1,0 +1,76 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/components/BaseLayout.astro';
+import type { Lang } from '@/i18n';
+import { getSlugFromId, ui } from '@/i18n';
+import { getPostsByLang, getRecommendedPosts, getPostSlug } from '@/utils/posts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map((post) => {
+    const [lang, slug] = post.id.split('/');
+    return {
+      params: { lang, slug },
+      props: { post }
+    };
+  });
+}
+
+const { post } = Astro.props;
+const lang = Astro.params.lang as Lang;
+const t = ui[lang];
+const posts = getPostsByLang(await getCollection('blog'), lang);
+const recommendedPosts = getRecommendedPosts(posts, post, 4);
+const { Content } = await render(post);
+const date = post.data.pubDate.toLocaleDateString(lang === 'zh' ? 'zh-TW' : 'en', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} lang={lang} currentPath={`/blog/${getSlugFromId(post.id)}/`}>
+  <section class="px-5 py-14">
+    <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
+      <article>
+        <div class="max-w-3xl">
+          <a class="font-semibold text-sky-200 hover:text-sky-100" href={`/${lang}/blog/`}>{t.backToArticles}</a>
+          <header class="mt-8 border-b border-white/10 pb-8">
+            <div class="mb-4 flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-slate-400">
+              <time datetime={post.data.pubDate.toISOString()}>{date}</time>
+              <span aria-hidden="true">/</span>
+              <span>{post.data.author}</span>
+            </div>
+            <h1 class="text-4xl font-bold leading-tight text-white sm:text-5xl">{post.data.title}</h1>
+            <p class="mt-5 text-lg leading-8 text-slate-300">{post.data.description}</p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              {post.data.tags.map((tag) => (
+                <span class="rounded-md border border-emerald-300/20 bg-emerald-300/[0.08] px-2.5 py-1 font-mono text-xs text-emerald-200">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </header>
+          <div class="prose-security mt-8">
+            <Content />
+          </div>
+        </div>
+      </article>
+
+      <aside class="lg:sticky lg:top-24 lg:self-start" aria-label={t.recommended}>
+        <div class="hud-panel rounded-lg p-5">
+          <h2 class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{t.recommended}</h2>
+          <div class="mt-5 grid gap-3" data-testid="recommended-articles">
+            {recommendedPosts.map((recommended) => (
+              <a class="rounded-md border border-white/10 bg-white/[0.03] p-3 transition hover:border-sky-300/45" href={`/${lang}/blog/${getPostSlug(recommended)}/`}>
+                <span class="block text-sm font-semibold leading-6 text-white">{recommended.data.title}</span>
+                <span class="mt-2 block text-xs leading-5 text-slate-400">{recommended.data.description}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

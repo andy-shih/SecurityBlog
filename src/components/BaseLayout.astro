@@ -1,18 +1,23 @@
 ---
 import '../styles/global.css';
 import { profile } from '@/config/profile';
+import type { Lang } from '@/i18n';
+import { getLangPath, ui } from '@/i18n';
 
 interface Props {
   title: string;
   description: string;
+  lang?: Lang;
+  currentPath?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang = 'zh', currentPath = '/' } = Astro.props;
 const pageTitle = `${title} | ${profile.siteName}`;
+const t = ui[lang];
 ---
 
 <!doctype html>
-<html lang="zh-Hant">
+<html lang={lang === 'zh' ? 'zh-Hant' : 'en'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -25,14 +30,17 @@ const pageTitle = `${title} | ${profile.siteName}`;
       Skip to main content
     </a>
     <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/[0.82] backdrop-blur">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
-        <a href="/" class="font-mono text-sm font-semibold uppercase tracking-[0.18em] text-sky-200">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-4 sm:gap-4 sm:px-5">
+        <a href="/" class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sky-200 sm:text-sm">
           {profile.siteName}
         </a>
-        <div class="flex items-center gap-1 text-sm text-slate-300 sm:gap-2">
-          <a class="rounded-md px-3 py-2 transition hover:bg-white/[0.08] hover:text-white" href="/">Home</a>
-          <a class="rounded-md px-3 py-2 transition hover:bg-white/[0.08] hover:text-white" href="/blog/">Blog</a>
-          <a class="rounded-md px-3 py-2 transition hover:bg-white/[0.08] hover:text-white" href="/resume/">Resume</a>
+        <div class="flex items-center gap-1 text-xs text-slate-300 sm:gap-2 sm:text-sm">
+          <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/`}>{t.navHome}</a>
+          <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/blog/`}>{t.navBlog}</a>
+          <a class="rounded-md px-2 py-2 transition hover:bg-white/[0.08] hover:text-white sm:px-3" href={`/${lang}/resume/`}>{t.navResume}</a>
+          <span class="mx-0.5 h-5 w-px bg-white/10 sm:mx-1" aria-hidden="true"></span>
+          <a class={`rounded-md px-2 py-2 font-mono text-xs ${lang === 'zh' ? 'bg-sky-300/15 text-sky-100' : 'hover:bg-white/[0.08] hover:text-white'}`} href={getLangPath('zh', currentPath)}>ZH</a>
+          <a class={`rounded-md px-2 py-2 font-mono text-xs ${lang === 'en' ? 'bg-sky-300/15 text-sky-100' : 'hover:bg-white/[0.08] hover:text-white'}`} href={getLangPath('en', currentPath)}>EN</a>
         </div>
       </nav>
     </header>

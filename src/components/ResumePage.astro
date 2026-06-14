@@ -1,9 +1,18 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
 import { profile } from '@/config/profile';
+import type { Lang } from '@/i18n';
+import { ui } from '@/i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
 ---
 
-<BaseLayout title="Resume" description="Resume for Andy.Shih, OPSWAT Solutions Engineer and CISSP focused on critical infrastructure protection and secure file workflows.">
+<BaseLayout title="Resume" description={`Resume for ${profile.name}.`} lang={lang} currentPath="/resume/">
   <section class="px-5 py-16">
     <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
       <aside class="space-y-6">
@@ -11,7 +20,7 @@ import { profile } from '@/config/profile';
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">Resume</p>
           <h1 class="mt-4 text-4xl font-bold text-white">Resume / {profile.name}</h1>
           <p class="mt-3 text-xl text-emerald-200">{profile.title} / {profile.titleZh}</p>
-          <p class="mt-5 leading-8 text-slate-300">{profile.taglineZh}</p>
+          <p class="mt-5 leading-8 text-slate-300">{lang === 'zh' ? profile.taglineZh : profile.tagline}</p>
           <div class="mt-6 grid gap-3 text-sm text-slate-300">
             <span>{profile.location}</span>
             <a class="text-sky-200 hover:text-sky-100" href={`mailto:${profile.email}`}>{profile.email}</a>
@@ -23,14 +32,8 @@ import { profile } from '@/config/profile';
       <div class="space-y-8">
         <section>
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-emerald-200">Profile</p>
-          <h2 class="mt-3 text-3xl font-bold text-white">OPSWAT 資安職涯與解決方案經驗</h2>
-          <p class="mt-4 leading-8 text-slate-300">
-            我的 Security 相關職涯皆在 OPSWAT 累積，從 L2/L3 Technical Support、Technical Account Manager/ Customer Success Manager，到目前的 Solutions Engineer。
-            工作核心是把客戶問題、產品能力與關鍵基礎設施防護需求連起來，協助技術團隊理解可部署、可維運、可驗證的資安方案。
-          </p>
-          <p class="mt-4 leading-8 text-slate-400">
-            My security experience is rooted in OPSWAT customer-facing roles, with practical exposure to critical infrastructure protection, secure file workflows, file-borne threat prevention, and enterprise security operations.
-          </p>
+          <h2 class="mt-3 text-3xl font-bold text-white">{t.resumeProfile}</h2>
+          <p class="mt-4 leading-8 text-slate-300">{t.resumeIntro}</p>
         </section>
 
         <section data-testid="experience">
@@ -43,9 +46,7 @@ import { profile } from '@/config/profile';
                   <p class="font-mono text-xs uppercase tracking-[0.14em] text-emerald-200">{item.period}</p>
                 </div>
                 <p class="mt-2 font-mono text-sm text-sky-200">{item.company}</p>
-                <p class="mt-2 text-sm leading-6 text-slate-400">
-                  {item.summary}
-                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-400">{item.summary}</p>
               </div>
             ))}
           </div>
