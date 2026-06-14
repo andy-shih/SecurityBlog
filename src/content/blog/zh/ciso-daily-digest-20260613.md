@@ -51,34 +51,6 @@ featured: true
 
 ---
 
-## CISO 需要做的事
-
-### 本週
-
-1. **盤點你的 AI 供應商依賴。** 哪些 Anthropic 模型正在生產環境中使用？哪些使用案例（客服、內部工具、程式碼生成）依賴它們？記錄每一個整合點並按關鍵性標記。
-2. **修補 Splunk Enterprise。** 這是未經驗證的 RCE——請以正在被積極利用的情境處理。
-3. **驗證 Linux 二進位檔完整性。** 對所有伺服器群上的 SSH 和身份驗證二進位檔執行 `rpm -V` 或 `debsums`。
-
-### 本月
-
-1. **建立 AI 供應商冗餘。** 對每個關鍵任務 AI 使用案例，確定 2-3 個替代方案。測試故障轉移程序。下一次禁令可能發生在其他供應商身上。
-2. **審查供應鏈安全措施。** [The Hacker News 對 AUR 攻擊的報導](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html)和[中國 APT 後門](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html)都顯示套件生態系統攻擊的規模和複雜度正在增長。確保你的軟體成品驗證和依賴鎖定涵蓋了你管線中的所有語言生態系統（Rust、Python、npm、Go）。
-3. **向董事會簡報。** 將 Anthropic 禁令定位為供應鏈韌性問題，而非合規勾選框。下一次模型關閉可能直接影響你的 AI 生產管線。
-
-### 本季
-
-1. **建立地緣政治供應商風險評估框架。** 對每個 AI 供應商在監管風險、資料主權、合約靈活度等方面進行評分。
-2. **評估自建和開源 AI 替代方案。** 控制在自己手中的模型的監管優勢從未如此明顯。
-3. **模擬供應商中斷的成本。** 一次計劃外的 24 小時 AI 服務中斷對你的組織意味著多少損失？將其納入供應商選擇標準。
-
----
-
-## 向董事會說什麼
-
-> *「美國政府已經確立了一個先例：AI 模型可以經由行政命令在零預警下被關閉。我們已在組織內識別出 [X] 個 AI 整合點。我們正在建立一個多供應商 AI 架構，具備 24 小時內的故障轉移能力，以確保無論監管如何變化，營運都能持續。」*
-
----
-
 ## 重點參考資料
 
 **Anthropic 禁令：**
@@ -98,13 +70,3 @@ featured: true
 - [Anthropic 推出 1500 萬美元網路安全防禦計畫 (StateScoop)](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNME1NNUNiODhvSFVlVldoMTFQMDVRSTg2VFg2TTlzUHkzb0kxaXJsa3NVYkhhX3FkTXRYNERVX0NjVXVJRUVicWNVRVZQTWxtRC1OclFrQjlsWkZNWHBnRk14WE1FVUNveC1FMTJhdkZDekZzUTFyT1NYdmtaV3hKdDdBeDNYTXNXRUs2cnI3UDhiQWpLdGN5Y2I2cEtMS0JHSDliTkVNT0ZoY2h4YjJKWFdPZ0xtamUtNl80?oc=5)
 - [Opsin 整合 Claude Compliance API 擴展 AI 治理 (Yahoo Finance)](https://news.google.com/rss/articles/CBMirAFBVV95cUxNZ0xzZHEtUjRGei0yTmRmYzlHT3JCS1dhNnBzbmNUZHduNEpocEQzbUdRZUdRYjRjbFFkNDNJT2dWdUw2c1llU0ZLUlVRdnJWWjdLZzd6M25DZVM2QVpPUlJzLVpRWFNrVkt4Y3Y2YjFHcC1KcEVpQmNoc0wtVWVFTUJSbVdBUVdHd2dQVGRZLWpiVVZIT3dlNnR2SDRob3ZQYl9OVHMwMGs5WGFX?oc=5)
 - [加拿大隱私監管機構對 Grok 深偽內容做出裁決 (Jurist)](https://news.google.com/rss/articles/CBMixgFBVV95cUxPS05zUFVuaFBQWWJpUHBiM3FWN1dRTF9IUmoteWdteEZOZmJyR2RCeXUxM2lvVUpsX3FzT0E3QldLOFRSdklhZTYxdU1oRXBXTjFQOXQyMC01QXRfeGROMHZ3S2c0SHdRdmUtLURCR2JYU3VRQ3psSnhvTU5zTG4zUEw2aEFGTTFGVkNOMW5WY19pVUwzSzFVYzV2VUhWOVZaZ2VtcjhPSFdhVVdhdHlfTjRVdmg0UFd5enpjSUxQQmtFTGFCa2c?oc=5)
-
----
-
-## 立即行動
-
-1. **立即：** 修補 Splunk Enterprise。驗證 Linux 二進位檔完整性。確認你的組織正在使用哪些 Anthropic 模型。
-2. **本週內：** 完成 AI 供應商依賴盤點。識別單點故障風險。
-3. **本月內：** 向董事會簡報地緣政治 AI 風險。在你的 AI 架構中建立故障轉移能力。
-
-好的 AI 治理意味著你的組織能夠在模型被關閉時——無論原因為何——維持營運不中斷。Fable 5 禁令就是最好的測試案例。不要等到下一次才開始準備。
