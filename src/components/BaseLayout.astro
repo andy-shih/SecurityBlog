@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import BrandMark from '@/components/BrandMark.astro';
 import { profile } from '@/config/profile';
 import type { Lang } from '@/i18n';
 import { getLangPath, ui } from '@/i18n';
@@ -23,6 +24,7 @@ const t = ui[lang];
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{pageTitle}</title>
   </head>
   <body>
@@ -31,7 +33,8 @@ const t = ui[lang];
     </a>
     <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-950/[0.82] backdrop-blur">
       <nav class="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-4 sm:gap-4 sm:px-5">
-        <a href="/" class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sky-200 sm:text-sm">
+        <a href="/" class="flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-sky-200 sm:text-sm">
+          <BrandMark className="h-7 w-7 shrink-0" decorative />
           {profile.siteName}
         </a>
         <div class="flex items-center gap-1 text-xs text-slate-300 sm:gap-2 sm:text-sm">

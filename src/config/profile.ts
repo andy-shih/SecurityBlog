@@ -1,5 +1,5 @@
 export const profile = {
-  siteName: 'Andy.S',
+  siteName: 'ANDY.S',
   name: 'Andy.Shih',
   title: 'Solutions Engineer',
   titleZh: '資安解決方案工程師',

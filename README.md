@@ -1,4 +1,4 @@
-# Andy.S Security Blog
+# ANDY.S Security Blog
 
 Astro + Tailwind static personal brand blog for Andy.Shih. The site focuses on OPSWAT experience, critical infrastructure protection, secure file workflows, CISSP credentials, and practical security writing with a professional dark HUD visual direction.
 
@@ -22,7 +22,7 @@ npm run test:e2e
 
 Profile content is centralized in `src/config/profile.ts`:
 
-- Site name: Andy.S
+- Site name: ANDY.S
 - Resume name: Andy.Shih
 - Email: andy.shih@opswat.com
 - GitHub: https://github.com/andy-shih

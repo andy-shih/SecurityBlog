@@ -8,10 +8,12 @@ const slugs = [
   'phishing-resilience-program'
 ];
 
-test('zh homepage presents Andy.S, no professional focus screenshot section, and four article links', async ({ page }) => {
+test('zh homepage presents ANDY.S, brand favicon, no professional focus screenshot section, and four article links', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Andy.S');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('ANDY.S');
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', '/favicon.svg');
+  await expect(page.locator('header').getByTestId('brand-mark')).toBeVisible();
   await expect(page.getByTestId('featured-articles').getByRole('article')).toHaveCount(4);
   await expect(page.getByText('Professional focus')).toHaveCount(0);
   await expect(page.getByText('專業焦點')).toHaveCount(0);
@@ -27,7 +29,7 @@ test('zh homepage presents Andy.S, no professional focus screenshot section, and
 
 test('en and zh language routes do not mix article languages', async ({ page }) => {
   await page.goto('/en/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Andy.S');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('ANDY.S');
   await expect(page.getByText('Security notes from Andy.Shih')).toBeVisible();
   await expect(page.getByText('專注於關鍵基礎設施')).toHaveCount(0);
 

@@ -1,0 +1,27 @@
+---
+interface Props {
+  className?: string;
+  decorative?: boolean;
+  title?: string;
+}
+
+const { className = 'h-7 w-7', decorative = false, title = 'ANDY.S brand mark' } = Astro.props;
+---
+
+<svg
+  class={className}
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role={decorative ? undefined : 'img'}
+  aria-hidden={decorative ? 'true' : undefined}
+  aria-label={decorative ? undefined : title}
+  data-testid="brand-mark"
+>
+  <rect width="64" height="64" rx="16" fill="#07111f"></rect>
+  <rect x="4" y="4" width="56" height="56" rx="13" fill="#0f172a" stroke="#1e3a5f" stroke-width="2"></rect>
+  <path d="M12 50 25 15 38 50" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M19 37h14" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"></path>
+  <path d="M49 17H39c-4.4 0-7 2.6-7 6.5S34.6 30 39 30h4c4.4 0 7 2.7 7 7s-3 10-10 10H31" stroke="#34d399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M8 12h8M48 52h8" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" opacity=".45"></path>
+</svg>
