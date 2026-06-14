@@ -53,6 +53,6 @@ Japan Vulnerability Notes (JVN) published the **CISA ICS Advisory for late April
 
 🔗 **Reference:** [JVN](https://jvn.jp/vu/JVNVU90656414/)
 
-## OPSWAT 能做什麼
+## How Can OPSWAT Help
 
 The Tropic Trooper campaign used **trojanized SumatraPDF installers** distributed via GitHub — a technique that **MetaDefender's file-based threat prevention** is specifically designed to counter. **MetaDefender Gateway** can inspect all downloaded files at the network perimeter, while **MetaDefender CDR** can neutralize weaponized PDF installers by removing active content and macros. For the **home router-based proxy infrastructure,** OPSWAT's **TrustNo.one** platform provides device-level visibility for managed environments.
