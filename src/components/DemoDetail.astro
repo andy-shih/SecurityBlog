@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
-import type { DemoEntry } from '@/components/demo-data';
-import { getCategoryLabel, difficultyClass } from '@/components/demo-data';
+import type { DemoEntry } from '@/components/demo-types';
+import { getCategoryLabel, difficultyClass } from '@/components/demo-types';
 import type { Lang } from '@/i18n';
 
 interface Props {
@@ -20,7 +20,6 @@ const pageDesc = desc;
 <BaseLayout title={pageTitle} description={pageDesc} lang={lang} currentPath={`/demos/${demo.id}/`}>
   <section class="px-5 py-14">
     <div class="mx-auto max-w-4xl">
-      <!-- Breadcrumb -->
       <a
         href={`/${lang}/demos/`}
         class="font-semibold text-sky-200 hover:text-sky-100"
@@ -28,7 +27,6 @@ const pageDesc = desc;
         &larr; {lang === 'zh' ? '返回示範目錄' : 'Back to Demos'}
       </a>
 
-      <!-- Header -->
       <div class="mt-6 border-b border-white/10 pb-8">
         <div class="mb-4 flex flex-wrap items-center gap-2">
           <span class="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 font-mono text-xs text-slate-400">{cat}</span>
@@ -44,7 +42,6 @@ const pageDesc = desc;
         <p class="mt-4 text-lg leading-8 text-slate-300">{desc}</p>
       </div>
 
-      <!-- Attack Technique & MITRE -->
       <div class="mt-8 grid gap-4 sm:grid-cols-2">
         <div class="hud-panel rounded-lg p-4">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{lang === 'zh' ? '攻擊手法' : 'Attack Technique'}</p>
@@ -62,7 +59,6 @@ const pageDesc = desc;
         </div>
       </div>
 
-      <!-- Details Grid -->
       <div class="mt-6 grid gap-4 sm:grid-cols-2">
         <div class="hud-panel rounded-lg p-4">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{lang === 'zh' ? '影響平台' : 'Platforms'}</p>
@@ -82,7 +78,6 @@ const pageDesc = desc;
         </div>
       </div>
 
-      <!-- MetaDefender Capabilities -->
       <div class="mt-6">
         <div class="hud-panel rounded-lg p-4">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-emerald-200">{lang === 'zh' ? 'MetaDefender 防護能力' : 'MetaDefender Capabilities'}</p>
@@ -96,12 +91,11 @@ const pageDesc = desc;
         </div>
       </div>
 
-      <!-- Screenshots -->
       {demo.screenshots && demo.screenshots.length > 0 && (
         <div class="mt-8">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{lang === 'zh' ? '螢幕截圖' : 'Screenshots'}</p>
           <div class="mt-4 grid gap-4 sm:grid-cols-2">
-            {demo.screenshots.map((s: any) => (
+            {demo.screenshots.map((s: { label: string; src: string }) => (
               <div class="hud-panel rounded-lg p-4">
                 <p class="mb-2 text-sm text-slate-300">{s.label}</p>
                 <div class="aspect-video rounded-md border border-white/10 bg-slate-950/60 flex items-center justify-center">
@@ -113,7 +107,6 @@ const pageDesc = desc;
         </div>
       )}
 
-      <!-- Actions -->
       <div class="mt-8 flex flex-wrap gap-3">
         <a
           href={demo.github_url || '#'}

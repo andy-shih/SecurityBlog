@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
-import type { DemoEntry } from '@/components/demo-data';
+import type { DemoEntry } from '@/components/demo-types';
+import { demos, demoCategories, demoCapabilities } from '@/components/demo-data';
+import { getCategoryLabel } from '@/components/demo-types';
 import DemoCard from '@/components/DemoCard.astro';
-import { getCategoryLabel, difficultyClass } from '@/components/demo-data';
 import type { Lang } from '@/i18n';
 import { ui } from '@/i18n';
 
@@ -11,13 +12,10 @@ interface Props {
   demos: DemoEntry[];
 }
 
-const { lang, demos } = Astro.props;
+const { lang } = Astro.props;
 const t = ui[lang];
 
-const allCategories = [...new Set(demos.map((d) => d.category))];
-const allCapabilities = [...new Set(demos.flatMap((d) => d.metadefender_capabilities))];
-const allPlatforms = [...new Set(demos.flatMap((d) => d.platforms))];
-const published = demos.filter((d) => d.status === 'published');
+const published = demos.filter((d: DemoEntry) => d.status === 'published');
 
 const pageTitle = lang === 'zh' ? '攻防示範資料庫' : 'Attack Demo Library';
 const pageDesc = lang === 'zh'
@@ -34,23 +32,21 @@ const pageDesc = lang === 'zh'
         <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-300">{pageDesc}</p>
       </div>
 
-      <!-- Stats bar -->
       <div class="mb-8 grid gap-3 sm:grid-cols-3">
         <div class="hud-panel rounded-lg p-4">
           <p class="font-mono text-2xl font-bold text-white">{published.length}</p>
           <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? '已發布示範' : 'Published Demos'}</p>
         </div>
         <div class="hud-panel rounded-lg p-4">
-          <p class="font-mono text-2xl font-bold text-white">{allCategories.length}</p>
+          <p class="font-mono text-2xl font-bold text-white">{demoCategories.length}</p>
           <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? '攻擊類別' : 'Attack Categories'}</p>
         </div>
         <div class="hud-panel rounded-lg p-4">
-          <p class="font-mono text-2xl font-bold text-white">{allCapabilities.length}</p>
+          <p class="font-mono text-2xl font-bold text-white">{demoCapabilities.length}</p>
           <p class="mt-1 text-xs text-slate-400">{lang === 'zh' ? 'MetaDefender 防護能力' : 'MetaDefender Capabilities'}</p>
         </div>
       </div>
 
-      <!-- Category filter chips -->
       <div class="mb-6 flex flex-wrap gap-2">
         <a
           href={`/${lang}/demos/`}
@@ -58,7 +54,7 @@ const pageDesc = lang === 'zh'
         >
           {lang === 'zh' ? '全部' : 'All'}
         </a>
-        {allCategories.map((cat) => (
+        {demoCategories.map((cat: string) => (
           <a
             href={`/${lang}/demos/?category=${cat}`}
             class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-xs text-slate-300 transition hover:border-sky-300/30 hover:text-white"
@@ -68,10 +64,9 @@ const pageDesc = lang === 'zh'
         ))}
       </div>
 
-      <!-- Demo grid -->
       {published.length > 0 ? (
         <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {published.map((demo) => <DemoCard demo={demo} lang={lang} />)}
+          {published.map((demo: DemoEntry) => <DemoCard demo={demo} lang={lang} />)}
         </div>
       ) : (
         <div class="hud-panel rounded-lg p-10 text-center">
