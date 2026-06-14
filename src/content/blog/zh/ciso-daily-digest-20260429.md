@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：勒索軟體與資料破壞攻擊 (20260429)"
+title: "CISO 每日摘要：Feuding Ransomware Groups Leak Each Othe (t-20260429)"
 description: "每日資安重點事件與威脅摘要 — 2026-04-29"
 pubDate: 2026-04-29
 tags: ["CISO", "資安", "每日摘要", "威脅情資"]
@@ -91,7 +91,7 @@ CISA 警告 ConnectWise ScreenConnect 與 Windows Shell 漏洞正被積極利用
 
 ---
 
-## OPSWAT 能做什麼
+## OPSWAT可以怎麼幫上忙
 
 **供應鏈威脅防護：** OPSWAT MetaDefender 的多引擎掃描（30+ 防毒引擎）與 CDR 技術，可在下載套件進入企業系統前進行檢查。可部署為 CI/CD 流程的檔案驗證閘道。
 
