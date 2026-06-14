@@ -1,6 +1,6 @@
 ---
-title: "CISO Daily Digest: US Government Orders Anthropic to Disable Claude Fable 5 Globally (20260614)"
-description: "US Commerce Department forces Anthropic to suspend Fable 5 and Mythos 5 worldwide under export controls following a 90-minute ultimatum, triggered by Amazon CEO Andy Jassy's security briefing to the White House. Also: xAI Grok safety whistleblower lawsuit, NPM 12 blocks install scripts by default to combat supply chain attacks, and Iranian Handala group claims Cal Water breach."
+title: "CISO Daily Digest: Fable 5 Ban Aftermath — Amazon’s Role and Industry Fallout (20260614)"
+description: "Day 2 of the Anthropic Fable 5 shutdown: Amazon CEO Andy Jassy briefed the White House, triggering a 90-minute ultimatum. Plus: xAI Grok whistleblower lawsuit, npm 12 blocks install scripts, Iranian Handala claims Cal Water breach."
 pubDate: 2026-06-14
 tags: [AI Governance, Supply Chain, Critical Infrastructure, Export Control, AI Safety, Anthropic, NPM]
 author: "Security Solutions Team"
