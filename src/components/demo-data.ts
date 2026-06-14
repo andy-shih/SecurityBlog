@@ -15,8 +15,8 @@ export interface DemoEntry {
   metadefender_capabilities: string[];
   estimated_duration: string;
   screenshots?: { label: string; src: string }[];
-  download_url?: string;
-  github_url?: string;
+  download_url: string;
+  github_url: string;
   status: 'published' | 'coming_soon';
   created: string; // YYYY-MM-DD
 }
