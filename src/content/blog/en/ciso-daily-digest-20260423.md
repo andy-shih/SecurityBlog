@@ -53,6 +53,6 @@ Japan Vulnerability Notes published advisories for **CMS ALAYA SQL injection vul
 
 🔗 **Reference:** [JVNDB](https://jvndb.jvn.jp/en/contents/2026/JVNDB-2026-0) | [JVN](https://jvndb.jvn.jp/en/contents/2026/JVNDB-2026-0)
 
-## OPSWAT 能做什麼
+## How Can OPSWAT Help
 
 The Checkmarx supply chain attack — where security scanning tools themselves became the attack vector — is a textbook case for **MetaDefender's multi-engine malware detection.** By running files through **30+ anti-malware engines** simultaneously, MetaDefender can detect threats missed by any single scanner. Additionally, **MetaDefender CDR** can neutralize weaponized Docker images and VS Code extension files by removing potentially malicious macros, scripts, and embedded objects while preserving functionality.
