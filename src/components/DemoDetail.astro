@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
-import type { DemoEntry } from '@/components/demo-types';
-import { getCategoryLabel, difficultyClass } from '@/components/demo-types';
+import type { DemoEntry } from '@/components/demo-data';
+import { getCategoryLabel, difficultyClass } from '@/components/demo-data';
 import type { Lang } from '@/i18n';
 
 interface Props {
@@ -67,7 +67,7 @@ const pageDesc = desc;
         <div class="hud-panel rounded-lg p-4">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{lang === 'zh' ? '影響平台' : 'Platforms'}</p>
           <div class="mt-2 flex flex-wrap gap-2">
-            {demo.platforms.map((p) => (
+            {demo.platforms.map((p: string) => (
               <span class="rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-xs text-slate-300">{p}</span>
             ))}
           </div>
@@ -75,7 +75,7 @@ const pageDesc = desc;
         <div class="hud-panel rounded-lg p-4">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{lang === 'zh' ? '檔案類型' : 'File Types'}</p>
           <div class="mt-2 flex flex-wrap gap-2">
-            {demo.file_types.map((t) => (
+            {demo.file_types.map((t: string) => (
               <span class="rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-xs text-slate-300">.{t}</span>
             ))}
           </div>
@@ -87,7 +87,7 @@ const pageDesc = desc;
         <div class="hud-panel rounded-lg p-4">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-emerald-200">{lang === 'zh' ? 'MetaDefender 防護能力' : 'MetaDefender Capabilities'}</p>
           <div class="mt-3 flex flex-wrap gap-2">
-            {demo.metadefender_capabilities.map((cap) => (
+            {demo.metadefender_capabilities.map((cap: string) => (
               <span class="rounded-md border border-emerald-300/20 bg-emerald-300/[0.08] px-3 py-1.5 text-sm text-emerald-200">
                 {cap}
               </span>
@@ -101,7 +101,7 @@ const pageDesc = desc;
         <div class="mt-8">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{lang === 'zh' ? '螢幕截圖' : 'Screenshots'}</p>
           <div class="mt-4 grid gap-4 sm:grid-cols-2">
-            {demo.screenshots.map((s) => (
+            {demo.screenshots.map((s: any) => (
               <div class="hud-panel rounded-lg p-4">
                 <p class="mb-2 text-sm text-slate-300">{s.label}</p>
                 <div class="aspect-video rounded-md border border-white/10 bg-slate-950/60 flex items-center justify-center">
