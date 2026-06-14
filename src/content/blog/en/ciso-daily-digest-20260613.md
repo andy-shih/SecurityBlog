@@ -11,19 +11,32 @@ The U.S. government has ordered Anthropic to disable Claude Fable 5 and Mythos 5
 
 ## What happened
 
-On June 13, the U.S. government issued a directive barring Anthropic from providing access to its latest frontier models—Claude Fable 5 and Mythos 5—to any foreign national. Anthropic complied by disabling access globally. [The BBC reported the suspension over security fears](https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iZTNFalowWHVUV2FhOGlEcWgxVWdISzBVLXJfN2FXOXBjdkVhRG0wVFRyNURuMHNxREtKeENYSkdWdm45OXBTd2xaUzlZQjBTQ2dQWjgzOUtCZw?oc=5), while [CNBC confirmed the directive](https://news.google.com/rss/articles/CBMivwFBVV95cUxQQndha2NfQ0ZvbE1DU2gxUFBrLWdGU2x3RjFlbGQ0MG1TSzBVVlRrUFlqbFZnUERDbW1oYmY3cTV4UnZkelZ4TEtLa3ZabEpCcXJVQTZEZjFyT2hWdEFERXpVdDR2OUhCWnVEbklSeEJGU1gxaGdvdmt2d0psY2N3RnlHdjMtOGIxOHV2cXpuUzlqVk42TkYxbEpMOVJzenZ5VVg1b29rcUpnRFlWSDQxV3FWMm5fY3lyVnlQU29BONIBxAFBVV95cUxQUHNqZzhHU1lSVGhtUmhjSF9iS3o5VG0wM1NZM2RfckdPWWhUZURYUGVhaW1VdVZ0bWJaeHd5Uk9RUDZIRmh0X3RZY2Eyc1hzSGtqSTlzTEJrVEctMW1oUWZUNURTQV96dm42NF9nWTBnZDFuSWxTMGNIX0dGZUs2TWFYXzAwWVBKRUhFdHIxd2JXcnczX0w1UUwzZ1EzT3pXMDhxVFZaZTNGbmRKOUc4cVJWSDY3dXVpQkVxYlphWFlnYS1v?oc=5).
+On June 13, the U.S. government issued a directive barring Anthropic from providing access to its latest frontier models—Claude Fable 5 and Mythos 5—to any foreign national. Anthropic complied by disabling access globally.
 
-[Forbes framed it as a direct business impact question](https://news.google.com/rss/articles/CBMi2wFBVV95cUxPV2xUTDg3OEZQVmN3bFBEWjJoWkltLUhDa0ZlWjEtMHRQZHU5MDhSVFo3ZHJ5YWNES2VJQ0VOQVNVTTFtbU9lNjJpNEVnb3cycWZ1bjJic0tZV0pvS09LcFhzbnplb3dUc2VEa2pqTXI5dmxDN1dydDF6U084NEhNVVVjMWcyYWZ4Z3ppSTlOcGVZbl8wMlk2UHZSS0JLVkwyUEZ3T2prc0FvMjB3aGN0MG9yQThyX25BX1ZsTjR2ZHZhOERuVEZYOTM0bWNlZ1hHSzVRbEdKSS14bnM?oc=5), while [VentureBeat offered enterprise response guidance](https://news.google.com/rss/articles/CBMi6AFBVV95cUxNX2MxcmpFWC0wcWlaVl85Wlg3aTVOT190MGFNSDRYTlZYWURjUU5KMGZhd2V4YU4wempIVU5GUEFNNklQSXk0a3lBU2ZycHh2a3dVUEN3N0w4QndlbGx6RV94U0xGS3hEQXU0TC1PY0otTVl0TmNQeGFaVGxrTXZQOW5DYjB6czJvWHhDb0ZUUVNhQVhncGRfNWxMQ1pqZjFSWlltR0Z5WTZONjVTRnRpVU41VXNCTHJFX0NHUm94bnlFVWVWeDFQT2RlRFprbzlvUmltSjRKQS1tc25JbnlELUVhOVliU0dP?oc=5).
+**Context:**
+- The BBC reported the suspension over security fears
+- CNBC confirmed the directive
+- Forbes framed it as a direct business impact question
+- VentureBeat offered enterprise response guidance
+- Reports suggest Fable 5 was jailbroken for stack exploit creation, which SecurityBrief Australia described as triggering cybersecurity warnings
+- Anthropic's CEO warned of military risks in Claude use
+- Anthropic's own safety warnings may have backfired, accelerating the government's decision
 
-Inside the story: [reports suggest Fable 5 was jailbroken for stack exploit creation](https://news.google.com/rss/articles/CBMid0FVX3lxTE5EZGJXTnUxZkRyQ0IxVlREeTB4dFVJcS1PbE0tY0ZYM2U0RmZ4aFZfUEliYnpvZXlnTE1ZcWtxUjcwUWprbDBUUjgybmZtYnRpQm5TMDZFS2dvdFBmc1dRbWR4aEMxZXhyZmY2SGdwR1F3V1dhemEw?oc=5), which [SecurityBrief Australia described as triggering cybersecurity warnings](https://news.google.com/rss/articles/CBMilgFBVV95cUxPMWZXbjl3Q2ZMcVF5Y19MRXZvQThQbENyZmM4dnNoR3pOMFBfd1l3cEc2dkVfX3R6Q0ZkaS1HLXZJb1V0VEYtSV9keW96WnhKNVpIWlBGbHZVT1ctLUNycmtGakRrcTBxdW1kNW1rNC1LMm5IakhnUWk2RHNCRjZhdDBNVXozbkt4aFlGX2N5RmxTdUlfa2c?oc=5). Anthropic's CEO [warned of military risks in Claude use](https://news.google.com/rss/articles/CBMidEFVX3lxTFBTUHViSzBsRWUtWXlYTVF4RV9XRjdkREJiWFF0c2Ria25xZHJabHhiZVk2Rkp3bjRFa2hlN1ZnS3p2dzJKNHVLUHFkMzBERnZKQk5wTE5DQS01b2xSajkyLW9uLWR1akhnellQYzU3Mnl1T0FX?oc=5), and [Anthropic's own safety warnings may have backfired](https://news.google.com/rss/articles/CBMi3AFBVV95cUxNbS1FendLaUxRLVQ4V2ktQ1ZSSXRJeUw3MkUyV3BMdWNESDNuWjMyNzcxQ2FjMXpvQ1NDOElkSjBrZGV1ZjhnUnNGZEtaV3FXQU5CazMzMXRuYmdON2tKRWxUaWluMEdiZHIyOGdFcXJCdlhqdXVoWlpoZTdGVUNaYmpPN0RDUklmMzc4OEtlS3g2cEtjWjhfMEFNay1IT0dFLU1GNzJ5dWcydjlqQ01WQWxsYUVtV0JxY1E0bUtDbTNOaUtPSGpXZGMzcTByWDJydzdwckg5VDE1MWth?oc=5), accelerating the government's decision.
+The ban applies retroactively—enterprises with prepaid Fable 5 credits face refund obligations, and cross-border deployments face immediate discontinuity.
 
-The ban also applies retroactively—[enterprises with prepaid Fable 5 credits face refund obligations](https://news.google.com/rss/articles/CBMimwFBVV95cUxPVjNtNjJIUlh2Z18yU1FaYVdyMTdTMXktR1EyMjlqYUlEVElXS0ZvbkZtYmRES3FuRENGc1NoWTBHSFUzMUxiWkQ5aXk5ZlJPTHJLYzM3SmJPSzVzcEtkSVprZWtjUUZoNHRlWnVVNTVJTDJaN18wUWNweWdTUnhaSVFmVTlRcHc4R3owRnMwbTJCclJETXRCamRvQQ?oc=5), and [cross-border enterprise deployments face immediate discontinuity](https://news.google.com/rss/articles/CBMi6AFBVV95cUxNX2MxcmpFWC0wcWlaVl85Wlg3aTVOT190MGFNSDRYTlZYWURjUU5KMGZhd2V4YU4wempIVU5GUEFNNklQSXk0a3lBU2ZycHh2a3dVUEN3N0w4QndlbGx6RV94U0xGS3hEQXU0TC1PY0otTVl0TmNQeGFaVGxrTXZQOW5DYjB6czJvWHhDb0ZUUVNhQVhncGRfNWxMQ1pqZjFSWlltR0Z5WTZONjVTRnRpVU41VXNCTHJFX0NHUm94bnlFVWVWeDFQT2RlRFprbzlvUmltSjRKQS1tc25JbnlELUVhOVliU0dP?oc=5).
+**Reference:**
+- [BBC](https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iZTNFalowWHVUV2FhOGlEcWgxVWdISzBVLXJfN2FXOXBjdkVhRG0wVFRyNURuMHNxREtKeENYSkdWdm45OXBTd2xaUzlZQjBTQ2dQWjgzOUtCZw?oc=5)
+- [CNBC](https://news.google.com/rss/articles/CBMivwFBVV95cUxQQndha2NfQ0ZvbE1DU2gxUFBrLWdGU2x3RjFlbGQ0MG1TSzBVVlRrUFlqbFZnUERDbW1oYmY3cTV4UnZkelZ4TEtLa3ZabEpCcXJVQTZEZjFyT2hWdEFERXpVdDR2OUhCWnVEbklSeEJGU1gxaGdvdmt2d0psY2N3RnlHdjMtOGIxOHV2cXpuUzlqVk42TkYxbEpMOVJzenZ5VVg1b29rcUpnRFlWSDQxV3FWMm5fY3lyVnlQU29BONIBxAFBVV95cUxQUHNqZzhHU1lSVGhtUmhjSF9iS3o5VG0wM1NZM2RfckdPWWhUZURYUGVhaW1VdVZ0bWJaeHd5Uk9RUDZIRmh0X3RZY2Eyc1hzSGtqSTlzTEJrVEctMW1oUWZUNURTQV96dm42NF9nWTBnZDFuSWxTMGNIX0dGZUs2TWFYXzAwWVBKRUhFdHIxd2JXcnczX0w1UUwzZ1EzT3pXMDhxVFZaZTNGbmRKOUc4cVJWSDY3dXVpQkVxYlphWFlnYS1v?oc=5)
+- [Forbes](https://news.google.com/rss/articles/CBMi2wFBVV95cUxPV2xUTDg3OEZQVmN3bFBEWjJoWkltLUhDa0ZlWjEtMHRQZHU5MDhSVFo3ZHJ5YWNES2VJQ0VOQVNVTTFtbU9lNjJpNEVnb3cycWZ1bjJic0tZV0pvS09LcFhzbnplb3dUc2VEa2pqTXI5dmxDN1dydDF6U084NEhNVVVjMWcyYWZ4Z3ppSTlOcGVZbl8wMlk2UHZSS0JLVkwyUEZ3T2prc0FvMjB3aGN0MG9yQThyX25BX1ZsTjR2ZHZhOERuVEZYOTM0bWNlZ1hHSzVRbEdKSS14bnM?oc=5)
+- [VentureBeat](https://news.google.com/rss/articles/CBMi6AFBVV95cUxNX2MxcmpFWC0wcWlaVl85Wlg3aTVOT190MGFNSDRYTlZYWURjUU5KMGZhd2V4YU4wempIVU5GUEFNNklQSXk0a3lBU2ZycHh2a3dVUEN3N0w4QndlbGx6RV94U0xGS3hEQXU0TC1PY0otTVl0TmNQeGFaVGxrTXZQOW5DYjB6czJvWHhDb0ZUUVNhQVhncGRfNWxMQ1pqZjFSWlltR0Z5WTZONjVTRnRpVU41VXNCTHJFX0NHUm94bnlFVWVWeDFQT2RlRFprbzlvUmltSjRKQS1tc25JbnlELUVhOVliU0dP?oc=5)
+- [Fable 5 Jailbroken for Stack Exploit Creation](https://news.google.com/rss/articles/CBMid0FVX3lxTE5EZGJXTnUxZkRyQ0IxVlREeTB4dFVJcS1PbE0tY0ZYM2U0RmZ4aFZfUEliYnpvZXlnTE1ZcWtxUjcwUWprbDBUUjgybmZtYnRpQm5TMDZFS2dvdFBmc1dRbWR4aEMxZXhyZmY2SGdwR1F3V1dhemEw?oc=5)
+- [Anthropic CEO Warns of Military Risks](https://news.google.com/rss/articles/CBMidEFVX3lxTFBTUHViSzBsRWUtWXlYTVF4RV9XRjdkREJiWFF0c2Ria25xZHJabHhiZVk2Rkp3bjRFa2hlN1ZnS3p2dzJKNHVLUHFkMzBERnZKQk5wTE5DQS01b2xSajkyLW9uLWR1akhnellQYzU3Mnl1T0FX?oc=5)
 
 ### Why this reshapes AI risk governance
 
-1. **Models are now regulated assets.** The U.S. government has established a precedent: AI models can be treated as dual-use technologies subject to export controls. This applies regardless of your contractual terms.
-2. **Geopolitical fragmentation is accelerating.** The U.S. mandates access restrictions, the EU calls this a "wake-up call," and Asia faces an uncertain regulatory divide. [MarketWatch warned this could trigger a global AI arms race](https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSUtrZ21uY0pTRk9MNDJHcXVRemtzR000N1FjMkhNNkVnOC00RUxaVGQ1U2I2Xy12dl82dDkwMndsWUhQOHp0ekoxYlJLVjJyMnlqUlZrMy1NeWtsR0FKeGNsMGE1ckFtbE1HeWJic3RpOWk1VnUtVzFuaHh6NXFoanBNd29ndWwtWi1CWlJYekdhaUtLdDUtT0dvTHExSWdJaDRpcXN5SERlY0dpb2F2VTYza1JyQXhtTHRn?oc=5).
-3. **Vendor lock-in is now a security risk.** An AI model you've integrated deeply can be shut down by government decree with zero notice. [Cybersecurity Dive asks: It's Mythos' world now—how do we live in it?](https://news.google.com/rss/articles/CBMinwFBVV95cUxQbWNXU2FzdVVVWTlaeHo1QnRuMGY5c0ozVlBqRW04VkpsTm5rWk1VeE0taUxtUTNmaC0tUi1mVmNjdmV4cnFHZ0tSZU5WOGwwVERKTmR4TWFpV0I4RUIzUFA1YXgxWjFxVnUxTnJvb2xhSlhROGRtWGJhUXJ1akdiNjJYdkEyUG9faE5LOW8zV29OSVNhamJ5WDRKZ2h3WlU?oc=5)
+1. **Models are now regulated assets.** The U.S. government has established a precedent: AI models can be treated as dual-use technologies subject to export controls.
+2. **Geopolitical fragmentation is accelerating.** The U.S. mandates access restrictions, the EU calls this a "wake-up call," and Asia faces an uncertain regulatory divide. MarketWatch warned this could trigger a global AI arms race.
+3. **Vendor lock-in is now a security risk.** An AI model you've integrated deeply can be shut down by government decree with zero notice.
 
 ---
 
@@ -31,23 +44,35 @@ The ban also applies retroactively—[enterprises with prepaid Fable 5 credits f
 
 ### Critical Splunk Enterprise flaw
 
-[The Hacker News reported](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html) a critical vulnerability in Splunk Enterprise that allows unauthenticated remote code execution. Given Splunk's pervasive role in security operations centers, this is a **patch immediately** situation. Inventory your Splunk deployments, verify patch status, and monitor for exploitation attempts.
+A critical vulnerability in Splunk Enterprise allows unauthenticated remote code execution. Given Splunk's pervasive role in security operations centers, this requires immediate patching. Inventory your Splunk deployments, verify patch status, and monitor for exploitation attempts.
+
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html)
 
 ### Arch Linux AUR supply chain attack
 
-[Over 400 AUR packages were hijacked](https://thehackernews.com/2026/06/400-arch-linux-aur-packages-hijacked-to.html) to deploy a Rust-based credential stealer and [eBPF rootkit](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html). This is one of the largest package repository attacks in recent history. While Arch is not typical enterprise infrastructure, this attack technique is easily portable to other package ecosystems. Review your software supply chain verification practices—this includes all CI/CD pipelines using community-maintained package registries.
+Over 400 AUR packages were hijacked to deploy a Rust-based credential stealer and eBPF rootkit. This is one of the largest package repository attacks in recent history. While Arch is not typical enterprise infrastructure, this attack technique is easily portable to other package ecosystems.
+
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/06/400-arch-linux-aur-packages-hijacked-to.html) | [eBPF Rootkit Details](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html)
 
 ### Chinese APT backdoors Linux login software
 
-[China-linked hackers backdoored Linux login software](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html) to maintain persistence undetected for nearly a decade. Separately, [iThome reported on the Brickstorm backdoor](https://news.google.com/rss/articles/CBMiTkFVX3lxTE16aGlzQ0VrQjdTalpGcEUwVjc3TnFRS3ZJVGREbjBXeE9NOGtmVkk4Z1BTd1FNTkFGeUxJd1Z4OXZmNTY3d3llN293aUhwZw?oc=5) targeting edge devices without EDR protection, with 18 months of undetected persistence.
+China-linked hackers backdoored Linux login software to maintain persistence undetected for nearly a decade. Separately, the Brickstorm backdoor targeted edge devices without EDR protection, with 18 months of undetected persistence.
 
 **Detection recommendation:** Run binary integrity verification on all SSH/PAM/LDAP-related binaries across Linux server fleets using file integrity monitoring (FIM) tools. Prioritize non-EDR-protected edge devices and jump boxes.
 
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html) | [iThome - Brickstorm 後門](https://news.google.com/rss/articles/CBMiTkFVX3lxTE16aGlzQ0VrQjdTalpGcEUwVjc3TnFRS3ZJVGREbjBXeE9NOGtmVkk4Z1BTd1FNTkFGeUxJd1Z4OXZmNTY3d3llN293aUhwZw?oc=5)
+
 ### Google sues Chinese smishing network using Gemini
 
-[Google filed a lawsuit](https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html) against a smishing network allegedly using Gemini AI to craft phishing messages. This is the first major case of an AI model being weaponized at scale for credential harvesting by organized crime.
+Google filed a lawsuit against a smishing network allegedly using Gemini AI to craft phishing messages. This is the first major case of an AI model being weaponized at scale for credential harvesting by organized crime.
 
-**For your security team:** Update your phishing simulation scenarios to include AI-crafted messages. Train users that language quality is no longer an indicator of authenticity.
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html)
+
+### ShinyHunters Oracle zero-day
+
+ShinyHunters exploited an Oracle zero-day to compromise higher education institutions.
+
+🔗 **Reference:** [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/shinyhunters-oracle-zero-day-higher-ed)
 
 ---
 
@@ -64,7 +89,8 @@ For the two file-based threats this week—hijacked packages and backdoored Linu
 **The Anthropic mandate:**
 - [U.S. Government Suspends Claude Fable 5 & Mythos 5 (Forbes)](https://news.google.com/rss/articles/CBMi2wFBVV95cUxPV2xUTDg3OEZQVmN3bFBEWjJoWkltLUhDa0ZlWjEtMHRQZHU5MDhSVFo3ZHJ5YWNES2VJQ0VOQVNVTTFtbU9lNjJpNEVnb3cycWZ1bjJic0tZV0pvS09LcFhzbnplb3dUc2VEa2pqTXI5dmxDN1dydDF6U084NEhNVVVjMWcyYWZ4Z3ppSTlOcGVZbl8wMlk2UHZSS0JLVkwyUEZ3T2prc0FvMjB3aGN0MG9yQThyX25BX1ZsTjR2ZHZhOERuVEZYOTM0bWNlZ1hHSzVRbEdKSS14bnM?oc=5)
 - [Anthropic disables Fable 5 globally after U.S. order (CNBC)](https://news.google.com/rss/articles/CBMivwFBVV95cUxQQndha2NfQ0ZvbE1DU2gxUFBrLWdGU2x3RjFlbGQ0MG1TSzBVVlRrUFlqbFZnUERDbW1oYmY3cTV4UnZkelZ4TEtLa3ZabEpCcXJVQTZEZjFyT2hWdEFERXpVdDR2OUhCWnVEbklSeEJGU1gxaGdvdmt2d0psY2N3RnlHdjMtOGIxOHV2cXpuUzlqVk42TkYxbEpMOVJzenZ5VVg1b29rcUpnRFlWSDQxV3FWMm5fY3lyVnlQU29BONIBxAFBVV95cUxQUHNqZzhHU1lSVGhtUmhjSF9iS3o5VG0wM1NZM2RfckdPWWhUZURYUGVhaW1VdVZ0bWJaeHd5Uk9RUDZIRmh0X3RZY2Eyc1hzSGtqSTlzTEJrVEctMW1oUWZUNURTQV96dm42NF9nWTBnZDFuSWxTMGNIX0dGZUs2TWFYXzAwWVBKRUhFdHIxd2JXcnczX0w1UUwzZ1EzT3pXMDhxVFZaZTNGbmRKOUc4cVJWSDY3dXVpQkVxYlphWFlnYS1v?oc=5)
-- [What enterprises should do (VentureBeat)](https://news.google.com/rss/articles/CBMi6AFBVV95cUxNX2MxcmpFWC0wcWlaVl85Wlg3aTVOT190MGFNSDRYTlZYWURjUU5KMGZhd2V4YU4wempIVU5GUEFNNklQSXk0a3lBU2ZycHh2a3dVUEN3N0w4QndlbGx6RV94U0xGS3hEQXU0TC1PY0otTVl0TmNQeGFaVGxrTXZQOW5DYjB6czJvWHhDb0ZUUVNhQVhncGRfNWxMQ1pqZjFSWlltR0Z5WTZONjVTRnRpVU41VXNCTHJFX0NHUm94bnlFVWVWeDFQT2RlRFprbzlvUmltSjRKQS1tc25JbnlELUVhOVliU0dP?oc=5)
+- [What enterprises should do (VentureBeat)](https://news.google.com/rss/articles/CBMi6AFBVV95cUxNX2MxcmpFWC0wcWlaVl85Wlg3aTVOT190MGFNSDRYTlZYWURjUU5KMGZhd2V4YU4wempIVU5GUEFNNklQSXk0a3lBU2ZycHh2a3dVUEN3N0w4QndlbGx6RV94U0xGS3hEQXU0TC1PY0otTVl0TmNQeGFaVGxrTXZQOW5DYjB6czJvWHhDb0ZUUVNhQVhncGRfNWxMQ1pqZjFSWlltR0Z5WTZONjVTRnRpU41VXNCTHJFX0NHUm94bnlFVWVWeDFQT2RlRFprbzlvUmltSjRKQS1tc25JbnlELUVhOVliU0dP?oc=5)
+- [BBC](https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iZTNFalowWHVUV2FhOGlEcWgxVWdISzBVLXJfN2FXOXBjdkVhRG0wVFRyNURuMHNxREtKeENYSkdWdm45OXBTd2xaUzlZQjBTQ2dQWjgzOUtCZw?oc=5)
 
 **Active threats:**
 - [Critical Splunk Enterprise RCE (The Hacker News)](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html)
