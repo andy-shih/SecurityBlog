@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: BitLocker Zero-Day and Critical Microsoft Patches (2026-05-22)"
+title: "CISO Daily Digest: BitLocker Zero-Day and Critical Microsoft Patches (20260522)"
 description: "Microsoft disclosed mitigation guidance for the YellowKey zero-day vulnerability that bypasses BitLocker full-disk encryption on Windows; the Showboat Linux malware targeted a Middle Eastern telecom provider with a SOCKS5 proxy backdoor; Anthropic quietly fixed a Claude Code sandbox security bypass; and 237 million patient records were exposed in a global healthcare data leak."
 pubDate: 2026-05-22
 tags: ["CISO", "cybersecurity", "threats", "vulnerabilities", "infosec"]

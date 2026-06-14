@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Windows Netlogon RCE 漏洞遭積極利用，攻擊者鎖定企業網路 (t-20260604)"
+title: "CISO 每日摘要：Windows Netlogon RCE 漏洞遭積極利用，攻擊者鎖定企業網路 (20260604)"
 description: "2026年6月4日 關鍵資安事件與威脅回顧"
 pubDate: 2026-06-04
 tags: ["CISO", "每日摘要", "資安", "威脅情資"]

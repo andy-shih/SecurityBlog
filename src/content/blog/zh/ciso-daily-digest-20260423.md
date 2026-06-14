@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Checkmarx 供應鏈攻擊 — KICS Docker 映像與 VS Code 擴充套件遭入侵 (t-20260423)"
+title: "CISO 每日摘要：Checkmarx 供應鏈攻擊 — KICS Docker 映像與 VS Code 擴充套件遭入侵 (20260423)"
 description: "Checkmarx 遭供應鏈攻擊，KICS Docker 映像與 VS Code 擴充套件被入侵；Harvester 組織使用 Microsoft Graph API 部署 Linux GoGra 後門；Apple 修補 iOS 通知漏洞；The Gentlemen 勒索軟體崛起；Bitwarden NPM 套件在持續攻擊中遭駭"
 pubDate: 2026-04-23
 tags: ["CISO Daily Digest", "\u8cc7\u5b89", "\u5a01\u8105\u60c5\u8cc7"]

@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Feuding Ransomware Groups Leak Each Other's Data (t-20260429)"
+title: "CISO 每日摘要：Feuding Ransomware Groups Leak Each Other's Data (20260429)"
 description: "每日資安重點事件與威脅摘要 — 2026-04-29"
 pubDate: 2026-04-29
 tags: ["CISO", "資安", "每日摘要", "威脅情資"]

@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：中國駭客散布 Showboat 惡意程式、Grandoreiro RAT 攻擊、CISA 要求修補  (t-20260528)"
+title: "CISO 每日摘要：中國駭客散布 Showboat 惡意程式、Grandoreiro RAT 攻擊、CISA 要求修補  (20260528)"
 description: "中國駭客部署Showboat與JFMBackdoor惡意程式鎖定電信營運商，Grandoreiro與BTMOB RAT針對拉丁美洲用戶發動金融詐欺攻擊，CISA要求聯邦機構緊急修補cPanel LiteSpeed外掛重大漏洞，惡意npm套件從Claude AI使用者目錄竊取檔案。"
 pubDate: 2026-05-28
 tags: ["CISO", "資訊安全", "威脅情資"]

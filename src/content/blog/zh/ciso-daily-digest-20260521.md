@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Pwn2Own Berlin 零時差漏洞揭露與重大漏洞 (2026-05-21)"
+title: "CISO 每日摘要：Pwn2Own Berlin 零時差漏洞揭露與重大漏洞 (20260521)"
 description: "本日重點：Pwn2Own Berlin 2026 駭客競賽揭露 47 個零時差漏洞，涵蓋瀏覽器、作業系統及 ICS 平台；微軟（Microsoft）破獲勒索軟體使用的惡意程式碼簽章服務；OT Robot OS 被爆重大遠端控制漏洞；以及 Shai-Hulud 駭客組織發動新一波供應鏈攻擊，入侵 600 個 npm 套件。"
 pubDate: 2026-05-21
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]

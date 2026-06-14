@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Dutch Authorities Dismantle 17 Million-Device Botn (t-20260531)"
+title: "CISO Daily Digest: Dutch Authorities Dismantle 17 Million-Device Botn (20260531)"
 description: "Key cybersecurity events and threats as of May 31, 2026"
 pubDate: 2026-05-31
 tags: ["CISO", "Daily Digest", "Cybersecurity", "Threat Intelligence"]

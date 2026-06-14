@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Miasma Supply Chain Attack Compromises Red Hat npm (t-20260602)"
+title: "CISO Daily Digest: Miasma Supply Chain Attack Compromises Red Hat npm (20260602)"
 description: "Key cybersecurity events and threats as of June 02, 2026"
 pubDate: 2026-06-02
 tags: ["CISO", "Daily Digest", "Cybersecurity", "Threat Intelligence"]

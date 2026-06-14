@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Ransomware and OT Security Threats (2026-05-23)"
+title: "CISO Daily Digest: Ransomware and OT Security Threats (20260523)"
 description: "Lawmakers demanded answers from CISA leadership after the agency suffered a significant data leak; international law enforcement dismantled the first VPN service used by at least 25 ransomware affiliates in a coordinated global takedown; a critical remote code execution vulnerability was disclosed in Drupal; and Anthropic patched a sandbox escape in Claude Code."
 pubDate: 2026-05-23
 tags: ["CISO", "cybersecurity", "threats", "vulnerabilities", "infosec"]

@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：EVERY8D 遭駭、Lazarus 攻擊鎖定金融機構、Ghost CMS ClickFix 大規模 (t-20260527)"
+title: "CISO 每日摘要：EVERY8D 遭駭、Lazarus 攻擊鎖定金融機構、Ghost CMS ClickFix 大規模 (20260527)"
 description: "台灣最大OTP簡訊平台EVERY8D遭駭，北韓Lazarus集團以RemotePE惡意軟體鎖定金融與加密貨幣機構，Ghost CMS SQL注入漏洞遭利用入侵700多個網站散布ClickFix攻擊，微軟修補UnDefend與RedSun零時差漏洞，Megalodon惡意軟體感染數千個GitHub倉庫。"
 pubDate: 2026-05-27
 tags: ["CISO", "資訊安全", "威脅情資"]

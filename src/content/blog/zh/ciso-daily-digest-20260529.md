@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Gogs RCE 重大漏洞、FortiClient EMS 遭積極利用、Chrome 148 修補逾 (t-20260529)"
+title: "CISO 每日摘要：Gogs RCE 重大漏洞、FortiClient EMS 遭積極利用、Chrome 148 修補逾 (20260529)"
 description: "Gogs版本控制系統的重大RCE漏洞遭揭露，FortiClient EMS重大漏洞被積極利用以部署憑證竊取惡意軟體，Google發布Chrome 148修補逾150個漏洞，APT組織Fluffy Wolf以新型惡意軟體攻擊俄羅斯企業，駭客出售3.4億筆OnlyFans用戶記錄。"
 pubDate: 2026-05-29
 tags: ["CISO", "資訊安全", "威脅情資"]

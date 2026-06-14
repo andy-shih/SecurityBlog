@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Miasma 供應鏈攻擊：Red Hat npm 套件遭植入憑證竊取蠕蟲 (t-20260602)"
+title: "CISO 每日摘要：Miasma 供應鏈攻擊：Red Hat npm 套件遭植入憑證竊取蠕蟲 (20260602)"
 description: "2026年6月2日 關鍵資安事件與威脅回顧"
 pubDate: 2026-06-02
 tags: ["CISO", "每日摘要", "資安", "威脅情資"]
