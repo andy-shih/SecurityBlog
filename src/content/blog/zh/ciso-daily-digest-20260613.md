@@ -44,27 +44,27 @@ featured: true
 
 ### Splunk Enterprise 重大漏洞
 
-Splunk Enterprise 存在一個重大漏洞，允許未經身份驗證的遠端程式碼執行（RCE）。考量到 Splunk 在資安維運中心（SOC）中的核心地位，這是需要立即修補的情況。清查你的 Splunk 部署、確認修補狀態、監控是否有嘗試利用的行為。
+Splunk Enterprise 存在一個重大漏洞，允許 **未經身份驗證的遠端程式碼執行（RCE）**。考量到 Splunk 在資安維運中心（SOC）中的核心地位，這是需要 **立即修補** 的情況。清查你的 Splunk 部署、確認修補狀態、監控是否有嘗試利用的行為。
 
 🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html)
 
 ### Arch Linux AUR 供應鏈攻擊
 
-超過 400 個 AUR 套件被劫持，用於部署 Rust 撰寫的憑證竊取器和 eBPF rootkit。這是近年來規模最大的套件庫攻擊事件之一。雖然 Arch 並非典型企業基礎設施，但此攻擊手法容易移植到其他套件生態系統。
+超過 **400 個 AUR 套件** 被劫持，用於部署 **Rust 撰寫的憑證竊取器** 和 **eBPF rootkit**。這是近年來規模最大的套件庫攻擊事件之一。雖然 Arch 並非典型企業基礎設施，但此攻擊手法容易移植到其他套件生態系統。
 
 🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/06/400-arch-linux-aur-packages-hijacked-to.html) | [eBPF Rootkit 詳細報導](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html)
 
 ### 中國駭客組織後門 Linux 登入軟體
 
-與中國有關聯的駭客組織在 Linux 登入軟體中植入後門，潛伏近十年未被發現。與此同時，Brickstorm 後門針對缺乏 EDR 防護的邊界設備，已潛伏 18 個月未被發現。
+**與中國有關聯的駭客組織** 在 Linux 登入軟體中植入後門，潛伏 **近十年** 未被發現。與此同時，**Brickstorm 後門** 針對缺乏 EDR 防護的邊界設備，已潛伏 **18 個月** 未被發現。
 
-**偵測建議：** 對所有 Linux 伺服器群上的 SSH、PAM、LDAP 相關二進位檔執行完整性驗證（使用檔案完整性監控工具）。優先檢查缺乏 EDR 保護的邊界設備和跳板機。
+**偵測建議：** 對所有 Linux 伺服器群上的 SSH、PAM、LDAP 相關二進位檔執行 **完整性驗證**（使用檔案完整性監控工具）。優先檢查 **缺乏 EDR 保護的邊界設備** 和跳板機。
 
 🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html) | [iThome - Brickstorm 後門報導](https://news.google.com/rss/articles/CBMiTkFVX3lxTE16aGlzQ0VrQjdTalpGcEUwVjc3TnFRS3ZJVGREbjBXeE9NOGtmVkk4Z1BTd1FNTkFGeUxJd1Z4OXZmNTY3d3llN293aUhwZw?oc=5)
 
 ### Google 起訴利用 Gemini 的中文簡訊釣魚集團
 
-Google 提起訴訟，指控一個簡訊釣魚集團涉嫌使用 Gemini AI 製作釣魚訊息。這是首宗有組織犯罪大規模利用 AI 模型進行憑證竊取的重大案件。
+**Google 提起訴訟**，指控一個簡訊釣魚集團涉嫌使用 **Gemini AI** 製作釣魚訊息。這是首宗 **有組織犯罪大規模利用 AI 模型** 進行憑證竊取的重大案件。
 
 🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html)
 
@@ -82,25 +82,4 @@ ShinyHunters 利用 Oracle 零日漏洞入侵高等教育機構。
 
 針對本週兩項以檔案為基礎的威脅——遭劫持的套件和被植入後門的 Linux 登入二進位檔——OPSWAT 在檔案層級威脅防禦的核心能力可在這些檔案執行前提供額外的偵測層。
 
----
 
-## 重點參考資料
-
-**Anthropic 禁令：**
-- [美國政府暫停 Claude Fable 5 與 Mythos 5 存取 (Forbes)](https://news.google.com/rss/articles/CBMi2wFBVV95cUxPV2xUTDg3OEZQVmN3bFBEWjJoWkltLUhDa0ZlWjEtMHRQZHU5MDhSVFo3ZHJ5YWNES2VJQ0VOQVNVTTFtbU9lNjJpNEVnb3cycWZ1bjJic0tZV0pvS09LcFhzbnplb3dUc2VEa2pqTXI5dmxDN1dydDF6U084NEhNVVVjMWcyYWZ4Z3ppSTlOcGVZbl8wMlk2UHZSS0JLVkwyUEZ3T2prc0FvMjB3aGN0MG9yQThyX25BX1ZsTjR2ZHZhOERuVEZYOTM0bWNlZ1hHSzVRbEdKSS14bnM?oc=5)
-- [Anthropic 依美國命令全球關閉 Fable 5 (CNBC)](https://news.google.com/rss/articles/CBMivwFBVV95cUxQQndha2NfQ0ZvbE1DU2gxUFBrLWdGU2x3RjFlbGQ0MG1TSzBVVlRrUFlqbFZnUERDbW1oYmY3cTV4UnZkelZ4TEtLa3ZabEpCcXJVQTZEZjFyT2hWdEFERXpVdDR2OUhCWnVEbklSeEJGU1gxaGdvdmt2d0psY2N3RnlHdjMtOGIxOHV2cXpuUzlqVk42TkYxbEpMOVJzenZ5VVg1b29rcUpnRFlWSDQxV3FWMm5fY3lyVnlQU29BONIBxAFBVV95cUxQUHNqZzhHU1lSVGhtUmhjSF9iS3o5VG0wM1NZM2RfckdPWWhUZURYUGVhaW1VdVZ0bWJaeHd5Uk9RUDZIRmh0X3RZY2Eyc1hzSGtqSTlzTEJrVEctMW1oUWZUNURTQV96dm42NF9nWTBnZDFuSWxTMGNIX0dGZUs2TWFYXzAwWVBKRUhFdHIxd2JXcnczX0w1UUwzZ1EzT3pXMDhxVFZaZTNGbmRKOUc4cVJWSDY3dXVpQkVxYlphWFlnYS1v?oc=5)
-- [企業應如何應對 (VentureBeat)](https://news.google.com/rss/articles/CBMi6AFBVV95cUxNX2MxcmpFWC0wcWlaVl85Wlg3aTVOT190MGFNSDRYTlZYWURjUU5KMGZhd2V4YU4wempIVU5GUEFNNklQSXk0a3lBU2ZycHh2a3dVUEN3N0w4QndlbGx6RV94U0xGS3hEQXU0TC1PY0otTVl0TmNQeGFaVGxrTXZQOW5DYjB6czJvWHhDb0ZUUVNhQVhncGRfNWxMQ1pqZjFSWlltR0Z5WTZONjVTRnRpVU41VXNCTHJFX0NHUm94bnlFVWVWeDFQT2RlRFprbzlvUmltSjRKQS1tc25JbnlELUVhOVliU0dP?oc=5)
-- [BBC 報導](https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iZTNFalowWHVUV2FhOGlEcWgxVWdISzBVLXJfN2FXOXBjdkVhRG0wVFRyNURuMHNxREtKeENYSkdWdm45OXBTd2xaUzlZQjBTQ2dQWjgzOUtCZw?oc=5)
-
-**活躍威脅：**
-- [Splunk Enterprise 重大 RCE 漏洞 (The Hacker News)](https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html)
-- [400+ AUR 套件被劫持植入 Rust 資訊竊取器及 eBPF Rootkit (The Hacker News)](https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html)
-- [中國駭客在 Linux 登入軟體植入後門 (The Hacker News)](https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html)
-- [Google 起訴使用 Gemini 的中國簡訊釣魚集團 (The Hacker News)](https://thehackernews.com/2026/06/google-sues-chinese-smishing-network.html)
-- [ShinyHunters Oracle 零日漏洞 (Dark Reading)](https://www.darkreading.com/vulnerabilities-threats/shinyhunters-oracle-zero-day-higher-ed)
-- [中國駭客 Brickstorm 後門潛伏 18 個月 (iThome)](https://news.google.com/rss/articles/CBMiTkFVX3lxTE16aGlzQ0VrQjdTalpGcEUwVjc3TnFRS3ZJVGREbjBXeE9NOGtmVkk4Z1BTd1FNTkFGeUxJd1Z4OXZmNTY3d3llN293aUhwZw?oc=5)
-
-**AI 治理與政策：**
-- [Anthropic 推出 1500 萬美元網路安全防禦計畫 (StateScoop)](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNME1NNUNiODhvSFVlVldoMTFQMDVRSTg2VFg2TTlzUHkzb0kxaXJsa3NVYkhhX3FkTXRYNERVX0NjVXVJRUVicWNVRVZQTWxtRC1OclFrQjlsWkZNWHBnRk14WE1FVUNveC1FMTJhdkZDekZzUTFyT1NYdmtaV3hKdDdBeDNYTXNXRUs2cnI3UDhiQWpLdGN5Y2I2cEtMS0JHSDliTkVNT0ZoY2h4YjJKWFdPZ0xtamUtNl80?oc=5)
-- [Opsin 整合 Claude Compliance API 擴展 AI 治理 (Yahoo Finance)](https://news.google.com/rss/articles/CBMirAFBVV95cUxNZ0xzZHEtUjRGei0yTmRmYzlHT3JCS1dhNnBzbmNUZHduNEpocEQzbUdRZUdRYjRjbFFkNDNJT2dWdUw2c1llU0ZLUlVRdnJWWjdLZzd6M25DZVM2QVpPUlJzLVpRWFNrVkt4Y3Y2YjFHcC1KcEVpQmNoc0wtVWVFTUJSbVdBUVdHd2dQVGRZLWpiVVZIT3dlNnR2SDRob3ZQYl9OVHMwMGs5WGFX?oc=5)
-- [加拿大隱私監管機構對 Grok 深偽內容做出裁決 (Jurist)](https://news.google.com/rss/articles/CBMixgFBVV95cUxPS05zUFVuaFBQWWJpUHBiM3FWN1dRTF9IUmoteWdteEZOZmJyR2RCeXUxM2lvVUpsX3FzT0E3QldLOFRSdklhZTYxdU1oRXBXTjFQOXQyMC01QXRfeGROMHZ3S2c0SHdRdmUtLURCR2JYU3VRQ3psSnhvTU5zTG4zUEw2aEFGTTFGVkNOMW5WY19pVUwzSzFVYzV2VUhWOVZaZ2VtcjhPSFdhVVdhdHlfTjRVdmg0UFd5enpjSUxQQmtFTGFCa2c?oc=5)
