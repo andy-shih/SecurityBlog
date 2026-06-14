@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Fable 5 禁令後續 — Amazon 角色與產業震皪 (20260614)"
+title: "CISO 每日摘要：Fable 5 禁令後續 — Amazon 角色與產業震盪 (20260614)"
 description: "Anthropic Fable 5 下架事件第二天：Amazon CEO Andy Jassy 向白宮簡報，觸發 90 分鐘最後通牒。另含：xAI Grok 吹哨者訴訟、npm 12 封鎖安裝腳本、伊朗 Handala 入侵加州水務。"
 pubDate: 2026-06-14
 tags: [AI治理, 供應鏈安全, 關鍵基礎設施, 出口管制, AI安全, Anthropic, NPM]
