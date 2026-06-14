@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Weekly Security Roundup (20260603)"
+title: "CISO Daily Digest: Dashlane Password Manager Users Locked Out in Wide (t-20260603)"
 description: "Key cybersecurity events and threats as of June 03, 2026"
 pubDate: 2026-06-03
 tags: ["CISO", "Daily Digest", "Cybersecurity", "Threat Intelligence"]
