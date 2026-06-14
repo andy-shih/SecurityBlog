@@ -1,50 +1,56 @@
 ---
-title: "CISO 每日摘要：One Click, Total Shutdown: The "Patient Zero" Webi (20260509)"
-description: "2026-05-09 每日資安新聞摘要"
+title: "CISO 每日摘要：ShinyHunters Second Wave; TCLBANKER Banking Trojan Targets WhatsApp (20260509)"
+description: "2026-05-09 每日資安新聞摘要 - ShinyHunters second attack on Instructure, TCLBANKER banking trojan spreads via WhatsApp, Russia's secret hacker school exposed, and cPanel vulnerabilities disclosed."
 pubDate: 2026-05-09
-tags: ["資安", "CISO", "daily-digest"]
+tags: ["資安", "CISO", "daily-digest", "威脅情資"]
 author: "Security Solutions Team"
 featured: true
 ---
 
-## 重點新聞
+## ShinyHunters Claims Second Attack on Instructure, Deepening the Canvas Crisis
 
-**One Click, Total Shutdown: The "Patient Zero" Webinar on Killing Stealth Breaches**
+The ShinyHunters threat group has claimed a second attack against Instructure, the developer of the Canvas LMS platform used by thousands of educational institutions. Following the initial breach that disrupted schools nationwide, this second wave of attacks suggests persistent access to Instructure's infrastructure. Educational institutions should prepare for extended service disruptions and potential data exposure as investigations continue.
 
-- 據 安全研究人員 報導，此為當日重大安全事件。
-
-🔗 **參考資料：** [詳情](https://thehackernews.com/2026/05/one-click-total-shutdown-patient-zero.html)
+🔗 **Reference:** [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/shiny-hunters-second-attack-instructure)
 
 ## 本週活躍威脅
 
-📌 **TCLBANKER Banking Trojan Targets Financial Platforms via WhatsApp and Outlook Worms**
+📌 **TCLBANKER Banking Trojan Targets Financial Platforms via WhatsApp**
 
-此新興安全威脅需要企業資安團隊關注。
+A new banking trojan named TCLBANKER is actively targeting financial platforms and spreading through WhatsApp messages. The trojan intercepts SMS-based two-factor authentication codes and steals banking credentials, primarily targeting users in Asia-Pacific regions. It poses as legitimate banking notifications.
 
-🔗 **Reference:** [詳情](https://thehackernews.com/2026/05/tclbanker-banking-trojan-targets.html)
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/tclbanker-banking-trojan-targets.html)
 
-📌 **修補程式漏洞的成本往往是設計預防的10~30倍**
+📌 **Inside Department 4: Russia's Secret School for Hackers Revealed**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+An investigation has revealed the inner workings of Russia's 'Department 4' — a secret government program training elite offensive cyber operatives. The program recruits from technical universities and provides advanced training in vulnerability research, exploit development, and operational security for state-sponsored cyber operations targeting critical infrastructure globally.
 
+🔗 **Reference:** [Bitdefender](https://www.bitdefender.com/en-us/blog/hotforsecurity/inside-department-4-russia-hacker-school/)
 
-📌 **cPanel, WHM Release Fixes for Three New Vulnerabilities**
+📌 **cPanel and WHM Release Fixes for Three New Vulnerabilities**
 
-據 Patch Now 報導，此新興安全威脅需要企業資安團隊關注。
+cPanel and Web Host Manager have released patches for three newly discovered vulnerabilities affecting their hosting management platforms. System administrators are urged to patch immediately as the flaws could allow privilege escalation and unauthorized access to hosting environments.
 
-🔗 **Reference:** [Patch Now](https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html)
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/cpanel-whm-patch-3-new-vulnerabilities.html)
 
-📌 **Linux高風險漏洞Dirty Frag影響2017年至今的系統核心，以及5種發行版**
+📌 **Fake Call History Apps on Google Play Defraud 7.3 Million Users**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+Fraudulent call history apps on Google Play have defrauded 7.3 million users by tricking them into premium service subscriptions. The apps requested extensive permissions and processed unauthorized recurring payments, highlighting the ongoing risk of malicious applications in official app stores.
 
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/fake-call-history-apps-stole.html)
 
-## 其他安全事件
+📌 **Quasar Linux RAT Steals Developer Credentials for Supply Chain Attacks**
 
-- **Anthropic’s Claude used in attempted compromise of Mexican water utility**
-- **Inside Department 4: Russia’s secret school for hackers**
-  🔗 [詳情](https://www.bitdefender.com/en-us/blog/hotforsecurity/inside-department-4-russias-secret-school-for-hackers)
-- **Fake Call History Apps Stole Payments From Users After 7.3 Million Play Store Downloads**
-  🔗 [詳情](https://thehackernews.com/2026/05/fake-call-history-apps-stole-payments.html)
-- **ShinyHunters Claims Second Attack Against Instructure**
-  🔗 [詳情](https://www.darkreading.com/cyberattacks-data-breaches/shinyhunters-second-attack-instructure)
+A Linux variant of the Quasar RAT is actively targeting software developers to steal credentials for launching supply chain attacks. The malware captures IDE tokens, SSH keys, and source code repository access credentials, enabling attackers to inject malicious code into trusted repositories.
+
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/quasar-linux-rat-steals-developer.html)
+
+📌 **One Missed Threat Per Week: 25M Alerts Reveal Prioritization Gaps**
+
+Analysis of 25 million security alerts across multiple organizations reveals that security teams miss an average of one significant threat per week due to alert fatigue and poor prioritization of low-severity findings, underscoring the need for AI-assisted triage.
+
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/one-missed-threat-per-week.html)
+
+## OPSWAT 能做什麼
+
+The TCLBANKER banking trojan spreading through WhatsApp and the Fake Call History apps demonstrate the growing threat of credential theft via mobile channels. MetaDefender Email Security and Mobile Threat Defense detect and block phishing attempts and malicious apps before they reach end users.
