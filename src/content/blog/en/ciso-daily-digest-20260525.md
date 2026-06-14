@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Software Supply Chain Attacks on the Rise (2026-05-25)"
+title: "CISO Daily Digest: CISA Warns of Actively Exploited Drupal SQL Injection Vulnerability (20260525)"
 description: "Daily cybersecurity briefing for 2026-05-25 covering the most critical threats, vulnerabilities, and security industry developments."
 pubDate: 2026-05-25
 tags: ["CISO", "cybersecurity", "threats", "vulnerabilities", "infosec"]
