@@ -19,7 +19,7 @@ export const ui = {
     backToArticles: '返回文章列表',
     recommended: '推薦文章',
     resumeProfile: 'OPSWAT 資安職涯與解決方案經驗',
-    resumeIntro: '皆在 OPSWAT 累積，從 L2/L3 Technical Support、Technical Account Manager/ Customer Success Manager，到目前的 Solutions Engineer。工作核心是把客戶問題、產品能力與關鍵基礎設施防護需求連起來，協助技術團隊理解可部署、可維運、可驗證的資安方案。'
+    resumeIntro: '從 L2/L3 Technical Support、Technical Account Manager/ Customer Success Manager，到目前的 Solutions Engineer。工作核心是把客戶問題、產品能力與關鍵基礎設施防護需求連起來，協助技術團隊理解可部署、可維運、可驗證的資安方案。'
   },
   en: {
     navHome: 'Home',
