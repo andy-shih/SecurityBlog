@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
-import type { DemoEntry } from '@/components/demo-data';
 import { demos, categoryLabels } from '@/components/demo-data';
 import type { Lang } from '@/i18n';
 import { ui } from '@/i18n';
@@ -27,11 +26,6 @@ const allFileTypes = [...new Set(published.flatMap((d) => d.file_types))].sort()
 const catLabels = Object.entries(categoryLabels) as [string, { en: string; zh: string }][];
 catLabels.sort((a, b) => a[1].en.localeCompare(b[1].en));
 
-const diffLabel: Record<string, string> = {
-  beginner: 'Beginner / 初級',
-  intermediate: 'Intermediate / 中級',
-  advanced: 'Advanced / 進階',
-};
 ---
 
 <BaseLayout title={pageTitle} description={pageDesc} lang={lang} currentPath="/demos/">
@@ -72,7 +66,7 @@ const diffLabel: Record<string, string> = {
                 id="demo-search"
                 placeholder={lang === 'zh' ? '搜尋名稱、描述...' : 'Search name, desc...'}
                 class="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-sky-300/40"
-                oninput="applyFilters()"
+                data-filter="search"
               />
             </div>
 
@@ -82,7 +76,7 @@ const diffLabel: Record<string, string> = {
               <select
                 id="cap-filter"
                 class="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3.5 py-2.5 text-sm text-slate-300 outline-none transition focus:border-sky-300/40"
-                onchange="applyFilters()"
+                data-filter="cap"
               >
                 <option value="">{lang === 'zh' ? '全部功能' : 'All capabilities'}</option>
                 {allCapabilities.map((cap) => (
@@ -101,7 +95,7 @@ const diffLabel: Record<string, string> = {
                     <button
                       class="filter-tag category-tag rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1.5 font-mono text-xs text-slate-300 transition hover:border-sky-300/30 hover:text-white"
                       data-key={key}
-                      onclick="toggleCategory(this)"
+                      data-tag="category"
                     >
                       {labels[lang]}
                     </button>
@@ -117,7 +111,7 @@ const diffLabel: Record<string, string> = {
                   <button
                     class="filter-tag filetype-tag rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1.5 font-mono text-xs text-slate-300 transition hover:border-sky-300/30 hover:text-white"
                     data-key={ft}
-                    onclick="toggleFileType(this)"
+                    data-tag="filetype"
                   >
                     {ft}
                   </button>
@@ -202,79 +196,80 @@ const diffLabel: Record<string, string> = {
   </section>
 
   <script>
-    // Track active filters
-    let activeCategories: string[] = [];
-    let activeFileTypes: string[] = [];
+    document.addEventListener('DOMContentLoaded', () => {
+      const activeCategories: string[] = [];
+      const activeFileTypes: string[] = [];
+      const searchInput = document.getElementById('demo-search') as HTMLInputElement;
+      const capSelect = document.getElementById('cap-filter') as HTMLSelectElement;
 
-    // @ts-ignore
-    window.toggleCategory = function (btn: HTMLElement) {
-      const key = btn.dataset.key!;
-      const idx = activeCategories.indexOf(key);
-      if (idx >= 0) {
-        activeCategories.splice(idx, 1);
-        btn.classList.remove('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
-        btn.classList.add('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
-      } else {
-        activeCategories.push(key);
-        btn.classList.remove('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
-        btn.classList.add('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+      function applyFilters() {
+        const search = searchInput.value.toLowerCase().trim();
+        const capability = capSelect.value;
+        const rows = document.querySelectorAll<HTMLElement>('.demo-row');
+        let visible = 0;
+
+        rows.forEach((row) => {
+          const name = row.dataset.name || '';
+          const desc = row.dataset.desc || '';
+          const rowCat = row.dataset.category || '';
+          const rowFT = (row.dataset.filetypes || '').split(' ');
+          const rowCap = row.dataset.capabilities || '';
+
+          const matchSearch = !search || name.includes(search) || desc.includes(search) || rowCap.includes(search);
+          const matchCap = !capability || rowCap.includes(capability.toLowerCase());
+          const matchCat = activeCategories.length === 0 || activeCategories.includes(rowCat);
+          const matchFT = activeFileTypes.length === 0 || activeFileTypes.some((ft) => rowFT.includes(ft));
+
+          row.style.display = (matchSearch && matchCap && matchCat && matchFT) ? '' : 'none';
+          if (matchSearch && matchCap && matchCat && matchFT) visible++;
+        });
+
+        const empty = document.getElementById('demo-empty')!;
+        empty.classList.toggle('hidden', visible > 0);
       }
-      applyFilters();
-    };
 
-    // @ts-ignore
-    window.toggleFileType = function (btn: HTMLElement) {
-      const key = btn.dataset.key!;
-      const idx = activeFileTypes.indexOf(key);
-      if (idx >= 0) {
-        activeFileTypes.splice(idx, 1);
-        btn.classList.remove('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
-        btn.classList.add('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
-      } else {
-        activeFileTypes.push(key);
-        btn.classList.remove('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
-        btn.classList.add('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
-      }
-      applyFilters();
-    };
+      // Search input
+      searchInput.addEventListener('input', applyFilters);
 
-    // @ts-ignore
-    window.applyFilters = function () {
-      const search = (document.getElementById('demo-search') as HTMLInputElement).value.toLowerCase().trim();
-      const capability = (document.getElementById('cap-filter') as HTMLSelectElement).value;
-      const rows = document.querySelectorAll<HTMLElement>('.demo-row');
-      let visible = 0;
+      // Capability dropdown
+      capSelect.addEventListener('change', applyFilters);
 
-      rows.forEach((row) => {
-        const name = row.dataset.name || '';
-        const desc = row.dataset.desc || '';
-        const rowCat = row.dataset.category || '';
-        const rowFT = (row.dataset.filetypes || '').split(' ');
-        const rowCap = row.dataset.capabilities || '';
-
-        // Search
-        const matchSearch = !search || name.includes(search) || desc.includes(search) || rowCap.includes(search);
-
-        // Capability dropdown
-        const matchCap = !capability || rowCap.includes(capability.toLowerCase());
-
-        // Category tags (OR logic — any selected category matches)
-        const matchCat = activeCategories.length === 0 || activeCategories.includes(rowCat);
-
-        // File type tags (OR logic)
-        const matchFT = activeFileTypes.length === 0 || activeFileTypes.some((ft) => rowFT.includes(ft));
-
-        if (matchSearch && matchCap && matchCat && matchFT) {
-          row.style.display = '';
-          visible++;
-        } else {
-          row.style.display = 'none';
-        }
+      // Category tags
+      document.querySelectorAll<HTMLElement>('[data-tag="category"]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const key = btn.dataset.key!;
+          const idx = activeCategories.indexOf(key);
+          if (idx >= 0) {
+            activeCategories.splice(idx, 1);
+            btn.classList.remove('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+            btn.classList.add('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+          } else {
+            activeCategories.push(key);
+            btn.classList.remove('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+            btn.classList.add('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+          }
+          applyFilters();
+        });
       });
 
-      const empty = document.getElementById('demo-empty')!;
-      empty.classList.toggle('hidden', visible > 0);
-    };
+      // File type tags
+      document.querySelectorAll<HTMLElement>('[data-tag="filetype"]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const key = btn.dataset.key!;
+          const idx = activeFileTypes.indexOf(key);
+          if (idx >= 0) {
+            activeFileTypes.splice(idx, 1);
+            btn.classList.remove('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+            btn.classList.add('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+          } else {
+            activeFileTypes.push(key);
+            btn.classList.remove('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+            btn.classList.add('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+          }
+          applyFilters();
+        });
+      });
+    });
   </script>
 </BaseLayout>
 ---
