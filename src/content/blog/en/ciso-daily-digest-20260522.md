@@ -53,6 +53,6 @@ This zero-day vulnerability poses a critical risk to enterprise environments. Im
 
 🔗 **Reference:** [В Microsoft рассказали, как защититься от 0-day-уязвимости YellowKey для обхода BitLocker](https://xakep.ru/2026/05/21/yellowkey-migration/)
 
-## What OPSWAT Can Do
+## How Can OPSWAT Help
 
 OPSWAT MetaDefender provides **multi-engine malware detection** with over **30 anti-malware engines** and **Deep Content Disarm and Reconstruction (CDR)** technology, protecting OT/ICS environments from zero-day threats and targeted attacks. Organizations can deploy MetaDefender to prevent malicious files from reaching critical infrastructure, supporting compliance with **NIST**, **IEC 62443**, and other regulatory frameworks.
