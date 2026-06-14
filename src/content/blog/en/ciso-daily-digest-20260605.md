@@ -64,6 +64,6 @@ Cisco patched a **server-side request forgery (SSRF)** vulnerability in **Unifie
 
 🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/06/cisco-patches-cve-2026-20230-in-unified.html)
 
-## OPSWAT Section
+## How Can OPSWAT Help
 
 The IronWorm and Miasma supply chain attacks targeting npm, GitHub, and PyPI highlight the growing risk of software supply chain compromise. OPSWAT MetaDefender's multi-scanning engine, which aggregates **30+ anti-malware engines**, and its **Content Disarm and Reconstruction (CDR)** technology can detect and block known and unknown malware variants embedded in package dependencies, reducing the risk of supply chain-driven infections in enterprise CI/CD pipelines.
