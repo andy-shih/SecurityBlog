@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：New Wave of DPRK Attacks Uses AI-Inserte (t-20260430)"
+title: "CISO 每日摘要：New Wave of DPRK Attacks Uses AI-Inserted npm Malw (t-20260430)"
 description: "每日資安重點事件與威脅摘要 — 2026-04-30"
 pubDate: 2026-04-30
 tags: ["CISO", "資安", "每日摘要", "威脅情資"]
