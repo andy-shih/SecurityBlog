@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：資安週報 (20260601)"
+title: "CISO 每日摘要：CISA 警告 Palo Alto Networks GlobalProtect (t-20260601)"
 description: "2026年6月1日 關鍵資安事件與威脅回顧"
 pubDate: 2026-06-01
 tags: ["CISO", "每日摘要", "資安", "威脅情資"]
