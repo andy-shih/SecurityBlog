@@ -13,7 +13,6 @@ const { lang } = Astro.props;
 const t = ui[lang];
 
 const published = demos.filter((d) => d.status === 'published');
-// Sort by created date descending
 published.sort((a, b) => b.created.localeCompare(a.created));
 
 const pageTitle = lang === 'zh' ? '攻防示範資料庫' : 'Attack Demo Library';
@@ -21,21 +20,23 @@ const pageDesc = lang === 'zh'
   ? 'OPSWAT MetaDefender 攻防示範：實際攻擊手法與 MetaDefender 防護能力展示'
   : 'Hands-on attack demonstrations mapped to OPSWAT MetaDefender capabilities.';
 
+const allCapabilities = [...new Set(published.flatMap((d) => d.metadefender_capabilities))].sort();
+const allCategories = [...new Set(published.map((d) => d.category))];
+const allFileTypes = [...new Set(published.flatMap((d) => d.file_types))].sort();
+
+const catLabels = Object.entries(categoryLabels) as [string, { en: string; zh: string }][];
+catLabels.sort((a, b) => a[1].en.localeCompare(b[1].en));
+
 const diffLabel: Record<string, string> = {
-  beginner: 'Beginner',
-  intermediate: 'Intermediate',
-  advanced: 'Advanced',
-};
-const diffLabelZh: Record<string, string> = {
-  beginner: '初級',
-  intermediate: '中級',
-  advanced: '進階',
+  beginner: 'Beginner / 初級',
+  intermediate: 'Intermediate / 中級',
+  advanced: 'Advanced / 進階',
 };
 ---
 
 <BaseLayout title={pageTitle} description={pageDesc} lang={lang} currentPath="/demos/">
   <section class="px-5 py-14">
-    <div class="mx-auto max-w-6xl">
+    <div class="mx-auto max-w-7xl">
       <!-- Header -->
       <div class="mb-6">
         <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{t.demosSection}</p>
@@ -43,124 +44,204 @@ const diffLabelZh: Record<string, string> = {
         <p class="mt-3 max-w-3xl text-base leading-7 text-slate-400">{pageDesc}</p>
       </div>
 
-      <!-- Stats row -->
+      <!-- Stats -->
       <div class="mb-6 flex flex-wrap gap-4 text-sm text-slate-400">
         <span class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5">
           {lang === 'zh' ? '已發布' : 'Published'}: <strong class="text-white">{published.length}</strong>
         </span>
         <span class="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5">
-          {lang === 'zh' ? '類別' : 'Categories'}: <strong class="text-white">{categoryLabels.size}</strong>
+          {lang === 'zh' ? '類別' : 'Categories'}: <strong class="text-white">{allCategories.length}</strong>
         </span>
       </div>
 
-      <!-- Search + Filter -->
-      <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-        <input
-          type="search"
-          id="demo-search"
-          placeholder={lang === 'zh' ? '搜尋攻擊手法、描述、能力...' : 'Search attack name, description, capability...'}
-          class="flex-1 rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-sky-300/40"
-          oninput="filterDemos()"
-        />
-        <select
-          id="category-filter"
-          class="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-slate-300 outline-none transition focus:border-sky-300/40"
-          onchange="filterDemos()"
-        >
-          <option value="">{lang === 'zh' ? '全部分類' : 'All Categories'}</option>
-          {[...categoryLabels.entries()].sort().map(([key, labels]) => (
-            <option value={key}>{labels[lang]}</option>
-          ))}
-        </select>
-      </div>
+      <!-- Layout: filter sidebar + table -->
+      <div class="flex flex-col gap-6 lg:flex-row">
+        <!-- ====== FILTER SIDEBAR ====== -->
+        <aside class="w-full shrink-0 lg:w-72">
+          <div class="hud-panel rounded-lg border border-white/5 p-5">
 
-      <!-- Table -->
-      <div class="overflow-x-auto rounded-lg border border-white/10">
-        <table class="w-full text-left text-sm">
-          <thead>
-            <tr class="border-b border-white/10 bg-white/[0.03] font-mono text-xs uppercase tracking-[0.12em] text-slate-400">
-              <th class="px-4 py-3 font-normal">{lang === 'zh' ? '日期' : 'Date'}</th>
-              <th class="px-4 py-3 font-normal">{lang === 'zh' ? '標題' : 'Title'}</th>
-              <th class="hidden px-4 py-3 font-normal md:table-cell">{lang === 'zh' ? '敘述' : 'Description'}</th>
-              <th class="px-4 py-3 font-normal">{lang === 'zh' ? 'OS' : 'OS'}</th>
-              <th class="px-4 py-3 font-normal">{lang === 'zh' ? '攻擊類型' : 'Type'}</th>
-              <th class="hidden px-4 py-3 font-normal lg:table-cell">{lang === 'zh' ? 'MetaDefender 功能' : 'MetaDefender'}</th>
-            </tr>
-          </thead>
-          <tbody id="demo-table-body">
-            {published.map((demo) => {
-              const title = lang === 'zh' ? demo.titleZh : demo.title;
-              const desc = lang === 'zh' ? demo.descriptionZh : demo.description;
-              const cat = categoryLabels[demo.category]?.[lang] ?? demo.category;
-              const diff = lang === 'zh' ? diffLabelZh[demo.difficulty] : diffLabel[demo.difficulty];
-              const rowClass = demo.status === 'coming_soon' ? 'opacity-50' : '';
-              const href = `/${lang}/demos/${demo.id}/`;
-              return (
-                <tr
-                  class={`${rowClass} demo-row border-b border-white/5 transition hover:bg-white/[0.02]`}
-                  data-name={title.toLowerCase()}
-                  data-desc={desc.toLowerCase()}
-                  data-category={demo.category}
-                  data-capabilities={demo.metadefender_capabilities.join(' ').toLowerCase()}
-                >
-                  <td class="whitespace-nowrap px-4 py-3 font-mono text-xs text-slate-500">
-                    {demo.created}
-                  </td>
-                  <td class="px-4 py-3">
-                    <a href={href} class="font-semibold text-white hover:text-sky-100">
-                      {title}
-                    </a>
-                  </td>
-                  <td class="hidden max-w-xs truncate px-4 py-3 text-slate-400 md:table-cell">
-                    {desc}
-                  </td>
-                  <td class="whitespace-nowrap px-4 py-3">
-                    <div class="flex flex-wrap gap-1">
-                      {demo.platforms.slice(0, 3).map((p: string) => (
-                        <span class="rounded border border-white/5 bg-white/[0.02] px-1.5 py-0.5 font-mono text-[11px] text-slate-500">{p}</span>
-                      ))}
-                    </div>
-                  </td>
-                  <td class="px-4 py-3">
-                    <span class="rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[11px] text-sky-200 whitespace-nowrap">
-                      {cat}
-                    </span>
-                    <span class={`ml-1 rounded-md px-1.5 py-0.5 font-mono text-[11px] ${
-                      demo.difficulty === 'beginner' ? 'text-emerald-200 bg-emerald-300/[0.08] border-emerald-300/20' :
-                      demo.difficulty === 'intermediate' ? 'text-amber-200 bg-amber-300/[0.08] border-amber-300/20' :
-                      'text-rose-200 bg-rose-300/[0.08] border-rose-300/20'
-                    }`}>
-                      {diff}
-                    </span>
-                  </td>
-                  <td class="hidden max-w-[200px] px-4 py-3 lg:table-cell">
-                    <div class="flex flex-wrap gap-1">
-                      {demo.metadefender_capabilities.slice(0, 3).map((cap: string) => (
-                        <span class="rounded border border-emerald-300/15 bg-emerald-300/[0.05] px-1.5 py-0.5 font-mono text-[11px] text-emerald-200/80">{cap}</span>
-                      ))}
-                      {demo.metadefender_capabilities.length > 3 && (
-                        <span class="text-[11px] text-slate-500">+{demo.metadefender_capabilities.length - 3}</span>
-                      )}
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+            <h2 class="mb-4 font-mono text-sm uppercase tracking-[0.14em] text-white">
+              {lang === 'zh' ? '篩選 Demo' : 'Filter Demos'}
+            </h2>
 
-      <!-- Empty state -->
-      <p id="demo-empty" class="mt-6 hidden text-center text-sm text-slate-500">
-        {lang === 'zh' ? '找不到符合條件的示範。' : 'No matching demos found.'}
-      </p>
+            <!-- Search -->
+            <div class="mb-5">
+              <label class="mb-1.5 block font-mono text-xs text-slate-400">{lang === 'zh' ? '搜尋' : 'Search'}</label>
+              <input
+                type="search"
+                id="demo-search"
+                placeholder={lang === 'zh' ? '搜尋名稱、描述...' : 'Search name, desc...'}
+                class="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-sky-300/40"
+                oninput="applyFilters()"
+              />
+            </div>
+
+            <!-- MetaDefender Capabilities -->
+            <div class="mb-5">
+              <label class="mb-1.5 block font-mono text-xs text-slate-400">MetaDefender {lang === 'zh' ? '功能' : 'Capabilities'}</label>
+              <select
+                id="cap-filter"
+                class="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3.5 py-2.5 text-sm text-slate-300 outline-none transition focus:border-sky-300/40"
+                onchange="applyFilters()"
+              >
+                <option value="">{lang === 'zh' ? '全部功能' : 'All capabilities'}</option>
+                {allCapabilities.map((cap) => (
+                  <option value={cap}>{cap}</option>
+                ))}
+              </select>
+            </div>
+
+            <!-- Attack Type -->
+            <div class="mb-5">
+              <label class="mb-1.5 block font-mono text-xs text-slate-400">{lang === 'zh' ? '攻擊類型' : 'Attack Type'}</label>
+              <div class="flex flex-wrap gap-1.5" id="category-tags">
+                {catLabels
+                  .filter(([key]) => published.some((d) => d.category === key))
+                  .map(([key, labels]) => (
+                    <button
+                      class="filter-tag category-tag rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1.5 font-mono text-xs text-slate-300 transition hover:border-sky-300/30 hover:text-white"
+                      data-key={key}
+                      onclick="toggleCategory(this)"
+                    >
+                      {labels[lang]}
+                    </button>
+                  ))}
+              </div>
+            </div>
+
+            <!-- File Type -->
+            <div class="mb-2">
+              <label class="mb-1.5 block font-mono text-xs text-slate-400">{lang === 'zh' ? '檔案類型' : 'File Type'}</label>
+              <div class="flex flex-wrap gap-1.5" id="filetype-tags">
+                {allFileTypes.map((ft) => (
+                  <button
+                    class="filter-tag filetype-tag rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1.5 font-mono text-xs text-slate-300 transition hover:border-sky-300/30 hover:text-white"
+                    data-key={ft}
+                    onclick="toggleFileType(this)"
+                  >
+                    {ft}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- ====== RESULTS TABLE ====== -->
+        <div class="min-w-0 flex-1 overflow-x-auto rounded-lg border border-white/10">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-white/10 bg-white/[0.03] font-mono text-xs uppercase tracking-[0.12em] text-slate-400">
+                <th class="px-4 py-3 font-normal">{lang === 'zh' ? '日期' : 'Date'}</th>
+                <th class="px-4 py-3 font-normal">{lang === 'zh' ? '標題' : 'Title'}</th>
+                <th class="hidden px-4 py-3 font-normal md:table-cell">{lang === 'zh' ? '敘述' : 'Description'}</th>
+                <th class="px-4 py-3 font-normal">{lang === 'zh' ? 'OS' : 'OS'}</th>
+                <th class="px-4 py-3 font-normal">{lang === 'zh' ? '攻擊類型' : 'Type'}</th>
+                <th class="hidden px-4 py-3 font-normal lg:table-cell">{lang === 'zh' ? '功能' : 'Capabilities'}</th>
+              </tr>
+            </thead>
+            <tbody id="demo-table-body">
+              {published.map((demo) => {
+                const title = lang === 'zh' ? demo.titleZh : demo.title;
+                const desc = lang === 'zh' ? demo.descriptionZh : demo.description;
+                const cat = categoryLabels[demo.category]?.[lang] ?? demo.category;
+                const href = `/${lang}/demos/${demo.id}/`;
+                return (
+                  <tr
+                    class="demo-row border-b border-white/5 transition hover:bg-white/[0.02]"
+                    data-name={title.toLowerCase()}
+                    data-desc={desc.toLowerCase()}
+                    data-category={demo.category}
+                    data-filetypes={demo.file_types.join(' ')}
+                    data-capabilities={demo.metadefender_capabilities.join(' ').toLowerCase()}
+                  >
+                    <td class="whitespace-nowrap px-4 py-3 font-mono text-xs text-slate-500">{demo.created}</td>
+                    <td class="px-4 py-3">
+                      <a href={href} class="font-semibold text-white hover:text-sky-100">{title}</a>
+                    </td>
+                    <td class="hidden max-w-xs truncate px-4 py-3 text-slate-400 md:table-cell">{desc}</td>
+                    <td class="whitespace-nowrap px-4 py-3">
+                      <div class="flex flex-wrap gap-1">
+                        {demo.platforms.slice(0, 3).map((p: string) => (
+                          <span class="rounded border border-white/5 bg-white/[0.02] px-1.5 py-0.5 font-mono text-[11px] text-slate-500">{p}</span>
+                        ))}
+                      </div>
+                    </td>
+                    <td class="px-4 py-3">
+                      <span class="whitespace-nowrap rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[11px] text-sky-200">{cat}</span>
+                      <span class={`ml-1 rounded-md px-1.5 py-0.5 font-mono text-[11px] ${
+                        demo.difficulty === 'beginner' ? 'text-emerald-200 bg-emerald-300/[0.08]' :
+                        demo.difficulty === 'intermediate' ? 'text-amber-200 bg-amber-300/[0.08]' :
+                        'text-rose-200 bg-rose-300/[0.08]'
+                      }`}>
+                        {demo.difficulty === 'beginner' ? '初級' : demo.difficulty === 'intermediate' ? '中級' : '進階'}
+                      </span>
+                    </td>
+                    <td class="hidden max-w-[180px] px-4 py-3 lg:table-cell">
+                      <div class="flex flex-wrap gap-1">
+                        {demo.metadefender_capabilities.slice(0, 3).map((cap: string) => (
+                          <span class="rounded border border-emerald-300/15 bg-emerald-300/[0.05] px-1.5 py-0.5 font-mono text-[11px] text-emerald-200/80">{cap}</span>
+                        ))}
+                        {demo.metadefender_capabilities.length > 3 && (
+                          <span class="text-[11px] text-slate-500">+{demo.metadefender_capabilities.length - 3}</span>
+                        )}
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <p id="demo-empty" class="hidden p-6 text-center text-sm text-slate-500">
+            {lang === 'zh' ? '找不到符合條件的示範。' : 'No matching demos found.'}
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <script>
-    function filterDemos() {
+    // Track active filters
+    let activeCategories: string[] = [];
+    let activeFileTypes: string[] = [];
+
+    // @ts-ignore
+    window.toggleCategory = function (btn: HTMLElement) {
+      const key = btn.dataset.key!;
+      const idx = activeCategories.indexOf(key);
+      if (idx >= 0) {
+        activeCategories.splice(idx, 1);
+        btn.classList.remove('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+        btn.classList.add('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+      } else {
+        activeCategories.push(key);
+        btn.classList.remove('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+        btn.classList.add('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+      }
+      applyFilters();
+    };
+
+    // @ts-ignore
+    window.toggleFileType = function (btn: HTMLElement) {
+      const key = btn.dataset.key!;
+      const idx = activeFileTypes.indexOf(key);
+      if (idx >= 0) {
+        activeFileTypes.splice(idx, 1);
+        btn.classList.remove('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+        btn.classList.add('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+      } else {
+        activeFileTypes.push(key);
+        btn.classList.remove('border-white/10', 'bg-white/[0.04]', 'text-slate-300');
+        btn.classList.add('border-sky-300', 'bg-sky-300/[0.08]', 'text-sky-100');
+      }
+      applyFilters();
+    };
+
+    // @ts-ignore
+    window.applyFilters = function () {
       const search = (document.getElementById('demo-search') as HTMLInputElement).value.toLowerCase().trim();
-      const category = (document.getElementById('category-filter') as HTMLSelectElement).value;
+      const capability = (document.getElementById('cap-filter') as HTMLSelectElement).value;
       const rows = document.querySelectorAll<HTMLElement>('.demo-row');
       let visible = 0;
 
@@ -168,12 +249,22 @@ const diffLabelZh: Record<string, string> = {
         const name = row.dataset.name || '';
         const desc = row.dataset.desc || '';
         const rowCat = row.dataset.category || '';
+        const rowFT = (row.dataset.filetypes || '').split(' ');
         const rowCap = row.dataset.capabilities || '';
 
+        // Search
         const matchSearch = !search || name.includes(search) || desc.includes(search) || rowCap.includes(search);
-        const matchCat = !category || rowCat === category;
 
-        if (matchSearch && matchCat) {
+        // Capability dropdown
+        const matchCap = !capability || rowCap.includes(capability.toLowerCase());
+
+        // Category tags (OR logic — any selected category matches)
+        const matchCat = activeCategories.length === 0 || activeCategories.includes(rowCat);
+
+        // File type tags (OR logic)
+        const matchFT = activeFileTypes.length === 0 || activeFileTypes.some((ft) => rowFT.includes(ft));
+
+        if (matchSearch && matchCap && matchCat && matchFT) {
           row.style.display = '';
           visible++;
         } else {
@@ -183,7 +274,7 @@ const diffLabelZh: Record<string, string> = {
 
       const empty = document.getElementById('demo-empty')!;
       empty.classList.toggle('hidden', visible > 0);
-    }
+    };
   </script>
 </BaseLayout>
 ---
