@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Packagist 供應鏈攻擊與 npm 強化 2FA 安全管控 (20260524)"
+title: "CISO 每日摘要：Packagist 供應鏈攻擊與 npm 強化 2FA 安全管控 (20260524)"
 description: "2026-05-24 每日資安摘要，涵蓋當日最重大的威脅、漏洞與資安產業發展。"
 pubDate: 2026-05-24
 tags: ["CISO", "資安", "威脅", "漏洞", "網路安全"]
