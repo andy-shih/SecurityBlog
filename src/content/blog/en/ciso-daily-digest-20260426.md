@@ -7,7 +7,7 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-A notable **Anthropic’s ‘Too Dangerous To Release’ Mythos Model Reportedly Breached By Unauthorized Users** highlights the intersection of artificial intelligence and cybersecurity, raising important questions about AI safety and security controls.
+This incident involving Anthropic's Claude Mythos model raises concerns about AI model security and unauthorized access to restricted systems.
 
 **Event Context:**
 
@@ -26,6 +26,6 @@ Organizations should review the relevant security advisories and ensure their de
 
 📌 **美國務院示警 AI 模型遭竊取智財，點名 DeepSeek 等中國公司**
 
-The theft of AI model intellectual property represents an emerging threat vector. Organizations developing AI models should implement robust access controls and monitoring for their training infrastructure.
+AI model IP theft is an emerging threat vector. Implement robust access controls for AI training infrastructure.
 
 📌 **國務院示警全球：DeepSeek等中國企業 竊取美國AI模型**
