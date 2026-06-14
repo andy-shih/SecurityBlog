@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：中國駭客散布 Showboat 惡意程式、Grandoreiro RAT 攻擊、 (t-20260528)"
+title: "CISO 每日摘要：中國駭客散布 Showboat 惡意程式、Grandoreiro RAT 攻擊、CISA 要求修補  (t-20260528)"
 description: "2026-05-28 每日資安新聞摘要"
 pubDate: 2026-05-28
 tags: ["CISO", "資訊安全", "威脅情資"]
