@@ -99,7 +99,17 @@ npm run test:e2e     # Playwright
 - **推薦文章** — 基於標籤相似度的自動推薦
 - **暗色 HUD 主題** — 專業科技風格
 - **多頁面 Resume** — 中英雙語版本，資料集中管理
-- **SEO 友好** — 動態 meta tags、Open Graph
+- **SEO 友好** — 動態 meta tags、XML sitemap、robots.txt、IndexNow key
+
+### Search Indexing
+
+Production URL: `https://blog.pingpongtech.us.kg/`
+
+- XML sitemap: `https://blog.pingpongtech.us.kg/sitemap.xml`
+- Robots file: `https://blog.pingpongtech.us.kg/robots.txt`
+- IndexNow key file: `https://blog.pingpongtech.us.kg/89ca9699954ea5a5f65d528f17de471c.txt`
+
+Google can discover the sitemap through `robots.txt` and can also accept it through Search Console. Bing-compatible search engines can receive URL updates through IndexNow after the key file is deployed.
 
 ---
 
