@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  index?: number;
+}
+
+const { post, index = 0 } = Astro.props;
+const date = post.data.pubDate.toLocaleDateString('en', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+---
+
+<article
+  class="reveal-card hud-panel group grid h-full gap-5 rounded-lg p-5 transition duration-200 hover:-translate-y-1 hover:border-sky-300/45"
+  style={`animation-delay: ${index * 70}ms`}
+>
+  <div class="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-slate-400">
+    <time datetime={post.data.pubDate.toISOString()}>{date}</time>
+    <span aria-hidden="true">/</span>
+    <span>{post.data.author}</span>
+  </div>
+  <div class="space-y-3">
+    <h2 class="text-xl font-semibold leading-tight text-white group-hover:text-sky-200">
+      <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+    </h2>
+    <p class="text-sm leading-7 text-slate-300">{post.data.description}</p>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    {post.data.tags.map((tag) => (
+      <span class="rounded-md border border-emerald-300/20 bg-emerald-300/[0.08] px-2.5 py-1 font-mono text-xs text-emerald-200">
+        {tag}
+      </span>
+    ))}
+  </div>
+</article>
