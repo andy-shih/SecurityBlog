@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Windows Netlogon RCE Vulnerability (-20260604)"
+title: "CISO Daily Digest: Windows Netlogon RCE Vulnerability (20260604)"
 description: "Key cybersecurity events and threats as of June 04, 2026"
 pubDate: 2026-06-04
 tags: ["CISO", "Daily Digest", "Cybersecurity", "Threat Intelligence"]
