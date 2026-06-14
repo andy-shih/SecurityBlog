@@ -64,6 +64,6 @@ Cisco 修補了 **Unified Communications Manager** 中的一個**伺服器端請
 
 🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/06/cisco-patches-cve-2026-20230-in-unified.html)
 
-## OPSWAT 相關
+## OPSWAT可以怎麼幫上忙
 
 鎖定 npm、GitHub 和 PyPI 的 IronWorm 與 Miasma 供應鏈攻擊突顯了軟體供應鏈入侵風險的日益增長。OPSWAT MetaDefender 的多引擎掃描技術整合 **30 多個防毒引擎**，以及其**內容拆除與重組（CDR）**技術，能夠檢測並封鎖嵌入在套件依賴項中的已知和未知惡意軟體變種，降低企業 CI/CD 管線中供應鏈驅動感染的風險。
