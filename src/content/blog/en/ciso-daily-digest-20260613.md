@@ -51,6 +51,14 @@ The ban also applies retroactively—[enterprises with prepaid Fable 5 credits f
 
 ---
 
+## What OPSWAT can do
+
+**Supply chain threat prevention (AUR packages, backdoored binaries):** OPSWAT MetaDefender's multi-engine scanning (30+ antivirus engines) and Content Disarm and Reconstruction (CDR) can inspect downloaded packages and binaries before they reach enterprise systems. For organizations concerned about malicious files entering through CI/CD pipelines, developer workstations, or package registries, MetaDefender can be deployed as a file verification gate—stripping active threats from files while preserving their usability. This applies to any software package ecosystem, not just AUR.
+
+For the two file-based threats this week—hijacked packages and backdoored Linux login binaries—OPSWAT's core competency in file-level threat prevention provides an additional detection layer before those files execute.
+
+---
+
 ## Key readings
 
 **The Anthropic mandate:**
