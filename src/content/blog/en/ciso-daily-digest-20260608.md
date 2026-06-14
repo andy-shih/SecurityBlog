@@ -52,6 +52,6 @@ A new Android trojan named **MagicAd** has been discovered that bypasses adverti
 
 🔗 **Reference:** [xakep.ru](https://xakep.ru/2026/06/08/magicad/)
 
-## OPSWAT
+## How Can OPSWAT Help
 
 The escalating Miasma worm supply chain attacks targeting NPM packages and AI development tools underscore the urgent need for comprehensive file security in software development pipelines. OPSWAT's **MetaDefender** platform provides multi-scanning with over **30 anti-malware engines** and **Content Disarm and Reconstruction (CDR)** to detect and neutralize threats in software packages and artifacts before they enter the development supply chain. Additionally, **MetaDefender ICAP Server** can be deployed at proxy and storage layers to scan files being uploaded or downloaded, providing an essential security layer against worm-driven malware distribution through compromised packages.
