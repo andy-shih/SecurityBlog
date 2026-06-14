@@ -7,7 +7,7 @@ export const profile = {
   tagline: 'Security professional focused on critical infrastructure protection, secure file workflows, and customer-facing security architecture.',
   taglineZh: '專注於關鍵基礎設施防護、安全檔案流程與客戶場景資安架構的資安專業人員。',
   email: 'andy.shih@opswat.com',
-  location: 'Taiwan / Global customers',
+  location: 'GCR + Korea',
   github: 'https://github.com/andy-shih',
   focus: [
     'Critical infrastructure protection',
