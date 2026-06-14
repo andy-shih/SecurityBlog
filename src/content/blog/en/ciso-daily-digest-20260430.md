@@ -1,5 +1,5 @@
 ---
-title: "CISO Daily Digest: Critical Vulnerabilities and Active Exploits (-20260430)"
+title: "CISO Daily Digest: Critical Vulnerabilities and Active Exploits (20260430)"
 description: "Key cybersecurity events and threats as of 2026-04-30"
 pubDate: 2026-04-30
 tags: ["CISO", "Daily Digest", "Cybersecurity", "Threat Intelligence"]
