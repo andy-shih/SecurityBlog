@@ -1,68 +1,56 @@
 ---
-title: "CISO 每日摘要：Instructure Breach Exposes Schools' Vendor Depende (20260507)"
-description: "2026-05-07 每日資安新聞摘要"
+title: "CISO 每日摘要：Trellix Source Code Breach; ShinyHunters Attack Canvas Platform (20260507)"
+description: "2026-05-07 每日資安新聞摘要 - Trellix source code leak, ShinyHunters claims on Canvas/NVIDIA data, PAN-OS RCE under active exploit, and WhatsApp malicious link vulnerability."
 pubDate: 2026-05-07
-tags: ["資安", "CISO", "daily-digest"]
+tags: ["資安", "CISO", "daily-digest", "威脅情資"]
 author: "Security Solutions Team"
 featured: true
 ---
 
-## 重點新聞
+## Trellix Source Code Breach Highlights Growing Supply Chain Threats
 
-**Instructure Breach Exposes Schools' Vendor Dependence**
+Trellix, a major cybersecurity provider, has suffered a source code breach that raises significant supply chain security concerns. The exposure of proprietary security software source code could enable threat actors to identify vulnerabilities in widely-deployed endpoint protection products. Security teams are advised to audit their supply chain dependencies and monitor for any anomalous activity linked to the incident.
 
-- 據 安全研究人員 報導，此為當日重大安全事件。
-
-🔗 **參考資料：** [詳情](https://www.darkreading.com/cyberattacks-data-breaches/instructure-breach-exposes-schools-vendor-dependence)
+🔗 **Reference:** [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/trellix-source-code-breach)
 
 ## 本週活躍威脅
 
-📌 **Mirai**
+📌 **ShinyHunters Claims Data Breach of Canvas Developer and NVIDIA GeForce NOW**
 
-據 Based xlabs_v1 Botnet Exploits ADB to Hijack IoT Devices for DDoS Attacks 報導，此新興安全威脅需要企業資安團隊關注。
+The notorious threat actor group ShinyHunters has claimed responsibility for stealing millions of personal records from Instructure (Canvas LMS developer) and NVIDIA's GeForce NOW service. The Canvas breach has already disrupted schools and colleges nationwide, forcing many to suspend online learning operations.
 
-🔗 **Reference:** [Based xlabs_v1 Botnet Exploits ADB to Hijack IoT Devices for DDoS Attacks](https://thehackernews.com/2026/05/mirai-based-xlabsv1-botnet-exploits-adb.html)
+🔗 **Reference:** [Krebs on Security](https://krebsonsecurity.com/2026/05/canvas-breach-disrupts-schools-colleges-nationwide/)
 
-📌 **惡意軟體Quasar Linux結合後門與Rootkit功能，鎖定開發人員而來**
+📌 **PAN-OS RCE Exploit Under Active Usage — CISA Issues Emergency Directive**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+A remote code execution vulnerability in Palo Alto Networks PAN-OS is under active exploitation. CISA has added the flaw to its Known Exploited Vulnerabilities catalog and mandated federal agencies to apply mitigations within three days. Palo Alto Networks has released detection signatures.
 
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/pan-os-rce-exploit-under-a.html)
 
-📌 **為掩護網路間諜活動，伊朗駭客MuddyWater利用勒索軟體Chaos製造混亂**
+📌 **WhatsApp Malicious Link Vulnerability Exploited for Surveillance**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+A critical flaw in WhatsApp's link preview functionality has been exploited in targeted attacks. The vulnerability allows attackers to trigger malicious actions when a user receives a crafted link, even without clicking it. Meta has released an emergency update for all platforms.
 
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/)
 
-📌 **微軟Phone Link應用程式被濫用，惡意軟體CloudZ竊取手機簡訊與OTP**
+📌 **New ConsentFix v3 Phishing Technique Automates Azure Environment Attacks**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+A new variant of the ConsentFix phishing technique (v3) is actively targeting Azure environments. The automated attack tricks users into granting OAuth permissions to malicious applications, bypassing traditional MFA protections and security awareness training.
 
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/)
 
-📌 **惡意OpenClaw技能套件被用於散布Remcos與GhostLoader**
+📌 **Windows Phone Link Exploited by CloudZ RAT to Steal Credentials**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+Threat actors are exploiting the Windows Phone Link feature to distribute CloudZ RAT, a remote access trojan designed to steal credentials and sensitive data from mobile devices connected to Windows PCs. The attack vector leverages trusted device pairing.
 
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/05/windows-phone-link-exploit.html)
 
-📌 **Google發布5月份Android例行更新，修補重大層級的資安漏洞**
+📌 **Apache HTTP Server High-Risk Vulnerability Patched by Apache Foundation**
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
+The Apache Software Foundation has patched a high-risk vulnerability in the Apache HTTP Server that could allow remote attackers to compromise web servers. System administrators are urged to update to the latest version immediately.
 
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/)
 
-📌 **【臺灣資安大會直擊】衛福部推SBOM填補AI供應鏈漏洞、醫療主權雲八大方針正式版近期將出爐**
+## OPSWAT 能做什麼
 
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
-
-
-📌 **Palo Alto Networks揭露防火牆重大資安漏洞，並指出已被用於實際攻擊**
-
-據 iThome 報導，此新興安全威脅需要企業資安團隊關注。
-
-
-## 其他安全事件
-
-- **【臺灣資安大會直擊】2026年底9成資訊都是AI撰寫？趨勢科技揭示AI演進下的4大內外部風險**
-- **vm2 Node.js Library Vulnerabilities Enable Sandbox Escape and Arbitrary Code Execution**
-  🔗 [詳情](https://thehackernews.com/2026/05/vm2-nodejs-library-vulnerabilities.html)
-- **為深度學習框架PyTorch打造的PyPI程式庫Lightning遭供應鏈攻擊**
-- **AI資安治理**
-- **【臺灣資安大會直擊】沒弄清楚DevSecOps流程反模式，靠AI也解不了四大根本問題**
+The Trellix source code breach and ShinyHunters' data theft operations highlight the critical need for multi-layered defense. MetaDefender's CDR technology disarms malicious documents at the gateway, while multi-engine scanning catches known and unknown threats across email and web traffic.
