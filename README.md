@@ -2,7 +2,7 @@
 
 ![Site](https://img.shields.io/badge/status-live-22c55e)
 ![Build](https://img.shields.io/badge/Astro-6.x-ff5a03)
-![Articles](https://img.shields.io/badge/articles-150-3b82f6)
+![Articles](https://img.shields.io/badge/articles-152-3b82f6)
 
 **CISO Daily Digest** — 每日資安新聞摘要，中英雙語。由 Andy.Shih（OPSWAT Solutions Engineer）撰寫，聚焦關鍵基礎設施防護、供應鏈安全與實務資安架構。
 
