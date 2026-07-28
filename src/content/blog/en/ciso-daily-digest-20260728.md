@@ -47,4 +47,4 @@ Security researchers identified persistent **Confused Deputy** vulnerabilities i
 
 📌 **NVIDIA Forms 37-Member Open Secure AI Alliance — xAI Joins**
 **NVIDIA** announced the formation of a **37-member Open Secure AI Alliance** and open-sourced its **NOOA framework** for AI security. **xAI** (Elon Musk's AI company) is among the founding members. The alliance aims to establish security standards and testing frameworks for AI models and deployment pipelines — directly relevant as enterprises accelerate AI adoption amid growing security concerns highlighted by this week's Claude leak.
-🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html)
+🔗 **Reference:** [NVIDIA Blog](https://blogs.nvidia.com/blog/open-secure-ai-alliance/)
