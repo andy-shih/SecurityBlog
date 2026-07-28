@@ -23,7 +23,7 @@ This incident exposes a **systemic gap in AI platform data governance**: collabo
 
 The **second-day mainstream coverage** signals that AI data privacy incidents now attract the same scrutiny as traditional data breaches — this is a board-level conversation, not just a security team concern.
 
-🔗 **Reference:** Coverage from ([BBC](URL_PLACEHOLDER_BBC), [Axios](URL_PLACEHOLDER_AXIOS), [PCMag](URL_PLACEHOLDER_PCMAG), [The Register](URL_PLACEHOLDER_REGISTER), [Business Insider](URL_PLACEHOLDER_BI), [Yahoo Tech](URL_PLACEHOLDER_YAHOO))
+🔗 **Reference:** Coverage from ([BBC](https://www.bbc.com/news/articles/cly5qgjk5ywo), [The Hacker News](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html), [Decrypt](https://decrypt.co/303178))
 
 ---
 

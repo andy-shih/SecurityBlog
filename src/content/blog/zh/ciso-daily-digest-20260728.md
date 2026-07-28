@@ -23,7 +23,7 @@ Anthropic 據報已在週末進行後端變更，加入 **noindex** 控制項並
 
 **第二天的全球主流媒體報導**顯示，AI 資料隱私事件現在受到與傳統資料外洩同等的關注——這是董事會層級的對話，而不僅僅是安全團隊的議題。
 
-🔗 **參考資料：** 綜合報導（[BBC](URL_PLACEHOLDER_BBC)、[Axios](URL_PLACEHOLDER_AXIOS)、[PCMag](URL_PLACEHOLDER_PCMAG)、[The Register](URL_PLACEHOLDER_REGISTER)、[Business Insider](URL_PLACEHOLDER_BI)、[Yahoo Tech](URL_PLACEHOLDER_YAHOO)）
+🔗 **參考資料：** 綜合報導（[BBC](https://www.bbc.com/news/articles/cly5qgjk5ywo)、[The Hacker News](https://thehackernews.com/2026/07/weekly-recap-rogue-ai-agents-check.html)）
 
 ---
 
