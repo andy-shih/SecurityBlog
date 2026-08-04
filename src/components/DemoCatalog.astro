@@ -163,13 +163,16 @@ catLabels.sort((a, b) => a[1].en.localeCompare(b[1].en));
                       </div>
                     </td>
                     <td class="px-4 py-3">
-                      <span class="whitespace-nowrap rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[11px] text-sky-200">{cat}</span>
-                      <span class={`ml-1 rounded-md px-1.5 py-0.5 font-mono text-[11px] ${
-                        demo.difficulty === 'beginner' ? 'text-emerald-200 bg-emerald-300/[0.08]' :
-                        demo.difficulty === 'intermediate' ? 'text-amber-200 bg-amber-300/[0.08]' :
-                        'text-rose-200 bg-rose-300/[0.08]'
-                      }`}>
-                        {demo.difficulty === 'beginner' ? '初級' : demo.difficulty === 'intermediate' ? '中級' : '進階'}
+                      <span class="whitespace-nowrap rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[11px] text-sky-200">
+                        {cat}
+                        <span class="mx-1 text-slate-500">·</span>
+                        <span class={`${
+                          demo.difficulty === 'beginner' ? 'text-emerald-200' :
+                          demo.difficulty === 'intermediate' ? 'text-amber-200' :
+                          'text-rose-200'
+                        }`}>
+                          {demo.difficulty === 'beginner' ? '初級' : demo.difficulty === 'intermediate' ? '中級' : '進階'}
+                        </span>
                       </span>
                     </td>
                     <td class="hidden max-w-[180px] px-4 py-3 lg:table-cell">
