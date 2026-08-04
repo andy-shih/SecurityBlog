@@ -18,9 +18,9 @@ This demo is **Linux-only**. The zip contains two folders:
 | `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
 | `clean/` | The same file after MetaDefender processing — payload removed |
 
-Files in `malicious/`: `malicious-report.pdf`
+Files in `malicious/`: `malicious-deps.zip`, `malicious-package.json`
 
-Files in `clean/`: `clean-report.pdf`
+Files in `clean/`: `clean-package.json`
 
 
 
@@ -40,16 +40,28 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash malicious-report.pdf` — the calculator opens (the visible impact).
+- Run: `bash malicious-deps.zip` — the calculator opens (the visible impact).
+- Run: `bash malicious-package.json` — the calculator opens (the visible impact).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"
 — the benign stand-in for a real malware payload.
 
 ### 3. Show the protection (clean)
 
-- Run: `bash clean-report.pdf` — nothing happens (payload removed).
+- Run: `bash clean-package.json` — nothing happens (payload removed).
 
 **Expected result:** the file opens/behaves normally — no calculator, no execution.
+
+---
+
+## Expected behavior (file by file)
+
+| File | What you should observe |
+|---|---|
+| malicious files | malicious-package.json → pins known-vulnerable versions (lodash 4.17.20 …) |
+| clean files | no payload, no calculator, sanitized content |
+
+> Behavior notes are verified by the QA suite on every build (see the QA checklist below).
 
 ---
 

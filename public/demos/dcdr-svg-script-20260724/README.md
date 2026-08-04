@@ -53,6 +53,17 @@ The payload script auto-detects which one is installed.
 
 ---
 
+## Expected behavior (file by file)
+
+| File | What you should observe |
+|---|---|
+| malicious files | malicious-image.svg → onload fires the payload (browser-dependent; blocked in strict contexts) |
+| clean files | no payload, no calculator, sanitized content |
+
+> Behavior notes are verified by the QA suite on every build (see the QA checklist below).
+
+---
+
 ## Safety
 
 - ✅ All payloads are **benign by construction**: the only side effect is opening the calculator.

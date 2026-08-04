@@ -53,6 +53,17 @@ The payload script auto-detects which one is installed.
 
 ---
 
+## Expected behavior (file by file)
+
+| File | What you should observe |
+|---|---|
+| malicious files | malicious-invoice.html → the page auto-assembles and downloads invoice.sh (browser-dependent) |
+| clean files | no payload, no calculator, sanitized content |
+
+> Behavior notes are verified by the QA suite on every build (see the QA checklist below).
+
+---
+
 ## Safety
 
 - ✅ All payloads are **benign by construction**: the only side effect is opening the calculator.

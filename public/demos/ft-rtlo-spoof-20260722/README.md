@@ -53,6 +53,17 @@ The payload script auto-detects which one is installed.
 
 ---
 
+## Expected behavior (file by file)
+
+| File | What you should observe |
+|---|---|
+| malicious files | malicious file with U+202E in the filename → file manager renders txt.exe instead of the real extension |
+| clean files | no payload, no calculator, sanitized content |
+
+> Behavior notes are verified by the QA suite on every build (see the QA checklist below).
+
+---
+
 ## Safety
 
 - ✅ All payloads are **benign by construction**: the only side effect is opening the calculator.
