@@ -18,9 +18,11 @@ This demo is **Linux-only**. The zip contains two folders:
 | `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
 | `clean/` | The same file after MetaDefender processing — payload removed |
 
-Files in `malicious/`: `malicious-eicar.txt`, `malicious-eicar.zip`
+Files in `malicious/`: `eicar.com`, `eicar.txt`, `eicar_demo.exe`, `malicious-eicar.zip`
 
 Files in `clean/`: `clean-note.txt`
+
+
 
 ---
 
@@ -38,7 +40,9 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash malicious-eicar.txt` — the calculator opens (the visible impact).
+- Run: `bash eicar.com` — the calculator opens (the visible impact).
+- Run: `bash eicar.txt` — the calculator opens (the visible impact).
+- Run: `bash eicar_demo.exe` — the calculator opens (the visible impact).
 - Run: `bash malicious-eicar.zip` — the calculator opens (the visible impact).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"

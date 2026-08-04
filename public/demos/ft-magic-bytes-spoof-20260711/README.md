@@ -22,6 +22,8 @@ Files in `malicious/`: `malicious-image.png`
 
 Files in `clean/`: `clean-image.png`
 
+
+
 ---
 
 ## How to run the demo (Linux)

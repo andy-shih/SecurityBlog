@@ -22,6 +22,8 @@ Files in `malicious/`: `malicious-image.svg`
 
 Files in `clean/`: `clean-image.svg`
 
+
+
 ---
 
 ## How to run the demo (Linux)

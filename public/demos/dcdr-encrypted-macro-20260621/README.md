@@ -22,6 +22,11 @@ Files in `malicious/`: `malicious-invoice.docx`, `malicious-launcher.sh`
 
 Files in `clean/`: `clean-invoice.docx`
 
+- **Macro note:** LibreOffice 24.x does not embed Basic macros into `.docm`
+  `vbaProject.bin` on export, so the macro demo ships a clean `.docx` plus a
+  launcher that reproduces the macro's visible impact. To create a real `.docm`,
+  run the included generator on Windows (Word) — see the blog for the technique.
+
 ---
 
 ## How to run the demo (Linux)

@@ -18,9 +18,12 @@ This demo is **Linux-only**. The zip contains two folders:
 | `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
 | `clean/` | The same file after MetaDefender processing — payload removed |
 
-Files in `malicious/`: `malicious-archive.zip`
+Files in `malicious/`: `malicious-archive.rar`
 
 Files in `clean/`: `clean-archive.zip`
+
+- **RAR note:** the password-protected archive uses `-hp` (header + data
+  encryption), password `infected`. Verify with `rar t -pinfected <file>.rar`.
 
 ---
 
@@ -38,7 +41,7 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash malicious-archive.zip` — the calculator opens (the visible impact).
+- Run: `bash malicious-archive.rar` — the calculator opens (the visible impact).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"
 — the benign stand-in for a real malware payload.

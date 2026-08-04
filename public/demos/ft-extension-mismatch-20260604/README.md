@@ -22,6 +22,8 @@ Files in `malicious/`: `malicious-photo.jpg`
 
 Files in `clean/`: `clean-photo.jpg`
 
+
+
 ---
 
 ## How to run the demo (Linux)

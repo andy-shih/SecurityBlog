@@ -22,6 +22,8 @@ Files in `malicious/`: `malicious-firmware.bin`
 
 Files in `clean/`: `clean-firmware.bin`
 
+
+
 ---
 
 ## How to run the demo (Linux)

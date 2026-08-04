@@ -814,7 +814,7 @@ export const demos: DemoEntry[] = [
     category: "archive",
     difficulty: "intermediate",
     platforms: ["linux"],
-    file_types: ["zip"],
+    file_types: ["rar"],
     attack_technique: "Password-protected archive",
     mitre_attack_id: "T1027.002",
     mitre_attack_url: "https://attack.mitre.org/techniques/T1027/002/",
