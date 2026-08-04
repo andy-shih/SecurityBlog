@@ -90,6 +90,22 @@ const pageDesc = desc;
         </div>
       </div>
 
+      {demo.blog_url && (
+        <div class="mt-6">
+          <div class="hud-panel rounded-lg border border-sky-300/20 p-4">
+            <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">
+              {lang === 'zh' ? '真實事件報導' : 'Incident Coverage'}
+            </p>
+            <p class="mt-2 text-sm text-slate-300">
+              {lang === 'zh' ? '此攻擊手法對應真實發生的資安事件，可點擊連結閱讀當日摘要：' : 'This attack technique maps to a real-world security incident — read the daily digest for details: '}
+              <a href={demo.blog_url} target="_blank" class="font-semibold text-sky-200 underline underline-offset-2 hover:text-sky-100">
+                {lang === 'zh' ? '閱讀當日資安摘要 ↗' : 'Read the incident digest ↗'}
+              </a>
+            </p>
+          </div>
+        </div>
+      )}
+
       {demo.screenshots && demo.screenshots.length > 0 && (
         <div class="mt-8">
           <p class="font-mono text-xs uppercase tracking-[0.2em] text-sky-200">{lang === 'zh' ? '螢幕截圖' : 'Screenshots'}</p>
