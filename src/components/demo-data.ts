@@ -1663,7 +1663,7 @@ created: "2026-07-22",
     download_url: "https://github.com/andy-shih/SecurityBlog/raw/main/public/demos/ai-m365-devicecode-phish-20260805/ai-m365-devicecode-phish-20260805.zip",
     github_url: "https://github.com/andy-shih/SecurityBlog/tree/main/public/demos/ai-m365-devicecode-phish-20260805",
     blog_url: "https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260803/",
-    status: "live",
+    status: "published",
     created: "2026-08-04",
   },
 ];
