@@ -18,7 +18,7 @@ This demo is **Linux-only**. The zip contains two folders:
 | `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
 | `clean/` | The same file after MetaDefender processing — payload removed |
 
-Files in `malicious/`: `invoice.docx`, `malicious-archive.zip`
+Files in `malicious/`: `invoice.odt`, `malicious-archive.zip`
 
 Files in `clean/`: `clean-archive.zip`
 
@@ -40,7 +40,7 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash invoice.docx` — the calculator opens (the visible impact).
+- Run: `bash invoice.odt` — the calculator opens (the visible impact).
 - Run: `bash malicious-archive.zip` — the calculator opens (the visible impact).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"
@@ -58,7 +58,7 @@ The payload script auto-detects which one is installed.
 
 | File | What you should observe |
 |---|---|
-| malicious files | malicious-archive.zip → wraps a macro-enabled document |
+| malicious files | malicious-archive.zip → wraps an ODT with an obfuscated macro (open the inner document to trigger the alert) |
 | clean files | no payload, no calculator, sanitized content |
 
 > Behavior notes are verified by the QA suite on every build (see the QA checklist below).

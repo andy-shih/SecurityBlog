@@ -18,9 +18,9 @@ This demo is **Linux-only**. The zip contains two folders:
 | `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
 | `clean/` | The same file after MetaDefender processing — payload removed |
 
-Files in `malicious/`: `malicious-invoice.docx`, `malicious-launcher.sh`
+Files in `malicious/`: `malicious-invoice.odt`, `malicious-launcher.sh`
 
-Files in `clean/`: `clean-invoice.docx`
+Files in `clean/`: `clean-invoice.docx`, `clean-invoice.odt`
 
 - **Macro note:** LibreOffice 24.x does not embed Basic macros into `.docm`
   `vbaProject.bin` on export, so the macro demo ships a clean `.docx` plus a
@@ -43,7 +43,7 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash malicious-invoice.docx` — the calculator opens (the visible impact).
+- Run: `bash malicious-invoice.odt` — the calculator opens (the visible impact).
 - Run: `bash malicious-launcher.sh` — the calculator opens (the visible impact).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"
@@ -52,6 +52,7 @@ The payload script auto-detects which one is installed.
 ### 3. Show the protection (clean)
 
 - Run: `bash clean-invoice.docx` — nothing happens (payload removed).
+- Run: `bash clean-invoice.odt` — nothing happens (payload removed).
 
 **Expected result:** the file opens/behaves normally — no calculator, no execution.
 
@@ -61,7 +62,7 @@ The payload script auto-detects which one is installed.
 
 | File | What you should observe |
 |---|---|
-| malicious files | malicious-launcher.sh → calculator opens (macro stand-in) |
+| malicious files | malicious-invoice.odt → open in LibreOffice → Enable Macros → ALERT shows the XOR-decoded payload text (obfuscated macro variant) |
 | clean files | no payload, no calculator, sanitized content |
 
 > Behavior notes are verified by the QA suite on every build (see the QA checklist below).
