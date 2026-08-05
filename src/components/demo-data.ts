@@ -1705,7 +1705,7 @@ created: "2026-07-22",
     github_url: "https://github.com/andy-shih/SecurityBlog/tree/main/public/demos/sbx-macro-docm-20260805",
     status: "published",
     created: "2026-08-05",
-    blog_url: "https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260805/",
+    blog_url: "",
   },
 ];
 
