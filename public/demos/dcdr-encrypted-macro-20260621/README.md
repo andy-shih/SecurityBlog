@@ -45,8 +45,8 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash malicious-invoice.odt` — the calculator opens (the visible impact).
-- Run: `bash malicious-launcher.sh` — the calculator opens (the visible impact).
+- Open `malicious-invoice.odt` in its native app — the attack triggers on open.
+- Linux/macOS (bash): `bash malicious-launcher.sh` — the calculator opens (the visible impact).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"
 — the benign stand-in for a real malware payload.
