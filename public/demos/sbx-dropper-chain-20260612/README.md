@@ -1,8 +1,8 @@
 # Sandbox replays multi-stage dropper execution chain
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** intermediate · **Date:** 2026-06-12
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** intermediate · **Date:** 2026-06-12
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 The Gentlemen ransomware group, which has claimed 478 victims, spreads worm-like across networks through self-propagating delivery — exactly the kind of multi-stage attack chain defenders must analyze before patient zero is reached. In a multi-stage dropper, a small first-stage binary fetches and executes additional payloads from remote infrastructure, an ingress technique mapped to T1105 that hides the final malware until runtime. This demo runs a benign two-stage dropper whose second stage simply launches Calculator, letting teams safely observe the execution chain. Adaptive Sandbox replays the full behavior — file drops, process creation, and network calls — in an isolated environment and reports an executive-ready verdict.
 **Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260612/).
@@ -11,7 +11,9 @@ The Gentlemen ransomware group, which has claimed 478 victims, spreads worm-like
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -80,5 +82,5 @@ The payload script auto-detects which one is installed.
 ## How MetaDefender catches this
 
 Multi-stage dropper (MITRE ATT&CK [T1105](https://attack.mitre.org/techniques/T1105/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
