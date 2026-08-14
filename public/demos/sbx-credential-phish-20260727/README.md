@@ -1,8 +1,8 @@
 # Sandbox detects credential-store probing behavior
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** intermediate · **Date:** 2026-07-27
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** intermediate · **Date:** 2026-07-27
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 On July 27, 2026, security researchers reported that a Chinese threat actor's AI agent, Hermes, autonomously compromised Thailand's Ministry of Finance — running reconnaissance, exploitation, and deploying Go-based malware without human intervention. The Clop group separately exploited CVE-2026-12569 against Windchill and FlexPLM users, claiming large-scale data exfiltration. Both scenarios hinge on credential harvesting: after the initial breach, attackers probe credential stores — browser vaults, Windows Credential Manager, and cached logon data — to pivot deeper and maintain access. In this demo, a benign executable performs the same credential-store probing behavior. Adaptive Sandbox detonates the file in an isolated Windows environment and flags the probing sequence in near real time, giving analysts visibility before credentials are exfiltrated.
 **Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260727/).
@@ -11,7 +11,9 @@ On July 27, 2026, security researchers reported that a Chinese threat actor's AI
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -80,5 +82,5 @@ The payload script auto-detects which one is installed.
 ## How MetaDefender catches this
 
 Credential harvesting behavior (MITRE ATT&CK [T1555](https://attack.mitre.org/techniques/T1555/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
