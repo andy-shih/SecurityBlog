@@ -1,17 +1,19 @@
 # RLO Filename Spoofing Masquerades Executable as Text
 
-> **MetaDefender module:** FileType Engine · **Difficulty:** intermediate · **Date:** 2026-07-22
+> **MetaDefender module:** "FileType Engine" · **Difficulty:** intermediate · **Date:** 2026-07-22
 >
-> FileType Engine verifies the true file type via magic bytes, defeating name/extension masquerades.
+> 
 
-The right-to-left override (U+202E) character lets an attacker craft a filename that displays as a harmless text document while the real executable extension sits at the end. A file named invoice‮txt.sh is shown by file managers as invoice‮sh.txt, hiding the shell-script nature from users. This demo ships a real shell script with the RLO-spoofed filename and a clean counterpart. FileType Engine verifies the true magic bytes behind the displayed name, so the masquerade is exposed regardless of what the file manager renders.
-**Real incident:** no same-day digest link (technique-focused demo).
+The right-to-left override (U+202E) character lets an attacker craft a filename that displays as a harmless text document while the real executable extension sits at the end. A file named invoice\u202etxt.sh is shown by file managers as invoice\u202esh.txt, hiding the shell-script nature from users. This demo ships a real shell script with the RLO-spoofed filename and a clean counterpart. FileType Engine verifies the true magic bytes behind the displayed name, so the masquerade is exposed regardless of what the file manager renders.
+**Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260722/).
 
 ---
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -47,7 +49,7 @@ The payload script auto-detects which one is installed.
 
 ### 3. Show the protection (clean)
 
-- Run: `bash clean-invoice‮sh.txt` — nothing happens (payload removed).
+- Open `clean-invoice‮sh.txt` — no payload, no calculator.
 
 **Expected result:** the file opens/behaves normally — no calculator, no execution.
 
@@ -79,6 +81,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Right-to-left override (RLO) filename spoofing (MITRE ATT&CK [T1036.002](https://attack.mitre.org/techniques/T1036/002/))
-is neutralized by **FileType Engine** before the file reaches the user — see the blog for the
+Right-to-left override (RLO) filename spoofing (MITRE ATT&CK [T1036.002](https://attack.mitre.org/techniques/T1036.002/))
+is neutralized by **"FileType Engine"** before the file reaches the user — see the blog for the
 full story and detection details.
