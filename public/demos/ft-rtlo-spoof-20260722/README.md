@@ -20,7 +20,7 @@ Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 | `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
 | `clean/` | The same file after MetaDefender processing — payload removed |
 
-Files in `malicious/`: `invoice‮sh.txt`
+Files in `malicious/`: `invoice‮sh.txt`, `malicious-win.cmd`
 
 Files in `clean/`: `clean-invoice‮sh.txt`
 
@@ -42,7 +42,8 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash invoice‮sh.txt` — the calculator opens (the visible impact).
+- Open `invoice‮sh.txt` in its native app — the attack triggers on open.
+- Windows: double-click `malicious-win.cmd` — the calculator opens (no bash required).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"
 — the benign stand-in for a real malware payload.
