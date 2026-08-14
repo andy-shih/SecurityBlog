@@ -1,17 +1,19 @@
 # Executable Renamed to .jpg Bypasses Naive Filters
 
-> **MetaDefender module:** FileType Engine · **Difficulty:** beginner · **Date:** 2026-06-04
+> **MetaDefender module:** 'FileType Engine' · **Difficulty:** beginner · **Date:** 2026-06-04
 >
-> FileType Engine verifies the true file type via magic bytes, defeating name/extension masquerades.
+> 
 
 Threat actors routinely rename executables with innocuous extensions — .jpg, .png, .pdf — to smuggle payloads past email gateways and web filters that only check file extensions. A renamed binary remains fully executable: the extension is cosmetic, while the file's magic bytes and internal structure still identify it as a Windows PE program. This mismatch is invisible to users browsing attachments and to any scanner that trusts the filename, yet it is trivial to catch by inspecting actual content. This demo uses a benign executable simply renamed to .jpg; no malware is involved. The FileType Engine ignores the filename, inspects the file's signature and structure, and flags the true format, so the mismatch is surfaced immediately and the disguised executable can be blocked or quarantined at the perimeter.
-**Real incident:** no same-day digest link (technique-focused demo).
+**Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260604/).
 
 ---
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -47,7 +49,7 @@ The payload script auto-detects which one is installed.
 
 ### 3. Show the protection (clean)
 
-- Run: `bash clean-photo.jpg` — nothing happens (payload removed).
+- Open `clean-photo.jpg` as an image (e.g. `xdg-open clean-photo.jpg`) — a genuine photo, nothing executes.
 
 **Expected result:** the file opens/behaves normally — no calculator, no execution.
 
@@ -79,6 +81,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Extension mismatch (MITRE ATT&CK [T1036.001](https://attack.mitre.org/techniques/T1036/001/))
-is neutralized by **FileType Engine** before the file reaches the user — see the blog for the
+Extension mismatch (MITRE ATT&CK [T1036.001](https://attack.mitre.org/techniques/T1036.001/))
+is neutralized by **'FileType Engine'** before the file reaches the user — see the blog for the
 full story and detection details.
