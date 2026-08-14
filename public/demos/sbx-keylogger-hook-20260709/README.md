@@ -1,8 +1,8 @@
 # Keylogger Keyboard Hook Detected by Behavioral Sandbox
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** intermediate · **Date:** 2026-07-09
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** intermediate · **Date:** 2026-07-09
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 Vidar infostealer campaigns currently target SMBs through malvertising and cracked-software downloads, with loaders inflated to hundreds of megabytes specifically to evade sandbox analysis. Stealers like Vidar depend on keylogging — installing a global keyboard hook to capture credentials as they are typed. This demo uses a benign test program that installs the same type of global hook, observing keystrokes only within the sandboxed environment. Adaptive Sandbox executes the sample and monitors Windows API calls, flagging the SetWindowsHookEx global-hook pattern as suspicious credential-harvesting behavior. A verdict and full behavioral timeline are produced without any real keylogger or malware ever being deployed.
 **Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260709/).
@@ -11,7 +11,9 @@ Vidar infostealer campaigns currently target SMBs through malvertising and crack
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -79,6 +81,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Keyboard hooking (MITRE ATT&CK [T1056.001](https://attack.mitre.org/techniques/T1056/001/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+Keyboard hooking (MITRE ATT&CK [T1056.001](https://attack.mitre.org/techniques/T1056.001/))
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
