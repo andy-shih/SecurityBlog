@@ -1,17 +1,19 @@
 # XOR-encrypted macro source defeating static inspection
 
-> **MetaDefender module:** Deep CDR · **Difficulty:** advanced · **Date:** 2026-06-21
+> **MetaDefender module:** 'Deep CDR' · **Difficulty:** advanced · **Date:** 2026-06-21
 >
-> Deep CDR (Content Disarm & Reconstruction) dismantles the file, removes executable/embedded content, and rebuilds a clean, safe version.
+> 
 
 Office documents remain a favorite initial-access vector, and attackers increasingly encrypt or encode their macro source so that signature-based scanning sees only gibberish. In this scenario the VBA project inside a DOCM is protected with XOR obfuscation: the plaintext strings, API calls, and download logic only become visible after the macro decrypts itself at runtime, so static inspection of the file reveals nothing malicious (MITRE T1027.013). Deep CDR does not rely on seeing the payload - it removes the macro project entirely, extracts only the safe document content, and rebuilds a clean DOCM that opens without executing any code. The demo ships a benign obfuscated macro that merely launches calc.exe, making it safe to run in any environment.
-**Real incident:** no same-day digest link (technique-focused demo).
+**Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260621/).
 
 ---
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -51,8 +53,8 @@ The payload script auto-detects which one is installed.
 
 ### 3. Show the protection (clean)
 
-- Run: `bash clean-invoice.docx` — nothing happens (payload removed).
-- Run: `bash clean-invoice.odt` — nothing happens (payload removed).
+- Open `clean-invoice.docx` — no payload, no calculator.
+- Open `clean-invoice.odt` — no payload, no calculator.
 
 **Expected result:** the file opens/behaves normally — no calculator, no execution.
 
@@ -84,6 +86,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Obfuscated/encrypted VBA (MITRE ATT&CK [T1027.013](https://attack.mitre.org/techniques/T1027/013/))
-is neutralized by **Deep CDR** before the file reaches the user — see the blog for the
+Obfuscated/encrypted VBA (MITRE ATT&CK [T1027.013](https://attack.mitre.org/techniques/T1027.013/))
+is neutralized by **'Deep CDR'** before the file reaches the user — see the blog for the
 full story and detection details.
