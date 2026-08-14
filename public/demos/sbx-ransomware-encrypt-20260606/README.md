@@ -1,8 +1,8 @@
 # Sandbox Observes Mass File Encryption and Ransom Note Behavior
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** beginner · **Date:** 2026-06-06
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** beginner · **Date:** 2026-06-06
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 The threat group tracked as Silent Ransom is escalating extortion attacks against US law firms, exfiltrating sensitive client data and threatening public disclosure after breaching networks through phishing, credential theft, and VPN exploitation. Once inside, ransomware operators typically deploy an encryptor that walks the filesystem, encrypting documents with a fast symmetric cipher, appending an extension, and dropping ransom notes across affected folders. The danger is that the encryptor is often a fresh build that no signature has seen. This demo uses a benign encryptor that only touches files inside a dedicated test directory, so nothing outside the sandbox is affected. The Adaptive Sandbox detonates the sample in an isolated Windows environment, observes the mass-encryption and ransom-note behaviors, and reports the malicious activity with behavioral indicators — no signature required.
 **Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260606/).
@@ -11,7 +11,9 @@ The threat group tracked as Silent Ransom is escalating extortion attacks agains
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -80,5 +82,5 @@ The payload script auto-detects which one is installed.
 ## How MetaDefender catches this
 
 Ransomware file-encryption behavior (MITRE ATT&CK [T1486](https://attack.mitre.org/techniques/T1486/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
