@@ -1,8 +1,8 @@
 # Fileless PowerShell Execution Caught in Memory
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** advanced · **Date:** 2026-07-08
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** advanced · **Date:** 2026-07-08
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 ClickFix social engineering became the dominant malware delivery method between March and May 2026, according to ReliaQuest: fake browser error pages trick users into copying and running malicious scripts. Many of these scripts are fileless — PowerShell payloads that execute entirely in memory with no file dropped to disk, bypassing traditional file scanning. This demo runs a benign PowerShell command that only opens Calculator, delivered through a .docm container, to reproduce that execution pattern safely. Adaptive Sandbox detonates the sample in a controlled virtual machine and observes the in-memory behavior: script interpretation, process tree, and network calls. Even with no malicious file on disk, the sandbox's behavioral analysis exposes the full attack chain for detection and response.
 **Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260708/).
@@ -11,7 +11,9 @@ ClickFix social engineering became the dominant malware delivery method between 
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -79,6 +81,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Fileless PowerShell execution (MITRE ATT&CK [T1059.001](https://attack.mitre.org/techniques/T1059/001/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+Fileless PowerShell execution (MITRE ATT&CK [T1059.001](https://attack.mitre.org/techniques/T1059.001/))
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
