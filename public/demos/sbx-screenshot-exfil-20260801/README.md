@@ -1,8 +1,8 @@
 # Sandbox flags screen-capture followed by data exfiltration
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** advanced · **Date:** 2026-08-01
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** advanced · **Date:** 2026-08-01
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 Screen capture is a staple of information-stealing malware: implants periodically snapshot the display to harvest credentials, financial dashboards, and one-time codes before they are used. In this demo, a benign executable performs a single screen capture followed by a simulated outbound transfer to illustrate the pattern. Adaptive Sandbox detonates the executable in an isolated Windows environment and correlates the screen-capture API calls with subsequent network activity, flagging the capture-then-exfiltrate sequence as suspicious. The payload is a benign screenshot test that touches no real data, so the demo is safe to run end to end.
 **Real incident:** no same-day digest link (technique-focused demo).
@@ -11,7 +11,9 @@ Screen capture is a staple of information-stealing malware: implants periodicall
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -80,5 +82,5 @@ The payload script auto-detects which one is installed.
 ## How MetaDefender catches this
 
 Screen capture + exfiltration (MITRE ATT&CK [T1113](https://attack.mitre.org/techniques/T1113/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
