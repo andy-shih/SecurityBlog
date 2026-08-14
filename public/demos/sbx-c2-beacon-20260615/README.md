@@ -1,8 +1,8 @@
 # Sandbox captures periodic C2 beacon network behavior
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** intermediate · **Date:** 2026-06-15
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** intermediate · **Date:** 2026-06-15
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 NightSpire ransomware has compromised at least 64 organizations across healthcare, government, finance, and other sectors in 33 countries, including Taiwan, blending in by abusing legitimate admin tools such as PSExec, Cobalt Strike, and PowerShell. A signature of such intrusions is periodic command-and-control beaconing — compromised hosts phoning home at regular intervals, an application-layer communication pattern mapped to T1071.001. This demo runs a benign executable that sends loopback-only beacon traffic, so no external network is touched. Adaptive Sandbox isolates the sample, captures the beacon's regularity, destinations, and payloads, and surfaces the suspicious C2 behavior in a clear report executives can act on.
 **Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260615/).
@@ -11,7 +11,9 @@ NightSpire ransomware has compromised at least 64 organizations across healthcar
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -79,6 +81,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-C2 beaconing (MITRE ATT&CK [T1071.001](https://attack.mitre.org/techniques/T1071/001/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+C2 beaconing (MITRE ATT&CK [T1071.001](https://attack.mitre.org/techniques/T1071.001/))
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
