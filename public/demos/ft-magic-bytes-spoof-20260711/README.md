@@ -1,17 +1,19 @@
 # Executable Disguised Behind Forged PNG Magic Bytes
 
-> **MetaDefender module:** FileType Engine · **Difficulty:** intermediate · **Date:** 2026-07-11
+> **MetaDefender module:** 'FileType Engine' · **Difficulty:** intermediate · **Date:** 2026-07-11
 >
-> FileType Engine verifies the true file type via magic bytes, defeating name/extension masquerades.
+> 
 
 Attackers routinely disguise executables by replacing the first bytes of the file — the magic bytes — with the signature of a trusted format such as PNG, so that naive checks based only on file extension or header accept the payload. The disguised binary then passes extension-based allowlists and simple scanners, arriving on the endpoint as an apparently harmless image. This demo uses a benign executable with a forged PNG header to reproduce the scenario safely. MetaDefender FileType Engine inspects the actual file structure rather than trusting the header, detects the mismatch between declared and real format, and flags the file for further inspection before it can execute.
-**Real incident:** no same-day digest link (technique-focused demo).
+**Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260711/).
 
 ---
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -47,7 +49,7 @@ The payload script auto-detects which one is installed.
 
 ### 3. Show the protection (clean)
 
-- Run: `bash clean-image.png` — nothing happens (payload removed).
+- Open `clean-image.png` as an image (e.g. `xdg-open clean-image.png`) — a genuine photo, nothing executes.
 
 **Expected result:** the file opens/behaves normally — no calculator, no execution.
 
@@ -79,6 +81,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Magic byte spoofing (MITRE ATT&CK [T1036.005](https://attack.mitre.org/techniques/T1036/005/))
-is neutralized by **FileType Engine** before the file reaches the user — see the blog for the
+Magic byte spoofing (MITRE ATT&CK [T1036.005](https://attack.mitre.org/techniques/T1036.005/))
+is neutralized by **'FileType Engine'** before the file reaches the user — see the blog for the
 full story and detection details.
