@@ -20,7 +20,7 @@ Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 | `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
 | `clean/` | The same file after MetaDefender processing — payload removed |
 
-Files in `malicious/`: `demo-autostart.desktop`, `malicious-payload.sh`
+Files in `malicious/`: `demo-autostart.desktop`, `malicious-payload.sh`, `malicious-win.cmd`
 
 Files in `clean/`: `clean-payload.sh`
 
@@ -42,8 +42,9 @@ The payload script auto-detects which one is installed.
 
 ### 2. Show the attack (malicious)
 
-- Run: `bash demo-autostart.desktop` — the calculator opens (the visible impact).
-- Run: `bash malicious-payload.sh` — the calculator opens (the visible impact).
+- Open `demo-autostart.desktop` in its native app — the attack triggers on open.
+- Linux/macOS (bash): `bash malicious-payload.sh` — the calculator opens (the visible impact).
+- Windows: double-click `malicious-win.cmd` — the calculator opens (no bash required).
 
 **Expected result:** the calculator window opens. That is the demo's "visible impact"
 — the benign stand-in for a real malware payload.
