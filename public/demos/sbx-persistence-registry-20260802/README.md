@@ -1,8 +1,8 @@
 # Sandbox observes Run-key persistence installation
 
-> **MetaDefender module:** Adaptive Sandbox · **Difficulty:** intermediate · **Date:** 2026-08-02
+> **MetaDefender module:** 'Adaptive Sandbox' · **Difficulty:** intermediate · **Date:** 2026-08-02
 >
-> Adaptive Sandbox executes the file in an isolated environment and reports behavior (network, filesystem, processes).
+> 
 
 Persistence is what turns a one-time compromise into a lasting foothold: malware writes an entry to a Windows Registry Run key so it relaunches automatically at every logon. This demo uses a benign executable that performs the same run-key write to illustrate the behavior. Adaptive Sandbox observes the registry write inside an isolated environment and reports the persistence mechanism together with its full command line, letting analysts see exactly how an implant would survive reboots. The payload performs only a benign run-key write, so no real malware or system modification occurs outside the sandbox.
 **Real incident:** no same-day digest link (technique-focused demo).
@@ -11,7 +11,9 @@ Persistence is what turns a one-time compromise into a lasting foothold: malware
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -80,6 +82,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Registry persistence (MITRE ATT&CK [T1547.001](https://attack.mitre.org/techniques/T1547/001/))
-is neutralized by **Adaptive Sandbox** before the file reaches the user — see the blog for the
+Registry persistence (MITRE ATT&CK [T1547.001](https://attack.mitre.org/techniques/T1547.001/))
+is neutralized by **'Adaptive Sandbox'** before the file reaches the user — see the blog for the
 full story and detection details.
