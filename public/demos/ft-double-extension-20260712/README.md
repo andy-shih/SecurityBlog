@@ -1,17 +1,19 @@
 # Double Extension Masquerade Hides Executable
 
-> **MetaDefender module:** FileType Engine · **Difficulty:** beginner · **Date:** 2026-07-12
+> **MetaDefender module:** 'FileType Engine' · **Difficulty:** beginner · **Date:** 2026-07-12
 >
-> FileType Engine verifies the true file type via magic bytes, defeating name/extension masquerades.
+> 
 
 Double-extension files such as invoice.pdf.exe exploit the common habit of hiding known file extensions in Windows Explorer, so the visible name reads as a PDF while the file actually executes as a program. The technique is a staple of email-borne attacks, where a filename like invoice.pdf.exe slips past users and basic email filters that check only the visible extension. This demo recreates the masquerade with a benign executable, demonstrating how easy it is to deceive the human eye. MetaDefender FileType Engine parses the real file content, exposes the mismatch between the visible .pdf name and the actual PE executable, and blocks or quarantines the file before it reaches the user.
-**Real incident:** no same-day digest link (technique-focused demo).
+**Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260712/).
 
 ---
 
 ## What's in this package
 
-This demo is **Linux-only**. The zip contains two folders:
+This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
+runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
+Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -79,6 +81,6 @@ The payload script auto-detects which one is installed.
 
 ## How MetaDefender catches this
 
-Double extension masquerade (MITRE ATT&CK [T1036.003](https://attack.mitre.org/techniques/T1036/003/))
-is neutralized by **FileType Engine** before the file reaches the user — see the blog for the
+Double extension masquerade (MITRE ATT&CK [T1036.003](https://attack.mitre.org/techniques/T1036.003/))
+is neutralized by **'FileType Engine'** before the file reaches the user — see the blog for the
 full story and detection details.
