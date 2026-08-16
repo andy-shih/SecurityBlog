@@ -9,7 +9,7 @@ featured: true
 
 ## XSS2Shell WordPress Flaw Faces Automated Mass Exploitation
 
-WordPress shipped **7.0.3** to fix **CVE-2026-64638 (XSS2Shell)**, a high-risk cross-site scripting vulnerability in the core login page. The flaw sits in the login flow: when a visitor tries to log in with a non-existent username, WordPress reflects that input into the error message, and a mismatch between two layers of HTML filtering lets attacker-controlled markup survive into the rendered page. An attacker needs **no WordPress account** to trigger the vulnerability.
+WordPress shipped **7.0.3** to fix **CVE-2026-64638 (XSS2Shell)**, a high-risk cross-site scripting vulnerability in the core login page. The flaw sits in the login flow: when a visitor tries to log in with a non-existent username, WordPress reflects that input into the error message, and a mismatch between two layers of HTML filtering lets attacker-controlled markup survive into the rendered page. An attacker needs **no WordPress account** to trigger the vulnerability. The flaw was first disclosed in mid-August and covered in our Aug 13 digest — what changed this week is the scale of the exploitation.
 
 Exploitation still requires a social-engineering step — a logged-in administrator must open and interact with a malicious page — but the chain then escalates quickly: the attacker borrows the admin's existing session to obtain WordPress **application passwords**, creates pages carrying malicious JavaScript, and uploads a plugin containing PHP code, culminating in **server-side code execution**.
 
