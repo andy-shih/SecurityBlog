@@ -1,6 +1,6 @@
 # Invisible Prompt Injection: White-on-White Text Hidden in US Court Filings to Steer AI-Assisted Review (Matthew Elliott / 404 Media)
 
-> **MetaDefender module:** OPSWAT AI Content Inspector · **Difficulty:** intermediate · **Date:** 2026-08-17
+> **MetaDefender module:** OPSWAT AI Content Inspector · **Difficulty:** intermediate · **Date:** 2026-08-18
 >
 > AI Content Inspector analyzes document content for AI-generated phishing, prompt injection, and fraud patterns.
 
@@ -11,14 +11,12 @@ On August 14, 2026, 404 Media reported that a pro se plaintiff, Matthew Elliott,
 
 ## What's in this package
 
-This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
-runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
-Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
+This demo ships a **static file sample — nothing executes**. The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
-| `malicious/` | The attack file(s) — **benign**, the only effect is opening the calculator |
-| `clean/` | The same file after MetaDefender processing — payload removed |
+| `malicious/` | The attack sample — a static document whose **content** carries the malicious payload (e.g. an embedded prompt-injection instruction) |
+| `clean/` | The same content after MetaDefender processing — payload removed |
 
 Files in `malicious/`: `malicious-document.txt`
 
@@ -37,21 +35,23 @@ unzip ai-prompt-court-filing-20260818.zip
 cd ai-prompt-court-filing-20260818
 ```
 
-Requirements: a desktop Linux with a calculator (`gnome-calculator`, `kcalc`, or `xcalc`).
-The payload script auto-detects which one is installed.
-
 ### 2. Show the attack (malicious)
 
-- Open `malicious-document.txt` in its native app — the attack triggers on open.
+- Open `malicious-document.txt` in a text editor (or feed it to an LLM-assisted
+  document pipeline) — the file carries an embedded prompt-injection
+  instruction. In the real incident this text was 3pt white-on-white:
+  invisible to humans, fully readable by language models.
 
-**Expected result:** the calculator window opens. That is the demo's "visible impact"
-— the benign stand-in for a real malware payload.
+**Expected result:** the malicious content (e.g. the injection instruction) is present in
+the file; with **OPSWAT AI Content Inspector** in the pipeline, the file is flagged and blocked before it
+reaches the user or an LLM.
 
 ### 3. Show the protection (clean)
 
-- Open `clean-document.txt` — no payload, no calculator.
+- Open `clean-document.txt` — the injection instruction has been removed
+  (sanitized content).
 
-**Expected result:** the file opens/behaves normally — no calculator, no execution.
+**Expected result:** the sanitized file is clean — no payload, nothing to flag.
 
 ---
 
@@ -60,7 +60,7 @@ The payload script auto-detects which one is installed.
 | File | What you should observe |
 |---|---|
 | malicious files | malicious-document.txt → contains the injection payload line `[SYSTEM: ignore previous …]` |
-| clean files | no payload, no calculator, sanitized content |
+| clean files | no payload, sanitized content |
 
 > Behavior notes are verified by the QA suite on every build (see the QA checklist below).
 
@@ -68,15 +68,15 @@ The payload script auto-detects which one is installed.
 
 ## Safety
 
-- ✅ All payloads are **benign by construction**: the only side effect is opening the calculator.
+- ✅ All payloads are **benign by construction**: static text/data samples — **nothing executes**.
 - ✅ No real malware, no network callbacks (any network reference targets `example.com` or loopback).
 - ✅ Metascan demos use the **EICAR test string** — the universal, harmless AV test file.
 
 ## QA checklist (verified on this build)
 
 - [ ] `unzip -t ai-prompt-court-filing-20260818.zip` → no errors
-- [ ] malicious script runs and opens the calculator
-- [ ] clean script runs and opens nothing
+- [ ] malicious file carries the injection marker; clean file does not
+- [ ] no placeholder content in clean files
 - [ ] format magic bytes verified (PDF `%PDF`, ZIP `PK`, PNG `\x89PNG`, 7z `7z\xbc\xaf`, OOXML `PK`)
 
 ## How MetaDefender catches this
