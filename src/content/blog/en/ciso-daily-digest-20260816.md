@@ -63,4 +63,4 @@ A login-page XSS in the world's most deployed CMS became a mass-exploitation eve
 ---
 ## How Can OPSWAT Help
 
-Several of this week's campaigns arrive as **files**: PATCHCORD's fake VPN installers, Mustang Panda's signed kernel drivers, WindRelay's sideloaded APKs, and macOS stealers distributed via counterfeit download pages. MetaDefender's multi-scanning and **Content Disarm and Reconstruction (CDR)** neutralize malicious packages, installers, and documents before they reach endpoints — including signed-but-malicious binaries that legacy antivirus treats as trusted.
+Several of this week's campaigns arrive as **files**: PATCHCORD's fake VPN installers, Mustang Panda's signed kernel drivers, and WindRelay's sideloaded APKs. MetaDefender's multi-scanning and **Content Disarm and Reconstruction (CDR)** neutralize malicious packages, installers, and documents before they reach endpoints — including signed-but-malicious binaries that legacy antivirus treats as trusted.
