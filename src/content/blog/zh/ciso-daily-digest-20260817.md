@@ -17,6 +17,8 @@ featured: true
 
 PLM 與 CAD 環境保存的是 **最珍貴的智慧財產**——設計檔案、藍圖、測試報告與專案計畫，一旦外洩便無法復原。Clop 的目標選擇顯示攻擊者已開始系統性獵捕暴露於網際網路的企業工程平台，而不只是檔案傳輸或 Webmail 系統。從漏洞公開（6 月 17 日）到 CISA KEV 收錄（6 月 25 日）、再到首批勒索郵件（7 月 20 日），整個時程被壓縮到 **數週之內**——暴露面盤點與修補速度已成為資安上的關鍵制約。使用 PTC Windchill／FlexPLM 的組織應假設可從網際網路觸及的實例都已被掃描，並檢視日誌中是否有此行動的指紋（對 `/Windchill/rfa/jsp/login/*.jsp?wsdl` 的 GET 請求約回傳 4,045 bytes，以及 `X-windchill-req` 惡意標頭），同時依 7 月 22 日聯合建議盡速套用修補。
 
+🔗 **參考資料：** 綜合報導（[iThome](https://www.ithome.com.tw/news/178184)、[TechTimes](https://www.techtimes.com/articles/324578/20260815/clop-hacks-shell-ge-philips-43-victim-ptc-windchill-zero-day-campaign.htm)、[eSecurity Planet](https://www.esecurityplanet.com/threats/shell-investigates-clop-data-theft-claims-tied-to-ptc-flaw/)、[Reuters](https://www.reuters.com/legal/government/philips-shell-targeted-by-hacking-group-2026-08-13/))
+
 ---
 
 ## 本週活躍威脅
@@ -118,5 +120,3 @@ BCA LTD、NorthScan 與 ANY.RUN 的研究人員打造了一個假 DeFi 新創公
 ## OPSWAT可以怎麼幫上忙
 
 今日多則新聞的共通點是 **不受信任的檔案抵達端點或網路**——AmnesiaStealer 仿冒 GitHub 下載頁面與 ClickFix「複製貼上指令」的誘餌都屬於檔案型攻擊，單靠特徵碼防禦難以攔截。MetaDefender 的 30 餘種引擎多重掃描與檔案內容淨化重構（CDR）可在惡意安裝程式執行前移除其中的惡意酬載，深度內容檢查也能攔截混淆處理過的安裝檔。對於導入 MCP／AI 代理工具鏈、會從不可信來源拉取套件或檔案的團隊，同樣的檔案檢查機制可套用在所有資料攝取點。
-
-🔗 **參考資料：** 綜合報導（[iThome](https://www.ithome.com.tw/news/178184)、[TechTimes](https://www.techtimes.com/articles/324578/20260815/clop-hacks-shell-ge-philips-43-victim-ptc-windchill-zero-day-campaign.htm)、[eSecurity Planet](https://www.esecurityplanet.com/threats/shell-investigates-clop-data-theft-claims-tied-to-ptc-flaw/)、[Reuters](https://www.reuters.com/legal/government/philips-shell-targeted-by-hacking-group-2026-08-13/)）

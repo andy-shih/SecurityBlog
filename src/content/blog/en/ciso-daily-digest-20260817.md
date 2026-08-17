@@ -17,6 +17,8 @@ Clop (CL0P) is running one of its signature mass-extortion campaigns — this ti
 
 PLM and CAD environments hold **crown-jewel intellectual property** — design files, blueprints, test reports, and project plans that cannot be re-created if leaked. Clop's choice of target shows that attackers now systematically hunt for internet-exposed enterprise engineering platforms, not just file-transfer or webmail systems. The window between public disclosure (June 17), CISA KEV listing (June 25), and first extortion emails (July 20) compressed to **weeks** — a reminder that exposure discovery and patch velocity are the binding constraints. Organizations running PTC Windchill/FlexPLM should assume that internet-reachable instances have been probed and verify their logs for the campaign's fingerprint (GET requests to `/Windchill/rfa/jsp/login/*.jsp?wsdl` returning ~4,045 bytes, and the `X-windchill-req` header) while validating the July 22 advisory's patch guidance.
 
+🔗 **Reference:** Coverage from ([iThome](https://www.ithome.com.tw/news/178184), [TechTimes](https://www.techtimes.com/articles/324578/20260815/clop-hacks-shell-ge-philips-43-victim-ptc-windchill-zero-day-campaign.htm), [eSecurity Planet](https://www.esecurityplanet.com/threats/shell-investigates-clop-data-theft-claims-tied-to-ptc-flaw/), [Reuters](https://www.reuters.com/legal/government/philips-shell-targeted-by-hacking-group-2026-08-13/))
+
 ---
 
 ## Active Threats This Week
