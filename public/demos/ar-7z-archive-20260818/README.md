@@ -4,25 +4,23 @@
 >
 > Archive Engine deep-unpacks archives (nested, encrypted, malformed) so payloads cannot hide inside.
 
-Clop (CL0P) ransomware's signature mass-extortion playbook for the PTC Windchill/FlexPLM campaign (CVE-2026-12569, CVSS 9.8, KEV-listed June 25) weaponizes archives in phishing emails: password-protected or plain compressed containers hide the real payload from single-pass gateway filters, and the malware only materializes when the victim opens the archive and executes the file inside — the same delivery pattern the gang has used since its 2023 file-transfer exploits. The campaign extorted 43+ organizations (Shell, Philips, GE, Fiserv) and Clop claims 89 GB of Shell engineering data. This demo reproduces the container-smuggling pattern safely: malicious-archive.7z packages a payload file whose content carries the standard EICAR test signature (a benign stand-in for real malware), plus a clean-archive.zip counterpart containing only harmless text. Nothing executes. MetaDefender's Archive Engine decodes and recursively unpacks the 7z at the gateway, feeds every extracted file to multi-engine scanning, and flags the malicious content before the payload can reach an endpoint — closing the container-obfuscation gap Clop relies on (user execution of a malicious file inside an archive, MITRE T1204.002).
+Clop (CL0P) ransomware's signature mass-extortion playbook for the PTC Windchill/FlexPLM campaign (CVE-2026-12569, CVSS 9.8, KEV-listed June 25) weaponizes archives in phishing emails: password-protected or plain compressed containers hide the real payload from single-pass gateway filters, and the malware only materializes when the victim opens the archive and executes the file inside — the same delivery pattern the gang has used since its 2023 file-transfer exploits. The campaign extorted 43+ organizations (Shell, Philips, GE, Fiserv) and Clop claims 89 GB of Shell engineering data. This demo reproduces the container-smuggling pattern safely: malicious-archive.7z packages a payload script whose content carries the standard EICAR test signature (a benign stand-in for real malware) alongside a calculator-launch action — the visible "impact" a real payload would have — plus a clean-archive.zip counterpart containing only harmless text. MetaDefender's Archive Engine decodes and recursively unpacks the 7z at the gateway, feeds every extracted file to multi-engine scanning, and flags the EICAR signature before the payload can reach an endpoint — closing the container-obfuscation gap Clop relies on (user execution of a malicious file inside an archive, MITRE T1204.002).
+
 **Real incident:** this attack technique corresponds to a real-world event — [read the daily digest](https://blog.andyshih.uk/en/blog/ciso-daily-digest-20260817/).
 
 ---
 
 ## What's in this package
 
-This demo ships a **static file sample — nothing executes**. The zip contains two folders:
+The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
-| `malicious/` | The attack sample — a static document whose **content** carries the malicious payload (e.g. an embedded prompt-injection instruction) |
-| `clean/` | The same content after MetaDefender processing — payload removed |
+| `malicious/` | The attack sample — `malicious-archive.7z` containing `payload.sh` (opens the calculator **and** embeds the EICAR AV test string) |
+| `clean/` | The same content after MetaDefender processing — `clean-archive.zip` with only harmless text |
 
 Files in `malicious/`: `malicious-archive.7z`
-
 Files in `clean/`: `clean-archive.zip`
-
-
 
 ---
 
@@ -37,18 +35,21 @@ cd ar-7z-archive-20260818
 
 ### 2. Show the attack (malicious)
 
-- Open/inspect `malicious-archive.7z` — the malicious content (payload marker) is
-  embedded in the file's data; nothing executes.
+```bash
+7z e malicious-archive.7z
+bash payload.sh
+```
 
-**Expected result:** the malicious content (e.g. the injection instruction) is present in
-the file; with **Archive Engine** in the pipeline, the file is flagged and blocked before it
-reaches the user or an LLM.
+**Expected result:** the calculator opens — this is the "visible impact" the attacker's payload would have on a victim who opens the archive and executes its contents. MetaDefender Archive Engine unpacks the 7z at the gateway and flags the EICAR signature before this ever reaches the user.
 
 ### 3. Show the protection (clean)
 
-- Open `clean-archive.zip` — no payload, sanitized content.
+```bash
+unzip clean-archive.zip
+cat README.txt
+```
 
-**Expected result:** the sanitized file is clean — no payload, nothing to flag.
+**Expected result:** plain text, no script, no calculator — the sanitized file.
 
 ---
 
@@ -56,8 +57,8 @@ reaches the user or an LLM.
 
 | File | What you should observe |
 |---|---|
-| malicious files | malicious-archive.7z → valid 7z (SFX variant documented in README) |
-| clean files | no payload, sanitized content |
+| malicious/malicious-archive.7z | Extract → payload.sh → `bash payload.sh` → calculator opens |
+| clean/clean-archive.zip | Extract → README.txt only, no script, no calculator |
 
 > Behavior notes are verified by the QA suite on every build (see the QA checklist below).
 
@@ -65,16 +66,16 @@ reaches the user or an LLM.
 
 ## Safety
 
-- ✅ All payloads are **benign by construction**: static text/data samples — **nothing executes**.
+- ✅ All payloads are **benign by construction**: `payload.sh` only launches the system calculator and embeds the EICAR test string — **no real malware, nothing destructive**.
 - ✅ No real malware, no network callbacks (any network reference targets `example.com` or loopback).
 - ✅ Metascan demos use the **EICAR test string** — the universal, harmless AV test file.
 
 ## QA checklist (verified on this build)
 
 - [ ] `unzip -t ar-7z-archive-20260818.zip` → no errors
-- [ ] malicious file carries the injection marker; clean file does not
+- [ ] malicious 7z extracts → `payload.sh`, which opens the calculator and carries the EICAR marker; clean archive does not
 - [ ] no placeholder content in clean files
-- [ ] format magic bytes verified (PDF `%PDF`, ZIP `PK`, PNG `\x89PNG`, 7z `7z\xbc\xaf`, OOXML `PK`)
+- [ ] format magic bytes verified (ZIP `PK`, 7z `7z\xbc\xaf`)
 
 ## How MetaDefender catches this
 
