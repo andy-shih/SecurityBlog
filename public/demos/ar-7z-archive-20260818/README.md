@@ -16,7 +16,7 @@ The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
-| `malicious/` | The attack sample — `malicious-archive.7z` containing `payload.sh` (opens the calculator **and** embeds the EICAR AV test string) |
+| `malicious/` | The attack sample — `malicious-archive.7z` containing `payload.sh` (opens the calculator) **and** `eicar.com` (the raw EICAR AV test file) |
 | `clean/` | The same content after MetaDefender processing — `clean-archive.zip` with only harmless text |
 
 Files in `malicious/`: `malicious-archive.7z`
@@ -30,13 +30,12 @@ Files in `clean/`: `clean-archive.zip`
 
 ```bash
 unzip ar-7z-archive-20260818.zip
-cd ar-7z-archive-20260818
 ```
 
 ### 2. Show the attack (malicious)
 
 ```bash
-7z e malicious-archive.7z
+7z e malicious/malicious-archive.7z
 bash payload.sh
 ```
 
@@ -45,7 +44,7 @@ bash payload.sh
 ### 3. Show the protection (clean)
 
 ```bash
-unzip clean-archive.zip
+unzip clean/clean-archive.zip
 cat README.txt
 ```
 
@@ -57,7 +56,7 @@ cat README.txt
 
 | File | What you should observe |
 |---|---|
-| malicious/malicious-archive.7z | Extract → payload.sh → `bash payload.sh` → calculator opens |
+| malicious/malicious-archive.7z | Extract → `payload.sh` + `eicar.com` → `bash payload.sh` → calculator opens; `eicar.com` triggers an AV EICAR detection |
 | clean/clean-archive.zip | Extract → README.txt only, no script, no calculator |
 
 > Behavior notes are verified by the QA suite on every build (see the QA checklist below).
@@ -66,14 +65,15 @@ cat README.txt
 
 ## Safety
 
-- ✅ All payloads are **benign by construction**: `payload.sh` only launches the system calculator and embeds the EICAR test string — **no real malware, nothing destructive**.
+- ✅ All payloads are **benign by construction**: `payload.sh` only launches the system calculator, and `eicar.com` is the standard EICAR AV test file — **no real malware, nothing destructive**.
 - ✅ No real malware, no network callbacks (any network reference targets `example.com` or loopback).
-- ✅ Metascan demos use the **EICAR test string** — the universal, harmless AV test file.
+- ✅ MetaDefender demos use the **EICAR test string** — the universal, harmless AV test file.
 
 ## QA checklist (verified on this build)
 
 - [ ] `unzip -t ar-7z-archive-20260818.zip` → no errors
-- [ ] malicious 7z extracts → `payload.sh`, which opens the calculator and carries the EICAR marker; clean archive does not
+- [ ] malicious 7z extracts → `payload.sh` (opens calculator) **and** `eicar.com` (EICAR marker); clean archive does not
+- [ ] `clamscan malicious-archive.7z` → `Eicar-Signature FOUND`
 - [ ] no placeholder content in clean files
 - [ ] format magic bytes verified (ZIP `PK`, 7z `7z\xbc\xaf`)
 
