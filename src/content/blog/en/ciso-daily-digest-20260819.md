@@ -1,74 +1,96 @@
 ---
-title: "CISO Daily Digest: CoSnitch One-Click Exfil, MLflow CVE-2026-64849 Actively Exploited, DGFiP 678K Records Leaked (20260819)"
-description: "Varonis discloses CVE-2026-24301 CoSnitch in Microsoft Copilot Personal (patched Aug 18); MLflow CVE-2026-64849 SSRF and FUXA CVE-2026-25895 RCE see active exploitation hours after CVE assignment; French tax authority DGFiP confirms 678,000-record breach by threat actor ZeroBytes."
+title: "CISO Daily Digest: CISA Flags 4 Actively Exploited Flaws, Citrix NetScaler in the Wild (20260819)"
+description: "CISA warns Windows, macOS, Microsoft SharePoint, VMware vCenter and Microsoft IKE flaws are under active exploitation; the UK NCSC and researchers confirm Citrix NetScaler CVE-2026-8452 is being exploited in the wild and the June-patched DoS flaw can now achieve remote code execution. Oracle's August 2026 Critical Patch Update fixes 925 vulnerabilities, more than 100 at CVSS 9.0–10.0; MLflow CVE-2026-64849 SSRF and FUXA CVE-2026-25895 RCE see malicious scanning within hours of disclosure. France's DGFiP tax authority confirms a 2 million-record breach, Commerzbank loses €30M to a vulnerability-driven heist, and logistics giant CEVA's breach spreads to UK/German Pokémon Center. CoSnitch (CVE-2026-24301) lets one link exfiltrate every connected Copilot app; SilkParasite and StopAndProtect run live campaigns."
 pubDate: "2026-08-19"
-tags: ["ciso", "daily-digest", "copilot", "mlflow", "ssrf", "france", "data-breach", "cve"]
+tags: ["ciso", "daily-digest", "cisa", "citrix", "netscaler", "oracle", "mlflow", "cve", "data-breach", "copilot", "ransomware"]
 author: "Andy Shih"
-featured: false
+featured: true
 ---
 
-## Executive Summary
+## CISA Sounds Active-Exploitation Alarm, Citrix NetScaler CVE-2026-8452 Weaponized
 
-Three high-urgency issues dominate today's threat landscape. Microsoft patched **CVE-2026-24301 (CoSnitch)** in Copilot Personal the same day Varonis went public, but the one-click memory-poisoning path requires users to manually clear injected instructions. Two critical CVEs — **MLflow CVE-2026-64849 (CVSS 9.3)** and **FUXA CVE-2026-25895 (CVSS 9.5)** — saw malicious scanning within hours of disclosure. France's tax authority **DGFiP** confirmed a late-June breach by threat actor **ZeroBytes** affecting at least 678,000 taxpayer records.
+Today's threat picture is dominated by **known vulnerabilities moving into active exploitation at scale**. CISA's latest KEV-adjacent alert names four flaws now being abused in the wild: a Microsoft Windows issue, an Apple **macOS** flaw, **Microsoft SharePoint**, **VMware vCenter**, plus a **Microsoft IKE** vulnerability. Separately, the UK's NCSC and independent researchers confirmed **Citrix NetScaler CVE-2026-8452** — a high-severity flaw the UK government is warning organizations to remediate urgently — is already under attack, and a **June-patched NetScaler denial-of-service bug** now has a documented path to **remote code execution**.
 
----
+On the patch front, **Oracle's August 2026 Critical Patch Update (CPU)** is unusually large: **925 vulnerabilities** fixed, with more than 100 rated at the **CVSS 9.0–10.0** ceiling. Two freshly disclosed AI/OT flaws — **MLflow CVE-2026-64849 (SSRF, CVSS 9.3)** and **FUXA CVE-2026-25895 (RCE, CVSS 9.5)** — attracted malicious scanning **within hours of CVE assignment**, the now-familiar "patch-to-exploit" gap that gives defenders a sub-day window.
 
-## 1 — CVE-2026-24301 "CoSnitch": One-Click Exfiltration in Microsoft Copilot Personal
+### Why This Reshapes Vulnerability Governance
 
-Varonis Threat Labs disclosed three vulnerabilities in Microsoft Copilot Personal (copilot.microsoft.com) that allow a single crafted link to silently pull data from every service the victim has connected.
+The pattern repeating across today's items is the **collapse of the remediation window**. When MLflow and FUXA are scanned by attackers the same day they are published, and when a NetScaler DoS fix from June becomes an RCE in August, the "patch next maintenance window" model is obsolete. CISOs should treat **CISA-named exploited flaws and internet-facing NetScaler/SharePoint/vCenter** as emergency-change candidates, and prioritize the **100+ CVSS-10.0 Oracle fixes** in any environment running Oracle E-Business Suite, PeopleSoft, or Database. The DGFiP, Commerzbank, and CEVA incidents also show that **supply-chain and third-party breaches** (a logistics partner's compromise cascading into Pokémon Center order cancellations) are now a first-order material-risk category, not an edge case.
 
-**Attack chain:**
-- Varonis used *meta-hacking*: asking Copilot why a prompt could not auto-run until the assistant itself surfaced an undocumented `autorun=1` URL parameter.
-- Combining `autorun=1` with the `q` parameter fires the injected prompt without any user gesture. Execution continues even if the victim closes the tab immediately.
-- The exfiltration request is indistinguishable at the network layer from a standard Copilot page-summarization fetch; base64 encoding can evade content filters scanning for credential patterns.
-
-**Data reachable in testing:** Gmail bodies, subject lines, sender/recipient metadata; Google Calendar titles, attendees, locations; Google Drive filenames and summaries; full Copilot conversation history; saved Copilot memory instructions.
-
-**Memory-poisoning path (separate vector):** A web-summarization flow can inject a persistent instruction that survives password changes, session revocation, and device re-enrollment. The change produces no process, file, network, or log entry visible to security tooling — it is only visible in Copilot's memory settings UI.
-
-**Patch:** Microsoft shipped fixes on **August 18, 2026**. No client update is required, but injected memories created before the fix may persist until the user manually removes them from Copilot's memory settings.
-
-🔗 **Reference:** [The Hacker News — Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps](https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html)
+🔗 **Reference:** Coverage from [The Hacker News](https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html), [iThome — CISA 4-vuln warning](https://www.ithome.com.tw/news/178276), [iThome — Citrix NetScaler active exploitation](https://www.ithome.com.tw/news/178253), [iThome — Oracle August 2026 CPU](https://www.ithome.com.tw/news/178129), [iThome — MLflow exploitation](https://www.ithome.com.tw/news/178259)
 
 ---
 
-## 2 — CVE-2026-64849 (MLflow SSRF, CVSS 9.3) and CVE-2026-25895 (FUXA RCE, CVSS 9.5) — Active Exploitation
+## Active Threats This Week
 
-Two critical CVEs in AI/ICS tooling attracted active scanning within hours of disclosure.
+📌 **CISA: 5 actively exploited flaws (Windows, macOS, SharePoint, vCenter, Microsoft IKE)** — Federal and enterprise defenders told to remediate immediately; SharePoint and vCenter are the repeat offenders from prior KEV cycles.
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html) | [iThome](https://www.ithome.com.tw/news/178276)
 
-**CVE-2026-64849 — MLflow SSRF (affects versions < 3.15.0):**
-- Unauthenticated Server-Side Request Forgery in the model-registry webhook implementation.
-- Bypasses prior fixes by exploiting how MLflow handles HTTP redirects.
-- Attackers are using it to reach cloud metadata services (AWS IMDSv1, GCP metadata) and extract cloud credentials and secrets.
-- watchTowr detected malicious scanning via global honeypot telemetry within hours of the CVE being assigned on **August 17, 2026**.
+📌 **Citrix NetScaler CVE-2026-8452 exploited in the wild** — UK NCSC urges urgent action; a **June-patched NetScaler DoS flaw (CVE linked to the 178251 advisory)** now demonstrated as **remote code execution**.
+🔗 **Reference:** [iThome — UK warning](https://www.ithome.com.tw/news/178253) | [iThome — DoS-to-RCE](https://www.ithome.com.tw/news/178251)
 
-**CVE-2026-25895 — FUXA ICS/SCADA RCE (affects versions ≤ 1.2.9):**
-- Missing authentication for a critical function + path traversal allowing unauthenticated remote attackers to write arbitrary files to the server filesystem.
-- VulnCheck detected a single IP broadly scanning the internet for exposed FUXA instances starting August 18. No RCE payloads dropped yet; observed activity attempts to overwrite `main.js` with junk data.
-- Approximately 60 FUXA installations are internet-exposed.
+📌 **Oracle August 2026 CPU: 925 CVEs, 100+ at CVSS 10.0** — Covers E-Business Suite, PeopleSoft, Database and Fusion Middleware; multiple满分 (perfect-score) flaws demand same-week patching.
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178129)
 
-**Recommended actions:** Patch MLflow to ≥ 3.15.0 immediately; review audit logs for signs of IMDSv1 access; apply FUXA patch and firewall SCADA management interfaces from the internet.
+📌 **MLflow CVE-2026-64849 (SSRF, CVSS 9.3) actively exploited** — Attackers use server-request forgery to steal **cloud credentials and secrets** from AI engineering platforms hours after disclosure.
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html) | [iThome](https://www.ithome.com.tw/news/178259)
 
-🔗 **Reference:** [The Hacker News — Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets](https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html)
+📌 **FUXA CVE-2026-25895 (RCE, CVSS 9.5) scanned within hours of CVE assignment** — OT/SCADA visualization tool exposed on the internet; exploitation enables arbitrary code execution on industrial hosts.
+
+📌 **France's DGFiP tax authority: 2 million taxpayer records breached** — Threat actor **ZeroBytes** claims exfiltration; earlier iThome reporting cited 678,000, the actor now states **2 million** (June 2026 incident).
+🔗 **Reference:** [xakep.ru](https://xakep.ru/2026/08/18/dgfip-leak/)
+
+📌 **Commerzbank: €30M+ stolen via a vulnerability** — German bank confirms attackers siphoned **more than €30 million** by exploiting a software flaw; one of the largest vulnerability-driven financial heists this year.
+🔗 **Reference:** [xakep.ru](https://xakep.ru/2026/08/19/commerzbank-hack/)
+
+📌 **CEVA logistics breach spreads to UK/German Pokémon Center** — Global logistics provider **CEVA** compromise forces **order cancellations and data exposure** at Pokémon Center UK and Germany.
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178260)
+
+📌 **CoSnitch CVE-2026-24301 in Microsoft Copilot Personal** — One crafted link silently exfiltrates Gmail, Calendar, Drive, and Copilot memory; a memory-poisoning vector survives password changes and re-enrollment. Patched Aug 18; users must manually clear injected instructions.
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html) | [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/cosnitch-attack-copilot-mapping-out-architecture)
+
+📌 **SilkParasite espionage campaign** — Targets Central Asian governments with **five new RATs**; classic nation-state tradecraft against regional public sector.
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/08/silkparasite-espionage-campaign-targets.html)
+
+📌 **StopAndProtect malware network** — Uses nearly **2,000 hacked WordPress sites** to spread malware and steal data via injected redirects.
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/08/stopandprotect-uses-nearly-2000-hacked.html)
+
+📌 **New Python malware abuses SharePoint + Teams** — Hides command-and-control inside Microsoft 365 collaboration tools, enables credential theft and lateral movement.
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178278)
+
+📌 **GitLab CVE-2026-19478 emergency fix** — Critical-grade GraphQL flaw let public projects be deleted; zero-click mitigation challenges reported.
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178254) | [Dark Reading](https://www.darkreading.com/application-security/critical-gitlab-zero-click-flaw-mitigation-challenges)
+
+📌 **WordPress Forminator arbitrary file upload** — **600,000+ sites** exposed; unauthenticated upload can lead to site takeover.
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178275)
+
+📌 **Threema DDoS outage** — Swiss encrypted messenger disrupted by large-scale DDoS attacks.
+🔗 **Reference:** [xakep.ru](https://xakep.ru/2026/08/18/threema-ddos/)
+
+📌 **AMD Vitis high-risk flaw (private key exposure + RCE)** — August 2026 AMD security advisory; affects FPGA toolchain.
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178252)
+
+📌 **Intel August security update** — Multiple high-risk flaws in **Xeon and TDX** products.
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178250)
+
+📌 **Firefox 154 fixes 58 security bugs; Chrome 151 fixes 15** — Routine browser patch rounds; deploy via standard cadence.
+🔗 **Reference:** [iThome — Firefox 154](https://www.ithome.com.tw/news/178261) | [iThome — Chrome 151](https://www.ithome.com.tw/news/178255)
 
 ---
 
-## 3 — DGFiP (French Tax Authority) Breach: ZeroBytes Claims 2M Records, Government Confirms 678K
+## Vendor Risk Matrix
 
-France's Ministry of Economy confirmed that threat actor **ZeroBytes** gained unauthorized access to the **Direction Générale des Finances Publiques (DGFiP)** in late June 2026 using stolen credentials and a 2FA bypass.
-
-**What was taken:** Income data, family composition, tax withholding rates for individuals; company name and SIREN registration numbers; cadastral data (property addresses and floor areas).
-
-**Scale dispute:** ZeroBytes posted a sales listing on **PwnForums** on August 12 claiming a 2M+ record dump and alleging access to the **Serveur Professionnel de Données Cadastrales (SPDC)** covering ~20M French citizens. DGFiP confirmed unauthorized access was detected and closed in late June during a routine audit; its own forensic count is **678,000 individuals and organizations** affected.
-
-**Response:** ANSSI is co-investigating; France's data-protection authority **CNIL** has been notified. DGFiP begins mailing individual breach notifications next week. Online taxpayer accounts and login credentials were not compromised.
-
-🔗 **Reference:** [Xakep.ru — Хакер заявляет, что похитил у французской налоговой службы данные 2 млн человек](https://xakep.ru/2026/08/18/dgfip-leak/)
+| Vendor / Product | Issue | Severity | Exposure | Action |
+|---|---|---|---|---|
+| Citrix NetScaler | CVE-2026-8452 + June DoS→RCE | High / Critical | Internet-facing ADCs | Emergency patch + hunt for RCE |
+| Oracle (EBS/PeopleSoft/DB) | 925 CVEs, 100+ CVSS 10.0 | Critical | Enterprise core apps | Same-week CPU adoption |
+| Microsoft (Copilot/SharePoint/Windows/IKE) | CoSnitch, KEV flaws | High | Cloud + endpoints | Patch + clear Copilot memory |
+| MLflow / FUXA | CVE-2026-64849 / CVE-2026-25895 | 9.3 / 9.5 | AI + OT estates | Isolate, patch immediately |
+| GitLab | CVE-2026-19478 | Critical | Dev platforms | Upgrade to fixed release |
+| DGFiP / Commerzbank / CEVA | Breach / theft / 3rd-party | Severe | Supply chain | Monitor, contain cascades |
 
 ---
 
-## 4 — Threema Disrupted by DDoS Attack
+## How Can OPSWAT Help
 
-The end-to-end encrypted messenger **Threema** experienced service disruption on August 18, 2026 as a result of a distributed denial-of-service attack. The platform serves approximately 12 million users and is widely used by government agencies and security-conscious enterprises across Europe.
-
-🔗 **Reference:** [Xakep.ru — В работе мессенджера Threema возникли проблемы из-за DDoS-атак](https://xakep.ru/2026/08/18/threema-ddos/)
+Most of today's headline risk is **file- and supply-chain-borne**: MLflow/FUXA payloads, the StopAndProtect WordPress-injected malware, the Python SharePoint/Teams dropper, and CoSnitch's memory-injection all land through untrusted content or third-party code. **OPSWAT MetaDefender** multi-scanning plus **Content Disarm & Reconstruction (CDR)** stops these at the file layer — neutralizing weaponized documents, binaries, and web-content before they reach endpoints or CI/CD pipelines — and the **Deep CDR** pipeline sanitizes files pulled from compromised partners like logistics providers. For AI/ML platforms, sanitizing model artifacts and notebook dependencies reduces the blast radius of an SSRF or RCE foothold.
