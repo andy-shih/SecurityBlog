@@ -6,7 +6,7 @@
 
 **CISO Daily Digest** — 每日資安新聞摘要，中英雙語。由 Andy.Shih（OPSWAT Solutions Engineer）撰寫，聚焦關鍵基礎設施防護、供應鏈安全與實務資安架構。
 
-> 🌐 **Site:** [blog.pingpongtech.us.kg](https://blog.pingpongtech.us.kg)
+> 🌐 **Site:** [blog.andyshih.uk](https://blog.andyshih.uk)
 
 ---
 
@@ -103,11 +103,11 @@ npm run test:e2e     # Playwright
 
 ### Search Indexing
 
-Production URL: `https://blog.pingpongtech.us.kg/`
+Production URL: `https://blog.andyshih.uk/`
 
-- XML sitemap: `https://blog.pingpongtech.us.kg/sitemap.xml`
-- Robots file: `https://blog.pingpongtech.us.kg/robots.txt`
-- IndexNow key file: `https://blog.pingpongtech.us.kg/89ca9699954ea5a5f65d528f17de471c.txt`
+- XML sitemap: `https://blog.andyshih.uk/sitemap.xml`
+- Robots file: `https://blog.andyshih.uk/robots.txt`
+- IndexNow key file: `https://blog.andyshih.uk/89ca9699954ea5a5f65d528f17de471c.txt`
 
 Google can discover the sitemap through `robots.txt` and can also accept it through Search Console. Bing-compatible search engines can receive URL updates through IndexNow after the key file is deployed.
 

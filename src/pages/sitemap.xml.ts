@@ -3,8 +3,7 @@ import { getCollection } from 'astro:content';
 import { demos } from '@/components/demo-data';
 import { getLangFromId, getSlugFromId, languages, type Lang } from '@/i18n';
 
-const siteUrl = 'https://blog.pingpongtech.us.kg';
-const siteLastMod = '2026-06-15';
+const siteUrl = 'https://blog.andyshih.uk';
 
 type Hreflang = 'x-default' | 'zh-Hant' | 'en';
 
@@ -67,51 +66,52 @@ function renderUrl(entry: SitemapEntry) {
 export const GET: APIRoute = async () => {
   const posts = await getCollection('blog');
   const postIds = new Set(posts.map((post) => post.id));
+  const buildDate = formatDate(new Date());
 
   const staticEntries: SitemapEntry[] = [
     {
       path: '/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/', en: '/en/' }, '/')
     },
     {
       path: '/zh/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/', en: '/en/' }, '/')
     },
     {
       path: '/en/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/', en: '/en/' }, '/')
     },
     {
       path: '/zh/blog/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/blog/', en: '/en/blog/' }, '/zh/blog/')
     },
     {
       path: '/en/blog/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/blog/', en: '/en/blog/' }, '/zh/blog/')
     },
     {
       path: '/zh/demos/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/demos/', en: '/en/demos/' }, '/zh/demos/')
     },
     {
       path: '/en/demos/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/demos/', en: '/en/demos/' }, '/zh/demos/')
     },
     {
       path: '/zh/resume/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/resume/', en: '/en/resume/' }, '/zh/resume/')
     },
     {
       path: '/en/resume/',
-      lastmod: siteLastMod,
+      lastmod: buildDate,
       alternates: pageAlternates({ zh: '/zh/resume/', en: '/en/resume/' }, '/zh/resume/')
     }
   ];

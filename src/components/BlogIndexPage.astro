@@ -4,6 +4,8 @@ import ArticleCard from '@/components/ArticleCard.astro';
 import BaseLayout from '@/components/BaseLayout.astro';
 import type { Lang } from '@/i18n';
 import { ui } from '@/i18n';
+import { getPostSlug } from '@/utils/posts';
+import { profile } from '@/config/profile';
 
 interface Props {
   lang: Lang;
@@ -16,9 +18,55 @@ const searchItems = posts.map((post) => ({
   id: post.id,
   text: [post.data.title, post.data.description, post.data.tags.join(' '), post.body ?? ''].join(' ').toLowerCase()
 }));
+
+const siteUrl = 'https://blog.andyshih.uk';
+const blogIndexUrl = `${siteUrl}/${lang}/blog/`;
+
+function safeJson(obj: unknown): string {
+  return JSON.stringify(obj)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026');
+}
+
+const collectionJsonLd = safeJson({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${blogIndexUrl}#collection`,
+      url: blogIndexUrl,
+      name: `${t.blogTitle} | ${profile.siteName}`,
+      description: t.blogIntro,
+      inLanguage: lang === 'zh' ? 'zh-Hant' : 'en',
+      author: {
+        '@type': 'Person',
+        name: profile.name,
+        url: profile.github,
+      },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${blogIndexUrl}#itemlist`,
+      url: blogIndexUrl,
+      itemListElement: posts.slice(0, 50).map((post, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: post.data.title,
+        url: `${siteUrl}/${lang}/blog/${getPostSlug(post)}/`,
+      })),
+    },
+  ],
+});
 ---
 
-<BaseLayout title="Blog" description={`${t.blogTitle} by language.`} lang={lang} currentPath="/blog/">
+<BaseLayout
+  title="Blog"
+  description={`${t.blogTitle} by language.`}
+  lang={lang}
+  currentPath="/blog/"
+  collectionJsonLd={collectionJsonLd}
+>
   <section class="px-5 py-16">
     <div class="mx-auto max-w-6xl">
       <div class="max-w-3xl">
@@ -39,6 +87,7 @@ const searchItems = posts.map((post) => ({
         />
       </div>
 
+      <!-- Crawlable article list: all article <a> tags are in static HTML for search engines -->
       <div class="mt-10 grid gap-4 md:grid-cols-2" data-testid="blog-list">
         {posts.map((post, index) => (
           <div data-post-id={post.id}>

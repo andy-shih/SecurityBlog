@@ -10,22 +10,122 @@ interface Props {
   description: string;
   lang?: Lang;
   currentPath?: string;
+  /** Override: pass article-level JSON-LD as pre-serialised string (already escaped). */
+  articleJsonLd?: string;
+  /** Override: pass collection JSON-LD as pre-serialised string (already escaped). */
+  collectionJsonLd?: string;
 }
 
-const { title, description, lang = 'zh', currentPath = '/' } = Astro.props;
+const {
+  title,
+  description,
+  lang = 'zh',
+  currentPath = '/',
+  articleJsonLd,
+  collectionJsonLd,
+} = Astro.props;
+
+const siteUrl = 'https://blog.andyshih.uk';
 const pageTitle = `${title} | ${profile.siteName}`;
 const t = ui[lang];
+
+// Canonical and alternate URLs
+const canonicalPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+const langPath = `/${lang}${canonicalPath === '/' ? '/' : canonicalPath}`;
+const canonicalUrl = `${siteUrl}${langPath}`;
+
+const zhPath = `${siteUrl}/zh${canonicalPath === '/' ? '/' : canonicalPath}`;
+const enPath = `${siteUrl}/en${canonicalPath === '/' ? '/' : canonicalPath}`;
+// x-default → zh
+const xDefaultUrl = zhPath;
+
+const ogLocale = lang === 'zh' ? 'zh_TW' : 'en_US';
+const ogLocaleAlt = lang === 'zh' ? 'en_US' : 'zh_TW';
+
+// WebSite + WebPage JSON-LD (base — always emitted unless overridden by articleJsonLd)
+function safeJson(obj: unknown): string {
+  return JSON.stringify(obj)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026');
+}
+
+const websiteJsonLd = safeJson({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: profile.siteName,
+      description: lang === 'zh' ? t.heroSubtitle : t.heroSubtitle,
+      publisher: {
+        '@type': 'Person',
+        name: profile.name,
+        url: profile.github,
+      },
+      inLanguage: lang === 'zh' ? 'zh-Hant' : 'en',
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: pageTitle,
+      description,
+      isPartOf: { '@id': `${siteUrl}/#website` },
+      inLanguage: lang === 'zh' ? 'zh-Hant' : 'en',
+    },
+  ],
+});
 ---
 
 <!doctype html>
 <html lang={lang === 'zh' ? 'zh-Hant' : 'en'}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Primary meta -->
     <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={profile.name} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Canonical + hreflang -->
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="zh-Hant" href={zhPath} />
+    <link rel="alternate" hreflang="en" href={enPath} />
+    <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={profile.siteName} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={canonicalUrl} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- JSON-LD structured data -->
+    {articleJsonLd
+      ? <script is:inline type="application/ld+json" set:html={articleJsonLd} />
+      : collectionJsonLd
+        ? <script is:inline type="application/ld+json" set:html={collectionJsonLd} />
+        : <script is:inline type="application/ld+json" set:html={websiteJsonLd} />
+    }
   </head>
   <body>
     <a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-sky-300 focus:px-4 focus:py-2 focus:text-slate-950" href="#main">
