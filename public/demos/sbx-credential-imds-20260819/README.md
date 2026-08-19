@@ -11,9 +11,7 @@ The unauthenticated SSRF in MLflow tracked as CVE-2026-64849 (CVSS 9.3, affects 
 
 ## What's in this package
 
-This demo runs on **Linux, macOS and Windows** — the payload auto-detects the OS at
-runtime (Linux: gnome-calculator/kcalc/xcalc; macOS: Calculator via osascript;
-Windows with git-bash/MSYS: calc.exe). The zip contains two folders:
+This demo runs on **Linux**. The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
@@ -71,7 +69,7 @@ The payload script auto-detects which one is installed.
 
 - ✅ All payloads are **benign by construction**: the only side effect is opening the calculator.
 - ✅ No real malware, no network callbacks (any network reference targets `example.com` or loopback).
-- ✅ Metascan demos use the **EICAR test string** — the universal, harmless AV test file.
+
 
 ## QA checklist (verified on this build)
 
