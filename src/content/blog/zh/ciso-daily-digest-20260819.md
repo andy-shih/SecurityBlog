@@ -78,7 +78,9 @@ featured: true
 
 ---
 
-## 供應商風險矩陣
+## OPSWAT 可以怎麼幫上忙
+
+**供應商風險一覽**
 
 | 供應商 / 產品 | 問題 | 嚴重性 | 暴露面 | 行動 |
 |---|---|---|---|---|
@@ -88,9 +90,5 @@ featured: true
 | MLflow / FUXA | CVE-2026-64849 / CVE-2026-25895 | 9.3 / 9.5 | AI + OT 環境 | 隔離，立即修補 |
 | GitLab | CVE-2026-19478 | 嚴重 | 開發平臺 | 升級至修補版本 |
 | DGFiP / Commerzbank / CEVA | 外洩 / 竊款 / 第三方 | 嚴重 | 供應鏈 | 監控，控制連鎖影響 |
-
----
-
-## OPSWAT 可以怎麼幫上忙
 
 今日多數頭條風險都屬於 **檔案與供應鏈傳遞型**：MLflow / FUXA 的載荷、StopAndProtect 注入 WordPress 的惡意程式、濫用 SharePoint / Teams 的 Python 投遞器，以及 CoSnitch 的記憶體注入，全都經由不受信任的內容或第三方程式碼落地。**OPSWAT MetaDefender** 多引擎掃描搭配 **Content Disarm & Reconstruction（CDR，內容解除與重建）** 可在檔案層級阻擋這些威脅——在惡意文件、二進位檔與網頁內容抵達端點或 CI / CD 管線前就將其解毒；**Deep CDR** 流程更能清理來自遭駭夥伴（如物流業者）的檔案。對 AI / ML 平臺而言，清理模型物件與 notebook 相依套件可縮小 SSRF 或 RCE 立足點的爆炸半徑。

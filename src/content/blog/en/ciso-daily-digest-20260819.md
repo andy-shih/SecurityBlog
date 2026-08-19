@@ -78,7 +78,9 @@ The pattern repeating across today's items is the **collapse of the remediation 
 
 ---
 
-## Vendor Risk Matrix
+## How Can OPSWAT Help
+
+**Vendor risk at a glance**
 
 | Vendor / Product | Issue | Severity | Exposure | Action |
 |---|---|---|---|---|
@@ -88,9 +90,5 @@ The pattern repeating across today's items is the **collapse of the remediation 
 | MLflow / FUXA | CVE-2026-64849 / CVE-2026-25895 | 9.3 / 9.5 | AI + OT estates | Isolate, patch immediately |
 | GitLab | CVE-2026-19478 | Critical | Dev platforms | Upgrade to fixed release |
 | DGFiP / Commerzbank / CEVA | Breach / theft / 3rd-party | Severe | Supply chain | Monitor, contain cascades |
-
----
-
-## How Can OPSWAT Help
 
 Most of today's headline risk is **file- and supply-chain-borne**: MLflow/FUXA payloads, the StopAndProtect WordPress-injected malware, the Python SharePoint/Teams dropper, and CoSnitch's memory-injection all land through untrusted content or third-party code. **OPSWAT MetaDefender** multi-scanning plus **Content Disarm & Reconstruction (CDR)** stops these at the file layer — neutralizing weaponized documents, binaries, and web-content before they reach endpoints or CI/CD pipelines — and the **Deep CDR** pipeline sanitizes files pulled from compromised partners like logistics providers. For AI/ML platforms, sanitizing model artifacts and notebook dependencies reduces the blast radius of an SSRF or RCE foothold.
