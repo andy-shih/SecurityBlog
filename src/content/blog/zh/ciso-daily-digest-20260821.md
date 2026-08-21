@@ -23,6 +23,10 @@ Rust 安全回應團隊建議開發人員搜尋 `~/.cargo/registry/cache` 中的
 
 ## 本週活躍威脅
 
+📌 **Microsoft Entra ID CVE-2026-69836（CVSS 10.0）RCE 已遭實際利用 ** — Microsoft 警告 **Entra ID**（前身為 Azure AD）存在一個最高嚴重性的 **反序列化不受信任資料（deserialization of untrusted data）** 漏洞，並確認已 ** 遭實際利用 ** ，攻擊者無須身分驗證即可 ** 透過網路執行程式碼 ** 。Microsoft 表示使用者無須採取行動，但雲端身分識別平面是大多數企業最核心的驗證路徑，CISO 仍應確認租用戶狀態並監控異常的 Entra 登入或權杖活動。
+
+🔗 **參考資料：** （[The Hacker News](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html)）
+
 📌 **GitLab CVE-2026-19478 / CVE-2026-19650 已遭實際利用 ** — 重大等級 GraphQL 漏洞 CVE-2026-19478 現身實際利用；資安公司 watchTowr 於 **8 月 19 日 ** 在蜜罐環境偵測到利用嘗試，建議防禦者在事件記錄中搜尋含有 `@gl_introduced` 字串的請求。Mondoo 警告該漏洞可偽造合併記錄，讓攻擊者無須入侵維護者帳號即可繞過程式碼審查關卡，埋下 ** 軟體供應鏈 ** 攻擊的種子。
 
 🔗 **參考資料：** （[iThome — 已遭利用](https://www.ithome.com.tw/news/178319) | [iThome — 供應鏈風險](https://www.ithome.com.tw/news/178324)）

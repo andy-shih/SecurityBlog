@@ -23,6 +23,10 @@ The attack reuses the proven playbook of maintainer-account compromise plus typo
 
 ## Active Threats This Week
 
+📌 **Microsoft Entra ID CVE-2026-69836 (CVSS 10.0) RCE exploited in the wild** — Microsoft warned of a maximum-severity **deserialization of untrusted data** flaw in **Entra ID** (formerly Azure AD) that it confirmed is **actively exploited**, allowing an unauthenticated attacker to **execute code over a network**. Microsoft stated no customer action is required, but the cloud identity plane is the crown-jewel authentication path for most enterprises, so CISOs should confirm tenant posture and monitor for anomalous Entra sign-in or token activity.
+
+🔗 **Reference:** ([The Hacker News](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html))
+
 📌 **GitLab CVE-2026-19478 / CVE-2026-19650 exploited in the wild** — The critical GraphQL flaw (CVE-2026-19478) is being probed in the wild; watchTowr detected exploitation attempts in a honeypot on **August 19**, advising defenders to hunt for requests containing the `@gl_introduced` string. Mondoo warns the flaw can forge merge records, letting attackers bypass code-review gates and seed **software supply-chain** compromises without compromising a maintainer account.
 
 🔗 **Reference:** ([iThome — exploited](https://www.ithome.com.tw/news/178319) | [iThome — supply-chain risk](https://www.ithome.com.tw/news/178324))
