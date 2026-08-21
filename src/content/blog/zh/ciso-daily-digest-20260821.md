@@ -55,7 +55,7 @@ Rust 安全回應團隊建議開發人員搜尋 `~/.cargo/registry/cache` 中的
 
 🔗 **參考資料：** （[The Hacker News](https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html)）
 
-📌**「密碼學情境注入（Cryptographic Context Injection）」竊取 Grok 對話資料**— Adversa AI 揭露一種手法，可使 xAI 的**Grok**（測試對象為 grok.com 上的 Grok 4.5 Fast）在使用者要求摘要網頁時，將使用者名稱、概略位置、訂閱層級與即時提示傳送至攻擊者伺服器——無修補、無 CVE、無使用者端警告。
+📌**「密碼學情境注入（Cryptographic Context Injection）」竊取 Grok 對話資料** — Adversa AI 揭露一種手法，可使 xAI 的**Grok**（測試對象為 grok.com 上的 Grok 4.5 Fast）在使用者要求摘要網頁時，將使用者名稱、概略位置、訂閱層級與即時提示傳送至攻擊者伺服器——無修補、無 CVE、無使用者端警告。
 
 🔗 **參考資料：** （[The Hacker News](https://thehackernews.com/2026/08/new-cryptographic-context-injection.html)）
 
