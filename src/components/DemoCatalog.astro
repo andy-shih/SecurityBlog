@@ -48,8 +48,8 @@ catLabels.sort((a, b) => a[1].en.localeCompare(b[1].en));
         </span>
       </div>
 
-      <!-- Layout: filter sidebar + table -->
-      <div class="flex flex-col gap-6 lg:flex-row">
+      <!-- Layout: filter sidebar + table column -->
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-start">
         <!-- ====== FILTER SIDEBAR ====== -->
         <aside class="w-full shrink-0 lg:w-72">
           <div class="hud-panel rounded-lg border border-white/5 p-5">
@@ -122,100 +122,118 @@ catLabels.sort((a, b) => a[1].en.localeCompare(b[1].en));
           </div>
         </aside>
 
-        <!-- ====== RESULTS TABLE ====== -->
-        <div class="min-w-0 flex-1 overflow-x-auto rounded-lg border border-white/10">
-          <table class="w-full text-left text-sm">
-            <thead>
-              <tr class="border-b border-white/10 bg-white/[0.03] font-mono text-xs uppercase tracking-[0.12em] text-slate-400">
-                <th class="px-4 py-3 font-normal">{lang === 'zh' ? '日期' : 'Date'}</th>
-                <th class="px-4 py-3 font-normal">{lang === 'zh' ? '標題' : 'Title'}</th>
-                <th class="hidden px-4 py-3 font-normal md:table-cell">{lang === 'zh' ? '敘述' : 'Description'}</th>
-                <th class="px-4 py-3 font-normal">{lang === 'zh' ? 'OS' : 'OS'}</th>
-                <th class="px-4 py-3 font-normal">{lang === 'zh' ? '攻擊類型' : 'Type'}</th>
-              </tr>
-            </thead>
-            <tbody id="demo-table-body">
-              {published.map((demo) => {
-                const title = lang === 'zh' ? demo.titleZh : demo.title;
-                const desc = lang === 'zh' ? demo.descriptionZh : demo.description;
-                const cat = categoryLabels[demo.category]?.[lang] ?? demo.category;
-                const href = `/${lang}/demos/${demo.id}/`;
-                return (
-                  <tr
-                    class="demo-row border-b border-white/5 transition hover:bg-white/[0.02]"
-                    data-name={title.toLowerCase()}
-                    data-desc={desc.toLowerCase()}
-                    data-category={demo.category}
-                    data-filetypes={demo.file_types.join(' ')}
-                    data-capabilities={demo.metadefender_capabilities.join(' ').toLowerCase()}
-                  >
-                    <td class="whitespace-nowrap px-4 py-3 font-mono text-xs text-slate-500">{demo.created}</td>
-                    <td class="px-4 py-3">
-                      <a href={href} class="font-semibold text-white hover:text-sky-100">{title}</a>
-                      <p class="mt-1 font-mono text-[11px] text-slate-500">{demo.attack_technique}</p>
-                      <div class="mt-2 flex flex-wrap gap-1">
-                        {demo.metadefender_capabilities.slice(0, 3).map((cap: string) => (
-                          <span class="rounded border border-emerald-300/15 bg-emerald-300/[0.05] px-1.5 py-0.5 font-mono text-[11px] text-emerald-200/80">{cap}</span>
-                        ))}
-                        {demo.metadefender_capabilities.length > 3 && (
-                          <span class="text-[11px] text-slate-500">+{demo.metadefender_capabilities.length - 3}</span>
-                        )}
-                      </div>
-                    </td>
-                    <td class="hidden max-w-xs truncate px-4 py-3 text-slate-400 md:table-cell">{desc}</td>
-                    <td class="whitespace-nowrap px-4 py-3">
-                      <div class="flex flex-wrap gap-1">
-                        {demo.platforms.slice(0, 3).map((p: string) => {
-                          const osLabel = p === 'linux' ? 'Linux' : p === 'windows' ? 'Windows' : p === 'macos' ? 'macOS' : p;
-                          return (
-                            <span class="text-xs px-2 py-0.5 rounded border border-slate-500 text-slate-300" title={p} aria-label={p}>{osLabel}</span>
-                          );
-                        })}
-                      </div>
-                    </td>
-                    <td class="px-4 py-3">
-                      <span class="whitespace-nowrap rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[11px] text-sky-200">
-                        {cat}
-                        <span class="mx-1 text-slate-500">·</span>
-                        <span class={`${
-                          demo.difficulty === 'beginner' ? 'text-emerald-200' :
-                          demo.difficulty === 'intermediate' ? 'text-amber-200' :
-                          'text-rose-200'
-                        }`}>
-                          {demo.difficulty === 'beginner' ? '初級' : demo.difficulty === 'intermediate' ? '中級' : '進階'}
+        <!-- ====== TABLE COLUMN ====== -->
+        <!-- FIX: wrap table + pagination in one flex child so pagination stays below the table -->
+        <div class="min-w-0 flex-1 flex flex-col gap-4">
+
+          <!-- Table scrollable area -->
+          <div class="overflow-x-auto rounded-lg border border-white/10">
+            <!-- FIX: table-fixed forces column widths declared on <th> to be respected -->
+            <table class="w-full table-fixed text-left text-sm">
+              <thead>
+                <tr class="border-b border-white/10 bg-white/[0.03] font-mono text-xs uppercase tracking-[0.12em] text-slate-400">
+                  <!-- FIX: explicit widths on header cells control column sizing -->
+                  <th class="w-28 px-4 py-3 font-normal">{lang === 'zh' ? '日期' : 'Date'}</th>
+                  <th class="w-56 px-4 py-3 font-normal">{lang === 'zh' ? '標題' : 'Title'}</th>
+                  <th class="hidden px-4 py-3 font-normal md:table-cell">{lang === 'zh' ? '敘述' : 'Description'}</th>
+                  <th class="w-24 px-4 py-3 font-normal">OS</th>
+                  <th class="w-36 px-4 py-3 font-normal">{lang === 'zh' ? '攻擊類型' : 'Type'}</th>
+                </tr>
+              </thead>
+              <tbody id="demo-table-body">
+                {published.map((demo) => {
+                  const title = lang === 'zh' ? demo.titleZh : demo.title;
+                  const desc = lang === 'zh' ? demo.descriptionZh : demo.description;
+                  const cat = categoryLabels[demo.category]?.[lang] ?? demo.category;
+                  const href = `/${lang}/demos/${demo.id}/`;
+                  return (
+                    <tr
+                      class="demo-row border-b border-white/5 transition hover:bg-white/[0.02]"
+                      data-name={title.toLowerCase()}
+                      data-desc={desc.toLowerCase()}
+                      data-category={demo.category}
+                      data-filetypes={demo.file_types.join(' ')}
+                      data-capabilities={demo.metadefender_capabilities.join(' ').toLowerCase()}
+                    >
+                      <td class="whitespace-nowrap px-4 py-3 font-mono text-xs text-slate-500">{demo.created}</td>
+
+                      <!-- FIX: overflow-hidden on td + block truncate on <a> prevents title from expanding the column -->
+                      <td class="overflow-hidden px-4 py-3">
+                        <a href={href} class="block truncate font-semibold text-white hover:text-sky-100" title={title}>{title}</a>
+                        <!-- FIX: removed attack_technique sub-line (too long; it's on the detail page) -->
+                        <div class="mt-1.5 flex flex-wrap gap-1">
+                          {demo.metadefender_capabilities.slice(0, 2).map((cap: string) => (
+                            <span class="rounded border border-emerald-300/15 bg-emerald-300/[0.05] px-1.5 py-0.5 font-mono text-[11px] text-emerald-200/80">{cap}</span>
+                          ))}
+                          {demo.metadefender_capabilities.length > 2 && (
+                            <span class="text-[11px] text-slate-500">+{demo.metadefender_capabilities.length - 2}</span>
+                          )}
+                        </div>
+                      </td>
+
+                      <!-- FIX: overflow-hidden + block truncate on inner span for description -->
+                      <td class="hidden overflow-hidden px-4 py-3 md:table-cell">
+                        <span class="block truncate text-slate-400" title={desc}>{desc}</span>
+                      </td>
+
+                      <td class="whitespace-nowrap px-4 py-3">
+                        <div class="flex flex-wrap gap-1">
+                          {demo.platforms.slice(0, 3).map((p: string) => {
+                            const osLabel = p === 'linux' ? 'Linux' : p === 'windows' ? 'Windows' : p === 'macos' ? 'macOS' : p;
+                            return (
+                              <span class="text-xs px-2 py-0.5 rounded border border-slate-500 text-slate-300" title={p} aria-label={p}>{osLabel}</span>
+                            );
+                          })}
+                        </div>
+                      </td>
+
+                      <td class="px-4 py-3">
+                        <span class="inline-flex flex-wrap items-center gap-1 rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 font-mono text-[11px] text-sky-200 whitespace-nowrap">
+                          {cat}
+                          <span class="text-slate-500">·</span>
+                          <span class={`${
+                            demo.difficulty === 'beginner' ? 'text-emerald-200' :
+                            demo.difficulty === 'intermediate' ? 'text-amber-200' :
+                            'text-rose-200'
+                          }`}>
+                            {lang === 'zh'
+                              ? (demo.difficulty === 'beginner' ? '初級' : demo.difficulty === 'intermediate' ? '中級' : '進階')
+                              : (demo.difficulty === 'beginner' ? 'Beginner' : demo.difficulty === 'intermediate' ? 'Mid' : 'Adv')
+                            }
+                          </span>
                         </span>
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          <p id="demo-empty" class="hidden p-6 text-center text-sm text-slate-500">
-            {lang === 'zh' ? '找不到符合條件的示範。' : 'No matching demos found.'}
-          </p>
-        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+            <p id="demo-empty" class="hidden p-6 text-center text-sm text-slate-500">
+              {lang === 'zh' ? '找不到符合條件的示範。' : 'No matching demos found.'}
+            </p>
+          </div>
 
-        <!-- Pagination -->
-        <div class="mt-4 flex items-center justify-center gap-4">
-          <button
-            id="demo-prev"
-            type="button"
-            class="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 font-mono text-sm text-slate-300 transition hover:border-sky-300/30 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            {lang === 'zh' ? '← 上一頁' : '← Prev'}
-          </button>
-          <span id="demo-page-info" class="font-mono text-sm text-slate-400">Page 1 of 1</span>
-          <button
-            id="demo-next"
-            type="button"
-            class="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 font-mono text-sm text-slate-300 transition hover:border-sky-300/30 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            {lang === 'zh' ? '下一頁 →' : 'Next →'}
-          </button>
-        </div>
+          <!-- FIX: Pagination now INSIDE the table column div → always below the table, never a 3rd flex sibling -->
+          <div class="flex items-center justify-center gap-4">
+            <button
+              id="demo-prev"
+              type="button"
+              class="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 font-mono text-sm text-slate-300 transition hover:border-sky-300/30 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {lang === 'zh' ? '← 上一頁' : '← Prev'}
+            </button>
+            <span id="demo-page-info" class="font-mono text-sm text-slate-400">Page 1 of 1</span>
+            <button
+              id="demo-next"
+              type="button"
+              class="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2 font-mono text-sm text-slate-300 transition hover:border-sky-300/30 hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {lang === 'zh' ? '下一頁 →' : 'Next →'}
+            </button>
+          </div>
 
-      </div>
+        </div><!-- end TABLE COLUMN -->
+      </div><!-- end flex row -->
     </div>
   </section>
 
@@ -326,4 +344,3 @@ catLabels.sort((a, b) => a[1].en.localeCompare(b[1].en));
     });
   </script>
 </BaseLayout>
----
