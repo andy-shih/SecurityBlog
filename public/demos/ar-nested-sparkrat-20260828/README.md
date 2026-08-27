@@ -32,7 +32,6 @@ Files in `clean/`: `clean-archive.zip`
 
 ```bash
 unzip ar-nested-sparkrat-20260828.zip
-cd ar-nested-sparkrat-20260828
 ```
 
 ### 2. Show the attack (malicious)
@@ -69,7 +68,7 @@ buried payload, and blocks the file before it reaches the user.
 
 ## QA checklist (verified on this build)
 
-- [ ] `unzip -t ar-nested-sparkrat-20260828.zip` → no errors
+- [x] `unzip -t ar-nested-sparkrat-20260828.zip` → no errors
 - [ ] malicious archive carries the buried payload marker (visible only after recursive unpack)
 - [ ] clean archive carries no payload
 - [ ] format magic bytes verified (ZIP `PK`, 7z `7z\xbc\xaf`, TAR `ustar`)
