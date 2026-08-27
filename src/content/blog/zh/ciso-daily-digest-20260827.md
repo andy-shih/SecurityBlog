@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：Salesforce 與 Anthropic 推出 Claudeforce，將 Claude 嵌入 CRM（20260827）"
+title: "CISO 每日摘要：Salesforce 與 Anthropic 推出 Claudeforce，將 Claude 嵌入 CRM (20260827)"
 description: "2026 年 8 月 26 日，Salesforce 與 Anthropic 推出 Claudeforce，將 Claude 直接嵌入 Salesforce CRM 工作流程，業務人員可能再也無須開啟 Salesforce 應用程式；Anthropic 同步擴大 Mythos 5 資安能力至合作夥伴。威脅面：中國關聯駭客 APT24 滲透臺灣廣告供應鏈，在新聞與小說網站植入惡意程式碼；CISA 將 Citrix NetScaler、Linux 核心、Microsoft SQL Server、Red Hat 漏洞列入 KEV；Spark RAT 濫用脆弱的 OPSWAT 驅動程式在柬埔寨關閉端點防護；Ubiquiti 修補 22 個 UniFi 漏洞，其中 3 個為 CVSS 滿分重大漏洞。"
 pubDate: 2026-08-27
 tags: [Salesforce, Anthropic, Claudeforce, Claude, Mythos 5, APT24, CISA-KEV, NetScaler, Spark-RAT, OPSWAT, WordPress, 供應鏈]
