@@ -11,12 +11,12 @@ The 2026-08-30 CISO Daily Digest reported that ALPHV — the Black Basta-affilia
 
 ## What's in this package
 
-This demo ships a **static archive sample — nothing executes**. The zip contains two folders:
+This demo ships a **static AV-test sample — nothing executes**. The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
-| `malicious/` | The attack archive — a static file whose **payload hides inside the archive layers** (no executable runs on open) |
-| `clean/` | The same content after MetaDefender processing — threat removed, nothing hidden |
+| `malicious/` | EICAR test files standing in for the ransomware binary and staged payloads — no real malware |
+| `clean/` | The benign control file after MetaDefender processing — nothing hidden |
 
 Files in `malicious/`: `eicar.com`, `eicar.txt`, `eicar_demo.exe`, `malicious-eicar.zip`
 
@@ -36,20 +36,21 @@ unzip ms-alphv-lynx-20260903.zip
 
 ### 2. Show the attack (malicious)
 
-- Inspect `eicar.com` — a nested/abusive archive; the malicious marker is buried inside its layers, invisible to a single-pass scan that only looks at the outer file.
-- Inspect `eicar.txt` — a nested/abusive archive; the malicious marker is buried inside its layers, invisible to a single-pass scan that only looks at the outer file.
-- Inspect `eicar_demo.exe` — a nested/abusive archive; the malicious marker is buried inside its layers, invisible to a single-pass scan that only looks at the outer file.
-- Inspect `malicious-eicar.zip` — a nested/abusive archive; the malicious marker is buried inside its layers, invisible to a single-pass scan that only looks at the outer file.
+- Inspect `eicar.com` — a compiled sample embedding the EICAR test string (`strings eicar.com | grep EICAR`); if Wine is installed, running it only prints the EICAR string.
+- Inspect `eicar.txt` — it contains the exact EICAR test string (the industry-standard, harmless AV test file); any AV engine flags it (ClamAV: `Eicar-Test-Signature`).
+- Inspect `eicar_demo.exe` — a compiled sample embedding the EICAR test string (`strings eicar_demo.exe | grep EICAR`); if Wine is installed, running it only prints the EICAR string.
+- Inspect `malicious-eicar.zip` — a zip archive wrapping an EICAR test file; the marker is only visible after recursive unpacking (`unzip -l malicious-eicar.zip`, then scan the inner file).
 
-**Expected result:** a single-pass scanner sees only a benign outer archive; with
-**Metascan** in the pipeline, the engine recursively unpacks every layer, finds the
-buried payload, and blocks the file before it reaches the user.
+**Expected result:** a single-pass scan already flags the flat EICAR files; the
+EICAR wrapped inside the zip is only visible after recursive unpacking — with
+**Metascan** in the pipeline, all variants are scanned in one pass and every one
+is blocked before it reaches the user.
 
 ### 3. Show the protection (clean)
 
-- Inspect `clean-note.txt` — a clean archive, no hidden payload; after Metascan unpacks and scans every layer, nothing is flagged.
+- Inspect `clean-note.txt` — a benign control file; no EICAR marker, nothing is flagged.
 
-**Expected result:** the clean archive passes — no nested payload, nothing to flag.
+**Expected result:** the clean control file passes — no EICAR marker, nothing to flag.
 
 ---
 
@@ -66,18 +67,21 @@ buried payload, and blocks the file before it reaches the user.
 
 ## Safety
 
-- ✅ All payloads are **benign by construction**: inert archive content (no executable code, no macros).
-- ✅ No real malware, no network callbacks (any network reference targets `example.com` or loopback).
+- ✅ All payloads are the **EICAR test string** — the industry-standard, harmless AV test file (no real malware, nothing destructive).
+- ✅ No network callbacks; nothing executes on open (the PE sample only prints the EICAR string under Wine).
 
 ## QA checklist (verified on this build)
 
 - [x] `unzip -t ms-alphv-lynx-20260903.zip` → no errors
-- [ ] malicious archive carries the buried payload marker (visible only after recursive unpack)
-- [ ] clean archive carries no payload
-- [ ] format magic bytes verified (ZIP `PK`, 7z `7z\xbc\xaf`, TAR `ustar`)
+- [x] `eicar.com` / `eicar.txt` contain the exact EICAR test string
+- [x] `eicar_demo.exe` is a Windows PE embedding the EICAR string
+- [x] `malicious-eicar.zip` is a valid zip wrapping an EICAR file (recursive-unpack check)
+- [x] clean file carries no EICAR marker (no placeholder content)
+- [x] automated QA suite passes (structure + execution checks, FAIL=0)
 
 ## How MetaDefender catches this
 
 Data encrypted for impact — double-extortion ransomware (ALPHV/Lynx) payloads crossing the file boundary as EICAR stand-ins, flagged by multiscanning before execution (T1486) (MITRE ATT&CK [T1486](https://attack.mitre.org/techniques/T1486/))
 is neutralized by **Metascan** before the file reaches the user — see the blog for the
 full story and detection details.
+
