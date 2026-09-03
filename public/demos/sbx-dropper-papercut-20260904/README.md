@@ -46,7 +46,7 @@ The payload script auto-detects which one is installed.
 
 ### 3. Show the protection (clean)
 
-- Run: `bash clean-payload.sh` — nothing happens (payload removed).
+- Run: `bash clean/clean-payload.sh` — nothing happens (payload removed).
 
 **Expected result:** the file opens/behaves normally — no calculator, no execution.
 
