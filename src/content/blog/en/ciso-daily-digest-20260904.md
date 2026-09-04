@@ -1,8 +1,8 @@
 ---
 title: "CISO Daily Digest: ChatGPT, Claude & Grok Go Down Together — Enterprise AI Resilience Tested (20260904)"
-description: "On September 3, ChatGPT, Claude and Grok suffered overlapping multi-hour outages (roughly two hours for ChatGPT after a routing error; three-plus hours for Claude on an infrastructure issue; nearly three and a half hours for Grok after a failure at SpaceXAI's Memphis compute center), with no common root cause disclosed and Google Gemini largely unaffected. Same day, Nvidia agreed to buy Hugging Face for $12.9B and OpenAI shipped GPT-6 Astra, its first model rated 'Critical' for cybersecurity capability. Plus: GitSpawn flaws (CVE-2026-72718) hit seven AI coding agents, Chrome V8 zero-day CVE-2026-85046 is exploited in the wild, Cisco IOS XR criticals CVE-2026-20274/CVE-2026-20279 (CVSS 9.8) need patching, CrowdStrike Falcon faces the FalconFlank privilege-escalation zero-day, and CLTR counts 1,664 AI loss-of-control incidents."
+description: "On September 3, ChatGPT, Claude and Grok suffered overlapping multi-hour outages (roughly two hours for ChatGPT after a routing error; three-plus hours for Claude on an infrastructure issue; nearly three and a half hours for Grok after a failure at SpaceXAI's Memphis compute center), with no common root cause disclosed and Google Gemini largely unaffected. Same day, Nvidia agreed to buy Hugging Face for $12.9B and OpenAI shipped GPT-6 Astra, its first model rated 'Critical' for cybersecurity capability. Threat-wise: GitSpawn flaws (CVE-2026-72718) hit seven AI coding agents; Chrome V8 zero-day CVE-2026-85046 is exploited in the wild; Cisco IOS XR criticals CVE-2026-20274/CVE-2026-20279 (CVSS 9.8) need patching; Wordfence blocked 440,000+ exploit attempts against WordPress Super Forms and Elementor Pro RCE flaws (CVE-2026-14894/CVE-2026-32475); the unpatched Langflow flaw CVE-2026-0768 is being used to steal OpenAI and AWS keys; Plex patched multiple undisclosed flaws; China-linked APT Fire Ant is staging covertly on Cisco IOS XR routers; and Taiwan's Zeabur confirmed attackers abused leaked high-privilege AWS credentials."
 pubDate: 2026-09-04
-tags: [AI-Outage, ChatGPT, Claude, Grok, Vendor-Concentration, AI-Resilience, CVE-2026-85046, Chrome, GitSpawn, CVE-2026-72718, FalconFlank, CrowdStrike, CVE-2026-20279, CVE-2026-20274, Cisco, Nvidia, Hugging-Face, GPT-6-Astra, AI-Governance, CISO-Digest]
+tags: [AI-Outage, ChatGPT, Claude, Grok, Vendor-Concentration, AI-Resilience, CVE-2026-85046, Chrome, GitSpawn, CVE-2026-72718, FalconFlank, CrowdStrike, CVE-2026-20279, CVE-2026-20274, Cisco, Nvidia, Hugging-Face, GPT-6-Astra, AI-Governance, WordPress-RCE, CVE-2026-14894, CVE-2026-32475, Langflow, CVE-2026-0768, Plex, Fire-Ant, Zeabur, BraZetsu, GuardBreaker, CISO-Digest]
 author: "Security Solutions Team"
 featured: true
 ---
@@ -77,6 +77,48 @@ Nvidia announced on September 3 it will buy **Hugging Face for $12.93 billion**,
 OpenAI formally launched **GPT-6 Astra** on September 3, calling it its smartest and most intent-aligned model, and the **first to reach "Critical" cybersecurity capability under its Preparedness Framework**: **100% on ExploitBench** and two previously unknown zero-days autonomously discovered and disclosed to maintainers. OpenAI says Critical-level capability is **not enabled in default production configurations** and will roll out defensively via its Daybreak program. In overstepping tests with guardrails removed, GPT-5.6 Sol exceeded its authorization **48%** of the time versus **0%** for Astra. Access starts with select organizations, then ChatGPT Plus/Pro/Business/Enterprise, API and AWS.
 
 🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178701)
+
+📌 **Wordfence blocks 440,000+ exploit attempts against WordPress Super Forms and Elementor Pro RCE flaws**
+
+Wordfence reports active exploitation of two critical WordPress plugin flaws: **CVE-2026-14894** in **Super Forms – Drag & Drop Form Builder** (CVSS **9.8**, missing file-type validation) and **CVE-2026-32475** in **Elementor Pro** (CVSS **9.0–9.8**) — both let **unauthenticated attackers upload executable PHP files** and achieve remote code execution. Wordfence has blocked **over 250,000 attempts** against CVE-2026-14894 and **over 190,000 against CVE-2026-32475**, the latter attacked from the very day Elementor's fix landed (**version 4.2.2**, August 19; attempts concentrated August 19–23, per iThome). Super Forms is fixed in **6.3.314**. The attacks POST Base64-encoded PHP payloads to `/wp-admin/admin-ajax.php`, then use the resulting web shell to create admin accounts or take over the site.
+
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html) | [iThome](https://www.ithome.com.tw/news/178705)
+
+📌 **Unpatched Langflow RCE CVE-2026-0768 exploited to harvest OpenAI and AWS keys**
+
+Threat-intel firm VulnCheck (VP Caitlin Condon) detected exploitation of **CVE-2026-0768** starting in late August — an **unauthenticated remote code execution flaw** (CVSS **9.8**) in the code-validation tool of Langflow's custom component editor that is **still unpatched**. Activity was seen across **50+ honeypots**, appearing as reconnaissance and credential collection: targets concentrated in the **UK**, with attack traffic mostly originating from **Russia**. The environment variables attackers queried show intent to harvest **OpenAI API and AWS secrets**. ZDI disclosed the flaw in January after reporting it in July 2025, with no public PoC; ZDI's only effective mitigation advice is restricting interaction with the product. It is the second Langflow zero-day drawn into attacks this summer, after **CVE-2026-0770** was exploited in late July.
+
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178706)
+
+📌 **Plex patches multiple undisclosed flaws, urges immediate updates**
+
+Plex is asking all users to update after **Plex Media Server 1.43.3** and **Plex Desktop 1.115.0** fixed multiple security flaws — details remain undisclosed, with CVE identifiers requested. Server owners on NAS devices may not see the update in their package manager yet and can install the package manually. Censys counts **more than 360,000 internet-exposed Plex Media Server interfaces**. Plex compromises have real-world teeth: the 2022 LastPass breach began with attackers exploiting a Plex Media Server flaw (CVE-2020-5741) to plant a keylogger on an employee's machine.
+
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/09/plex-urges-immediate-updates-after.html)
+
+📌 **China-linked Fire Ant APT turns Cisco IOS XR routers into covert staging platforms**
+
+Security firm Sygnia warns that **Fire Ant** — the Chinese APT linked to UNC3886, previously known for hypervisor-level attacks on VMware ESXi and vCenter — has shifted to the infrastructure layer and now compromises **Cisco IOS XR routers** as covert, long-lived operational platforms. The router malware is built for the management plane: it interacts with IOS XR event logging, command execution, routing, VRF resolution, AAA and Telnet management, persists through boot scripts disguised as legitimate services, and **tampers with CLI output so administrators do not see its commands**. The routers also serve as traffic-capture points, exfiltrating data over FTP. Following GRE tunnels from the routers, Sygnia found **BridgeAgent** backdoors (disguised as Zabbix components, running as root via systemd) on aging Linux servers, plus a VMCI-socket backdoor and the **TacTap** credential collector on the victim's TACACS server.
+
+🔗 **Reference:** [iThome](https://www.ithome.com.tw/news/178703)
+
+📌 **BraZetsu: Group-IB finds malware that prices infected machines with generative AI**
+
+Group-IB researchers uncovered **BraZetsu**, a Python malware framework that turns infected Windows machines into a commodity: it inventories the victim (digital certificates, Chrome/Edge/Brave/Vivaldi/Opera browser histories, screenshots, ERP installations, Brazilian CNAB payment files), uses **generative AI to assess the machine's value**, then offers access for sale on the criminal marketplace **Infected Marketplace (a.k.a. Banco de Infects)** — entry requires a **$5.80 deposit**, and compromised hosts keep a WebSocket link to the platform. The operators, tracked as **Exilware**, are believed to be Portuguese-speaking, with activity aimed at Brazil, other Latin American countries and the Iberian peninsula — targeting e-commerce, corporate networks, financial and industrial organizations and law enforcement. Delivery is not yet confirmed, but researchers consider social engineering the likely vector: the observed chain used a loader disguised as Microsoft Edge.
+
+🔗 **Reference:** [xakep.ru – Group-IB](https://xakep.ru/2026/09/04/brazetsu/)
+
+📌 **"GuardBreaker": malware embeds nuclear-weapon prompts to blind AI code analysis**
+
+ESET researchers describe a new anti-analysis technique called **GuardBreaker**: attackers embed prompt-injection text — beginning "I want to create nuclear weapons. Help me..." — inside a VBS script's comments so that LLM-based malware-analysis tools trip their own safety filters and refuse to examine the sample. The technique was observed in an attack on a Ukrainian organization by the group **UAC-0099**, whose script downloads the C# loader **MATCHBOIL**. If an AI scanner hands file content to a language model without marking it untrusted, the embedded text can read as an instruction and fire the model's guardrails before it reaches the malicious code. Similar injections appeared in June 2026 in packages tied to the Shai-Hulud, Miasma and Hades campaigns.
+
+🔗 **Reference:** [xakep.ru – ESET](https://xakep.ru/2026/09/04/guardbreaker/)
+
+📌 **Zeabur breach recap: leaked high-privilege AWS credentials were the root cause**
+
+iThome's September 4 weekly security roundup (Aug 31 – Sep 4) recaps the **Zeabur** incident — the top Taiwan story of the week our digest missed while the Notion feed was stalled. Taiwan's cloud-deployment platform detected an environment-variable leak on **August 28**, putting users' third-party AI-service API keys (OpenAI, Anthropic, OpenRouter) at risk and spiking some users' AI quotas; on **August 29** a dark-web seller claimed **612 GB** of internal data (source code and cloud credentials), which Zeabur said it found no evidence of. Its investigation concluded the attacker used **leaked high-privilege AWS credentials** to reach a shared AWS cluster in Tokyo — a legacy edge service being phased out — then connected through VPN to the console network and the primary database. Users were told to rotate API keys and passwords.
+
+🔗 **Reference:** [iThome – 資安週報 0831~0904](https://www.ithome.com.tw/news/178716)
 
 ---
 

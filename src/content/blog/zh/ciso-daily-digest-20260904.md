@@ -1,8 +1,8 @@
 ---
 title: "CISO 每日摘要：ChatGPT、Claude、Grok 同時大當機 — 企業 AI 韌性與供應集中風險浮現 (20260904)"
-description: "9 月 3 日 ChatGPT、Claude 與 Grok 幾乎同時發生長達數小時的服務中斷（ChatGPT 因路由錯誤約 2 小時；Claude 因基礎設施問題中斷逾 3 小時；Grok 因 SpaceXAI 曼菲斯資料中心故障近 3.5 小時），業者均未說明共同原因，Google Gemini 大致不受影響。同日 Nvidia 宣布以 129.3 億美元併購 Hugging Face，OpenAI 發表首款網路安全能力達「重大（Critical）」等級的 GPT-6 Astra。此外：GitSpawn 漏洞（CVE-2026-72718）波及 7 款 AI 程式代理、Chrome V8 零時差漏洞 CVE-2026-85046 已遭利用、Cisco IOS XR 出現兩個 CVSS 9.8 重大漏洞（CVE-2026-20274／CVE-2026-20279）、CrowdStrike Falcon 遭揭露 FalconFlank 權限提升零時差漏洞、CLTR 統計今年已發生 1,664 起 AI 失控事件。"
+description: "9 月 3 日 ChatGPT、Claude 與 Grok 幾乎同時發生長達數小時的服務中斷（ChatGPT 因路由錯誤約 2 小時；Claude 因基礎設施問題中斷逾 3 小時；Grok 因 SpaceXAI 曼菲斯資料中心故障近 3.5 小時），業者均未說明共同原因，Google Gemini 大致不受影響。同日 Nvidia 宣布以 129.3 億美元併購 Hugging Face，OpenAI 發表首款網路安全能力達「重大（Critical）」等級的 GPT-6 Astra。威脅面：GitSpawn 漏洞（CVE-2026-72718）波及 7 款 AI 程式代理、Chrome V8 零時差漏洞 CVE-2026-85046 已遭利用、Cisco IOS XR 出現兩個 CVSS 9.8 重大漏洞（CVE-2026-20274／CVE-2026-20279）、Wordfence 攔截逾 44 萬次針對 WordPress Super Forms 與 Elementor Pro RCE 漏洞的攻擊嘗試（CVE-2026-14894／CVE-2026-32475）、未修補的 Langflow 漏洞 CVE-2026-0768 遭用於竊取 OpenAI 與 AWS 金鑰、Plex 修補多個未公開漏洞、中國駭客組織 Fire Ant 以思科 IOS XR 路由器為據點、臺灣新創 Zeabur 證實攻擊者利用外流的高權限 AWS 憑證。"
 pubDate: 2026-09-04
-tags: [AI 當機, ChatGPT, Claude, Grok, 供應集中, AI 韌性, CVE-2026-85046, Chrome, GitSpawn, CVE-2026-72718, FalconFlank, CrowdStrike, CVE-2026-20279, CVE-2026-20274, Cisco, Nvidia, Hugging Face, GPT-6 Astra, AI 治理, CISO 每日摘要]
+tags: [AI 當機, ChatGPT, Claude, Grok, 供應集中, AI 韌性, CVE-2026-85046, Chrome, GitSpawn, CVE-2026-72718, FalconFlank, CrowdStrike, CVE-2026-20279, CVE-2026-20274, Cisco, Nvidia, Hugging Face, GPT-6 Astra, AI 治理, WordPress, Super Forms, Elementor Pro, CVE-2026-14894, CVE-2026-32475, Langflow, CVE-2026-0768, Plex, Fire Ant, Zeabur, BraZetsu, GuardBreaker, CISO 每日摘要]
 author: "Security Solutions Team"
 featured: true
 ---
@@ -77,6 +77,48 @@ Nvidia 於 9 月 3 日宣布同意以 **129.3 億美元** 併購 **Hugging Face*
 OpenAI 於 9 月 3 日正式發表 **GPT-6 Astra**，宣稱是其最聰明、與使用者意圖最一致的模型，也是 **首款在《準備框架》（Preparedness Framework）中網路安全能力達到「重大（Critical）」等級** 的模型：**ExploitBench 拿下滿分 100%**，並自主發現兩個此前未知的零時差漏洞（已通報維護方）。OpenAI 強調 Critical 等級能力 **不會在預設生產配置開放**，將透過 Daybreak 計畫逐步投入防禦性用途。在刻意移除安全防護的越權測試中，GPT-5.6 Sol 有 48% 機率超出授權範圍，Astra 則為 **0%**。Astra 即日起先開放給少數組織，未來數日陸續提供給 ChatGPT Plus／Pro／Business／Enterprise 用戶，並透過 API 與 AWS 提供。
 
 🔗 **參考資料：** [iThome](https://www.ithome.com.tw/news/178701)
+
+📌 **Wordfence 攔截逾 44 萬次漏洞利用嘗試，鎖定 WordPress 外掛 Super Forms 與 Elementor Pro 的 RCE 漏洞**
+
+Wordfence 揭露兩個 WordPress 外掛的重大漏洞正遭積極利用：**CVE-2026-14894**（**Super Forms** 拖放表單產生器，CVSS **9.8**，檔案類型驗證缺失）與 **CVE-2026-32475**（**Elementor Pro**，CVSS **9.0–9.8**）——兩者都能讓 **未登入的攻擊者上傳可執行的 PHP 檔案**，進而遠端執行任意程式碼。Wordfence 已攔截 **超過 25 萬次** 針對 CVE-2026-14894 的攻擊嘗試、**超過 19 萬次** 針對 CVE-2026-32475；後者的攻擊從 Elementor 修補釋出當天（**8 月 19 日，4.2.2 版**）就開始，8 月 19 日至 23 日最為集中（iThome）。Super Forms 在 **6.3.314** 版修復。攻擊者向 `/wp-admin/admin-ajax.php` 送出夾帶 Base64 編碼 PHP 酬載的請求，再以寫入的網頁後門建立管理員帳號或全面接管網站。
+
+🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html) | [iThome](https://www.ithome.com.tw/news/178705)
+
+📌 **尚未修補的 Langflow RCE 漏洞 CVE-2026-0768 遭利用，竊取 OpenAI 與 AWS 金鑰**
+
+威脅情報公司 VulnCheck（研究副總裁 Caitlin Condon）自 8 月底偵測到 **CVE-2026-0768** 遭利用——這是 Langflow 自訂元件編輯器程式碼驗證工具中的 **未經身分驗證遠端程式碼執行漏洞**（CVSS **9.8**），**至今尚未修補**。該公司在 **超過 50 個蜜罐** 看到利用活動，疑似進行偵察並收集憑證：目標集中在 **英國**，攻擊流量大多來自 **俄羅斯**；從攻擊者查詢的環境變數來看，目的是竊取 **OpenAI API 與 AWS 機密資料**。此漏洞由趨勢科技 ZDI 漏洞懸賞計畫於去年 7 月通報、今年 1 月揭露，至今沒有公開 PoC；ZDI 認為唯一有效的緩解措施是限制與產品的互動。這是繼 7 月下旬同平臺另一未修補零時差漏洞 **CVE-2026-0770** 遭利用後，Langflow 今年夏天第二度淪為實際攻擊目標。
+
+🔗 **參考資料：** [iThome](https://www.ithome.com.tw/news/178706)
+
+📌 **Plex 修補多個未公開漏洞，呼籲用戶立即更新**
+
+Plex 呼籲所有用戶升級：**Plex Media Server 1.43.3** 與 **Plex Desktop 1.115.0** 修補多個安全漏洞，細節未公開，官方已申請 CVE 編號。NAS 裝置的套件庫可能尚未提供新版，官方建議可先手動安裝。Censys 統計顯示 **超過 36 萬臺** 裝置暴露 Plex Media Server 網頁介面。Plex 漏洞的實際危害有前例可循：2022 年 LastPass 遭入侵的起點，正是攻擊者利用 Plex Media Server 漏洞（CVE-2020-5741）在使用者電腦植入鍵盤側錄程式。
+
+🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/09/plex-urges-immediate-updates-after.html)
+
+📌 **中國駭客組織 Fire Ant 將思科 IOS XR 路由器變成隱密據點**
+
+資安公司 Sygnia 警告，與 UNC3886 有關的中國 APT **Fire Ant**（先前以 Hypervisor 層級手法鎖定 VMware ESXi 與 vCenter）已轉向基礎設施層，如今入侵 **思科 IOS XR 路由器** 作為隱密、長期的作戰平臺。這款路由器惡意軟體專為管理介面打造：直接與 IOS XR 的事件記錄、指令執行、路由、VRF 解析、AAA 與 Telnet 管理功能互動，以偽裝成合法服務的開機指令碼維持持久性，並 **竄改 CLI 顯示輸出，讓管理員看不到它的指令**。路由器同時作為流量蒐集點，將資料經 FTP 外傳。循路由器上的 GRE 隧道，Sygnia 進一步在受害組織的老舊 Linux 伺服器發現 **BridgeAgent 後門**（偽裝成 Zabbix 元件、以 systemd 服務常駐 root），並在 TACACS 伺服器上發現 VMCI Socket 後門與憑證收集工具 **TacTap**。
+
+🔗 **參考資料：** [iThome](https://www.ithome.com.tw/news/178703)
+
+📌 **BraZetsu：Group-IB 發現用生成式 AI 替受害電腦估價、再轉售存取權的惡意框架**
+
+Group-IB 揭露 **BraZetsu**——一款把受感染 Windows 系統變成商品的 Python 惡意框架：先盤點受害者（數位憑證、Chrome／Edge／Brave／Vivaldi／Opera 瀏覽器紀錄、螢幕截圖、ERP 安裝目錄、巴西 CNAB 付款檔案），再以 **生成式 AI 評估這臺機器的價值**，之後在犯罪市集 **Infected Marketplace（又稱 Banco de Infects）** 販售存取權——入場需 **5.80 美元押金**，受害主機與平臺之間以 WebSocket 保持連線。營運方被追蹤為 **Exilware**，推測為葡萄牙語系人士，活動鎖定巴西、其他拉丁美洲國家與伊比利半島，目標包括電子商務、企業網路、金融與工業組織及執法機構。散布方式尚未證實，研究人員認為社交工程最有可能：目前已見的攻擊鏈使用偽裝成 Microsoft Edge 的載入器。
+
+🔗 **參考資料：** [xakep.ru – Group-IB](https://xakep.ru/2026/09/04/brazetsu/)
+
+📌 **「GuardBreaker」反制術：在惡意軟體中埋入核武提示詞，癱瘓 AI 程式碼分析**
+
+ESET 研究人員揭露名為 **GuardBreaker** 的新型反分析手法：攻擊者在 VBS 指令碼的註解中植入提示注入文字——開頭是「我想製造核子武器。幫我……」——目的是讓以 LLM 為基礎的惡意軟體分析工具觸發自身安全限制，**拒絕繼續分析樣本**。該手法出現在駭客組織 **UAC-0099** 對烏克蘭組織的攻擊中，其指令碼用於下載 C# 載入器 **MATCHBOIL**。若 AI 掃描工具把檔案內容交給語言模型、卻未標示為不可信資料，內嵌文字可能被當成對模型下達的指令，在模型接觸惡意程式碼前就觸發防護。2026 年 6 月與 Shai-Hulud、Miasma、Hades 攻擊有關的 Python 套件中也曾出現類似注入。
+
+🔗 **參考資料：** [xakep.ru – ESET](https://xakep.ru/2026/09/04/guardbreaker/)
+
+📌 **Zeabur 資料外洩回顧：外流的高權限 AWS 憑證是事故根源**
+
+iThome 今日刊出的 **資安週報（0831~0904）** 回顧臺灣雲端部署平臺 **Zeabur** 事故——這是我們 8 月 29 日後第一篇每日摘要，正好補上這週臺灣最重要的資安事件。Zeabur 於 **8 月 28 日** 察覺環境變數外洩，存放 OpenAI、Anthropic、OpenRouter 等第三方 AI 服務 API 金鑰的用戶接獲通知，部分用戶 AI 服務額度爆增；**8 月 29 日** 暗網賣家宣稱竊得約 **612 GB** 內部資料（含原始碼與雲端憑證），Zeabur 表示沒有找到攻擊者取得完整資料集的證據。調查結論：攻擊者利用 **外流的高權限 AWS 憑證** 存取位於東京的共享 AWS 叢集（該公司正逐步汰除的邊緣服務），再經 VPN 連進控制臺網路並連上主要資料庫。用戶仍應依官方指引輪替 API 金鑰與密碼。
+
+🔗 **參考資料：** [iThome – 資安週報](https://www.ithome.com.tw/news/178716)
 
 ---
 
