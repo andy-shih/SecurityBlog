@@ -10,12 +10,12 @@ Microsoft detailed a high-volume phishing campaign that abuses invisible Unicode
 
 ## What's in this package
 
-This demo ships a **static file sample — nothing executes**. The zip contains two folders:
+This demo ships a **static document sample — nothing executes**. The zip contains two folders:
 
 | Folder | Contents |
 |---|---|
-| `malicious/` | The attack sample — a static document whose **content** carries the malicious payload (e.g. an embedded prompt-injection instruction) |
-| `clean/` | The same content after MetaDefender processing — payload removed |
+| `malicious/` | The attack sample — a DOCX lure whose message text encodes the loan keyword with invisible Unicode TAG characters (U+E0000–U+E007F), one shadow per letter |
+| `clean/` | The same message after MetaDefender processing — shadow characters removed, keyword readable |
 
 Files in `malicious/`: `malicious-lure.docx`
 
@@ -35,18 +35,24 @@ unzip ai-phishing-ascii-smuggle-20260906.zip
 
 ### 2. Show the attack (malicious)
 
-- Open/inspect `malicious-lure.docx` — the malicious content (payload marker) is
-  embedded in the file's data; nothing executes.
+- Open `malicious/malicious-lure.docx` in Word or LibreOffice — it reads as a
+  normal funding-application lure (the TAG characters are invisible).
+- Verify the construct in the raw text:
+  `python3 -c "import zipfile; x=zipfile.ZipFile('malicious/malicious-lure.docx').read('word/document.xml').decode('utf-8'); print(sorted({hex(ord(c)) for c in x if 0xE0000<=ord(c)<=0xE007F}))"`
+  — the report shows the shadow characters `0xe0064/0xe0066/0xe0067/0xe0069/0xe006e/0xe0075`
+  (the letters d/f/g/i/n/u), and the contiguous plain word never appears.
 
-**Expected result:** the malicious content (e.g. the injection instruction) is present in
-the file; with **OPSWAT AI Content Inspector** in the pipeline, the file is flagged and blocked before it
-reaches the user or an LLM.
+**Expected result:** a lexical content filter that inspects the raw text never
+sees the contiguous keyword, exactly as in the campaign Microsoft documented;
+with **OPSWAT AI Content Inspector** in the pipeline, the lure content is inspected and flagged
+before it reaches the user or an LLM.
 
 ### 3. Show the protection (clean)
 
-- Open `clean-lure.docx` — no payload, sanitized content.
+- Open `clean/clean-lure.docx` — the same message with the shadow characters
+  removed: the keyword is present as plain, readable text.
 
-**Expected result:** the sanitized file is clean — no payload, nothing to flag.
+**Expected result:** the sanitized file is clean — no hidden construct, nothing to flag.
 
 ---
 
@@ -55,7 +61,7 @@ reaches the user or an LLM.
 | File | What you should observe |
 |---|---|
 | malicious files | malicious-lure.docx → open in Word/LibreOffice: the message reads as a funding-application lure, but raw text extraction/hex dump shows each letter of 'funding' paired with an invisible Unicode TAG shadow character (U+E0000–U+E007F) — the contiguous keyword never appears in the raw text (the 'ASCII smuggling' construct Microsoft documented); clean-lure.docx is the same message with the shadow characters removed |
-| clean files | no payload, sanitized content |
+| clean files | decoded plain-text message, no tag characters |
 
 > Behavior notes are verified by the QA suite on every build (see the QA checklist below).
 
@@ -63,16 +69,16 @@ reaches the user or an LLM.
 
 ## Safety
 
-- ✅ All payloads are **benign by construction**: static text/data samples — **nothing executes**.
-- ✅ No real malware, no network callbacks (any network reference targets `example.com` or loopback).
-
+- ✅ The sample is **benign by construction**: static document text — **nothing executes**.
+- ✅ No real malware, no macros, no external links, no network callbacks.
 
 ## QA checklist (verified on this build)
 
-- [x] `unzip -t ai-phishing-ascii-smuggle-20260906.zip` → no errors
-- [ ] malicious file carries the injection marker; clean file does not
-- [ ] no placeholder content in clean files
-- [ ] format magic bytes verified (PDF `%PDF`, ZIP `PK`, PNG `\x89PNG`, 7z `7z\xbc\xaf`, OOXML `PK`)
+- [x] `unzip -t ai-phishing-ascii-smuggle-20260906.zip` -> no errors (zip integrity)
+- [x] malicious docx carries the U+E0000–U+E007F tag-shadow construct (lure-keyword letters paired with invisible tag chars) - byte-verified by the QA suite on this build
+- [x] plain contiguous “funding” absent from the malicious docx raw text - verified by the QA suite on this build
+- [x] clean docx contains the decoded keyword and zero tag characters - verified by the QA suite on this build
+- [x] OOXML `PK` magic verified on both files
 
 ## How MetaDefender catches this
 
