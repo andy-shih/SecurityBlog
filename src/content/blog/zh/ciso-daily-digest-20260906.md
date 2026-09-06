@@ -2,7 +2,7 @@
 title: "CISO 每日摘要：Magento 零日漏洞「StyleSmuggler」在商店伺服器植入後門 (20260906)"
 description: "荷蘭資安公司 Sansec 警告駭客正在利用 StyleSmuggler——Magento Open Source 與 Adobe Commerce 尚未修補的未授權零日漏洞，即使商店已安裝最新修補仍會被植入後門；JetBrains 坦承自家 Cadence 雲端服務遭人以 TeamCity CVE-2026-63077 入侵並竊取 AWS 憑證；CERT Polska 示警 MikroTik RouterOS 可未經認證接管；Broadcom 修補 VMware Workstation／Fusion 的 CVE-2026-59346 與 CVE-2026-59347；Trezor 表示 ShipMonk 因 Metabase CVE-2026-72898 入侵事件再外洩 67,000 名美國客戶資料；Elastic 揭露 4 個與 REVSTEALER 相關的持久化模組，其中一個會停用 Windows Update 與 Defender 以執行挖礦程式。"
 pubDate: 2026-09-06
-tags: [CISO, 每日摘要, 資安, StyleSmuggler, Magento, Adobe-Commerce, 零日漏洞, JetBrains, TeamCity, CVE-2026-63077, MikroTik, RouterOS, VMware, CVE-2026-59346, Trezor, ShipMonk, CVE-2026-72898, REVSTEALER]
+tags: [CISO, 每日摘要, 資安, StyleSmuggler, Magento, Adobe-Commerce, 零日漏洞, Sansec, JetBrains, TeamCity, CVE-2026-63077, MikroTik, RouterOS, VMware, CVE-2026-59346, CVE-2026-59347, Trezor, ShipMonk, CVE-2026-72898, REVSTEALER, Elastic]
 author: "Security Solutions Team"
 featured: true
 ---
