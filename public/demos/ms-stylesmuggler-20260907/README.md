@@ -14,7 +14,7 @@ This demo ships a **static AV-test sample — nothing executes**. The zip contai
 
 | Folder | Contents |
 |---|---|
-| `malicious/` | EICAR test files standing in for the ransomware binary and staged payloads — no real malware |
+| `malicious/` | EICAR test files standing in for the malicious binary and staged payloads — no real malware |
 | `clean/` | The benign control file after MetaDefender processing — nothing hidden |
 
 Files in `malicious/`: `eicar.com`, `eicar.txt`, `eicar_demo.exe`, `malicious-eicar.zip`
@@ -35,9 +35,9 @@ unzip ms-stylesmuggler-20260907.zip
 
 ### 2. Show the attack (malicious)
 
-- Inspect `eicar.com` — a compiled sample embedding the EICAR test string (`strings eicar.com | grep EICAR`); if Wine is installed, running it only prints the EICAR string.
+- Inspect `eicar.com` — the classic 68-byte EICAR test file (raw text; the EICAR signature starts at offset 0); any AV engine flags it (ClamAV: `Eicar-Test-Signature`).
 - Inspect `eicar.txt` — it contains the exact EICAR test string (the industry-standard, harmless AV test file); any AV engine flags it (ClamAV: `Eicar-Test-Signature`).
-- Inspect `eicar_demo.exe` — a compiled sample embedding the EICAR test string (`strings eicar_demo.exe | grep EICAR`); if Wine is installed, running it only prints the EICAR string.
+- Inspect `eicar_demo.exe` — a compiled Windows PE embedding the EICAR test string (`strings eicar_demo.exe | grep EICAR`); if Wine is installed, running it only prints the EICAR string.
 - Inspect `malicious-eicar.zip` — a zip archive wrapping an EICAR test file; the marker is only visible after recursive unpacking (`unzip -l malicious-eicar.zip`, then scan the inner file).
 
 **Expected result:** a single-pass scan already flags the flat EICAR files; the
