@@ -39,8 +39,9 @@ unzip dlp-pii-idscan-20260908.zip
   embedded in the file's data; nothing executes.
 
 **Expected result:** the malicious content (payload marker) is present in
-the file; with **Proactive DLP** in the pipeline, the file is flagged and blocked before it
-reaches the user or an LLM.
+the file; with **Proactive DLP** in the pipeline, the file is flagged and blocked (or
+redacted) by policy before it reaches its destination — an inbox, an upload, a
+shared drive, or a processing pipeline.
 
 ### 3. Show the protection (clean)
 
@@ -72,7 +73,7 @@ reaches the user or an LLM.
 - [x] `unzip -t dlp-pii-idscan-20260908.zip` → no errors
 - [x] malicious file carries the attack payload marker; clean file does not
 - [x] no placeholder content in clean files
-- [x] format magic bytes verified (PDF `%PDF`, ZIP `PK`, PNG `PNG`, 7z `7z¼¯`, OOXML `PK`)
+- [x] format magic bytes verified (OOXML `PK`)
 
 ## How MetaDefender catches this
 
