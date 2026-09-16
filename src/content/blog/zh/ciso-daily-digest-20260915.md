@@ -55,7 +55,7 @@ featured: true
 🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/09/human-attacker-exploits-marimo-rce.html)
 
 📌 **泰國 3BB：入侵者以 MeshCentral 後門維持 root 權限，目標是訂戶資料**
-**Hunt.io** 從攻擊者遺留在網路上的一臺中繼伺服器（2026 年 6 月 3 日捕捉）還原了 **3BB**——泰國最大寬頻業者之一——的入侵事件。操作者把合法遠端管理工具 **MeshCentral** 安裝成隱藏後門，回報到 **www.ayuthayatech[.]com**、裝置群組名稱為 **TH-3BB**，多臺機器握有 **root** 權限；一支清理指令碼會抹除日誌與其他工具，卻刻意保留 MeshCentral 代理程式。攻擊者以 SSH 對 **55 臺以上內部電腦** 灑密碼、探測內部業務入口 **agent.3bb.co[.]th**，並在受害機器上搜尋儲存的密碼、資料庫帳密與 SSH 金鑰。指令碼的目標是複製該公司的 **RADIUS 資料庫**——顯示訂戶登入憑證庫是被鎖定的目標，但沒有資料已被取走的直接證據。同一臺伺服器還存有 3BB 系統簽發的有效 VPN 憑證與 **Jasmine** 網路的有效登入工作階段，研判可能存在第二個目標。初始入侵途徑尚未確認；工具包中最完整的是針對 **mail.3bb.co[.]th**、利用 **CVE-2024-21762** 的 **FortiGate SSL-VPN 攻擊工具**，但沒有證據顯示它成功得手。
+**Hunt.io** 從攻擊者遺留在網路上的一臺中繼伺服器（2026 年 6 月 3 日捕捉）還原了 **3BB**——泰國最大寬頻業者之一——的入侵事件。操作者把合法遠端管理工具 **MeshCentral** 安裝成隱藏後門，回報到 **www.ayuthayatech[.]com** 、裝置群組名稱為 **TH-3BB**，多臺機器握有 **root** 權限；一支清理指令碼會抹除日誌與其他工具，卻刻意保留 MeshCentral 代理程式。攻擊者以 SSH 對 **55 臺以上內部電腦** 灑密碼、探測內部業務入口 **agent.3bb.co[.]th** ，並在受害機器上搜尋儲存的密碼、資料庫帳密與 SSH 金鑰。指令碼的目標是複製該公司的 **RADIUS 資料庫**——顯示訂戶登入憑證庫是被鎖定的目標，但沒有資料已被取走的直接證據。同一臺伺服器還存有 3BB 系統簽發的有效 VPN 憑證與 **Jasmine** 網路的有效登入工作階段，研判可能存在第二個目標。初始入侵途徑尚未確認；工具包中最完整的是針對 **mail.3bb.co[.]th** 、利用 **CVE-2024-21762** 的 **FortiGate SSL-VPN 攻擊工具**，但沒有證據顯示它成功得手。
 🔗 **參考資料：** [The Hacker News](https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html)
 
 📌 **Acronis 修補 cPanel & WHM 備份外掛漏洞，坦言已遭利用、未公布 CVE 編號**
