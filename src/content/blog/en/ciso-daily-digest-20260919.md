@@ -1,60 +1,75 @@
 ---
-title: "CISO Daily Digest: Critical Auth Bypass in Cisco ISE and Check Point Firewalls (20260919)"
-description: "Three maximum-severity vulnerabilities pose immediate threat to identity infrastructure and firewall management: Cisco ISE CVE-2026-76460 (CVSS 10.0, in-the-wild exploitation), Check Point Security Management CVE-2026-91843 (CVSS 9.8, pre-auth RCE), and Linux kernel authentication flaws requiring federal emergency patching by September 19."
+title: "CISO Daily Digest: Claude Leads 26% of Anthropic's R&D as Researchers Breach OpenAI with AI (20260919)"
+description: "Anthropic disclosed that Claude now 'leads' 26% of the company's internal AI research and development work—up from under 1% in March, with ~30,000 agents on its main platform and one in 47,000 agent decisions blocked—as security researchers at Hacktron AI disclosed breaching OpenAI: using Claude Opus to develop exploits, they compromised ChatGPT accounts and reached OpenAI's internal GitHub monorepo via a libheif image-parsing heap buffer overflow on the Discourse-hosted community forum. Also: Transparent Tribe deploys a Rust backdoor using private GitHub repositories for command-and-control; WordPress Click2Shell flaw forces theme installs with code-execution chains; Cisco zero-day highlights API endpoint authentication gaps; and Boko Haram fighters leveraged ChatGPT, Gemini, and Grok for weapons planning per Cambridge research."
 pubDate: 2026-09-19
-tags: [vulnerability, ciso, threat-intel, cisco, check-point, linux, authentication, cve]
+tags: [Anthropic, Claude, Claude-Opus-5, OpenAI, Hacktron-AI, libheif, AI-R&D, Epoch-AI, AI-Governance, Transparent-Tribe, Rust-Backdoor, GitHub-C2, WordPress, Click2Shell, CVE, Cisco, API-Authentication, Boko-Haram, ChatGPT, Gemini, Grok, Weapons-Planning, CISO-Digest]
 author: "Security Solutions Team"
 featured: true
 ---
 
-## Critical Auth Bypass Threatens Enterprise Identity & Firewall Management
+## AI Leading AI: Claude Reaches 26% of Anthropic's R&D as White-Hat Researchers Breach OpenAI
 
-Three maximum-severity vulnerabilities affecting core enterprise security infrastructure are under active exploitation or weaponization, demanding immediate remediation:
+**Anthropic** disclosed on **September 17** that **Claude now "leads" 26% of the company's AI research and development work** — a first release from a set of measurements Anthropic argues frontier labs should publish so outsiders can track how fast AI is building its own successors. On the **Epoch AI** automation scale (AL0 = no AI involvement, AL5 = fully autonomous), a quarter of measured R&D work now sits at **AL4 ("leads")**, where the model carries most of a task from a high-level prompt while a human supervises; the share at or above **"collaborates" (AL3) exceeds 90%**; the leading share was **below 1% in March** — a six-month doubling trajectory — and **no measured subset is fully autonomous**. The same announcement reports **~30,000 agents** performing research and engineering work on Anthropic's main internal platform in August; of **more than a billion agent decisions** that month, approximately **one in 47,000 (0.002%) was blocked** by monitors before execution, and roughly **one to two transcripts per thousand** are flagged for further human review; in a sampled week in July, **about 6% of AI R&D compute went to safety work — rising to 12% for work carried out by AI itself**. The disclosure lands amid high-stakes policy debate: **CEO Dario Amodei** had called for frontier labs to coordinate on slowing down, a researcher resigned accusing the industry of "gambling with our lives," and **OpenAI** began its own model-behavior reporting the day before Anthropic's announcement.
 
-**CVE-2026-76460: Cisco ISE Unauthenticated Authentication Bypass (CVSS 10.0)**
+The same week, the offensive boundary of the same equation surfaced. Security startup **Hacktron AI** disclosed that it **breached OpenAI**, compromising **ChatGPT accounts belonging to OpenAI staff** and reaching the company's **internal GitHub monorepo** — an operation it reported to **OpenAI and Discourse in July** under OpenAI's ethical-hacking program. The entry point was **community.openai.com**, OpenAI's Discourse-hosted forum: **HEIC/HEIF images uploaded there** were processed through **ImageMagick** and decoded by **libheif**, whose version in that environment contained a **heap buffer overflow** exploitable to **remote code execution**. The researchers say **Claude Opus 4.8** helped develop the exploit, the newly released **Claude Opus 5** made it work reliably against **address-space layout randomization (ASLR)**, and **OpenAI's own GPT-5.6 Sol** was used for much of the operation; **The Wall Street Journal** described a path to **read and propose changes to private OpenAI software**. **Hacktron did not download source code** — it demonstrated reach with a **harmless pull request** in the internal monorepo — and describes the "scope of what we could theoretically access" as **huge**; the team also claims its libheif research extended to other major platforms. **OpenAI thanked the researchers and said the vulnerabilities were patched**.
 
-Cisco Identity Services Engine (ISE) and ISE Passive Identity Connector suffer a critical API endpoint authentication flaw allowing unauthenticated remote attackers to bypass web-based management access and gain root-level command execution. Cisco released patches on September 16, with no workarounds available. CISA's Known Exploited Vulnerabilities catalog lists a federal remediation deadline of September 19, 2026. Active exploitation is confirmed in the wild.
+### Why This Reshapes Frontier AI Security and Disclosure
 
-**CVE-2026-91843: Check Point Security Management Pre-Auth RCE (CVSS 9.8)**
+- **Recursive self-improvement now has a public scoreboard.** "26% led / above 90% collaborating" is a concrete trajectory — sub-1% to a quarter in six months — on a third-party scale (Epoch AI), paired with oversight numbers (one in 47,000 decisions blocked, one to two flagged per thousand transcripts) that describe what "agent governance" looks like in practice at the frontier. Expect these figures to become the template enterprises cite when asking AI vendors to disclose comparable metrics — and for regulators to demand the same.
+- **AI changed the economics of exploitation.** A memory-corruption bug in a third-party image parser (**libheif**) became an account-takeover chain that reached a major AI company's developer infrastructure — chaining vulnerable dependencies, federated identity (Discourse accounts), and AI coding tools. Exploit development that historically required scarce specialists was carried substantially by models that can write and iterate exploit code — meaning the expertise barrier to sophisticated attacks is collapsing.
+- **Agent-connected developer accounts are a top-tier boundary.** The breach route ran from compromised ChatGPT accounts into **Codex** and a code repository — the same pattern enterprises are scaling now that agents hold standing access to repositories, CI systems, and cloud. Standing agent access increasingly warrants its own inventory and minimization, separate from traditional code-review and secret-rotation controls.
+- **Patch velocity outpaces attacker patience, but only marginally.** The same day's queue — **CVE-2026-19598 (Pods, CVSS 9.8)** from Wednesday, WordPress Click2Shell forcing theme installation, Cisco API endpoint flaws, and Boko Haram actors using ChatGPT and Grok — reflects the disclosure surge that AI-assisted review is accelerating. Yet CISA's analysis of 2024–2025 data found the number of vulnerabilities **actually exploited grew only marginally** even as disclosures soared.
 
-A stack-based buffer overflow in Check Point Security Management, Multi-Domain Management, and Log Servers (R80.x–R82.x) permits unauthenticated remote code execution with root privileges. The vulnerability resides in the unauthenticated pre-authentication management login service listening on TCP 18190/19009. An attacker sending an oversized username payload can overwrite the instruction pointer and execute arbitrary commands. Impacts all versions from R80.x through R82.20; end-of-support branches (R81.10, R80.x) require immediate decommissioning. Check Point deployed hotfixes via automated LivePatch (sk175504) on September 20.
-
-**Linux Kernel Authentication Flaws Trigger Federal Emergency Patch Orders**
-
-CISA flags three actively exploited Linux kernel flaws and orders federal civilian executive branch agencies to patch by September 19 (effective 2026-09-19). Scope and CVE details available in CISA's BOD 26-04 public alert.
-
-### Why This Reshapes Enterprise Security Posture
-
-These vulnerabilities target the administrative backbone of enterprise networks. Cisco ISE compromise grants full identity policy manipulation (VPN trust stores, MFA bypass, administrative credential exfiltration). Check Point management server breach exposes all distributed firewall policies, VPN root keys, and lateral access to thousands of enforcement points downstream. Linux kernel flaws on identity and gateway hosts break authentication primitives at the OS level. The three-vulnerability convergence creates a critical window where an attacker can bypass identity controls, compromise the security management plane, and laterally propagate across the entire perimeter. Federal agencies face a 48-hour deadline; enterprises should treat this as equivalent.
-
-🔗 **Reference:** Coverage from ([Cisco Security Advisory](https://www.cisco.com/site/us/en/security/cve-2026-76460/), [CISA KEV Catalog](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json), [Check Point CIVN-2026-0465](https://cybersecuretoday.com/article/check-point-security-management-root-rce-cve-2026-91843), [Tech Times Reporting](https://www.techtimes.com/articles/327741/20260919/cisa-flags-three-actively-exploited-linux-kernel-flaws-orders-federal-patch-sunday.htm))
+🔗 **Reference:** ([Reuters](https://www.reuters.com/business/anthropic-says-claude-now-leads-quarter-work-building-its-next-ai-models-2026-09-17), [Wall Street Journal](https://www.wsj.com/tech/ai/hackers-used-anthropics-claude-to-break-into-openai-b40ba883), [The Guardian](https://www.theguardian.com/technology/2026/sep/18/openai-hacked-anthropic-claude-chatbot), [VentureBeat](https://venturebeat.com/security/openai-hacked-by-small-team-of-white-hat-security-researchers-using-anthropics-claude-opus-5), [Anthropic](https://www.anthropic.com/institute/measuring-pace-of-ai-development))
 
 ---
 
 ## Active Threats This Week
 
-📌 **Docker Desktop Sandbox Escape CVE-2026-77179 (CVSS 9.4)**
+📌 **Transparent Tribe Deploys Rust Backdoor Using Private GitHub Repositories for Command-and-Control**
 
-Docker hypervisor flaw on macOS permits container-to-host escape with complete host filesystem access via three bash commands. Affects Docker Desktop with VMM enabled (scheduled to become default in October 2026). Fixed in Docker Desktop 4.88.0 and Docker Sandboxes 0.42.0 (September 7 release). Organizations running Docker for development should verify upgrade status immediately.
+**Transparent Tribe**, a Pakistan-linked APT group targeting Indian government and defense entities, has begun deploying a **modular Rust backdoor** that **uses private GitHub repositories as its command-and-control (C2) channel** instead of traditional infrastructure. This technique isolates the C2 traffic within GitHub's infrastructure, making detection via network perimeter monitoring difficult. The backdoor is delivered via spear-phishing attachments, establishes persistence, and communicates with the threat actor via custom GitHub API calls to exfiltrate data and receive commands. The shift to GitHub C2 reflects a broader trend of APTs using legitimate cloud services to hide malicious traffic.
 
-🔗 **Reference:** [Accomplish Blog: Docker Sandbox Escape](https://accomplish.ai/blog/escaping-dockers-hypervisor/)
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/09/transparent-tribe-deploys-new-rust.html)
+
+📌 **WordPress Click2Shell Flaw Forces Theme Installation, Can Chain to Code Execution**
+
+A **critical flaw in a WordPress security plugin** allows attackers to **force installation of arbitrary WordPress themes** with no user action, which can then chain to **remote code execution** depending on the theme's contents. The vulnerability is **unauthenticated and remotely exploitable**, and affects sites with certain automatic-update configurations. Wordfence released a signature this week; site operators should review their active theme list and ensure unintended themes have been removed.
+
+🔗 **Reference:** [The Hacker News](https://thehackernews.com/2026/09/new-wordpress-click2shell-flaw-forces.html)
+
+📌 **Cisco Zero-Day Highlights API Endpoint Authentication Issues as Firms Rush Patch Velocity**
+
+**Cisco** disclosed a **zero-day vulnerability in its API endpoints** affecting several products, stemming from **inconsistent authentication enforcement** — a flaw similar in pattern to the **WPMU DEV Dashboard HMAC bypass (CVE-2026-76581)** disclosed earlier this week. The issue underscores how modern cloud and API-first architectures face recurring authentication-redesign vulnerabilities as developers scale endpoints without centralizing identity gates.
+
+🔗 **Reference:** [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/cisco-zero-day-api-endpoint-authentication-issues)
+
+📌 **Boko Haram Fighters Leveraged ChatGPT, Gemini, and Grok for Weapons and Tactical Planning—Cambridge Study**
+
+A **University of Cambridge research** team found that **members of Boko Haram and affiliated jihadist groups** had used **ChatGPT, Google Gemini, and xAI's Grok** to research weapons, plan attacks, and refine operational security practices. Researchers recovered chat logs showing queries for explosive construction, drone assembly, and counter-surveillance techniques. The findings highlight that **large foundation models are now integral to threat-actor workflows** — lowering barriers to entry for non-state actors and enabling smaller groups to scale operations. Major model vendors have since updated usage policies to restrict such access, but enforcement relies on user-reported abuse and post-hoc monitoring.
+
+🔗 **Reference:** [SCMP](https://www.scmp.com/news/us/article/3360585/boko-haram-exploited-us-and-chinese-ai-chatbots-attacks-cambridge-study-finds)
+
+📌 **MFA Won't Save You From OAuth Consent Abuse**
+
+Security researchers detailed a class of attacks where attackers **bypass multi-factor authentication (MFA) by exploiting OAuth consent flows** — users grant broad permissions to third-party applications thinking they're logging in securely, but the application gains persistent access to email, cloud storage, and other resources. The attack is particularly effective against organizational SSO where MFA is at the identity provider, not the service-provider. Enterprises should review OAuth app permissions regularly and enforce scope minimization.
+
+🔗 **Reference:** [Dark Reading](https://www.darkreading.com/vulnerabilities-threats/mfa-oauth-consent-abuse)
+
+📌 **EY Survey Finds Autonomous AI Implementation Outpaces Oversight and Governance**
+
+**Ernst & Young** surveyed enterprise AI adoption and found that **deployment of autonomous AI agents is accelerating far faster than governance frameworks**. Only **~30% of surveyed firms reported having formal policies** for AI agent monitoring, decision logging, or containment — a gap Anthropic's own data (26% of work led by AI, minimal blocking) reflects. The survey recommends adopting agent-specific controls: capability boundaries, request logging, sandboxing, and escalation workflows for high-stakes decisions.
+
+🔗 **Reference:** [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/ey-survey-autonomous-ai-implementation-outpaces-oversight)
+
+📌 **Vectra AI Launches Ascent Platform to Counter AI-Driven Attacks**
+
+**Vectra AI** released **Ascent**, a security operations platform designed specifically to detect and respond to attacks **carried out or assisted by AI agents and LLMs** — including adversarial prompt injection, data exfiltration via model outputs, and anomalous agent behavior. The platform integrates with existing SIEM systems and includes pre-built detections for generative-AI-specific attack patterns.
+
+🔗 **Reference:** [Dark Reading](https://www.darkreading.com/cyberattacks-data-breaches/vectra-ai-launches-ascent-new-era-ai-driven-attacks)
 
 ---
 
-📌 **Claude Opus 5 Memory Defense Bypass & Code Repository Access**
+## How Can OPSWAT Help
 
-A vulnerability in Anthropic's Claude Opus 5 model allowed bypassing memory defense mechanisms and accessing OpenAI's private code repository. The attack was discovered hours after exploitation began. Incident details remain under coordinated disclosure; context windows and prompt-injection vectors suggest large-context-model supply-chain risks. Implications for enterprise AI integration warrant immediate policy review before adopting Claude-based agents in production systems.
-
-🔗 **Reference:** [TechTimes Reporting](https://www.techtimes.com/articles/327748/20260919/claude-opus-5-hacked-openais-private-code-repo-memory-defense-bypassed-hours.htm)
-
----
-
-## How OPSWAT Can Help
-
-Cisco ISE compromise, Check Point management server breach, and Linux kernel exploitation all involve file-based artifacts: malicious authentication bypass payloads, firmware modifications on management appliances, and kernel module injection. **OPSWAT MetaDefender** multi-scan technology can:
-
-- **Pre-trust scanning:** Scan administration appliance backup/restore files for embedded compromises before deployment
-- **File-based supply chain defense:** Multi-engine scanning of Linux kernel packages, Docker images, and configuration backups prevents supply-chain-borne attacks
-- **Content Disarm & Reconstruction (CDR):** Sanitize authentication logs and configuration dumps before feeding to SIEM systems (prevents log poisoning attacks)
-
-For organizations with federal contracts, MetaDefender's multi-scan + CDR combination satisfies zero-trust and supply-chain resilience requirements under NIST SP 800-56C and CISA BOD 26-04 equivalents.
+Today's attack surface spans **files users trust and AI agents users authorize**. Hacktron's breach chain began with **malicious HEIC/HEIF images uploaded to OpenAI's forum** and was developed using AI coding assistants; **Boko Haram actors leverage generative AI** for operational planning; **WordPress Click2Shell forces theme installation** and chains to RCE; and **GitHub repositories now host adversary C2 channels**. **MetaDefender Multi-Scan** layers **30+ anti-malware engines** over images, plugins, and installers entering via email, web, and file-share; **MetaDefender CDR** rebuilds malformed media and archives, stripping active content and parser-exploiting structures; **MetaDefender Kiosk** screens files at **removable media and OT boundaries**, catching both known malware and anomalous behaviors — critical when AI assistants are drafting code and security teams are racing to patch at scale.
