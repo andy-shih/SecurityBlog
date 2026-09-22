@@ -1,37 +1,59 @@
 ---
-title: "CISO Daily Digest: 方法一：把 ChatGPT、Claude 目前所認識的「我」整理出來 - iT 邦幫忙 (20260922)"
-description: "Security briefing for 2026-09-22 covering 46 key articles."
+title: "CISO Daily Digest: Anthropic & Accenture's $2B AI Safety Partnership (20260922)"
+description: "Anthropic and Accenture commit $1B each to embedded evaluators for AI model safety; NightmareStresser DDoS-for-hire platform seized by FBI/DOJ; TASK#STOMP backdoor steals credentials and clipboard data."
 pubDate: 2026-09-22
-tags: [security, threat-intel, ciso, governance]
+tags: [AI Safety, Embedded Evaluation, DDoS Takedown, Malware, Threat Intelligence]
 author: "Security Solutions Team"
 featured: true
 ---
 
-## 方法一：把 ChatGPT、Claude 目前所認識的「我」整理出來 - iT 邦幫忙
+## Anthropic & Accenture Establish $2B Embedded AI Evaluator Partnership
 
-### Why This Matters
+Anthropic and Accenture announced a landmark partnership on September 18, 2026, committing $1 billion each over the next five years to establish **embedded evaluators** within Anthropic. This initiative addresses a critical governance challenge: independent oversight of frontier AI models during development. Embedded evaluators—working inside the company with near-employee access—will evaluate models, conduct red-teaming, assess alignment, and test safeguards, then report findings to the public.
 
-A critical development shaping security strategy and organizational threat response.
+Accenture's embedded team will leverage expertise from **Faculty**, an acquired applied AI company specializing in safety evaluation for governments, defense, healthcare, and critical infrastructure (including the UK NHS Early Warning System during COVID-19). The partnership reflects an emerging consensus in AI governance: safety requires independent technical auditing _during_ model training and deployment, not post-hoc assessment.
 
-🔗 **Reference:** [方法一：把 ChatGPT、Claude 目前所認識的「我」整理出來 - iT 邦幫忙...](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9RRUhKWFh3U3N1bERxcVpGVVR4N1BQNHd4UUFvUkVVSFRhRmNFNjA3dHlOa0Jac1VvYi1SRHdoZnhOTks3NFlPRjU3S2s3OTZ4b2xPVGl3ZEFJanZ0QVYyZ01NR1huaXc?oc=5)
+### Why This Reshapes AI Safety Governance
+
+- **Verification of safety commitments.** Embedded evaluators with routine internal access can verify that companies keep safety promises, identify blind spots, and detect incidents in real time—addressing the "we'll trust you" model that currently dominates.
+- **Supply-chain AI trust.** As enterprises embed AI into critical workflows (customer service, code generation, infrastructure management), they will increasingly demand independent assurance of model behavior. Anthropic's move signals this demand is becoming material.
+- **Funding precedent.** Both companies direct-fund this work for now; longer-term, Anthropic advocates for pooled or government funding (as outlined in its June Advanced AI Framework). The partnership demonstrates that industry funding bootstraps this ecosystem until policy catches up.
+- **Competitor signal.** OpenAI and Meta have not announced embedded evaluator programs; this move gives Anthropic credibility with enterprise customers and policymakers concerned about AI governance gaps.
+
+🔗 **Reference:** Coverage from ([Anthropic](https://www.anthropic.com/news/accenture-embedded-evaluation), [Accenture Newsroom](https://newsroom.accenture.com/news/2026/accenture-and-anthropic-partner-to-build-team-of-embedded-evaluators-at-anthropic))
 
 ---
 
 ## Active Threats This Week
 
-📌 **Cybercriminals Are Hiding New Malware in Torrents for Popular Films**
+📌 **NightmareStresser DDoS-for-Hire Platform Seized by FBI, DOJ, RCMP**
 
-🔗 **Reference:** [Cybercriminals Are Hiding New Malware in...](https://www.darkreading.com/cyberattacks-data-breaches/cybercriminals-hiding-new-malware-torrents-popular-films)
+The FBI and Department of Justice (supported by the Royal Canadian Mounted Police) seized **nightmare-stresser.com** and **nightmarestresser.org** on September 15, 2026, dismantling one of the world's longest-running distributed denial-of-service (DDoS)-for-hire platforms. Since 2022, NightmareStresser was used to launch hundreds of thousands of actual or attempted DDoS attacks against victims globally, including educational institutions, government agencies, gaming platforms, and critical infrastructure. The platform boasted **566,000+ registered users** and operated 52 dedicated servers capable of attacks up to 200 Gbps across Layer 4 (TCP/UDP) and Layer 7 (application) protocols.
 
-📌 **ShinyHunters Hacked Clop. Now What About Clop's Victims?**
+The takedown is part of **Operation PowerOFF**, a coordinated law enforcement initiative targeting criminal DDoS-for-hire infrastructure worldwide. Victims impacted sectors spanned multiple geographies; some attacks "significantly degraded internet services and completely disrupted internet connections."
 
-🔗 **Reference:** [ShinyHunters Hacked Clop. Now What About...](https://www.darkreading.com/cyberattacks-data-breaches/shinyhunters-hacked-clop-what-about-clops-victims)
+🔗 **Reference:** ([The Hacker News](https://thehackernews.com/2026/09/us-seizes-nightmarestresser-domains.html), [Abijita](https://abijita.com/fbi-seizes-nightmarestresser-domains-linked-to-thousands-of-ddos-attacks))
 
-📌 **[Virtual Event] Cybersecurity Outlook 2027**
+---
 
-🔗 **Reference:** [[Virtual Event] Cybersecurity Outlook 20...](https://www.darkreading.com/events/virtual-event-cybersecurity-outlook-2027)
+📌 **TASK#STOMP PowerShell Backdoor Steals Documents, Passwords, Clipboard Data**
 
-📌 **OpenAI Develops Features To Counter Grok Bot, Mulls Response To Meta's Muse - The Information - TradingView**
+Security researchers identified **TASK#STOMP**, a malicious PowerShell backdoor deployed to steal documents, Wi-Fi passwords, and clipboard data from compromised endpoints. The backdoor represents a resurging threat vector: leveraging native Windows scripting (PowerShell) to avoid detection and establish persistent access. Attack chains embedding TASK#STOMP typically arrive via phishing or supply-chain compromise, allowing attackers to harvest credentials for lateral movement and deploy secondary payloads.
 
-🔗 **Reference:** [OpenAI Develops Features To Counter Grok...](https://news.google.com/rss/articles/CBMi8gFBVV95cUxQSHUtVTBmb2Ftb3RnQUIyRnpONE9ZQWFEVHNvTzhxckpRSE9ZZTA5Yl8zLTdBb3pQcHY5M2tiZHZfUGR4SklVR0pLeGdqMkRfdl9kTEpmV2ZGa3VPQ2p2U3ROaDIxV3IwanpUTXRlRzczOWdEbkxXZjVPczg3bWVEalo4TTlaTlZHUTNncXdaMTRpQW0wWGROVnY2TjVjMFNXd2syVi1YQ0dSeXdNeUNQU2ZoOGlNNHdXWTk4clJaQXBYLWdZZjliSVFNWVBvdG9mdGtQRXZkaXJqNFpuc3RuWXl1MVZKVEEtVkpkb1FBMk9Fdw?oc=5)
+🔗 **Reference:** ([The Hacker News](https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html))
 
+---
+
+📌 **Claude Code Adopts OpenAI's AGENTS.md Standard**
+
+Anthropic's Claude Code platform now natively supports **AGENTS.md**, an open format for documenting coding agent instructions. This format, originally developed by OpenAI and the broader AI agent community, standardizes how codebases communicate requirements to AI agents via markdown files. The adoption signals interoperability between Claude Code and other AI coding tools, reducing vendor lock-in and enabling developers to document agent behavior in a portable format.
+
+🔗 **Reference:** ([Anthropic/Infoworld](https://www.infoworld.com/article/3713000/claude-code-now-accepts-instructions-in-openai-s-agents-md-format.html))
+
+---
+
+## How Can OPSWAT Help
+
+Embedded evaluators rely on threat modeling and vulnerability assessment of AI inference pipelines. OPSWAT's **MetaDefender Multi-Scan** can audit supply-chain security for AI model artifacts (checkpoints, ONNX files, containerized inference servers) by scanning for embedded backdoors, supply-chain malware, and policy violations before deployment—complementing Anthropic and Accenture's human evaluators with automated baseline scanning.
+
+For organizations adopting Claude Code or other AI agents, **MetaDefender CDR (Content Disarm & Reconstruction)** sanitizes user-uploaded files and prompts before they reach the agent, preventing document-borne exploits and injection attacks.
