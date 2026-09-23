@@ -16,6 +16,13 @@ const date = post.data.pubDate.toLocaleDateString('en', {
   day: 'numeric'
 });
 const href = `/${lang}/blog/${getPostSlug(post)}/`;
+
+// Auto-fill short descriptions with body excerpt
+const bodyText = post.body || '';
+const bodyExcerpt = bodyText.slice(0, 180).replace(/\n/g, ' ').trim();
+const displayDescription = post.data.description.length > 150 
+  ? post.data.description 
+  : post.data.description + (post.data.description && bodyExcerpt ? ' ' : '') + bodyExcerpt + '…';
 ---
 
 <article
@@ -31,7 +38,7 @@ const href = `/${lang}/blog/${getPostSlug(post)}/`;
     <h2 class="text-xl font-semibold leading-tight text-white group-hover:text-sky-200">
       <a href={href}>{post.data.title}</a>
     </h2>
-    <p class="text-sm leading-7 text-slate-300">{post.data.description}</p>
+    <p class="text-sm leading-7 text-slate-300">{displayDescription}</p>
   </div>
   <div class="flex flex-wrap gap-2">
     {post.data.tags.map((tag) => (
