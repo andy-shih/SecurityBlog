@@ -1,81 +1,63 @@
 ---
-title: "2026年10月7日 CISO每日資安通報"
-description: "勒索軟體集團被端、Snowflake攻擊判決、ClickFix進化為本週威脅焦點，AI供應鏈風險與關鍵漏洞修補同時拉響警報。"
+title: "CISO 每日摘要：丹麥人口登記系統遭入侵 880萬筆個資外洩 (20261007)"
+description: "丹麥880萬筆個資外洩、KillSec勒索集團16歲首腦、FBI與Accenture供應鏈風險、大阪公立大學勒索、荷蘭漏洞組織Zammad攻擊、台灣104履歷外流。"
 pubDate: 2026-10-07
-tags: ["ransomware","clickfix","ai-security","supply-chain","vuln-patch","snowflake","iot-proxy","zero-day","cloud-security","identity-hijack"]
+tags: ["ransomware","data-breach","supply-chain","zero-day","asia","identity"]
 author: "Security Solutions Team"
 featured: true
 ---
 
-## 國際執法瓦解KillSec勒索軟體集團，16歲疑為管理員
+## 丹麥人口登記系統遭入侵 880萬筆個資外洩
 
-國際執法機構執行KillSwitch行動瓦解KillSec勒索軟體集團，於西班牙、羅馬尼亞及英國逮捕三名嫌犯，其中一名16歲的疑似管理人員被捕，另一名成員在犯罪期間已屆成年。
+丹麥人口登記系統遭入侵，880萬筆個資外洩。 攻擊目標為國家身份基礎設施，歐洲大規模資料外洩事件。
 
-調查人員在西班牙扣押電腦、手機及加密貨幣錢包，並鎖定贖金支付交易跡象； 警方在四國執行八次搜查，攔截KillSec暗網洩漏網站與五台關鍵伺服器。
+本次攻擊凸顯政府身份系統儲存敏感資料的風險，CISO應立即評估暴露範圍與憑據旋轉時效性。
 
-當局保護至少110TB受害者資料免受進一步未授權存取。 本次行動涵蓋全球約1,000起KillSec攻擊事件，開發者於2026年8月滿18歲，部分犯罪行為發生時仍為未成年； 協商代表與合作夥伴身分亦被查明，警方持續追訴其他嫌犯。
+儲存國民身份資料的組織必須優先權限控制、加密與入侵偵測，本次事件引發歐盟監管義務。
 
-### CISO應採取之行動
+### CISO 三項立即行動
 
-- **立即修補未更新系統 —** 立即檢視並修補PeopleSoft及其他未修補系統，未修補漏洞仍是勒索軟體與資料外洩的主要入侵管道。
-- **優先處理關鍵供應鏈漏洞 —** 請即刻更新所有影響的系統與瀏覽器，JPCERT週報確認多項嚴重漏洞正遭主動利用。
-- **評估AI供應鏈風險 —** 評估AI供應鏈風險並驗證AI開發工具的安全控制，Agent攻擊與工作流程身分劫持構成新興威脅向量。
+- **審查身份基礎設施存取記錄 —** 審查所有身份基礎設施存取記錄，強制特權帳戶憑據旋轉。
+- **驗證備份完整性 —** 驗證備份完整性、測試還原程序，並立即檢討勒索溝通應變流程。
+- **審查廠商修補SLA —** 審查廠商修補SLA，與第三方服務供應商簽署合約修補時效。
 
-**參考來源:** [Лидером вымогательской группы KillSec оказался 16-летний подросток](<https://xakep.ru/2026/10/06/killsec-down/>)
+**參考來源:** [丹麥人口登記系統遭駭，880萬人資料外洩 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1lbjU0cnRpZ2hJSjJDZW1qYkkwY3l3ZmJpM3ZxSklIdDgzVng0XzQxdXFqQy1wZndKbDJJZGlRN0E3djBkSnJDTUFiNXhMdw?oc=5>)
 
 ---
 
 ## 本週活躍威脅
-📌 **前美軍士兵因Snowflake攻擊被判70個月監禁**
+📌 **KillSec勒索集團首腦為16歲少年**
 
-卡麥隆·維根尼亞斯因Snowflake客戶攻擊被判70個月監禁，2023至2024年影響165家以上組織包括AT&T，數億用戶資料外洩，凸顯憑證與雲端存取控制至關重要。
+KillSec勒索集團首腦為16歲少年；國際執法行動沒收110TB受害者資料橫跨10國。
 
-**參考來源:** [Американский военный получил 70 месяцев тюрьмы за атаки на AT&T, Verizon и другие компании](<https://xakep.ru/2026/10/06/wagenius-sentenced/>)
+**參考來源:** [Лидером вымогательской группы KillSec оказался 16-летний подросток](<https://xakep.ru/2026/10/06/killsec-down/>)
 
-📌 **傳FBI因PeopleSoft漏洞疑慮終止與Accenture合約**
+📌 **FBI因ShinyHunters利用未修補PeopleSoft漏洞終止Accenture合約**
 
-據報FBI因PeopleSoft未修補漏洞導致ShinyHunters入侵，終止與Accenture合約，凸顯政府承包商風險，組織必須強化第三方服務的及時修補機制。
+FBI因ShinyHunters利用未修補PeopleSoft漏洞終止Accenture合約，第三方修補責任缺口曝光。
 
 **參考來源:** [FBI傳與Accenture解約，疑因未修補PeopleSoft漏洞造成ShinyHunters入侵 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBmRHBPOTlocDZDbDdUTU05UnZINnlkaWpCQ1M4RDRZYTBjN3hmT01SbElTczhYOHZKY2tNSnBIWFZtVlBOaTZvSnZFOWludw?oc=5>)
 
-📌 **ClickFix進化 DNS TXT與快取隱藏惡意載荷**
+📌 **大阪公立大學勒索攻擊停課**
 
-ClickFix攻擊現利用DNS TXT記錄與瀏覽器快取預取隱藏惡意載荷，逃避偵測，資安團隊應更新釣魚偵測規則並強化使用者安全意識教育。
+大阪公立大學遭勒索攻擊被迫停課；學生記錄、行政作業與秋季課程均受影響。
 
-**參考來源:** [ClickFix Attacks Evolve to Better Hide Malicious Payloads](<https://www.darkreading.com/cyberattacks-data-breaches/clickfix-attacks-evolve-better-hide-malicious-payloads>)
+**參考來源:** [日本大阪公立大學傳出遭勒索軟體攻擊而被迫停課 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFB5RkF4M1NJRkItUThrNl9Qc1Nhb0h6ZkRhNUgweFIwUVJUNnRMQklGSGFWRDlXWml6OHZfNFF6S0ctWUhKZzdDVVlESTVDQQ?oc=5>)
 
-📌 **美國國防部叫停Anthropic AI 供應鏈風險裁定**
+📌 **荷蘭漏洞揭露協會遭Zammad零時差攻擊**
 
-美國國防部因供應鏈風險裁定而停止使用Anthropic AI，凸顯AI供應商信任與資料處理面臨更嚴格審查，企業導入AI服務前應完整評估供應鏈風險。
-
-**參考來源:** [DOD Halts Use of Anthropic AI After Court Upholds Supply Chain Risk Designation - MeriTalk](<https://news.google.com/rss/articles/CBMitAFBVV95cUxOUGF5V3Q1a2o1bVVxRUUwUU91dHFxR09VbU41aXZ0NFZDSDRkdzV3cU40VV8xanVqSGtCZ2JDOWVJdnN5dWhZZXpqRGtJUFUteGxkYlc1cXRsNlFqY1hvV25BcjRIUGlXZmdYbTdJamlrcW0zUnpZc2stLTFFbGUyV21UdEV6NjdQYnFwa0VwV3FqcXZrelhkOW1KWksxa3ZVa2hDRlNZZlpWdFQ0RkdJNGJIT0w?oc=5>)
-
-📌 **ClingSTUN Linux後門 利用24個漏洞改造IoT為代理節點**
-
-ClingSTUN Linux後門利用24個已知漏洞入侵IoT裝置，通過合法公開STUN伺服器轉發惡意通訊以避開偵測，組織應即刻修補系統並全面清點所有暴露IoT資產。
-
-**參考來源:** [Linux後門ClingSTUN利用公開STUN服務，惡意通訊更難辨識 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE0xbU9WdE9MMGtnektrNl9mN2RQRHVJWmVaNnY3LVlDMDNaeU5KUnhBWEdaYnRwMmc2Z25iNkJUTy0yS1c2cXFoX1NmTVJsUQ?oc=5>)
-
-📌 **荷蘭漏洞揭露機構遭AI自主攻擊 Zammad零時差漏洞**
-
-荷蘭漏洞揭露機構透過Zammad客服系統零時差漏洞遭AI自主攻擊，顯示公開支援平台面臨自動化威脅，組織應強化對外服務安防與即時威脅監控機制。
+荷蘭漏洞揭露協會遭Zammad零時差漏洞攻擊；攻擊者透過開源IT服務平台取得初始存取。
 
 **參考來源:** [荷蘭漏洞揭露協會遭AI自主攻擊，攻擊者利用開源IT服務與客服系統Zammad零時差漏洞得到初期存取管道 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE16Q0NIMnhNbUU5Tk81WW0ycjdOcW9QSWhNaTZMVXRqV24zTlVLOWJnUk9leVhzX1RyaFdWOVp0elRfemVLTHRiLU9NUFJJZw?oc=5>)
 
-📌 **Google PageBreak AI發現500多項XSS漏洞**
+📌 **台灣104萬筆履歷個資外流風險**
 
-Google PageBreak AI代理在內部網頁應用程式自動發現500多項XSS漏洞，以確定性驗證降低偽陽性結果，顯示AI輔助漏洞探索已邁入實用階段，企業可參考。
+台灣104資訊系統異常致12萬筆履歷個資外流風險；求職者資料可能未經授權被存取。
 
-**參考來源:** [Google's PageBreak AI Agent Finds 500 Flaws in Its Web Apps](<https://www.darkreading.com/application-security/google-pagebreak-ai-agent-500-flaws-web-apps>)
+**參考來源:** [【資安日報】10月7日，一零四資訊科技系統遭到異常讀取，12萬筆履歷資料恐外流 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1WcHBBZkREUThfWmo2UTB1SjlDUFJYWWFONmRZMFc0enFHV2ZJdkZUa2hKMkExT2NsWmY3YmJsUDd1U1JZa2N6cHpiWURvQQ?oc=5>)
 
-📌 **Anthropic擴大Claude安全存取 Glasswing半年發現12萬漏洞**
+---
 
-Anthropic擴大資安團隊對Claude的存取權限，Glasswing半年發現逾12萬個漏洞，顯示AI輔助安全測試已成為企業防禦團隊的有效倍增器，值得持續關注。
+## OPSWAT 可以怎麼幫上忙
 
-**參考來源:** [Anthropic擴大資安Claude存取計畫，Glasswing半年找到逾12萬漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9RcWl3UWtYb1BUSmtvWG8yNHJicE5JTHBxbG5xX1h2WTBYVkx6TTVCbFZiT3czblJPSEFRRkVMQ1NpbUVya0VVSW5Cam9iZw?oc=5>)
-
-📌 **Atlassian8產品曝任意檔案讀取漏洞**
-
-Atlassian揭露影響8款主要應用程式的任意檔案讀取漏洞，所有組織應立即更新版本，以防止協作環境中發生未授權檔案存取與資料外洩事件。
-
-**參考來源:** [Atlassian揭露影響旗下8款主要應用系統的任意檔案讀取漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5mdXBacjhxSGxndHhWNTgtdmNpUGY1Yno1bWNZaTgxa2NFRW8yWlhBcThiMDVUV2o4TW5INTNqUzE5RlBCWFFMbmFwa2g1UQ?oc=5>)
+若事件源自惡意套件、依賴項或第三方軟體風險，可評估 OPSWAT 軟體供應鏈安全與 SBOM 能力，以盤點元件並辨識已知弱點或供應鏈曝險。 [OPSWAT Software Supply Chain Security 與 SBOM](<https://www.opswat.com/products/metadefender>)
