@@ -11,7 +11,7 @@ featured: true
 
 國際執法機構執行KillSwitch行動瓦解KillSec勒索軟體集團，於西班牙、羅馬尼亞及英國逮捕三名嫌犯，其中一名16歲的疑似管理人員被捕，另一名成員在犯罪期間已屆成年。
 
-調查人員在西班牙扣押電腦、手機及加密貨幣錢包，並鎖定贖金支付交易跡象； 警方在四國執行八次搜查，攔截KillSec暗網泄漏網站與五台關鍵伺服器。
+調查人員在西班牙扣押電腦、手機及加密貨幣錢包，並鎖定贖金支付交易跡象； 警方在四國執行八次搜查，攔截KillSec暗網洩漏網站與五台關鍵伺服器。
 
 當局保護至少110TB受害者資料免受進一步未授權存取。 本次行動涵蓋全球約1,000起KillSec攻擊事件，開發者於2026年8月滿18歲，部分犯罪行為發生時仍為未成年； 協商代表與合作夥伴身分亦被查明，警方持續追訴其他嫌犯。
 
@@ -70,7 +70,7 @@ Google PageBreak AI代理在內部網頁應用程式自動發現500多項XSS漏�
 
 📌 **Anthropic擴大Claude安全存取 Glasswing半年發現12萬漏洞**
 
-Anthropic擴大資安團隊對Claude的存取權限，Glasswing半年發現逾12萬個漏洞，顯示AI輔助安全測試已成為企業防御團隊的有效倍增器，值得持續關注。
+Anthropic擴大資安團隊對Claude的存取權限，Glasswing半年發現逾12萬個漏洞，顯示AI輔助安全測試已成為企業防禦團隊的有效倍增器，值得持續關注。
 
 **參考來源:** [Anthropic擴大資安Claude存取計畫，Glasswing半年找到逾12萬漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9RcWl3UWtYb1BUSmtvWG8yNHJicE5JTHBxbG5xX1h2WTBYVkx6TTVCbFZiT3czblJPSEFRRkVMQ1NpbUVya0VVSW5Cam9iZw?oc=5>)
 
