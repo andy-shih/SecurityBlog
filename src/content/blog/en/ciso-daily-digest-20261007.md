@@ -32,9 +32,9 @@ Cameron Wagenius sentenced to 70 months for Snowflake client attacks spanning Ap
 
 **Reference:** [Американский военный получил 70 месяцев тюрьмы за атаки на AT&T, Verizon и другие компании](<https://xakep.ru/2026/10/06/wagenius-sentenced/>)
 
-📌 **FBI Terminates Accenture Contract Over PeopleSoft Vulnerability**
+📌 **FBI Reportedly Ends Accenture Contract Over PeopleSoft Vulnerability**
 
-FBI terminated its Accenture contract after unpatched PeopleSoft vulnerabilities enabled ShinyHunters intrusion, highlighting government vendor risk and the critical importance of timely patch management across all third-party service providers.
+The FBI reportedly ended its Accenture contract after an unpatched PeopleSoft vulnerability enabled a ShinyHunters intrusion, highlighting government vendor risk and the importance of timely patch management across third-party service providers.
 
 **Reference:** [FBI傳與Accenture解約，疑因未修補PeopleSoft漏洞造成ShinyHunters入侵 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBmRHBPOTlocDZDbDdUTU05UnZINnlkaWpCQ1M4RDRZYTBjN3hmT01SbElTczhYOHZKY2tNSnBIWFZtVlBOaTZvSnZFOWludw?oc=5>)
 
