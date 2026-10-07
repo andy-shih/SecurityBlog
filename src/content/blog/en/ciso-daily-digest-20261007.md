@@ -34,7 +34,7 @@ Cameron Wagenius sentenced to 70 months for Snowflake client attacks spanning Ap
 
 📌 **FBI Reportedly Ends Accenture Contract Over PeopleSoft Vulnerability**
 
-The FBI reportedly ended its Accenture contract after an unpatched PeopleSoft vulnerability enabled a ShinyHunters intrusion, highlighting government vendor risk and the importance of timely patch management across third-party service providers.
+iThome reported that the FBI ended its Accenture contract following an intrusion linked to unpatched PeopleSoft vulnerabilities; the case highlights patch-management risks across government and third-party vendors.
 
 **Reference:** [FBI傳與Accenture解約，疑因未修補PeopleSoft漏洞造成ShinyHunters入侵 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBmRHBPOTlocDZDbDdUTU05UnZINnlkaWpCQ1M4RDRZYTBjN3hmT01SbElTczhYOHZKY2tNSnBIWFZtVlBOaTZvSnZFOWludw?oc=5>)
 
