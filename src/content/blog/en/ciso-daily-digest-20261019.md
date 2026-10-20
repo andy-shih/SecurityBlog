@@ -59,10 +59,13 @@ Adobe Commerce faces a critical vulnerability tracked as BlockStrap. This flaw p
 
 ---
 
-📌 **Arch Linux軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得root權限 - iThome**
+📌 **Malicious packages found in Arch Linux software store distribute malware to gain root privileges - iThome**
 
-Arch Linux 軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得 root 權限。
+iThome reports that malicious packages have appeared in the Arch Linux software store, with attackers using them to distribute malware aimed at obtaining root privileges. The report is headline-only, and no full technical details, affected package names, installation counts, or confirmed compromises are available. Arch Linux users should treat this as unconfirmed targeting and verify package sources before installation.
 
 **Reference:** [Arch Linux軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得root權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Uak04NTNmWFNVY04tOTdnZ3ZkRzF5QmV4UXR2WjNvZU9nMGlYbmhvRmFmQXQ2aUM5MFhxNTloZVAxanVvd1dORURld3dpdw?oc=5>) 
 
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
+
+
+<!-- ciso-revision:ciso-20261019-1-1792539645681 -->

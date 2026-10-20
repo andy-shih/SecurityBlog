@@ -59,10 +59,13 @@ Adobe Commerce 面臨名為 BlockStrap 的危急漏洞。此漏洞可能讓攻�
 
 ---
 
-📌 **Arch Linux 軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得 root 權限 - iThome**
+📌 **惡意套件發現於 Arch Linux 軟體商店，散布惡意軟體以取得 root 權限 - iThome**
 
-Arch Linux 軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得 root 權限。
+iThome 報導，惡意套件已出現在 Arch Linux 軟體商店中，攻擊者利用它們散布旨在取得 root 權限的惡意軟體。此報導僅為標題層級，目前沒有完整技術細節、受影響套件名稱、安裝數量或確認的妥協事件。Arch Linux 使用者應將此視為未確認的目標攻擊，並在安裝前驗證套件來源。
 
 **參考來源:** [Arch Linux軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得root權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Uak04NTNmWFNVY04tOTdnZ3ZkRzF5QmV4UXR2WjNvZU9nMGlYbmhvRmFmQXQ2aUM5MFhxNTloZVAxanVvd1dORURld3dpdw?oc=5>) 
 
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
+
+
+<!-- ciso-revision:ciso-20261019-1-1792539645681 -->
