@@ -41,4 +41,20 @@ OpenSourceMalware reports the GhostAction threat actor has evolved from injectin
 
 **Reference:** [GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories](<https://thehackernews.com/2026/10/ghostaction-attackers-plant-credential.html>) 
 
+---
+
+📌 **OpenBSD patches 37-year-old memory vulnerability; researchers reveal root exploit**
+
+OpenBSD has addressed a memory vulnerability originating 37 years ago. Researchers have publicly demonstrated an exploit achieving root access, confirming the flaw's severity and the importance of long-term maintenance security.
+
+**Reference:** [OpenBSD修補源自37年前的記憶體漏洞，研究人員已公開取得root權限的攻擊程式 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5qWGduRjllOTh3N1lwWUc4QTZkbThoWDltaXZZZmI3dlNWT3doTUVFSVpLbEJVWC1jaV8yWnQ3VFFMTllHLU5hWEQwRG10dw?oc=5>) 
+
+---
+
+📌 **Adobe Commerce critical vulnerability BlockStrap allows arbitrary code execution**
+
+Adobe Commerce faces a critical vulnerability tracked as BlockStrap. This flaw potentially allows attackers to execute arbitrary code directly on the server, representing a significant risk for e-commerce operations. Users are advised to apply security updates promptly.
+
+**Reference:** [Adobe Commerce重大漏洞BlockStrap恐讓攻擊者直接在伺服器執行任意程式碼 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBiOEVtZHpxRTNHVDU3T3hWTHQ4MG1pSTBNZ05PdTJhWlg4NHRMRVBaRzlreTBQb2l5UlR0NmptT2NES0RoZGVpckdBMndqUQ?oc=5>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)

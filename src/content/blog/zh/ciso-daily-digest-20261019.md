@@ -41,4 +41,20 @@ OpenSourceMalware 報告,GhostAction 威脅行為者已從注入惡意 GitHub Ac
 
 **參考來源:** [GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories](<https://thehackernews.com/2026/10/ghostaction-attackers-plant-credential.html>) 
 
+---
+
+📌 **OpenBSD 修補 37 年前的記憶體漏洞；研究人員揭示權限漏洞利用**
+
+OpenBSD 已修補一個源自 37 年前的記憶體漏洞。研究人員已公開展示可獲得 root 存取權的漏洞利用，確認該漏洞的嚴重性以及長期維護安全性的重要性。
+
+**參考來源:** [OpenBSD修補源自37年前的記憶體漏洞，研究人員已公開取得root權限的攻擊程式 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5qWGduRjllOTh3N1lwWUc4QTZkbThoWDltaXZZZmI3dlNWT3doTUVFSVpLbEJVWC1jaV8yWnQ3VFFMTllHLU5hWEQwRG10dw?oc=5>) 
+
+---
+
+📌 **Adobe Commerce 危急漏洞 BlockStrap 允許任意程式碼執行**
+
+Adobe Commerce 面臨名為 BlockStrap 的危急漏洞。此漏洞可能讓攻擊者直接在伺服器上執行任意程式碼，對電子商務營運構成重大風險。建議用戶儘快套用安全更新。
+
+**參考來源:** [Adobe Commerce重大漏洞BlockStrap恐讓攻擊者直接在伺服器執行任意程式碼 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBiOEVtZHpxRTNHVDU3T3hWTHQ4MG1pSTBNZ05PdTJhWlg4NHRMRVBaRzlreTBQb2l5UlR0NmptT2NES0RoZGVpckdBMndqUQ?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
