@@ -225,7 +225,79 @@ Xakep 報告指出，已發布緊急補丁以修復 Nginx 中的重大漏洞。
 
 **參考來源:** [Экстренные патчи исправляют критические баги в Nginx](<https://xakep.ru/2026/10/20/nginx-patches>) 
 
+---
+
+📌 **Hikvision 五年前漏洞再被鎖定，密集攻擊時點與俄羅斯空襲烏克蘭重疊**
+
+iThome 報導指出，攻擊者再次鎖定 Hikvision 一個存在五年的漏洞，密集攻擊活動的時點與俄羅斯空襲烏克蘭相吻合。
+
+**參考來源:** [海康威視5年前漏洞再成目標，密集攻擊時間與俄軍空襲烏克蘭重疊 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBEMlI5SGRlTDBsYVdfbFVNLVhzWWdKV1U1NkdzZ05HbE9Ybm13cnF5NlNBVjRnYV9NUWpzbGY1alE0blRUUXFla2l6a2ZUQQ?oc=5>) 
+
+---
+
+📌 **Microsoft 十月 Windows Server 更新觸發 Exchange 異常，影響電子郵件收發**
+
+iThome 報告指出，Microsoft 的十月 Windows Server 更新導致 Exchange 異常，影響電子郵件的發送與接收。
+
+**參考來源:** [微軟10月Windows Server更新引發Exchange異常，影響郵件收發 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBfLXFQOGFpVVJ3TXNoQnR3LUd0TTlBZzlMNXBxQU5iNV9xVEZnUWVrQVNsUjZUZjFrNU1WSmZickxWekx2OHExRndjUkpuQQ?oc=5>) 
+
+---
+
+📌 **IETF 發布 RFC 10024，建立 TLS 1.3 混合後量子密碼金鑰交換標準**
+
+iThome 報導，IETF 發布 RFC 10024，建立 TLS 1.3 混合後量子密碼金鑰交換標準。
+
+**參考來源:** [IETF發布RFC 10024，訂定TLS 1.3混合式PQC金鑰交換標準 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5ScEthZm90eE1udEJ6VE9yWmFYZGlUbTk4dTlTbk5qbGw1YXZBa1NQcGV5S2JacmFLTUR3anZYakZTeVBLUTRSUmdkdmxUUQ?oc=5>) 
+
+---
+
+📌 **AI 網路攻擊來襲：台灣違約事件凸顯從 AI 自主攻擊的範式轉移**
+
+iThome 報導指出，AI 驅動的自主攻擊正在改變威脅格局，並引用在台灣觀察到的違約事件。
+
+**參考來源:** [AI網攻兵臨城下：從臺灣受駭事件看AI自主攻擊掀起的典範轉移 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9sdlduY0FNQkdBVDhhQk5UeEdhTmZURmhwOXBXNTNqSkhNVEs0ZVplU0Q5c01nVjFiZ01pWElZR0pFSHB0OHZSSF84R1A5dw?oc=5>) 
+
+---
+
+📌 **超過一半的台灣企業備份環境缺乏隔離架構，備份資料面臨攻擊威脅**
+
+iThome 報導指出，超過一半的台灣企業未對備份環境進行隔離，使備份資料暴露於攻擊威脅之下。
+
+**參考來源:** [逾半數臺灣企業備份環境缺乏隔離架構，備份資料暴露於攻擊威脅 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5tc19UcGNHSFpzRlVSQlN3UVdHQXY4bUNBRC1qcHhCcXoxU25hT0NYUVBndjUxUU1XM3FydVU5YWJOUFRtR2NnNGNmakFHdw?oc=5>) 
+
+---
+
+📌 **Microsoft 與 Nvidia 提出開放權重 AI 模型的風險管理指導方針**
+
+iThome 報導指出，Microsoft 與 Nvidia 已針對開放權重 AI 模型提出風險管理指導方針。
+
+**參考來源:** [微軟、Nvidia提出開放權重AI模型風險管理指引 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1xSWh5V3AyaXRCNm8zQTV0Y25DRE10TnQ2VFRHa1pyOWVfazhTcjFST2MzN1lpWVV1bUNTbUZuV2drQ2FUYVBrWVI3bHZNdw?oc=5>) 
+
+---
+
+📌 **美國聯邦機構禁用 DeepSeek，管控範圍擴及第三方衍生服務，美中 AI 競爭激化**
+
+CTWANT 報告，美國聯邦機構被禁止使用 DeepSeek，第三方衍生服務納入管理，背景是美中 AI 競爭升溫。
+
+**參考來源:** [美中AI競爭升溫！華府禁聯邦機關使用DeepSeek　第三方衍生服務也納管 | 國際 | CTWANT - CTWANT](<https://news.google.com/rss/articles/CBMiT0FVX3lxTE1uX09ieVhlMFF1aXpQaHF5NjBkSkYzZXFFcjVadXBSQ0tNR2h5d1BkYnVjaE90cXNzeXBtVnQzYW45b0NsdzhCcHQ4Ui1BTWvSAVRBVV95cUxPMWFmenVSckNzVkkzZjVZRHNfaEJiOXRWTFVoZ2hLMWdKdnkxTlo1UVFPVV9yOGxPV0E2VkVCS0kwemxfdnF0b1huUXJ0WUN3Rkg4ank?oc=5>) 
+
+---
+
+📌 **AI 模型供應商 Cohere 計畫收購安全初創公司 AISLE**
+
+iThome 報告，AI 模型供應商 Cohere 計畫收購安全初創公司 AISLE。
+
+**參考來源:** [AI模型業者Cohere計畫併購資安新創AISLE - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1vazdaSVFfZ3FBVmlSMU1YMU1sRVFxZE9ZLUpuQ1ZXR0M4S3BaNTJRTkE2YkUxSW5udVFfSVBBM3F0a1BaQ2QwZ3JIYVZuZw?oc=5>) 
+
+---
+
+📌 **OpenCode 遭駭導致 API 金鑰外洩與未經授權費用**
+
+Xakep 報告，OpenCode 遭到入侵，導致 API 金鑰外洩並產生未經授權費用。
+
+**參考來源:** [Взлом OpenCode привел к утечке ключей API и несанкционированным списаниям](<https://xakep.ru/2026/10/20/opencode-leak>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-9-1792618872196 -->
+<!-- ciso-revision:ciso-20261020-10-1792621489178 -->

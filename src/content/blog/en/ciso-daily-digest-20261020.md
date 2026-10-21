@@ -225,7 +225,79 @@ Xakep reports that emergency patches have been released to fix critical bugs in 
 
 **Reference:** [Экстренные патчи исправляют критические баги в Nginx](<https://xakep.ru/2026/10/20/nginx-patches>) 
 
+---
+
+📌 **Hikvision five-year-old vulnerability targeted again, intensive attack timing overlaps Russian airstrikes on Ukraine**
+
+iThome reports that attackers are again targeting a five-year-old Hikvision vulnerability, with intensive attack activity coinciding with Russian airstrikes on Ukraine.
+
+**Reference:** [海康威視5年前漏洞再成目標，密集攻擊時間與俄軍空襲烏克蘭重疊 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBEMlI5SGRlTDBsYVdfbFVNLVhzWWdKV1U1NkdzZ05HbE9Ybm13cnF5NlNBVjRnYV9NUWpzbGY1alE0blRUUXFla2l6a2ZUQQ?oc=5>) 
+
+---
+
+📌 **Microsoft October Windows Server update triggers Exchange abnormalities affecting email sending and receiving**
+
+iThome reports that Microsoft's October Windows Server update caused Exchange abnormalities affecting email sending and receiving.
+
+**Reference:** [微軟10月Windows Server更新引發Exchange異常，影響郵件收發 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBfLXFQOGFpVVJ3TXNoQnR3LUd0TTlBZzlMNXBxQU5iNV9xVEZnUWVrQVNsUjZUZjFrNU1WSmZickxWekx2OHExRndjUkpuQQ?oc=5>) 
+
+---
+
+📌 **IETF releases RFC 10024, establishing TLS 1.3 hybrid PQC key exchange standard**
+
+iThome reports that IETF released RFC 10024, establishing the TLS 1.3 hybrid post-quantum cryptography key exchange standard.
+
+**Reference:** [IETF發布RFC 10024，訂定TLS 1.3混合式PQC金鑰交換標準 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5ScEthZm90eE1udEJ6VE9yWmFYZGlUbTk4dTlTbk5qbGw1YXZBa1NQcGV5S2JacmFLTUR3anZYakZTeVBLUTRSUmdkdmxUUQ?oc=5>) 
+
+---
+
+📌 **AI cyberattacks arrive: Taiwan breach highlights paradigm shift from AI autonomous attacks**
+
+iThome reports that AI-driven autonomous attacks are shifting the threat landscape, citing breach incidents observed in Taiwan.
+
+**Reference:** [AI網攻兵臨城下：從臺灣受駭事件看AI自主攻擊掀起的典範轉移 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9sdlduY0FNQkdBVDhhQk5UeEdhTmZURmhwOXBXNTNqSkhNVEs0ZVplU0Q5c01nVjFiZ01pWElZR0pFSHB0OHZSSF84R1A5dw?oc=5>) 
+
+---
+
+📌 **Over half of Taiwanese enterprises lack isolation architecture in backup environments, exposing backup data to attack threats**
+
+iThome reports that more than half of Taiwanese enterprises do not isolate backup environments, leaving backup data exposed to attack threats.
+
+**Reference:** [逾半數臺灣企業備份環境缺乏隔離架構，備份資料暴露於攻擊威脅 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5tc19UcGNHSFpzRlVSQlN3UVdHQXY4bUNBRC1qcHhCcXoxU25hT0NYUVBndjUxUU1XM3FydVU5YWJOUFRtR2NnNGNmakFHdw?oc=5>) 
+
+---
+
+📌 **Microsoft and Nvidia propose risk management guidance for open-weight AI models**
+
+iThome reports that Microsoft and Nvidia have proposed risk management guidance for open-weight AI models.
+
+**Reference:** [微軟、Nvidia提出開放權重AI模型風險管理指引 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1xSWh5V3AyaXRCNm8zQTV0Y25DRE10TnQ2VFRHa1pyOWVfazhTcjFST2MzN1lpWVV1bUNTbUZuV2drQ2FUYVBrWVI3bHZNdw?oc=5>) 
+
+---
+
+📌 **U.S. bans federal agencies from using DeepSeek, extends controls to third-party derivative services as U.S.-China AI competition intensifies**
+
+CTWANT reports that Washington has prohibited federal agencies from using DeepSeek and placed third-party derivative services under management amid rising U.S.-China AI competition.
+
+**Reference:** [美中AI競爭升溫！華府禁聯邦機關使用DeepSeek　第三方衍生服務也納管 | 國際 | CTWANT - CTWANT](<https://news.google.com/rss/articles/CBMiT0FVX3lxTE1uX09ieVhlMFF1aXpQaHF5NjBkSkYzZXFFcjVadXBSQ0tNR2h5d1BkYnVjaE90cXNzeXBtVnQzYW45b0NsdzhCcHQ4Ui1BTWvSAVRBVV95cUxPMWFmenVSckNzVkkzZjVZRHNfaEJiOXRWTFVoZ2hLMWdKdnkxTlo1UVFPVV9yOGxPV0E2VkVCS0kwemxfdnF0b1huUXJ0WUN3Rkg4ank?oc=5>) 
+
+---
+
+📌 **AI model provider Cohere plans to acquire security startup AISLE**
+
+iThome reports that AI model provider Cohere plans to acquire security startup AISLE.
+
+**Reference:** [AI模型業者Cohere計畫併購資安新創AISLE - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1vazdaSVFfZ3FBVmlSMU1YMU1sRVFxZE9ZLUpuQ1ZXR0M4S3BaNTJRTkE2YkUxSW5udVFfSVBBM3F0a1BaQ2QwZ3JIYVZuZw?oc=5>) 
+
+---
+
+📌 **OpenCode hack leads to API key leak and unauthorized charges**
+
+Xakep reports that a breach of OpenCode resulted in leaked API keys and unauthorized charges.
+
+**Reference:** [Взлом OpenCode привел к утечке ключей API и несанкционированным списаниям](<https://xakep.ru/2026/10/20/opencode-leak>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-9-1792618872196 -->
+<!-- ciso-revision:ciso-20261020-10-1792621489178 -->
