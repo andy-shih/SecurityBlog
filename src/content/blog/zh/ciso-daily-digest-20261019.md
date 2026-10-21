@@ -89,7 +89,31 @@ iThome報導Nginx已發布更新解決五項安全缺陷，其中三項被評級
 
 **參考來源:** [Nginx修補5項漏洞，3項恐導致遠端程式碼執行 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9pVkNZT3FTSmRUMG1FN0s2RzVTVjBEUlNBRE5kZ3pWQVplZDBXdnFsWnE3WFdqSFI5MGZ6WU1TZlZPOWZmZTEyWEdFU0t3dw?oc=5>) 
 
+---
+
+📌 **威脅組織 UNC5820 針對電信公司，利用 Fortinet 漏洞散布 PeerStitch 惡意軟體**
+
+iThome 報導，威脅組織 UNC5820 正在針對電信公司，利用 Fortinet 安全性漏洞散布 PeerStitch 惡意軟體。
+
+**參考來源:** [駭客組織UNC5820鎖定電信公司，利用Fortinet資安漏洞散布惡意軟體PeerStitch - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5ydWlIZFJ4QmdLZ2tTZmNPQ0pzRnE2X0t0SmlkZTZLT3JpcnRuc2Y0cXV4Z0czR1phS2ZUNElmV3dRSE9iMl9RMGxoMmpzdw?oc=5>) 
+
+---
+
+📌 **CISA 促 BeyondTrust 用戶修補遠端支援系統中的關鍵漏洞**
+
+iThome 報導，CISA 促 BeyondTrust 用戶盡快修補影響其遠端支援系統的關鍵漏洞。
+
+**參考來源:** [CISA呼籲BeyondTrust用戶儘速修補遠端支援系統重大漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9YSzJzTHRLWTdVNk9MOWJvcTFmc3dMTXZkQV90cHdjNlAzNUdiWWpXeFlmQU9TM2pYUUZTVmd1cWh4VlltVGduN295OEt2Zw?oc=5>) 
+
+---
+
+📌 **ConnectWise 備份 API 憑證遭濫用，173 個 Microsoft 365 租戶被未經授權存取**
+
+iThome 報導，遭濫用的 ConnectWise 備份 API 憑證導致未經授權存取 173 個 Microsoft 365 租戶。
+
+**參考來源:** [ConnectWise備份API憑證遭濫用，173個M365租戶遭未授權存取 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1saGVyaVllRFdSclA0TjdUdkFOeDlKZ1p5MWQ5b2VMbWZjaFg5Ni1waWtBLVJHT2JJQVRERjVzVVloX2dmSWF2aEFiQVU3QQ?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-4-1792557683932 -->
+<!-- ciso-revision:ciso-20261019-5-1792558651437 -->

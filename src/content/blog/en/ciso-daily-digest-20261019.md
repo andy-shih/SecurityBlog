@@ -89,7 +89,31 @@ iThome reports that Nginx has released updates addressing five security flaws, t
 
 **Reference:** [Nginx修補5項漏洞，3項恐導致遠端程式碼執行 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9pVkNZT3FTSmRUMG1FN0s2RzVTVjBEUlNBRE5kZ3pWQVplZDBXdnFsWnE3WFdqSFI5MGZ6WU1TZlZPOWZmZTEyWEdFU0t3dw?oc=5>) 
 
+---
+
+📌 **Threat group UNC5820 targets telecom firms, exploiting Fortinet vulnerabilities to distribute PeerStitch malware**
+
+iThome reports that threat group UNC5820 is targeting telecommunications companies by exploiting Fortinet security vulnerabilities to distribute PeerStitch malware.
+
+**Reference:** [駭客組織UNC5820鎖定電信公司，利用Fortinet資安漏洞散布惡意軟體PeerStitch - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5ydWlIZFJ4QmdLZ2tTZmNPQ0pzRnE2X0t0SmlkZTZLT3JpcnRuc2Y0cXV4Z0czR1phS2ZUNElmV3dRSE9iMl9RMGxoMmpzdw?oc=5>) 
+
+---
+
+📌 **CISA urges BeyondTrust users to patch critical vulnerability in remote support system**
+
+iThome reports that CISA is urging BeyondTrust users to promptly patch a critical vulnerability affecting its remote support system.
+
+**Reference:** [CISA呼籲BeyondTrust用戶儘速修補遠端支援系統重大漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9YSzJzTHRLWTdVNk9MOWJvcTFmc3dMTXZkQV90cHdjNlAzNUdiWWpXeFlmQU9TM2pYUUZTVmd1cWh4VlltVGduN295OEt2Zw?oc=5>) 
+
+---
+
+📌 **ConnectWise backup API credentials abused, 173 Microsoft 365 tenants accessed without authorization**
+
+iThome reports that abused ConnectWise backup API credentials led to unauthorized access to 173 Microsoft 365 tenants.
+
+**Reference:** [ConnectWise備份API憑證遭濫用，173個M365租戶遭未授權存取 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1saGVyaVllRFdSclA0TjdUdkFOeDlKZ1p5MWQ5b2VMbWZjaFg5Ni1waWtBLVJHT2JJQVRERjVzVVloX2dmSWF2aEFiQVU3QQ?oc=5>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-4-1792557683932 -->
+<!-- ciso-revision:ciso-20261019-5-1792558651437 -->
