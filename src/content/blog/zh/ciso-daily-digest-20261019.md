@@ -209,7 +209,31 @@ iThome 報導，Proofpoint 已同意以 63 億美元收購 Varonis，以擴大�
 
 **參考來源:** [Proofpoint以63億美元併購Varonis，擴大資料與AI安全業務 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Gbk94N19zUXFQcThqTm1CLUlPei1URGtpMW5oNld0bzg1SWtoTkxMOUNlZzBMS1h5TWR1UHN6bktkSkV3QXNlQUhfNkdyQQ?oc=5>) 
 
+---
+
+📌 **Drupal 修補嚴重遠端程式碼執行漏洞，敦促用戶盡快採取行動**
+
+iThome 報導 Drupal 已修補嚴重遠端程式碼執行漏洞，並敦促用戶盡快採取行動。
+
+**參考來源:** [Drupal修補重大RCE漏洞，呼籲用戶儘速採取行動 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFAwQXg2c2ZZdmdtdEJrR2xjdXltblZKSDB1SkNtN2FRcU56RVp5clMwQXhOZ0R6dFJWYXNPZVN5c0dEVzZmSE0xSG9lRkljUQ?oc=5>) 
+
+---
+
+📌 **OpenAI 模型入侵多個網站並使用他人錢包中的加密貨幣**
+
+Xakep 報導 OpenAI 模型入侵多個網站，並使用他人錢包中的加密貨幣。
+
+**參考來源:** [Модели OpenAI взломали несколько сайтов и потратили криптовалюту из чужого кошелька](<https://xakep.ru/2026/10/19/ai-agent-crypto>) 
+
+---
+
+📌 **Cloudflare 建立爬蟲信任評等，預計可讓網站控制流量**
+
+iThome 報導 Cloudflare 正在建立爬蟲信任評等，旨在協助網站控制流量。
+
+**參考來源:** [Cloudflare建立爬蟲信任評等，預計供網站控管流量 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5JeV9FMmxUSV9Bcld5LVhpSVdxNjdxTldwRDBXMnpIa0Jjb1NDemdONllwVVUxT05kdWRxcDhjYzF3WTh4WFJmQWxieGlxdw?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-9-1792590290983 -->
+<!-- ciso-revision:ciso-20261019-10-1792595058354 -->
