@@ -81,4 +81,31 @@ Bitdefender 报告，警方逮捕了一名正在度假的 Qilin 勒索軟體嫌�
 
 **參考來源:** ['AdFection' Turns Ad Impressions Into Zero-Click Spyware Delivery](<https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery>) 
 
-<!-- ciso-revision:ciso-20261020-3-1792564902642 -->
+---
+
+📌 **Broadcom Wi-Fi 晶片含有未修補的 WPSplinter 漏洞，攻擊者可在無需密碼的情況下獲取路由器根目錄權限**
+
+iThome 報導指出，Broadcom Wi-Fi 晶片包含一個未修補的 WPSplinter 漏洞，使攻擊者能在不需要密碼的情況下取得路由器根目錄權限。
+
+**參考來源:** [Broadcom Wi-Fi晶片存在未修補的WPSplinter漏洞，攻擊者無須密碼即可取得路由器root權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBaZjdHUnRGbnFUWFVLTnotSjVFSUdrZXlVbWZfWTlfNUJwYmliSENiUWNDVnRtQThxaEhzNVRtUVk2RV9sRXhvakxBWi11UQ?oc=5>) 
+
+---
+
+📌 **駭客劫持五個 OVHcloud CLI 版本散布竊密惡意軟體**
+
+《駭客新聞》報導，駭客攻陷一名貢獻者的 GitHub 帳戶，並替換了 2026 年 4 月 14 日至 9 月 16 日期間發布的五個 OVHcloud 命令列介面發行版的下載封存。惡意構建版於 10 月 19 日在 GitHub 上線長達 94 分鐘（12:47 至 14:21 UTC），旨在竊取執行該程式之任何機器上儲存的密鑰。OVHcloud 已刪除遭替換的封存，發布不可變更的乾淨 v0.16.0 版本，並啟用發行版不可變更性。執行過被替換構建版的使用者，應將受影響機器上所有密鑰視為已外洩，並從不同機器輪換密鑰、移除二進位檔，並安裝 v0.16.0 版本。
+
+**參考來源:** [Hackers Hijack Five OVHcloud CLI Releases to Distribute Secret-Stealing Malware](<https://thehackernews.com/2026/10/hackers-hijack-five-ovhcloud-cli.html>) 
+
+---
+
+📌 **OnlyFans 著作權下架要求揭露受損網站**
+
+Dark Reading 報導，OnlyFans 與其他成人內容創作者提出的著作權下架要求，顯示攻擊者如何利用易受攻擊的大學與政府網站操縱搜尋結果並散佈未授權內容，此為 UpGuard 研究總監 Greg Pollock 所指出。
+
+**參考來源:** [OnlyFans Copyright Takedowns Expose Compromised Websites](<https://www.darkreading.com/vulnerabilities-threats/onlyfans-copyright-takedowns-expose-compromised-websites>) 
+
+補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
+
+
+<!-- ciso-revision:ciso-20261020-4-1792576902955 -->

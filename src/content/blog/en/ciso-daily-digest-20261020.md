@@ -81,4 +81,31 @@ Dark Reading reports that the AdFection campaign converts online ad impressions 
 
 **Reference:** ['AdFection' Turns Ad Impressions Into Zero-Click Spyware Delivery](<https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery>) 
 
-<!-- ciso-revision:ciso-20261020-3-1792564902642 -->
+---
+
+📌 **Broadcom Wi-Fi chips have unpatched WPSplinter vulnerability allowing attackers to gain router root access without a password**
+
+iThome reports that Broadcom Wi-Fi chips contain an unpatched WPSplinter vulnerability enabling attackers to obtain router root privileges without requiring a password.
+
+**Reference:** [Broadcom Wi-Fi晶片存在未修補的WPSplinter漏洞，攻擊者無須密碼即可取得路由器root權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBaZjdHUnRGbnFUWFVLTnotSjVFSUdrZXlVbWZfWTlfNUJwYmliSENiUWNDVnRtQThxaEhzNVRtUVk2RV9sRXhvakxBWi11UQ?oc=5>) 
+
+---
+
+📌 **Hackers Hijack Five OVHcloud CLI Releases to Distribute Secret-Stealing Malware**
+
+The Hacker News reports that an attacker compromised a contributor's GitHub account and replaced download archives on five OVHcloud command-line interface releases published between April 14 and September 16, 2026. The malicious builds, live on GitHub for up to 94 minutes on October 19 from 12:47 to 14:21 UTC, were designed to steal secrets stored on any machine that ran them. OVHcloud has deleted the swapped archives, published an immutable clean v0.16.0, and enabled release immutability. Users who ran the swapped build should treat all secrets on the affected machine as exposed, rotate them from a different machine, remove the binary, and install v0.16.0.
+
+**Reference:** [Hackers Hijack Five OVHcloud CLI Releases to Distribute Secret-Stealing Malware](<https://thehackernews.com/2026/10/hackers-hijack-five-ovhcloud-cli.html>) 
+
+---
+
+📌 **OnlyFans Copyright Takedowns Expose Compromised Websites**
+
+Dark Reading reports that copyright takedown requests filed by OnlyFans and other adult content creators are revealing how attackers exploit vulnerable university and government websites to manipulate search results and distribute unauthorized material, according to UpGuard research director Greg Pollock.
+
+**Reference:** [OnlyFans Copyright Takedowns Expose Compromised Websites](<https://www.darkreading.com/vulnerabilities-threats/onlyfans-copyright-takedowns-expose-compromised-websites>) 
+
+Supplemental search context: [Brave Search API](https://brave.com/search/api/)
+
+
+<!-- ciso-revision:ciso-20261020-4-1792576902955 -->
