@@ -161,7 +161,31 @@ OpenCode 說明，入侵者於 10 月 16 日存取舊版系統，可能洩露 1.
 
 **參考來源:** [OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys](<https://thehackernews.com/2026/10/opencode-console-breach-may-have.html>) 
 
+---
+
+📌 **Burger King Taiwan CRM 系統遭入侵，超過 1100 萬會員記錄外洩 - iThome**
+
+iThome 報導，Burger King Taiwan 的 CRM 系統遭到駭客入侵，超過 1100 萬名會員的個人資料外洩。
+
+**參考來源:** [日本漢堡王CRM系統遭駭，外洩逾1,100萬會員個資 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBEeUQyUG51QmVqbWVJWmpxTWdDSWk0MUZwNkRyTTlQUkNHYU9kbUtxcU4wck9mQ1VKN1lsRW5ja1BnZ3RlVDVPV1lnajdPZw?oc=5>) 
+
+---
+
+📌 **中國駭客組織 UAT-11985 利用 Google 服務進行 AiTM 釣魚攻擊，鎖定台灣研究機構 - iThome**
+
+iThome 報導，中國威脅行動者 UAT-11985 利用 Google 服務對台灣研究機構實施中間人 (AiTM) 釣魚攻擊。
+
+**參考來源:** [中國駭客UAT-11985利用Google服務從事AiTM網釣，鎖定臺灣研究機構 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFB0UWhvLWpzZU9YMldnRkk0TXA3eEdmX1dzR19QWjJfVHdCNURyVmxCdE5sQ0E1ckhHRF9qdmZOeFhqbHdDVnM3RlU5RTdFUQ?oc=5>) 
+
+---
+
+📌 **Linux 核心 PwnEscape 漏洞可突破虛擬機器隔離，導致主機記憶體外洩 - iThome**
+
+iThome 報導，名為 PwnEscape 的 Linux 核心漏洞可突破虛擬機器隔離，並洩漏主機記憶體。
+
+**參考來源:** [Linux核心PwnEscape漏洞可突破虛擬機隔離，導致主機記憶體洩漏 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9fWXZCWVdxak9JYTNua3k1RzFuYzJHQnRoQ0ZFLUpISTNyek9oNVdnaHJKazlCWEtnTTRtTUpkMTJJanJNNGI5QjB3UmdKdw?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-7-1792578068473 -->
+<!-- ciso-revision:ciso-20261019-8-1792583142510 -->

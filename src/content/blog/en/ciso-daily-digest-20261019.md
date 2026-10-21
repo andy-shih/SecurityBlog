@@ -161,7 +161,31 @@ OpenCode says an intruder accessed a legacy system on October 16 and may have ex
 
 **Reference:** [OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys](<https://thehackernews.com/2026/10/opencode-console-breach-may-have.html>) 
 
+---
+
+📌 **Burger King Taiwan CRM system breached, over 11 million member records exposed - iThome**
+
+iThome reports that Burger King Taiwan's CRM system was hacked, exposing personal data of more than 11 million members.
+
+**Reference:** [日本漢堡王CRM系統遭駭，外洩逾1,100萬會員個資 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBEeUQyUG51QmVqbWVJWmpxTWdDSWk0MUZwNkRyTTlQUkNHYU9kbUtxcU4wck9mQ1VKN1lsRW5ja1BnZ3RlVDVPV1lnajdPZw?oc=5>) 
+
+---
+
+📌 **Chinese hacker group UAT-11985 uses Google services in AiTM phishing targeting Taiwan research institutions - iThome**
+
+iThome reports that Chinese threat actor UAT-11985 leveraged Google services to conduct adversary-in-the-middle phishing attacks against research institutions in Taiwan.
+
+**Reference:** [中國駭客UAT-11985利用Google服務從事AiTM網釣，鎖定臺灣研究機構 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFB0UWhvLWpzZU9YMldnRkk0TXA3eEdmX1dzR19QWjJfVHdCNURyVmxCdE5sQ0E1ckhHRF9qdmZOeFhqbHdDVnM3RlU5RTdFUQ?oc=5>) 
+
+---
+
+📌 **Linux kernel PwnEscape vulnerability can break virtual machine isolation, causing host memory leakage - iThome**
+
+iThome reports that a Linux kernel vulnerability named PwnEscape can escape virtual machine isolation and leak host memory.
+
+**Reference:** [Linux核心PwnEscape漏洞可突破虛擬機隔離，導致主機記憶體洩漏 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9fWXZCWVdxak9JYTNua3k1RzFuYzJHQnRoQ0ZFLUpISTNyek9oNVdnaHJKazlCWEtnTTRtTUpkMTJJanJNNGI5QjB3UmdKdw?oc=5>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-7-1792578068473 -->
+<!-- ciso-revision:ciso-20261019-8-1792583142510 -->
