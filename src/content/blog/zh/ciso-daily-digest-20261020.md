@@ -105,7 +105,31 @@ Dark Reading 報導，OnlyFans 與其他成人內容創作者提出的著作權�
 
 **參考來源:** [OnlyFans Copyright Takedowns Expose Compromised Websites](<https://www.darkreading.com/vulnerabilities-threats/onlyfans-copyright-takedowns-expose-compromised-websites>) 
 
+---
+
+📌 **研究人員滲透微軟技術支援詐騙集團**
+
+Dark Reading 報導研究人員滲透了一個微軟技術支援詐騙集團。僅標題的來源未提供技術細節、受害範圍、被害影響或緩解建議。
+
+**參考來源:** [Researchers Infiltrate Microsoft Tech Support Scam Operation](<https://www.darkreading.com/threat-intelligence/microsoft-tech-support-scam-operation>) 
+
+---
+
+📌 **日本《產經新聞》與阪急阪神百貨公司遭駭，超過一百萬人個人資料外洩**
+
+iThome報導，日本《產經新聞》與阪急阪神百貨公司均遭入侵，各自導致超過一百萬名個人受影響之個人資料外洩。來源未說明攻擊手法、兩起事件是否相關，亦未說明除資料外洩人數外之具體客戶影響。
+
+**參考來源:** [日本經濟新聞、阪急阪神百貨相繼遭駭，皆外洩個資超過百萬 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9oY2U5bmQ2SGJxV2NnUjRUQnJGVHdlS2NpMTN2cnF2RTU3M21XZmpJMFFkSHBYUVZidGZiTVBCZTNyeVVXemNfWVFKZGVRQQ?oc=5>) 
+
+---
+
+📌 **駭客使用新的 ROMULUS ClickFix 平台傳播 LegionLoader 與其他惡意軟體**
+
+The Hacker News 報導，Forescout Research - Vedere Labs 披露 ROMULUS ClickFix 傳播平台，該平台用於散布包括 Legion Loader 在內的惡意軟體。偽造登陸頁面誘騙使用者執行惡意指令，下載遭植入惡意程式的 MSI 安裝程式，或包含壓縮至接近 1 GB 以規避分析的 Legion Loader 加密檔案。Forescout 辨識出六個存放 ROMULUS 控制面板的 IP 位址。其中一個 IP 位址 96.62.224\[.\]81，先前曾與惡意 ChatGPT Custom GPTs 有關聯，該等 GPTs 將受害者引導至 ClickFix 誘餌。另一條攻擊鏈使用 ClickFix 執行 PowerShell，隨後傳送 Legion Loader，該載具亦稱為 Satacom downloader、CurlyGate 和 RobotDropper。報告指出 ROMULUS 的操作者身份不明，且與與 Silver Fox (TA4922) 相關聯的 RomulusLoader 沒有重疊。建議的威脅搜捕重點在於可疑 PowerShell 指令和 DLL 側載事件。
+
+**參考來源:** [Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware](<https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-4-1792576902955 -->
+<!-- ciso-revision:ciso-20261020-5-1792579447537 -->

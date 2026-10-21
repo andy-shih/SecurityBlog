@@ -105,7 +105,31 @@ Dark Reading reports that copyright takedown requests filed by OnlyFans and othe
 
 **Reference:** [OnlyFans Copyright Takedowns Expose Compromised Websites](<https://www.darkreading.com/vulnerabilities-threats/onlyfans-copyright-takedowns-expose-compromised-websites>) 
 
+---
+
+📌 **Researchers Infiltrate Microsoft Tech Support Scam Operation**
+
+Dark Reading reports that researchers infiltrated a Microsoft tech support scam operation. The headline-only source does not provide technical details, compromise scope, victim impact, or mitigation recommendations.
+
+**Reference:** [Researchers Infiltrate Microsoft Tech Support Scam Operation](<https://www.darkreading.com/threat-intelligence/microsoft-tech-support-scam-operation>) 
+
+---
+
+📌 **Japan's Nikkei and Hankyu Hanshin Department Stores Breached, Personal Data of Over One Million People Leaked**
+
+iThome reports that Japan's Nikkei newspaper and Hankyu Hanshin Department Stores were both breached, each leaking personal data affecting more than one million individuals. The source does not state the attack method, whether the incidents are linked, or specific customer impact beyond the data exposure figure.
+
+**Reference:** [日本經濟新聞、阪急阪神百貨相繼遭駭，皆外洩個資超過百萬 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9oY2U5bmQ2SGJxV2NnUjRUQnJGVHdlS2NpMTN2cnF2RTU3M21XZmpJMFFkSHBYUVZidGZiTVBCZTNyeVVXemNfWVFKZGVRQQ?oc=5>) 
+
+---
+
+📌 **Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware**
+
+The Hacker News reports that Forescout Research - Vedere Labs disclosed the ROMULUS ClickFix delivery platform, used to distribute malware including Legion Loader. Bogus landing pages trick users into running malicious commands that download a trojanized MSI installer or an encrypted archive containing Legion Loader inflated to nearly 1 GB to evade analysis. Forescout identified six IP addresses hosting ROMULUS panels. One IP, 96.62.224\[.\]81, was previously linked to malicious ChatGPT Custom GPTs directing victims to ClickFix lures. A separate chain used ClickFix to run PowerShell before delivering Legion Loader, also known as Satacom downloader, CurlyGate, and RobotDropper. The report says it is unknown who operates ROMULUS and states it shares no overlaps with RomulusLoader linked to Silver Fox (TA4922). Recommended hunting focuses on suspicious PowerShell commands and DLL sideloading events.
+
+**Reference:** [Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware](<https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-4-1792576902955 -->
+<!-- ciso-revision:ciso-20261020-5-1792579447537 -->
