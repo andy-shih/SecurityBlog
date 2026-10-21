@@ -233,7 +233,23 @@ iThome 報導 Cloudflare 正在建立爬蟲信任評等，旨在協助網站控�
 
 **參考來源:** [Cloudflare建立爬蟲信任評等，預計供網站控管流量 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5JeV9FMmxUSV9Bcld5LVhpSVdxNjdxTldwRDBXMnpIa0Jjb1NDemdONllwVVUxT05kdWRxcDhjYzF3WTh4WFJmQWxieGlxdw?oc=5>) 
 
+---
+
+📌 **FirstVDS報告被駭客攻擊**
+
+託管服務提供商 FirstVDS 已報告遭受網路攻擊，並披露正在回應該事件。
+
+**參考來源:** [Компания FirstVDS сообщила о взломе](<https://xakep.ru/2026/10/19/firstvds-leak>) 
+
+---
+
+📌 **Microchip 擴大數據中心產品線，新增 CNSA 2.0 後量子密碼支援**
+
+Microchip 已擴大其數據中心產品組合，新增 CNSA 2.0 後量子密碼支援。
+
+**參考來源:** [Microchip擴充資料中心產品線，導入CNSA 2.0後量子密碼學支援 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBTek5nS3BnZXZvZFBfNERKWk5nclMyY1ZfOVNJZEF3SnF2VlNDX0l2ZzVhZC0xR0J6RVBuRnlULUtINFRlYzhtN09fS3E4Zw?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-10-1792595058354 -->
+<!-- ciso-revision:ciso-20261019-11-1792597446421 -->

@@ -233,7 +233,23 @@ iThome reports that Cloudflare is establishing a crawler trust rating intended t
 
 **Reference:** [Cloudflare建立爬蟲信任評等，預計供網站控管流量 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5JeV9FMmxUSV9Bcld5LVhpSVdxNjdxTldwRDBXMnpIa0Jjb1NDemdONllwVVUxT05kdWRxcDhjYzF3WTh4WFJmQWxieGlxdw?oc=5>) 
 
+---
+
+📌 **FirstVDS reports hacking**
+
+Hosting provider FirstVDS has reported a cyberattack and disclosed that it is responding to the incident.
+
+**Reference:** [Компания FirstVDS сообщила о взломе](<https://xakep.ru/2026/10/19/firstvds-leak>) 
+
+---
+
+📌 **Microchip expands data center product line with CNSA 2.0 post-quantum cryptography support**
+
+Microchip has expanded its data center product portfolio by adding support for CNSA 2.0 post-quantum cryptography.
+
+**Reference:** [Microchip擴充資料中心產品線，導入CNSA 2.0後量子密碼學支援 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBTek5nS3BnZXZvZFBfNERKWk5nclMyY1ZfOVNJZEF3SnF2VlNDX0l2ZzVhZC0xR0J6RVBuRnlULUtINFRlYzhtN09fS3E4Zw?oc=5>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-10-1792595058354 -->
+<!-- ciso-revision:ciso-20261019-11-1792597446421 -->
