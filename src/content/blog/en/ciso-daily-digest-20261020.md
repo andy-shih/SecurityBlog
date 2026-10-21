@@ -41,4 +41,20 @@ Citizen Lab confirmed with high confidence that the iPhone of University of Belg
 
 **Reference:** [Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election](<https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html>) 
 
-<!-- ciso-revision:ciso-20261020-1-1792558256905 -->
+---
+
+📌 **Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor**
+
+Compromised copies of Rank Math PRO downloaded or updated between 20:02 UTC on October 15 and 07:12 UTC on October 16, 2026 contained a self-restoring backdoor, and affected sites should be treated as compromised. Clean version 3.0.124 has been released, but reinstalling it does not remove malicious files, administrator accounts, scheduled tasks, or SSH keys the malware may have already placed. The malware may leave PHP backdoor files in plugin, theme, and must-use plugin directories; create fake WordPress core files; alter .htaccess to execute .cache files as PHP; and expose any reachable passwords, database credentials, API keys, and other secrets. Recovery requires restoring from a pre-October 15 backup, changing all credentials, and installing 3.0.124 only afterward; without a clean backup, administrators must delete the rank-math-pro folder, remove specific wp\_options entries, block outgoing connections to rank1cdn\[.\]com, then hunt for additional artifacts before reinstalling the clean plugin.
+
+**Reference:** [Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor](<https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html>) 
+
+---
+
+📌 **ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan**
+
+Attackers exploited a DLL sideloading flaw in Siemens Software Center, tracked as CVE-2026-110936 with a CVSS v4 score of 8.4, using a valid signed copy of the application and a malicious archive.dll to execute code with the application's privileges. The ClickFix delivery platform Romulus was used to deliver Legion Loader and other malware, including campaigns that used malicious ChatGPT Custom GPTs to lure victims into copying and executing PowerShell that dropped an MSI installer abusing DLL sideloading to deploy a remote access trojan. Siemens has patched the issue in version 4.0.9.8 and advises organizations to update, block associated indicators including 96.62.218\[.\]59, wizardexpensive\[.\]com, and 2.27.248\[.\]127, and monitor for SiemensSoftwareCenter.exe running from AppData\\Local\\Programs and started by msiexec.exe.
+
+**Reference:** [ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan](<https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html>) 
+
+<!-- ciso-revision:ciso-20261020-2-1792562638648 -->

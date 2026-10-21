@@ -41,4 +41,20 @@ Citizen Lab 高度確信，塞爾維亞貝爾格勒大學校長 Vladan Đokić �
 
 **參考來源:** [Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election](<https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html>) 
 
-<!-- ciso-revision:ciso-20261020-1-1792558256905 -->
+---
+
+📌 **熱門 WordPress SEO 外掛 Rank Math PRO 被劫持以投遞自我修復後門**
+
+在 2026 年 10 月 15 日 20:02 UTC 至 10 月 16 日 07:12 UTC 之間下載或更新的 Rank Math PRO 受損版本包含自我修復後門，受影響網站應視為已遭入侵。乾淨版本 3.0.124 已釋出，但重新安裝無法移除惡意軟體可能已放置的惡意檔案、管理員帳號、排程工作或 SSH 金鑰。惡意軟體可能在外掛、主題和 must-use 外掛目錄留下 PHP 後門檔案；建立偽造的 WordPress 核心檔案；修改 .htaccess 以將 .cache 檔案作為 PHP 執行；並暴露任何可觸及的密碼、資料庫憑證、API 金鑰及其他祕密。復原需要從 10 月 15 日前的備份還原、更換所有憑證，然後才安裝 3.0.124；若無乾淨備份，管理員必須刪除 rank-math-pro 資料夾、移除特定 wp\_options 項目、封鎖對 rank1cdn\[.\]com 的外送連線，再搜尋其他痕跡後才重新安裝乾淨外掛。
+
+**參考來源:** [Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor](<https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html>) 
+
+---
+
+📌 **ClickFix 攻擊者利用 Siemens 軟體中心漏洞部署遠端存取木馬**
+
+攻擊者利用 Siemens 軟體中心的 DLL 側載漏洞，該漏洞編號為 CVE-2026-110936，CVSS v4 評分為 8.4，使用應用程式的合法簽署副本與惡意 archive.dll 以應用程式權限執行程式碼。ClickFix 交付平台 Romulus 用於傳遞 Legion Loader 與其他惡意軟體，包括利用惡意 ChatGPT Custom GPTs 誘使受害者複製並執行 PowerShell，以部署 MSI 安裝程式的活動，該安裝程式濫用 DLL 側載部署遠端存取木馬。Siemens 已在版本 4.0.9.8 修補此問題，並建議組織進行更新、封鎖相關指標，包括 96.62.218\[.\]59、wizardexpensive\[.\]com、以及 2.27.248\[.\]127，並監控 SiemensSoftwareCenter.exe 從 AppData\\Local\\Programs 執行且由 msiexec.exe 啟動的情況。
+
+**參考來源:** [ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan](<https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html>) 
+
+<!-- ciso-revision:ciso-20261020-2-1792562638648 -->
