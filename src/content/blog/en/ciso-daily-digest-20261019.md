@@ -113,7 +113,31 @@ iThome reports that abused ConnectWise backup API credentials led to unauthorize
 
 **Reference:** [ConnectWise備份API憑證遭濫用，173個M365租戶遭未授權存取 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1saGVyaVllRFdSclA0TjdUdkFOeDlKZ1p5MWQ5b2VMbWZjaFg5Ni1waWtBLVJHT2JJQVRERjVzVVloX2dmSWF2aEFiQVU3QQ?oc=5>) 
 
+---
+
+📌 **Adobe patched 176 security vulnerabilities in the first half of October**
+
+iThome reports that Adobe addressed 176 security vulnerabilities during the first half of October. The RSS headline does not provide affected products, severity ratings, CVE identifiers, or exploit status.
+
+**Reference:** [Adobe於10月上半修補176個資安漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9CdElUb2lqX2JYeDcxUEdCME1XaFlYbG5TUkFGMXM1Z3BjanFsN1EyTGl2Rk13WGhiUko5a2RaYkx2TFRubnZPeDJZZGludw?oc=5>) 
+
+---
+
+📌 **Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers**
+
+Researcher Quentin Kaiser disclosed an unpatched flaw in Broadcom’s Wi-Fi Protected Setup code that lets attackers within radio range run code as root on affected routers without a password or pairing. No CVE has been assigned, and Broadcom has not publicly acknowledged or patched the issue. Kaiser demonstrated attacks against an Orange Belgium Askey TCG3000 gateway that exposed the Wi-Fi password, and a Proximus Sagemcom BBOX3V+ that opened a remote shell over Wi-Fi. Older eCos-based chips including BCM3380, BCM3383, and BCM33834 have no usable fix, while newer Linux-based models such as BCM3390, BCM65xx, and BCM68xx could be patched by vendors switching Wi-Fi software. Millions of devices across dozens of vendors may be affected, though Belgian provider estimates are rough and Kaiser’s wider device list mixes confirmed and likely-vulnerable entries. Kaiser reports no real-world exploitation and says his exploits are his own work. Defenders have no patch or blocking setting; YARA rules and a detection script are available as triage aids, and replacement is the practical option for permanently vulnerable devices.
+
+**Reference:** [Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers](<https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html>) 
+
+---
+
+📌 **Cloud-based office software Collabora Online vulnerability exploited, attackers attempt to infiltrate Nextcloud servers**
+
+iThome reports that a vulnerability in cloud-based Collabora Online office software is being exploited in attempts to infiltrate Nextcloud servers. The RSS headline does not provide the vulnerability identifier, affected versions, exploitation details, or confirmed compromise scope.
+
+**Reference:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-5-1792558651437 -->
+<!-- ciso-revision:ciso-20261019-6-1792566408922 -->

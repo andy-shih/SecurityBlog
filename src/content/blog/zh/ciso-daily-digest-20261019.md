@@ -113,7 +113,31 @@ iThome 報導，遭濫用的 ConnectWise 備份 API 憑證導致未經授權存�
 
 **參考來源:** [ConnectWise備份API憑證遭濫用，173個M365租戶遭未授權存取 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1saGVyaVllRFdSclA0TjdUdkFOeDlKZ1p5MWQ5b2VMbWZjaFg5Ni1waWtBLVJHT2JJQVRERjVzVVloX2dmSWF2aEFiQVU3QQ?oc=5>) 
 
+---
+
+📌 **Adobe 於 10 月上半月修補 176 個安全性漏洞**
+
+iThome 報導，Adobe 在 10 月上半月處理了 176 個安全性漏洞。RSS 標題未提供受影響產品、嚴重程度評級、CVE 識別碼或攻擊狀態。
+
+**參考來源:** [Adobe於10月上半修補176個資安漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9CdElUb2lqX2JYeDcxUEdCME1XaFlYbG5TUkFGMXM1Z3BjanFsN1EyTGl2Rk13WGhiUko5a2RaYkx2TFRubnZPeDJZZGludw?oc=5>) 
+
+---
+
+📌 **未修補的 Broadcom Wi-Fi 漏洞讓攻擊者在無線範圍內以 root 權限在路由器上執行程式碼**
+
+研究人員 Quentin Kaiser 揭露 Broadcom Wi-Fi Protected Setup 程式碼中一個未修補的漏洞，讓攻擊者在無線電波範圍內，無需密碼或配對，即可在受影響的路由器上以 root 權限執行程式碼。尚未分配 CVE，Broadcom 也未公開承認或修補此問題。Kaiser 示範了針對 Orange Belgium Askey TCG3000 網關（洩露 Wi-Fi 密碼）和 Proximus Sagemcom BBOX3V+（透過 Wi-Fi 開啟遠端 Shell）的攻擊。較舊的 eCos 晶片（包括 BCM3380、BCM3383 和 BCM33834）無可用的修正方案，而較新的 Linux 架構機型（如 BCM3390、BCM65xx 和 BCM68xx）廠商可透過切換 Wi-Fi 軟體來修補。數百萬裝置、數十家廠商可能受影響，雖然比利時供應商的估算粗略，且 Kaiser 的較大裝置清單混合了已確認與可能受影響的項目。Kaiser 表示未發現真實世界的利用，且其漏洞利用程式碼為自行開發。防禦者目前無修補程式或封鎖設定；YARA 規則和偵測腳本可作為分流輔助，對於永久易受攻擊的裝置，更換是務實選項。
+
+**參考來源:** [Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers](<https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html>) 
+
+---
+
+📌 **雲端辦公軟體 Collabora Online 漏洞被利用，攻擊者試圖滲透 Nextcloud 伺服器**
+
+iThome 報導，雲端辦公軟體 Collabora Online 的漏洞正遭利用，攻擊者試圖滲透 Nextcloud 伺服器。RSS 標題未提供漏洞識別碼、受影響版本、利用細節或確認的受影響範圍。
+
+**參考來源:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-5-1792558651437 -->
+<!-- ciso-revision:ciso-20261019-6-1792566408922 -->
