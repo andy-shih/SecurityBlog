@@ -77,7 +77,7 @@ A fake Web3 accelerator named Apex Accelerator was observed pushing information 
 
 📌 **Microsoft Disrupts Transnational Phishing Crime Service Involving Over 1 Billion Malicious Messages**
 
-iThome reports that Microsoft has taken action against a cross-border phishing crime service responsible for more than one billion malicious messages. The report is based on a headline-only RSS item; full technical details and confirmed victim impact are not yet available.
+iThome reports that Microsoft has taken action against a cross-border phishing crime service responsible for more than one billion malicious messages.
 
 **Reference:** [微軟打擊跨國網釣犯罪服務，涉及逾10億則惡意訊息 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9rUFJWZlZsbFF4WGlFSFNwMEprYm5MRlVFS1pfdUNna0E5U2R3UGFNY3M3UkVkSUNUS0R4S1c5SWRnSkp1ejdrUGU2Y20xZw?oc=5>) 
 
@@ -92,4 +92,4 @@ iThome reports that Nginx has released updates addressing five security flaws, t
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-3-1792557372352 -->
+<!-- ciso-revision:ciso-20261019-4-1792557683932 -->

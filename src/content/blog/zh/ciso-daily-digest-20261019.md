@@ -77,7 +77,7 @@ iThome 報導，Arch Linux 軟體市集出現惡意套件，攻擊者藉此散�
 
 📌 **Microsoft瓦解跨國網路釣魚犯罪服務 涉及逾10億惡意訊息**
 
-iThome報導Microsoft已對負責超過10億惡意訊息的跨國網路釣魚犯罪服務採取行動。該報導基於僅有標題的RSS項目；完整技術細節和確認的受害者影響尚未公開。
+iThome 報導，Microsoft 已對涉及超過 10 億則惡意訊息的跨國網路釣魚犯罪服務採取行動。
 
 **參考來源:** [微軟打擊跨國網釣犯罪服務，涉及逾10億則惡意訊息 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9rUFJWZlZsbFF4WGlFSFNwMEprYm5MRlVFS1pfdUNna0E5U2R3UGFNY3M3UkVkSUNUS0R4S1c5SWRnSkp1ejdrUGU2Y20xZw?oc=5>) 
 
@@ -92,4 +92,4 @@ iThome報導Nginx已發布更新解決五項安全缺陷，其中三項被評級
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-3-1792557372352 -->
+<!-- ciso-revision:ciso-20261019-4-1792557683932 -->
