@@ -153,7 +153,31 @@ Xakep reports that the Android trojan Hirudo substitutes legitimate banking appl
 
 **Reference:** [Android-троян Hirudo подменяет банковские приложения вредоносными версиями](<https://xakep.ru/2026/10/19/hirudo>) 
 
+---
+
+📌 **Media reports arrests of DataSuckers hacking group members who attacked Dodo Pizza and Tez Tour**
+
+Russian media reports that members of the DataSuckers hacking group have been detained following attacks on Dodo Pizza and Tez Tour.
+
+**Reference:** [СМИ: задержаны участники хак-группы DataSuckers, атаковавшей «Додо Пицца» и Tez Tour](<https://xakep.ru/2026/10/19/datasuckers-arrests>) 
+
+---
+
+📌 **AWS tests AI agents to autonomously find and exploit vulnerabilities; 33 of 37 CVEs successfully exploited - iThome**
+
+iThome reports that AWS tested AI agents designed to autonomously discover and exploit vulnerabilities, achieving successful exploitation on 33 of 37 CVEs.
+
+**Reference:** [AWS測試AI代理自主尋找及利用漏洞，37項CVE有33項成功 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9ETEJZOVNGRFpQYV9TTjZkRGdQMlhTOExWTHRhMV9ncmZVOWg1dkVPR2xTT2V6RUtZcmNOM20xVmhjVGtmQzhwdk82MUpwdw?oc=5>) 
+
+---
+
+📌 **Hackers abuse AI pen-test tool Cairn to automate massive attack spree - Dark Reading**
+
+Dark Reading reports that attackers are abusing the AI penetration-testing tool Cairn to automate large-scale attack campaigns.
+
+**Reference:** [Hackers Abuse AI Pen-Test Tool Cairn to Automate Massive Attack Spree](<https://www.darkreading.com/cyberattacks-data-breaches/hackers-abuse-ai-pen-test-tool-cairn>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-7-1792586494109 -->
+<!-- ciso-revision:ciso-20261020-8-1792588900610 -->

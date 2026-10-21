@@ -153,7 +153,31 @@ Xakep 報導，Android 木馬 Hirudo 以惡意版本取代合法銀行應用程�
 
 **參考來源:** [Android-троян Hirudo подменяет банковские приложения вредоносными версиями](<https://xakep.ru/2026/10/19/hirudo>) 
 
+---
+
+📌 **媒體報導數據吸納者駭客組織成員被捕，涉及攻擊多多披薩和Tez Tour**
+
+俄羅斯媒體報導，數據吸納者駭客組織的成員已在多多披薩和Tez Tour遭受攻擊後被拘留。
+
+**參考來源:** [СМИ: задержаны участники хак-группы DataSuckers, атаковавшей «Додо Пицца» и Tez Tour](<https://xakep.ru/2026/10/19/datasuckers-arrests>) 
+
+---
+
+📌 **AWS測試AI代理自動尋找並利用漏洞；37個CVE中有33個成功被利用 - iThome**
+
+iThome報導，AWS測試旨在自動探索並利用漏洞的AI代理，成功利用37個CVE中的33個。
+
+**參考來源:** [AWS測試AI代理自主尋找及利用漏洞，37項CVE有33項成功 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9ETEJZOVNGRFpQYV9TTjZkRGdQMlhTOExWTHRhMV9ncmZVOWg1dkVPR2xTT2V6RUtZcmNOM20xVmhjVGtmQzhwdk82MUpwdw?oc=5>) 
+
+---
+
+📌 **駭客濫用AI滲透測試工具Cairn自動化大規模攻擊活動 - Dark Reading**
+
+Dark Reading報導，攻擊者正濫用AI滲透測試工具Cairn來自動化大規模攻擊活動。
+
+**參考來源:** [Hackers Abuse AI Pen-Test Tool Cairn to Automate Massive Attack Spree](<https://www.darkreading.com/cyberattacks-data-breaches/hackers-abuse-ai-pen-test-tool-cairn>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-7-1792586494109 -->
+<!-- ciso-revision:ciso-20261020-8-1792588900610 -->
