@@ -57,4 +57,28 @@ Attackers exploited a DLL sideloading flaw in Siemens Software Center, tracked a
 
 **Reference:** [ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan](<https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html>) 
 
-<!-- ciso-revision:ciso-20261020-2-1792562638648 -->
+---
+
+📌 **Police arrest Qilin ransomware suspect on holiday, as links made to Synnovis hack that contributed to patient’s death**
+
+Bitdefender reports that police have arrested a Qilin ransomware suspect while on holiday, with the group linked to the Synnovis hack that contributed to a patient’s death.
+
+**Reference:** [Police arrest Qilin ransomware suspect on holiday, as links made to Synnovis hack that contributed to patient’s death](<https://www.bitdefender.com/en-us/blog/hotforsecurity/qilin-ransomware-arrested-synnovis-patient-death>) 
+
+---
+
+📌 **Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor**
+
+The Hacker News reports threat actors are exploiting four Plex Media Server vulnerabilities, collectively called Plex2Shell (CVE-2026-96652, CVE-2026-96654, CVE-2026-96655, CVE-2026-96656), to achieve unauthenticated remote code execution one day after a proof-of-concept went public. The chain deploys an XMRig miner and a Linux backdoor named myawesomeproxy, with exploit attempts observed from IP addresses including 91.92.40\[.\]202 and 176.65.139\[.\]228. Plex patched the flaws in Media Server 1.43.3.10861 on August 3, 2026, and users are advised to update.
+
+**Reference:** [Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor](<https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html>) 
+
+---
+
+📌 **AdFection Turns Ad Impressions Into Zero-Click Spyware Delivery**
+
+Dark Reading reports that the AdFection campaign converts online ad impressions into a zero-click spyware delivery mechanism.
+
+**Reference:** ['AdFection' Turns Ad Impressions Into Zero-Click Spyware Delivery](<https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery>) 
+
+<!-- ciso-revision:ciso-20261020-3-1792564902642 -->

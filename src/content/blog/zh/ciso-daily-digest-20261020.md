@@ -57,4 +57,28 @@ Citizen Lab 高度確信，塞爾維亞貝爾格勒大學校長 Vladan Đokić �
 
 **參考來源:** [ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan](<https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html>) 
 
-<!-- ciso-revision:ciso-20261020-2-1792562638648 -->
+---
+
+📌 **警察逮捕正在度假的 Qilin 勒索軟體嫌疑人，並與導致患者死亡的 Synnovis 黑客攻擊相關聯**
+
+Bitdefender 报告，警方逮捕了一名正在度假的 Qilin 勒索軟體嫌疑人，該組織與導致一名患者死亡的 Synnovis 黑客攻擊有關。
+
+**參考來源:** [Police arrest Qilin ransomware suspect on holiday, as links made to Synnovis hack that contributed to patient’s death](<https://www.bitdefender.com/en-us/blog/hotforsecurity/qilin-ransomware-arrested-synnovis-patient-death>) 
+
+---
+
+📌 **駭客利用 Plex2Shell 漏洞安裝加密幣挖礦程式和 Linux 代理後門**
+
+《駭客新聞》報導，威脅行為者正在利用四個 Plex Media Server 漏洞，統稱為 Plex2Shell（CVE-2026-96652、CVE-2026-96654、CVE-2026-96655、CVE-2026-96656），在概念驗證程式碼公開一週後實現未經驗證的遠端程式碼執行。該鏈部署了 XMRig 挖礦程式和名為 myawesomeproxy 的 Linux 後門，利用企圖來源 IP 位址包括 91.92.40\[.\]202 和 176.65.139\[.\]228。Plex 於 2026 年 8 月 3 日在媒體伺服器 1.43.3.10861 中修補了這些漏洞，建議使用者更新。
+
+**參考來源:** [Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor](<https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html>) 
+
+---
+
+📌 **AdFection 將廣告展示次數轉換為零點擊間諜軟體傳遞機制**
+
+《暗讀報》報導，AdFection 活動將線上廣告展示次數轉換為零點擊間諜軟體傳遞機制。
+
+**參考來源:** ['AdFection' Turns Ad Impressions Into Zero-Click Spyware Delivery](<https://www.darkreading.com/data-privacy/adfection-online-ads-spyware-delivery>) 
+
+<!-- ciso-revision:ciso-20261020-3-1792564902642 -->
