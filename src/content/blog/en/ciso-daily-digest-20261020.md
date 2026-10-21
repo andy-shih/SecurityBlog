@@ -129,7 +129,31 @@ The Hacker News reports that Forescout Research - Vedere Labs disclosed the ROMU
 
 **Reference:** [Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware](<https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html>) 
 
+---
+
+📌 **SiteGuard WAF command injection exploited, attackers can gain highest server privileges - iThome**
+
+iThome reports that a command injection vulnerability in SiteGuard WAF is being exploited, allowing attackers to obtain the highest privileges on the server.
+
+**Reference:** [SiteGuard WAF命令注入漏洞遭利用，駭客可取得伺服器最高權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5mT01GWEpucEtuaG9GSG5tSlRvR1k0OW9fNUtyc0cxS09TR092US02YTZpOTB0c0NFZGZCNnN2Qm5ua3hON0M1Yy1wTUhJUQ?oc=5>) 
+
+---
+
+📌 **Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns**
+
+Go 1.27.3 and Go 1.26.10, released October 20 under the URGENT track, cause Go's certificate verifier to reject certificate chains passing through eight unnamed intermediate CA keys due to specific security concerns. Eight blocked intermediate certificates match eMudhra's emSign Root TLS CA - G3 and emSign Root CS CA - G3 hashes, covering six TLS intermediates and two code-signing intermediates issued to eMudhra BV and eMudhra Inc. The filter applies across Go's verifier, macOS and Windows OS paths, and even private trust stores, returning x509: no valid chains built with no way to disable it. Go has not said whether active exploitation or ecosystem integrity prompted the URGENT response, and affected sites need certificates from a different intermediate before rebuilt Go clients can connect.
+
+**Reference:** [Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns](<https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html>) 
+
+---
+
+📌 **Android banking trojan Hirudo replaces banking apps with malicious versions**
+
+Xakep reports that the Android trojan Hirudo substitutes legitimate banking applications with malicious versions.
+
+**Reference:** [Android-троян Hirudo подменяет банковские приложения вредоносными версиями](<https://xakep.ru/2026/10/19/hirudo>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-6-1792581596505 -->
+<!-- ciso-revision:ciso-20261020-7-1792586494109 -->

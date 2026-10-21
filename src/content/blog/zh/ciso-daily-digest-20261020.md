@@ -129,7 +129,31 @@ The Hacker News 報導，Forescout Research - Vedere Labs 披露 ROMULUS ClickFi
 
 **參考來源:** [Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware](<https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html>) 
 
+---
+
+📌 **SiteGuard WAF 命令注入漏洞遭利用，攻擊者可取得伺服器最高權限 - iThome**
+
+iThome 報導，SiteGuard WAF 命令注入漏洞正被利用，攻擊者可取得伺服器最高權限。
+
+**參考來源:** [SiteGuard WAF命令注入漏洞遭利用，駭客可取得伺服器最高權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5mT01GWEpucEtuaG9GSG5tSlRvR1k0OW9fNUtyc0cxS09TR092US02YTZpOTB0c0NFZGZCNnN2Qm5ua3hON0M1Yy1wTUhJUQ?oc=5>) 
+
+---
+
+📌 **Go 發行緊急更新，封鎖八個 CA 金鑰，原因係未公開安全疑慮**
+
+於 10 月 20 日在 URGENT 追蹤下發行的 Go 1.27.3 和 Go 1.26.10，導致 Go 憑證驗證器拒絕通過八個未具名中介 CA 金鑰的憑證鏈，原因為特定安全疑慮。這八個被封鎖的中介憑證與 eMudhra 的 emSign Root TLS CA - G3 和 emSign Root CS CA - G3 雜湊值相符，涵蓋發行給 eMudhra BV 和 eMudhra Inc. 的六個 TLS 中介和兩個代碼簽署中介。此過濾器適用於 Go 驗證器、macOS 和 Windows 作業系統路徑，甚至私人信任存放區，會回傳 x509: no valid chains built，且無法停用。Go 未說明是主動利用攻擊或生態系統完整性促成 URGENT 回應，且受影響網站在重建的 Go 用戶端能連線前，需要來自不同中介的憑證。
+
+**參考來源:** [Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns](<https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html>) 
+
+---
+
+📌 **Android 銀行木馬 Hirudo 以惡意版本取代銀行應用程式**
+
+Xakep 報導，Android 木馬 Hirudo 以惡意版本取代合法銀行應用程式。
+
+**參考來源:** [Android-троян Hirudo подменяет банковские приложения вредоносными версиями](<https://xakep.ru/2026/10/19/hirudo>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-6-1792581596505 -->
+<!-- ciso-revision:ciso-20261020-7-1792586494109 -->
