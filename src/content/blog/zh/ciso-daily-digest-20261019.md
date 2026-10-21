@@ -137,7 +137,31 @@ iThome 報導，雲端辦公軟體 Collabora Online 的漏洞正遭利用，攻�
 
 **參考來源:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
 
+---
+
+📌 **Sucuri 揭露自動重建的 WordPress 惡意軟體 SC 移除數秒後再度出現**
+
+Sucuri 已識別出一種稱為 SC 的自動重建 WordPress 惡意軟體，該惡意軟體在被移除後數秒內即會再度出現，表示伺服器可能持續受到存取或存在再感染機制。
+
+**參考來源:** [Sucuri揭露可自我重建的WordPress惡意程式SC，移除後數秒便會重現 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBOLXJfbEFuRUJfWktuLWFGNXUzWkMtdWY5R1VUc3JLMUM0OU40SVREYWx6NG1pUE0tU3plUXpxNDBJTENpZFBmZUlDd2xJQQ?oc=5>) 
+
+---
+
+📌 **聯邦調查人員懷疑勒索談判者經營 ShinyHunters 勒索網站**
+
+根據 Krebs on Security 報導，美國聯邦調查人員懷疑一名勒索談判者經營了 ShinyHunters 勒索網站。
+
+**參考來源:** [Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site](<https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site>) 
+
+---
+
+📌 **OpenCode Console 資料外洩可能洩露 OpenAI、Anthropic 與 Google API 金鑰**
+
+OpenCode 說明，入侵者於 10 月 16 日存取舊版系統，可能洩露 1.4% Console 用戶所儲存的第三方 AI 提供者金鑰。受影響用戶於 10 月 17 日收到電子郵件，要求撤銷並更換 OpenAI、Anthropic 或 Google 金鑰。OpenCode 強調，資安事件涉及託管的 Console 服務，而非其命令列或桌面應用程式，且提供者金鑰從未傳送至 OpenCode。該公司尚未確認任何金鑰被複製或使用，尚未點名任何人，也尚未說明舊版系統是如何被入侵，亦未說明其與報告中大規模蒸餾攻擊的關聯。攻擊者於 10 月 18 日仍嘗試存取 OpenCode 系統。
+
+**參考來源:** [OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys](<https://thehackernews.com/2026/10/opencode-console-breach-may-have.html>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-6-1792566408922 -->
+<!-- ciso-revision:ciso-20261019-7-1792578068473 -->

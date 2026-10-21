@@ -137,7 +137,31 @@ iThome reports that a vulnerability in cloud-based Collabora Online office softw
 
 **Reference:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
 
+---
+
+📌 **Sucuri reveals self-rebuilding WordPress malware SC reappears seconds after removal**
+
+Sucuri has identified a self-rebuilding WordPress malware known as SC that reappears within seconds after being removed, indicating persistent server access or reinfection mechanisms.
+
+**Reference:** [Sucuri揭露可自我重建的WordPress惡意程式SC，移除後數秒便會重現 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBOLXJfbEFuRUJfWktuLWFGNXUzWkMtdWY5R1VUc3JLMUM0OU40SVREYWx6NG1pUE0tU3plUXpxNDBJTENpZFBmZUlDd2xJQQ?oc=5>) 
+
+---
+
+📌 **Feds suspect ransom negotiator ran ShinyHunters extortion site**
+
+U.S. federal investigators suspect a ransom negotiator operated a ShinyHunters extortion site, according to Krebs on Security reporting.
+
+**Reference:** [Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site](<https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site>) 
+
+---
+
+📌 **OpenCode Console breach may have exposed OpenAI, Anthropic, and Google API keys**
+
+OpenCode says an intruder accessed a legacy system on October 16 and may have exposed third-party AI provider keys stored by 1.4 percent of Console users. Affected users were emailed on October 17 to revoke and replace their OpenAI, Anthropic, or Google keys. OpenCode stresses the breach involves the hosted Console service, not its command-line or desktop apps, and that provider keys never reach OpenCode. The company has not confirmed any key was copied or used, has not named anyone, and has not explained how the legacy system was reached or its connection to a reported large-scale distillation attack. Attackers were still attempting to access OpenCode systems on October 18.
+
+**Reference:** [OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys](<https://thehackernews.com/2026/10/opencode-console-breach-may-have.html>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-6-1792566408922 -->
+<!-- ciso-revision:ciso-20261019-7-1792578068473 -->
