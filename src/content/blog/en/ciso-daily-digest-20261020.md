@@ -177,7 +177,55 @@ Dark Reading reports that attackers are abusing the AI penetration-testing tool 
 
 **Reference:** [Hackers Abuse AI Pen-Test Tool Cairn to Automate Massive Attack Spree](<https://www.darkreading.com/cyberattacks-data-breaches/hackers-abuse-ai-pen-test-tool-cairn>) 
 
+---
+
+📌 **Collabora Online vulnerability exploited to attempt intrusion into Nextcloud servers - iThome**
+
+iThome reports that attackers exploited a vulnerability in cloud-based Collabora Online software to attempt intrusion into Nextcloud servers.
+
+**Reference:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
+
+---
+
+📌 **Microsoft October Windows update tightens NTLMv1 restrictions, enterprise Wi-Fi and VPN logins may be affected - iThome**
+
+iThome reports that Microsoft's October Windows update strengthens NTLMv1 restrictions, potentially affecting enterprise Wi-Fi and VPN logins.
+
+**Reference:** [微軟10月Windows更新強化NTLMv1限制，企業Wi-Fi與VPN登入恐受影響 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE40TURiSjFJVEdPdUVkRWxjRy1hRkM5MFZJTXhhelZxcERxZHNUaGVnOGFWUFlqa2ZGVlZTMHZaejJTUGRQbTR5UklJc1p1dw?oc=5>) 
+
+---
+
+📌 **Korean drug regulatory website has insufficient access controls, over 2,000 clinical trial records downloadable via ChatGPT and personal data of more than 1,000 people exposed - iThome**
+
+iThome reports that insufficient access controls on a Korean drug regulatory website allowed downloading of over 2,000 clinical trial records via ChatGPT and exposed personal data of more than 1,000 people.
+
+**Reference:** [韓國藥品監管網站存取管制不足，透過ChatGPT可下載2000多筆臨床試驗資料，並外洩上千人個資 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBuTlhGSUhtNmlkWXpVUjJXYnJ0M2xPQTlLYlltdzZWRUFtSHNMV1JrM2k1N0tPbXN5NHAwdlFzWHVBRWRHb0VmMnQxYkpaUQ?oc=5>) 
+
+---
+
+📌 **Claude Code Finds XMRig Crypto Miner on Mac**
+
+Cyber Kendra reports that Claude Code discovered an XMRig cryptocurrency miner on a Mac system.
+
+**Reference:** [Claude Code Finds XMRig Crypto Miner on Mac - Cyber Kendra](<https://news.google.com/rss/articles/CBMijAFBVV95cUxORWpBMGIxTTVwRDVid2lMaG5CWEFDMTljU0hvN2I1N20zalRxWHNWUkNhbVVZamtoRTZXRmxIV0FDeVgxbGV6U1A1SEt2VHE0cy1qQWlVeXY3dkMxVTM3Ujg2V09GVG1YSHNHVktoNGpXNk1weE8tRWQtV1lTS3NXc1pIX0I5NVpvT0ZlSQ?oc=5>) 
+
+---
+
+📌 **Clothing Company Reports Possible Personal Data Breach Linked to Automated Attack on Outsourced Platform Database**
+
+iThome reports that a clothing company received consumer reports of suspected personal data exposure, pointing toward an automated attack on a database used by an outsourced platform.
+
+**Reference:** [服飾公司滿心接獲消費者反映個資疑似外洩，茅頭指向委外平臺資料庫遭自動化攻擊 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE4zdVE5LVpZVTR3NnVFLVVZaGpETjY1ZzFIc2hOUlo0eEt2YXhEU2ZnVVpBcUlfYVN6ZkotSFdjc0xYSzVSZEI0R0pkaXV6QQ?oc=5>) 
+
+---
+
+📌 **Emergency Patches Fix Critical Bugs in Nginx**
+
+Xakep reports that emergency patches have been released to fix critical bugs in Nginx.
+
+**Reference:** [Экстренные патчи исправляют критические баги в Nginx](<https://xakep.ru/2026/10/20/nginx-patches>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-8-1792588900610 -->
+<!-- ciso-revision:ciso-20261020-9-1792618872196 -->

@@ -177,7 +177,55 @@ Dark Reading報導，攻擊者正濫用AI滲透測試工具Cairn來自動化大�
 
 **參考來源:** [Hackers Abuse AI Pen-Test Tool Cairn to Automate Massive Attack Spree](<https://www.darkreading.com/cyberattacks-data-breaches/hackers-abuse-ai-pen-test-tool-cairn>) 
 
+---
+
+📌 **Collabora Online 漏洞被利用試圖入侵 Nextcloud 伺服器 - iThome**
+
+iThome 報導，攻擊者利用雲端 Collabora Online 軟體漏洞，試圖入侵 Nextcloud 伺服器。
+
+**參考來源:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
+
+---
+
+📌 **Microsoft 十月 Windows 更新收緊 NTLMv1 限制，企業 Wi-Fi 和 VPN 登入可能受影響 - iThome**
+
+iThome 報導，Microsoft 的十月 Windows 更新加強 NTLMv1 限制，可能影響企業 Wi-Fi 和 VPN 登入。
+
+**參考來源:** [微軟10月Windows更新強化NTLMv1限制，企業Wi-Fi與VPN登入恐受影響 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE40TURiSjFJVEdPdUVkRWxjRy1hRkM5MFZJTXhhelZxcERxZHNUaGVnOGFWUFlqa2ZGVlZTMHZaejJTUGRQbTR5UklJc1p1dw?oc=5>) 
+
+---
+
+📌 **韓國藥品監管網站存取控制不足，超過 2,000 筆臨床試驗記錄可透過 ChatGPT 下載，超過 1,000 人個人資料外洩 - iThome**
+
+iThome 報導，韓國藥品監管網站存取控制不足，允許透過 ChatGPT 下載超過 2,000 筆臨床試驗記錄，並外洩超過 1,000 人的個人資料。
+
+**參考來源:** [韓國藥品監管網站存取管制不足，透過ChatGPT可下載2000多筆臨床試驗資料，並外洩上千人個資 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTFBuTlhGSUhtNmlkWXpVUjJXYnJ0M2xPQTlLYlltdzZWRUFtSHNMV1JrM2k1N0tPbXN5NHAwdlFzWHVBRWRHb0VmMnQxYkpaUQ?oc=5>) 
+
+---
+
+📌 **Claude Code 在 Mac 上發現 XMRig 加密礦工**
+
+Cyber Kendra 報告指，Claude Code 在 Mac 系統上發現 XMRig 加密貨幣礦工。
+
+**參考來源:** [Claude Code Finds XMRig Crypto Miner on Mac - Cyber Kendra](<https://news.google.com/rss/articles/CBMijAFBVV95cUxORWpBMGIxTTVwRDVid2lMaG5CWEFDMTljU0hvN2I1N20zalRxWHNWUkNhbVVZamtoRTZXRmxIV0FDeVgxbGV6U1A1SEt2VHE0cy1qQWlVeXY3dkMxVTM3Ujg2V09GVG1YSHNHVktoNGpXNk1weE8tRWQtV1lTS3NXc1pIX0I5NVpvT0ZlSQ?oc=5>) 
+
+---
+
+📌 **服裝公司通報疑似與外包平台資料庫自動化攻擊相關的個資外洩事件**
+
+iThome 報告指出，一家服裝公司收到消費者通報，懷疑個人資料外洩，指向針對外包平台所用資料庫的自動化攻擊。
+
+**參考來源:** [服飾公司滿心接獲消費者反映個資疑似外洩，茅頭指向委外平臺資料庫遭自動化攻擊 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE4zdVE5LVpZVTR3NnVFLVVZaGpETjY1ZzFIc2hOUlo0eEt2YXhEU2ZnVVpBcUlfYVN6ZkotSFdjc0xYSzVSZEI0R0pkaXV6QQ?oc=5>) 
+
+---
+
+📌 **緊急補丁修復 Nginx 中的重大漏洞**
+
+Xakep 報告指出，已發布緊急補丁以修復 Nginx 中的重大漏洞。
+
+**參考來源:** [Экстренные патчи исправляют критические баги в Nginx](<https://xakep.ru/2026/10/20/nginx-patches>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-8-1792588900610 -->
+<!-- ciso-revision:ciso-20261020-9-1792618872196 -->
