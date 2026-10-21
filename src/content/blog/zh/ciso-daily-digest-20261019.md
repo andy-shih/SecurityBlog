@@ -117,7 +117,7 @@ iThome 報導，遭濫用的 ConnectWise 備份 API 憑證導致未經授權存�
 
 📌 **Adobe 於 10 月上半月修補 176 個安全性漏洞**
 
-iThome 報導，Adobe 在 10 月上半月處理了 176 個安全性漏洞。RSS 標題未提供受影響產品、嚴重程度評級、CVE 識別碼或攻擊狀態。
+iThome 報導，Adobe 在 10 月上半月處理了 176 個安全性漏洞。
 
 **參考來源:** [Adobe於10月上半修補176個資安漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9CdElUb2lqX2JYeDcxUEdCME1XaFlYbG5TUkFGMXM1Z3BjanFsN1EyTGl2Rk13WGhiUko5a2RaYkx2TFRubnZPeDJZZGludw?oc=5>) 
 
@@ -133,7 +133,7 @@ iThome 報導，Adobe 在 10 月上半月處理了 176 個安全性漏洞。RSS 
 
 📌 **雲端辦公軟體 Collabora Online 漏洞被利用，攻擊者試圖滲透 Nextcloud 伺服器**
 
-iThome 報導，雲端辦公軟體 Collabora Online 的漏洞正遭利用，攻擊者試圖滲透 Nextcloud 伺服器。RSS 標題未提供漏洞識別碼、受影響版本、利用細節或確認的受影響範圍。
+iThome 報導，雲端辦公軟體 Collabora Online 的漏洞正遭利用，攻擊者試圖滲透 Nextcloud 伺服器。
 
 **參考來源:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
 
@@ -252,4 +252,4 @@ Microchip 已擴大其數據中心產品組合，新增 CNSA 2.0 後量子密碼
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-11-1792597446421 -->
+<!-- ciso-revision:ciso-20261019-12-1792607674868 -->

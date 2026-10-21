@@ -117,7 +117,7 @@ iThome reports that abused ConnectWise backup API credentials led to unauthorize
 
 📌 **Adobe patched 176 security vulnerabilities in the first half of October**
 
-iThome reports that Adobe addressed 176 security vulnerabilities during the first half of October. The RSS headline does not provide affected products, severity ratings, CVE identifiers, or exploit status.
+iThome reports that Adobe addressed 176 security vulnerabilities during the first half of October.
 
 **Reference:** [Adobe於10月上半修補176個資安漏洞 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9CdElUb2lqX2JYeDcxUEdCME1XaFlYbG5TUkFGMXM1Z3BjanFsN1EyTGl2Rk13WGhiUko5a2RaYkx2TFRubnZPeDJZZGludw?oc=5>) 
 
@@ -133,7 +133,7 @@ Researcher Quentin Kaiser disclosed an unpatched flaw in Broadcom’s Wi-Fi Prot
 
 📌 **Cloud-based office software Collabora Online vulnerability exploited, attackers attempt to infiltrate Nextcloud servers**
 
-iThome reports that a vulnerability in cloud-based Collabora Online office software is being exploited in attempts to infiltrate Nextcloud servers. The RSS headline does not provide the vulnerability identifier, affected versions, exploitation details, or confirmed compromise scope.
+iThome reports that a vulnerability in cloud-based Collabora Online office software is being exploited in attempts to infiltrate Nextcloud servers.
 
 **Reference:** [雲端版辦公室軟體Collabora Online漏洞遭到利用，攻擊者試圖入侵Nextcloud伺服器 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PcExyLWRmVWV1enZ1cUctVU16c2x5ZzJXWUpYaFAxTktuanNhcnBJZjZSRGxEQ0Q4NjZWaHdHaW1qS0Q2eXJheHdKNUQxQQ?oc=5>) 
 
@@ -252,4 +252,4 @@ Microchip has expanded its data center product portfolio by adding support for C
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-11-1792597446421 -->
+<!-- ciso-revision:ciso-20261019-12-1792607674868 -->
