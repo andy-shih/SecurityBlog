@@ -140,4 +140,4 @@ iThome reports that CISA has listed six vulnerabilities affecting Plex, SiteGuar
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261021-1-1792617632864 -->
+<!-- ciso-revision:ciso-20261021-2-1792619439254 -->

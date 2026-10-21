@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：八組 eMudhra 憑證授權中心金鑰遭盜，觸發瀏覽器和軟體緊急修復 (20261021)"
+title: "CISO 每日摘要：八組 eMudhra 憑證授權中心金鑰失陷，觸發瀏覽器和軟體緊急修復 (20261021)"
 description: "2026 年 10 月 20 日出現兩起重大安全事件：一起是由於有缺陷的金鑰儀式導致加密弱點而造成的八個 eMudhra CA 中間金鑰盜取的基礎 PKI 故障，促使所有主要瀏覽器和運行時信任存放區緊急撤銷；另一起是新型攻擊活動，自主 AI 代理入侵超過 100 個組織的 1,200 多個目標網站，展示了利用暴露的 AI 代理控制面板進行低成本、可擴展攻擊自動化。"
 pubDate: 2026-10-21
 tags: ["cybersecurity","threat-intelligence","ciso-daily","pki","certificate-authority","ai-agents","autonomous-attacks","supply-chain"]
@@ -7,7 +7,7 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-## 八組 eMudhra 憑證授權中心金鑰遭盜，觸發瀏覽器和軟體緊急修復
+## 八組 eMudhra 憑證授權中心金鑰失陷，觸發瀏覽器和軟體緊急修復
 
 由於 2025 年 4 月金鑰儀式期間隨機性不足，導致八個 eMudhra 中間憑證授權中心憑證的私密金鑰遭到盜取，任何人皆可從公開憑證計算這些金鑰。Mozilla 和 Google Chrome 根程式於 2026 年 10 月 20 日確認此次盜取事件，研究人員於 10 月 17 日回報。受影響的憑證包括六個 TLS 中間憑證（域驗證、組織驗證和擴展驗證）及兩個代碼簽署中間憑證，全部由 Sectigo 交叉簽署。
 
@@ -140,4 +140,4 @@ iThome 報導指出，CISA 已將影響 Plex、SiteGuard 和 Siemens 產品的�
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261021-1-1792617632864 -->
+<!-- ciso-revision:ciso-20261021-2-1792619439254 -->
