@@ -185,7 +185,31 @@ iThome reports that a Linux kernel vulnerability named PwnEscape can escape virt
 
 **Reference:** [Linux核心PwnEscape漏洞可突破虛擬機隔離，導致主機記憶體洩漏 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9fWXZCWVdxak9JYTNua3k1RzFuYzJHQnRoQ0ZFLUpISTNyek9oNVdnaHJKazlCWEtnTTRtTUpkMTJJanJNNGI5QjB3UmdKdw?oc=5>) 
 
+---
+
+📌 **G7 to hold AI cyberattack drill testing financial sector response capability - iThome**
+
+iThome reports that the G7 will conduct an AI cyberattack drill to test the financial sector's response capability.
+
+**Reference:** [G7將舉行AI網路攻擊演練，檢驗金融業應變能力 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9JYThGcDgxdzZwalFWemtHUG8zUngwU3ZYS3VkZnBjaHRzUUlhdVRxMDVmZ0N0Rk85VnEwT3VDazJFNkZWOHRKRWpwTmRBZw?oc=5>) 
+
+---
+
+📌 **QNAP 2026 Taiwan enterprise cyber resilience survey: 78% of companies have offsite backups, but nearly 70% face deletion risk after compromise - iThome**
+
+QNAP released its 2026 Taiwan enterprise cyber resilience survey based on self-assessments from 241 Taiwanese enterprises, finding average security scores of 30.0 out of 55 with 71% of organizations rated high-risk or needs improvement. While 78% have offsite backups, more than 60% of those backup environments remain always online and cannot guarantee protection against deletion when administrator accounts are compromised. Sophos data cited in the report indicates 94% of ransomware victims had attackers attempt to destroy backups, with affected organizations paying ransoms 67% of the time versus 36% for those with unaffected backups. The survey also found 38% of companies rely solely on passwords for privileged access with no additional protection, and many lack internal network detection capabilities for IoT devices and printers that cannot run endpoint agents. QNAP recommends prioritizing identity defense through MFA and RBAC, isolating backups with Airgap+ and immutable WORM storage, adding NDR for lateral movement detection, and focusing on one to three critical controls based on organizational maturity rather than launching too many simultaneous projects.
+
+**Reference:** [QNAP《2026 台灣企業資安韌性大調查》：78% 企業已建立異地備份，但其中近七成仍處可被刪除的失守危機 - iThome](<https://news.google.com/rss/articles/CBMiS0FVX3lxTFByaHlFeUVnMnpKVzhkTlZZa2h6SV9HTkhyZDVNVXpSeENSZXhmUGdNNEF6X1FTbEtVd010UVlwbEVGdjJWZHRDbWpzYw?oc=5>) 
+
+---
+
+📌 **Proofpoint to acquire Varonis for $6.3 billion, expanding data and AI security business - iThome**
+
+iThome reports that Proofpoint has agreed to acquire Varonis for $6.3 billion to expand its data and AI security business.
+
+**Reference:** [Proofpoint以63億美元併購Varonis，擴大資料與AI安全業務 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Gbk94N19zUXFQcThqTm1CLUlPei1URGtpMW5oNld0bzg1SWtoTkxMOUNlZzBMS1h5TWR1UHN6bktkSkV3QXNlQUhfNkdyQQ?oc=5>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-8-1792583142510 -->
+<!-- ciso-revision:ciso-20261019-9-1792590290983 -->

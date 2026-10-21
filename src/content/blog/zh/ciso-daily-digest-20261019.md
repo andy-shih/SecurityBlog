@@ -185,7 +185,31 @@ iThome 報導，名為 PwnEscape 的 Linux 核心漏洞可突破虛擬機器隔�
 
 **參考來源:** [Linux核心PwnEscape漏洞可突破虛擬機隔離，導致主機記憶體洩漏 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9fWXZCWVdxak9JYTNua3k1RzFuYzJHQnRoQ0ZFLUpISTNyek9oNVdnaHJKazlCWEtnTTRtTUpkMTJJanJNNGI5QjB3UmdKdw?oc=5>) 
 
+---
+
+📌 **G7 將進行人工智慧網路攻擊演練，測試金融部門應變能力 - iThome**
+
+iThome 報導，G7 將進行人工智慧網路攻擊演練，測試金融部門的應變能力。
+
+**參考來源:** [G7將舉行AI網路攻擊演練，檢驗金融業應變能力 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9JYThGcDgxdzZwalFWemtHUG8zUngwU3ZYS3VkZnBjaHRzUUlhdVRxMDVmZ0N0Rk85VnEwT3VDazJFNkZWOHRKRWpwTmRBZw?oc=5>) 
+
+---
+
+📌 **QNAP 2026 台灣企業網路韌性調查：78% 公司擁有異地備份，但近 70% 在遭入侵後面臨刪除風險 - iThome**
+
+QNAP 發布了基於 241 家台灣企業自我評估的 2026 台灣企業網路韌性調查，發現平均安全分數為 30.0 分（總分 55 分），其中 71% 的組織被評為高風險或需要改進。雖然 78% 的公司擁有異地備份，但其中超過 60% 的備份環境保持常時在線，且在管理員帳號遭入侵時無法保證能防止被刪除。報告中引用的 Sophos 數據顯示，94% 的勒索軟體受害者曾遭遇攻擊者試圖摧毀備份；受影響組織支付贖金的比例為 67%，而備份未受影響的組織則為 36%。調查還發現 38% 的公司僅依賴密碼進行特權存取而無額外保護，且許多公司缺乏針對無法安裝端點代理程式之 IoT 設備與印表機的內部網路偵測能力。QNAP 建議優先透過 MFA 與 RBAC 強化身分防禦，使用 Airgap+ 與不可變 WORM 儲存將備份隔離，增加 NDR 以偵測橫向移動，並根據組織成熟度專注於 1 到 3 個關鍵控制項，而非同時啟動過多專案。
+
+**參考來源:** [QNAP《2026 台灣企業資安韌性大調查》：78% 企業已建立異地備份，但其中近七成仍處可被刪除的失守危機 - iThome](<https://news.google.com/rss/articles/CBMiS0FVX3lxTFByaHlFeUVnMnpKVzhkTlZZa2h6SV9HTkhyZDVNVXpSeENSZXhmUGdNNEF6X1FTbEtVd010UVlwbEVGdjJWZHRDbWpzYw?oc=5>) 
+
+---
+
+📌 **Proofpoint 將斥資 63 億美元收購 Varonis，擴大資料與 AI 安全業務 - iThome**
+
+iThome 報導，Proofpoint 已同意以 63 億美元收購 Varonis，以擴大其資料與 AI 安全業務。
+
+**參考來源:** [Proofpoint以63億美元併購Varonis，擴大資料與AI安全業務 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Gbk94N19zUXFQcThqTm1CLUlPei1URGtpMW5oNld0bzg1SWtoTkxMOUNlZzBMS1h5TWR1UHN6bktkSkV3QXNlQUhfNkdyQQ?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-8-1792583142510 -->
+<!-- ciso-revision:ciso-20261019-9-1792590290983 -->
