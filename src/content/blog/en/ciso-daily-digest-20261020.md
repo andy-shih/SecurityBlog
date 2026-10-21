@@ -132,4 +132,4 @@ The Hacker News reports that Forescout Research - Vedere Labs disclosed the ROMU
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261020-5-1792579447537 -->
+<!-- ciso-revision:ciso-20261020-6-1792581596505 -->
