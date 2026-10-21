@@ -65,7 +65,31 @@ iThome reports that malicious packages appeared in an Arch Linux software reposi
 
 **Reference:** [Arch Linux軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得root權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Uak04NTNmWFNVY04tOTdnZ3ZkRzF5QmV4UXR2WjNvZU9nMGlYbmhvRmFmQXQ2aUM5MFhxNTloZVAxanVvd1dORURld3dpdw?oc=5>) 
 
+---
+
+📌 **Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic**
+
+A fake Web3 accelerator named Apex Accelerator was observed pushing information stealers and backdoors to Windows and macOS systems using malicious npm packages. The operation targets cryptocurrency startups and founders, repackaging legitimate coding agents to send model requests through attacker-controlled services. The npm packages @apexacc/cli and @apexacc/audit were published by an npm user named 'apexaccelerator'. Both packages implement distinct verification paths for Windows and macOS, sending HTTP POST requests to initiate the appropriate infection chain. On Windows, malware retrieves Base64-encoded PowerShell commands to fetch second-stage scripts and executables, ultimately harvesting system information and exfiltrating data through Telegram. On macOS, the malware downloads a bash script that deploys CloudSyncD, a backdoor first documented by Jamf Threat Labs, which phishes system login passwords and contacts external servers. The packages are also capable of intercepting and redirecting OpenRouter LLM traffic and registering a controlled MCP server in the victim's agent configuration. The operation has been tracked under the moniker REF8801 and was found to reference Russian-language comments in source code commit history.
+
+**Reference:** [Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic](<https://thehackernews.com/2026/10/fake-web3-accelerator-uses-npm-packages.html>) 
+
+---
+
+📌 **Microsoft Disrupts Transnational Phishing Crime Service Involving Over 1 Billion Malicious Messages**
+
+iThome reports that Microsoft has taken action against a cross-border phishing crime service responsible for more than one billion malicious messages. The report is based on a headline-only RSS item; full technical details and confirmed victim impact are not yet available.
+
+**Reference:** [微軟打擊跨國網釣犯罪服務，涉及逾10億則惡意訊息 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9rUFJWZlZsbFF4WGlFSFNwMEprYm5MRlVFS1pfdUNna0E5U2R3UGFNY3M3UkVkSUNUS0R4S1c5SWRnSkp1ejdrUGU2Y20xZw?oc=5>) 
+
+---
+
+📌 **Nginx patches five vulnerabilities, three could allow remote code execution**
+
+iThome reports that Nginx has released updates addressing five security flaws, three of which are rated as potentially enabling remote code execution. Users and administrators should apply the latest patches to affected Nginx versions promptly to mitigate exploitation risk.
+
+**Reference:** [Nginx修補5項漏洞，3項恐導致遠端程式碼執行 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9pVkNZT3FTSmRUMG1FN0s2RzVTVjBEUlNBRE5kZ3pWQVplZDBXdnFsWnE3WFdqSFI5MGZ6WU1TZlZPOWZmZTEyWEdFU0t3dw?oc=5>) 
+
 Supplemental search context: [Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-2-1792540690985 -->
+<!-- ciso-revision:ciso-20261019-3-1792557372352 -->

@@ -65,7 +65,31 @@ iThome 報導，Arch Linux 軟體市集出現惡意套件，攻擊者藉此散�
 
 **參考來源:** [Arch Linux軟體市集出現惡意套件，攻擊者藉此散布惡意程式以取得root權限 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Uak04NTNmWFNVY04tOTdnZ3ZkRzF5QmV4UXR2WjNvZU9nMGlYbmhvRmFmQXQ2aUM5MFhxNTloZVAxanVvd1dORURld3dpdw?oc=5>) 
 
+---
+
+📌 **假Web3加速器透過npm套件散播惡意軟體並劫持AI代理流量**
+
+觀察到一個名為Apex Accelerator的假Web3加速器，透過惡意npm套件向Windows和macOS系統推送資訊竊取程式和後門。該行動鎖定加密貨幣新創公司和創辦人，將合法的編碼代理重新封裝，使模型請求透過攻擊者控制的服務發送。npm套件@apexacc/cli和@apexacc/audit由名為'apexaccelerator'的npm用戶發布。兩個套件都為Windows和macOS實作不同的驗證路徑，發送HTTP POST請求以啟動相應的感染鏈。在Windows上，惡意軟體檢索Base64編碼的PowerShell命令以獲取第二階段腳本和可執行檔，最終收集系統資訊並透過Telegram外洩資料。在macOS上，惡意軟體下載部署CloudSyncD的bash腳本，這是Jamf Threat Labs首次記錄的後門，會釣魚系統登入密碼並聯繫外部伺服器。這些套件也能攔截和重新導向OpenRouter LLM流量，並在受害者的代理配置中註冊受控的MCP伺服器。該行動以代號REF8801追蹤，並在原始碼提交歷史中發現俄語註釋。
+
+**參考來源:** [Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic](<https://thehackernews.com/2026/10/fake-web3-accelerator-uses-npm-packages.html>) 
+
+---
+
+📌 **Microsoft瓦解跨國網路釣魚犯罪服務 涉及逾10億惡意訊息**
+
+iThome報導Microsoft已對負責超過10億惡意訊息的跨國網路釣魚犯罪服務採取行動。該報導基於僅有標題的RSS項目；完整技術細節和確認的受害者影響尚未公開。
+
+**參考來源:** [微軟打擊跨國網釣犯罪服務，涉及逾10億則惡意訊息 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9rUFJWZlZsbFF4WGlFSFNwMEprYm5MRlVFS1pfdUNna0E5U2R3UGFNY3M3UkVkSUNUS0R4S1c5SWRnSkp1ejdrUGU2Y20xZw?oc=5>) 
+
+---
+
+📌 **Nginx修補五項漏洞 三項可能允許遠端程式碼執行**
+
+iThome報導Nginx已發布更新解決五項安全缺陷，其中三項被評級為可能啟用遠端程式碼執行。用戶和管理員應儘快對受影響的Nginx版本套用最新修補程式以減緩被利用風險。
+
+**參考來源:** [Nginx修補5項漏洞，3項恐導致遠端程式碼執行 - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE9pVkNZT3FTSmRUMG1FN0s2RzVTVjBEUlNBRE5kZ3pWQVplZDBXdnFsWnE3WFdqSFI5MGZ6WU1TZlZPOWZmZTEyWEdFU0t3dw?oc=5>) 
+
 補充搜尋內容來源：[Brave Search API](https://brave.com/search/api/)
 
 
-<!-- ciso-revision:ciso-20261019-2-1792540690985 -->
+<!-- ciso-revision:ciso-20261019-3-1792557372352 -->
