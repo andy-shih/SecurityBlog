@@ -31,9 +31,9 @@ LiteLLM Python 套件 1.107.0 版透過軟體供應鏈攻擊遭到破壞，攻�
 
 ---
 
-### GitLab 重大漏洞（CVSS 10.0）允許過去 12 年發布版本發生未經驗證的遠端程式碼執行
+### 關鍵 GitLab 缺陷 (CVSS 10.0) 允許未經驗證的 RCE，影響 12 年來的所有版本
 
-GitLab 於 2026 年 10 月 21 日釋出修復程式，修正 CVE-2026-110264，這是 Onigmo 正規表示式編譯器中最高嚴重度 CVSS 10.0 整數溢位漏洞，可能導致自我管理實例發生未經驗證的遠端程式碼執行。該漏洞影響回溯至 7.0 版（2014 年）的所有版本，包括超出 GitLab 一般支援政策的舊版分支，修復版本已針對 19.5.1、19.4.3、19.3.6、19.2.9、19.1.9、19.0.10 和 18.11.13 發布。GitLab.com 與 Dedicated 租戶已修補。目前未有野外利用回報，且無臨時變通方案；管理員必須升級。19.4.3 與 19.3.6 的升級包含資料庫變更，會導致單一伺服器停機。
+GitLab 於 2026 年 10 月 21 日發布修補程式，針對 CVE-2026-110264，這是一個最高嚴重性 10.0 CVSS 的整數溢位漏洞，存在於 Onigmo 正規表達式編譯器中，可能允許未經驗證的遠端程式碼執行，影響自管實例。此缺陷影響回溯至 7.0 版 (2014 年) 的所有版本，包括超出 GitLab 正常支援政策的舊分支，並已為 19.5.1、19.4.3、19.3.6、19.2.9、19.1.9、19.0.10 和 18.11.13 版本發布修正版本。GitLab.com 和 Dedicated 租戶已完成修補。未發現野外利用情況，亦無臨時緩解措施；管理員必須升級。19.4.3 和 19.3.6 版本的升級包含資料庫變更，將導致單節點伺服器停機。
 
 **原始來源:** [Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases](<https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html>)
 
@@ -305,4 +305,4 @@ JPCERT/CC 警告關於在 2026 年 10 月 21 日披露的嚴重 PHP 遠端程式
 
 **原始來源:** [Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent "Claude Duet" - the-decoder.com](<https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRG9HZVRLSE1uRXNxWURQMkxmYlN3N050MmMwanJhUUc5QTN5b1VMYnNRc1ZWSlhENEluZ25EZkpQcnB0U2hTRFJRT2RQbFNIS0NzbnlDcF9jZHJJSEdsc1pwMWw2enloVDhjMW5PZHR0ZFZYa0ZrZ2dKWlhMSFQ2dGtDdktUaGZpc19TWDBfTlhpYTkxWlozVXdrZ0EySk1CRjdoUEk3NXBZTF9obVdiSW9DV29rNVhJ?oc=5>)
 
-<!-- ciso-revision:ciso-20261022-6-available-1792734373342 -->
+<!-- ciso-revision:ciso-20261022-7-available-1792737853597 -->
