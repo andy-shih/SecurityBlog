@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：今日資安新聞速覽 (20261022)"
+title: "CISO 每日摘要：PHP2Shell：PHP核心關鍵RCE漏洞遭主動利用 (20261022)"
 description: "本頁整理今日可用的資安新聞來源。摘要與繁體中文翻譯待補，請以原始來源內容為準。"
 pubDate: 2026-10-22
 tags: ["cybersecurity", "threat-intelligence", "ciso-daily"]
@@ -11,7 +11,13 @@ featured: true
 
 本頁整理今日可用的資安新聞來源。摘要與繁體中文翻譯待補，請以原始來源內容為準。
 
-### Вышли патчи для PHP2Shell. Хакеры уже пытаются эксплуатировать свежие уязвимости
+### PHP2Shell：PHP核心關鍵RCE漏洞遭主動利用
+
+PHP於2026年10月21日釋出緊急修補，針對兩個關鍵遠端程式碼執行缺陷，CVE-2026-109618與CVE-2026-109619，CVSS v4.0評分均為9.2。漏洞位於PHP核心引擎本身，影響自PHP 5.4（2012年釋出）至目前所有分支的所有版本，凡提供網頁服務的安裝均受衝擊，包含WordPress、Drupal、Joomla與Magento站點，研究人員已確認存在可運作的攻擊。
+
+Amazon Threat Intelligence於10月17日觀測到利用嘗試，較修補釋出早四天，建議調查自該日起展開。修補版本為8.5.12、8.4.27、8.3.36與8.2.35。7.4至8.1分支僅提供原始碼回溯修補，而5.4至7.3已屬生命週期結束，不再提供修補。美國、英國、荷蘭、芬蘭與澳洲的國家級網安機構發布緊急建議，部分歐洲政府部門在修補期間將對外門戶暫時下線。
+
+根據Palo Alto Networks遙測資料，超過2,260萬台對網暴露的伺服器執行可能受漏洞影響的PHP。所有處理HTTP請求的網頁環境——PHP-FPM、LiteSpeed、FrankenPHP、php-cgi、以及搭配mod\_php的Apache——均直接暴露，其中Apache mod\_php風險最高，因漏洞利用可在應用層級路由啟動前執行。概念驗證細節於10月20日外洩，迫使加速釋出修補。PHP基金會聲稱無可運作漏洞利用的證據，惟獨立研究人員回報在一天內開發出功能性漏洞利用。
 
 **原始來源:** [Вышли патчи для PHP2Shell. Хакеры уже пытаются эксплуатировать свежие уязвимости](<https://xakep.ru/2026/10/22/php2shell-patches>)
 
@@ -297,4 +303,4 @@ JPCERT/CC 警告關於在 2026 年 10 月 21 日披露的嚴重 PHP 遠端程式
 
 **原始來源:** [Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent "Claude Duet" - the-decoder.com](<https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRG9HZVRLSE1uRXNxWURQMkxmYlN3N050MmMwanJhUUc5QTN5b1VMYnNRc1ZWSlhENEluZ25EZkpQcnB0U2hTRFJRT2RQbFNIS0NzbnlDcF9jZHJJSEdsc1pwMWw2enloVDhjMW5PZHR0ZFZYa0ZrZ2dKWlhMSFQ2dGtDdktUaGZpc19TWDBfTlhpYTkxWlozVXdrZ0EySk1CRjdoUEk3NXBZTF9obVdiSW9DV29rNVhJ?oc=5>)
 
-<!-- ciso-revision:ciso-20261022-1-available-1792723212311 -->
+<!-- ciso-revision:ciso-20261022-2-available-1792725986729 -->
