@@ -1,5 +1,5 @@
 ---
-title: "CISO 每日摘要：PHP2Shell: PHP 核心關鍵 RCE 漏洞遭主動利用 (20261022)"
+title: "CISO 每日摘要：PHP2Shell：PHP 核心臨界 RCE 漏洞正被積極利用 (20261022)"
 description: "本頁整理今日可用的資安新聞來源。摘要與繁體中文翻譯待補，請以原始來源內容為準。"
 pubDate: 2026-10-22
 tags: ["cybersecurity", "threat-intelligence", "ciso-daily"]
@@ -11,13 +11,13 @@ featured: true
 
 本頁整理今日可用的資安新聞來源。摘要與繁體中文翻譯待補，請以原始來源內容為準。
 
-### PHP2Shell: PHP 核心關鍵 RCE 漏洞遭主動利用
+### PHP2Shell：PHP 核心臨界 RCE 漏洞正被積極利用
 
-PHP 於 2026 年 10 月 21 日發布緊急修補，修正兩個關鍵遠端程式碼執行缺陷 CVE-2026-109618 和 CVE-2026-109619，CVSS v4.0 均評為 9.2 分。漏洞位於 PHP 核心引擎本身，影響自 PHP 5.4（2012 年釋出）以來所有版本至現行分支，凡提供網頁服務的安裝環境皆受影響，包含 WordPress、Drupal、Joomla 和 Magento 網站，研究人員已確認存在可運作的攻擊。
+PHP 於 2026 年 10 月 21 日針對兩個關鍵遠程代碼執行缺陷釋放緊急補丁，分別為 CVE-2026-109618 和 CVE-2026-109619，均根據 CVSS v4.0 評級為 9.2。漏洞位於 PHP 核心引擎本身，影響從 PHP 5.4（2012 年發布）到當前分支的所有版本，影響任何服務 Web 請求的安裝，包括使用 WordPress、Drupal、Joomla 和 Magento 的站點，研究人員已確認存在實際攻擊。
 
-Amazon Threat Intelligence 於 10 月 17 日觀測到利用嘗試，比修補程式存在早四天，建議調查自該日啟動。修正版本為 8.5.12、8.4.27、8.3.36 和 8.2.35。7.4 至 8.1 分支僅提供原始碼回溯修補，5.4 至 7.3 為生命週期結束版本不再提供修正。美國、英國、荷蘭、芬蘭與澳洲的國家網安機構發布緊急勸告，部分歐洲政府部門於修補期間將對外入口網站離線。
+Amazon 威脅情報在 10 月 17 日觀察到在補丁存在前四天前試圖利用這些漏洞，並建議從該日期開始進行調查。修復版本為 8.5.12、8.4.27、8.3.36 和 8.2.35。7.4 到 8.1 的分支僅獲取源碼回溯，而 5.4 到 7.3 屬於終止生命週期，無補丁。美國、英國、荷蘭、芬蘭和澳大利亞的國家網絡安全機緊發出緊急協議，部分歐洲政府部門在修復期間將公眾門戶離線。
 
-根據 Palo Alto Networks 遙測資料，超過 2,260 萬台暴露於網際網路的伺服器執行潛在受影響的 PHP。所有處理 HTTP 請求的網頁環境 —— PHP-FPM、LiteSpeed、FrankenPHP、php-cgi 以及搭配 mod\_php 的 Apache —— 皆直接暴露，Apache mod\_php 風險最高，因漏洞利用可在應用層級路由啟動前執行。概念證明細節於 10 月 20 日外洩，迫使加速發布修補。PHP Foundation 指出無可運作漏洞利用的證據，但獨立研究人員回報在一天內開發出功能性漏洞利用。
+根據 Palo Alto Networks 的遙測數據，超過 2260 萬部露燈伺服器運行著潛在易受攻擊的 PHP。所有處理 HTTP 請求的 Web 環境——包括 PHP-FPM、LiteSpeed、FrankenPHP、php-cgi 以及 Apache with mod\_php——均直接暴露，其中 Apache mod\_php 被引述風險最高，因為利用可以在應用程序級路由開始前執行。概念證明於 10 月 20 日釋出，迫使加速發布補丁。PHP 基金會表示沒有實際利用的證據，儘管獨立研究人員報告稱他們在一天內開發了功能性利用程式。
 
 **原始來源:** [Вышли патчи для PHP2Shell. Хакеры уже пытаются эксплуатировать свежие уязвимости](<https://xakep.ru/2026/10/22/php2shell-patches>)
 
@@ -305,4 +305,4 @@ JPCERT/CC 警告關於在 2026 年 10 月 21 日披露的嚴重 PHP 遠端程式
 
 **原始來源:** [Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent "Claude Duet" - the-decoder.com](<https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRG9HZVRLSE1uRXNxWURQMkxmYlN3N050MmMwanJhUUc5QTN5b1VMYnNRc1ZWSlhENEluZ25EZkpQcnB0U2hTRFJRT2RQbFNIS0NzbnlDcF9jZHJJSEdsc1pwMWw2enloVDhjMW5PZHR0ZFZYa0ZrZ2dKWlhMSFQ2dGtDdktUaGZpc19TWDBfTlhpYTkxWlozVXdrZ0EySk1CRjdoUEk3NXBZTF9obVdiSW9DV29rNVhJ?oc=5>)
 
-<!-- ciso-revision:ciso-20261022-5-available-1792732952977 -->
+<!-- ciso-revision:ciso-20261022-6-available-1792734373342 -->
