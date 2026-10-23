@@ -55,7 +55,9 @@ JPCERT/CC 警告關於在 2026 年 10 月 21 日披露的嚴重 PHP 遠端程式
 
 ---
 
-### 研究人員借助AI力量找出存在超過10年的資安漏洞PHP2Shell - iThome
+### 研究人員利用 AI 發現存在超過 10 年的 PHP2Shell 漏洞
+
+iThome 報導指出，研究人員利用 AI 揭露了存在超過十年的 PHP2Shell 資安漏洞。
 
 **原始來源:** [研究人員借助AI力量找出存在超過10年的資安漏洞PHP2Shell - iThome](<https://news.google.com/rss/articles/CBMiTkFVX3lxTE8tbEN5RXE2eno3VnJYekVXX013V0NNNGo3WUpoSEk2OUppZmNjNkVGbkR1NUpZV0ZvQXgwZXY3VUYwZXZwbE5lRjRiLW5CUQ?oc=5>)
 
@@ -305,4 +307,4 @@ JPCERT/CC 警告關於在 2026 年 10 月 21 日披露的嚴重 PHP 遠端程式
 
 **原始來源:** [Anthropic takes on Grok Bot, Meta's Muse, and OpenAI's Dots with its always-on agent "Claude Duet" - the-decoder.com](<https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRG9HZVRLSE1uRXNxWURQMkxmYlN3N050MmMwanJhUUc5QTN5b1VMYnNRc1ZWSlhENEluZ25EZkpQcnB0U2hTRFJRT2RQbFNIS0NzbnlDcF9jZHJJSEdsc1pwMWw2enloVDhjMW5PZHR0ZFZYa0ZrZ2dKWlhMSFQ2dGtDdktUaGZpc19TWDBfTlhpYTkxWlozVXdrZ0EySk1CRjdoUEk3NXBZTF9obVdiSW9DV29rNVhJ?oc=5>)
 
-<!-- ciso-revision:ciso-20261022-8-available-1792741539168 -->
+<!-- ciso-revision:ciso-20261022-9-available-1792745147104 -->
