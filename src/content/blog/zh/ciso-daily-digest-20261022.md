@@ -7,7 +7,7 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-## PHP2Shell 緊急修補發布，揭露前已有利用嘗試
+## 📌 PHP2Shell 緊急修補發布，揭露前已有利用嘗試
 
 PHP 的兩項重大未經驗證遠端程式碼執行漏洞 CVE-2026-109618 與 CVE-2026-109619，促使專案於 2026 年 10 月 21 日發布緊急修補。受影響版本可追溯至 2012 年推出的 PHP 5.4。研究人員利用 AI 協助分析記憶體損毀漏洞並開發利用鏈。
 
@@ -363,7 +363,7 @@ pathofdemocracy.hk 報告稱，美國禁止 DeepSeek AI 進入政府系統後，
 
 ---
 
-## OPSWAT可以怎麼幫上忙
+## OPSWAT 可以怎麼幫上忙
 
 - [MetaDefender Software Supply Chain](<https://www.opswat.com/solutions/software-supply-chain-security>) — MetaDefender Software Supply Chain 可透過威脅偵測、SBOM 與弱點分析，協助檢查可疑軟體元件。這能補充相依套件完整性檢查及憑證撤銷作業，但不保證能偵測本次 LiteLLM 惡意載荷。
 

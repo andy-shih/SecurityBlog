@@ -7,7 +7,7 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-## 研究人員以特製 Brotli 資料展示 Node.js 的 Node2Shell 遠端程式碼執行漏洞利用
+## 📌 研究人員以特製 Brotli 資料展示 Node.js 的 Node2Shell 遠端程式碼執行漏洞利用
 
 Imperva 研究人員針對官方 Node.js 24.22.0 Linux arm64 版本，向隨附解碼器輸入特製 Brotli 資料，展示稱為 Node2Shell 的遠端程式碼執行漏洞利用（CVE-2026-111497）。概念驗證程式經多次嘗試，才在該特定版本成功執行程式碼；先前公開的概念驗證程式則只能使一般版本當機，並讀取有限的行程記憶體。Node.js 已於 2026 年 10 月 21 日揭露漏洞並釋出修補版本，包括會拒絕惡意輸入的 24.22.1 版。
 
@@ -291,7 +291,7 @@ iThome 報導，GitLab 修補了一個存在 12 年、被評為最高嚴重性�
 
 ---
 
-## OPSWAT可以怎麼幫上忙
+## OPSWAT 可以怎麼幫上忙
 
 - [MetaDefender NDR](<https://www.opswat.com/products/metadefender/ndr>) — MetaDefender NDR 可協助調查與勒索軟體相關的橫向移動及資料外傳網路跡象；應在實際環境驗證涵蓋範圍，並持續落實修補與憑證控管。
 
