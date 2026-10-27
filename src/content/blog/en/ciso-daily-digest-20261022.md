@@ -7,7 +7,7 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-## 📌 PHP2Shell emergency patches released after exploitation attempts
+## PHP2Shell emergency patches released after exploitation attempts
 
 Two critical unauthenticated remote code execution vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619, prompted emergency patches on October 21, 2026. The flaws affect PHP versions dating back to PHP 5.4, released in 2012. Researchers used AI to help investigate the memory-corruption vulnerabilities and develop exploit chains.
 

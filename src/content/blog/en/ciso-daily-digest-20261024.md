@@ -7,7 +7,7 @@ author: "Security Solutions Team"
 featured: false
 ---
 
-## 📌 October 24 source review
+## October 24 source review
 
 No stories were selected for a full daily digest from this five-item collection. This describes only the collection reviewed here; it does not mean that no cybersecurity news occurred on October 24.
 

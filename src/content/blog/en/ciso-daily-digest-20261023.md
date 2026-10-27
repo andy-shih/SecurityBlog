@@ -7,7 +7,7 @@ author: "Security Solutions Team"
 featured: true
 ---
 
-## 📌 Researchers Demonstrate Node2Shell RCE Exploit on Node.js Build Using Crafted Brotli Data
+## Researchers Demonstrate Node2Shell RCE Exploit on Node.js Build Using Crafted Brotli Data
 
 Imperva researchers demonstrated a remote code execution exploit, dubbed Node2Shell, against an official Node.js 24.22.0 Linux arm64 build by feeding crafted Brotli data to the bundled decoder (CVE-2026-111497). The proof of concept achieved code execution after multiple attempts on that specific build, while a prior public proof of concept only crashed a standard build and read limited process memory. Node.js disclosed the flaw and released fixed versions on October 21, 2026, including 24.22.1, which rejects the malicious input.
 
