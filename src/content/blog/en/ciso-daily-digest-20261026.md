@@ -15,7 +15,7 @@ Proof-of-concept exploit code is publicly available and exploitation attempts ha
 
 JPCERT/CC provides detailed compromise indicators including anomalous PHPSESSID cookie values, suspicious multipart/form-data requests correlated with memory limit errors or HTTP 500 responses, and unexpected PHP worker crashes or restarts. The advisory notes that absence of these indicators does not rule out compromise due to multiple exploitation paths and potential logging gaps, recommending continuous monitoring for suspicious processes, network connections, and file creation.
 
-### CISO Impact
+### 📌CISO Impact
 
 - **Emergency PHP Patching and Compromise Validation —** Prioritize immediate deployment of PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 across all web-facing and internal systems. Where patching is delayed, enforce the mitigation session.upload\_progress.enabled=0 and restart all PHP workers. Conduct targeted threat hunting for anomalous PHPSESSID cookies, multipart/form-data requests with memory errors, and unexpected PHP worker crashes. Treat absence of indicators as inconclusive given multiple exploitation paths and logging gaps.
 - **Microsoft 365 Token Replay Detection and Response —** Implement Conditional Access Policies requiring MFA for all users, cloud apps, and client app types without exceptions. Audit Entra ID for rogue device registrations and unauthorized authenticator app enrollments. Monitor for hidden inbox rules with obfuscated names targeting financial keywords. On suspected compromise, immediately revoke sessions, reset passwords, and review enterprise applications. Attribute sign-in attempts from the 193.26.115.0/24 range and associated StarkRDP/rdp.sh infrastructure as high-confidence indicators.
